@@ -1,0 +1,3 @@
+escenario,trenes,tren_km,energia_red_MWh,devuelta_red_MWh,kWh_tren_km,potencia_media_linea_MW,minutos_sin_trenes
+Solo Renfe (GTFS),155,64447,748.3,26.3,11.2,31.2,363
+Renfe + Iryo y Ouigo estimados,199,91771,1082.5,27.5,11.5,45.1,343

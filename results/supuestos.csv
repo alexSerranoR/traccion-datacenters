@@ -1,0 +1,14 @@
+parametro,valor,unidad,fuente
+Día simulado,miércoles 21 oct 2026,,Horarios GTFS de Renfe (datos abiertos)
+Trenes de otros operadores,22 por sentido,,Supuesto: Iryo y Ouigo no están en el GTFS de Renfe; se clonan trenes Madrid–Barcelona desplazados 20 min
+Subestaciones,"11, cada ~60 km",,Supuesto: posiciones reales en IDEADIF de Adif
+Potencia máxima tren AVE,"8,8",MW,Ficha S-103 / S-112
+Masa tren AVE,425,t,Ficha S-103
+Potencia máxima Alvia / Avant,"4,8 / 4,4",MW,Fichas S-130 y S-121
+Margen de regularidad del horario,8,%,Supuesto habitual: el tren marcha más rápido y gasta el margen parado
+Rendimiento tracción / regeneración,85 / 80,%,Supuesto
+Pendientes,no modeladas,,"Limitación: se cubre con el escenario de carga ×1,5"
+Conexión del centro de datos,embarrado de AT (220/400 kV),,"Comparte la capacidad de acceso, no los transformadores de tracción"
+Margen de seguridad sobre el acceso,10,%,Supuesto
+Contingencia N-1,+50 % de la carga de la vecina más cargada,,Supuesto simplificado
+Batería de referencia,20 MW / 20 MWh,,Supuesto
