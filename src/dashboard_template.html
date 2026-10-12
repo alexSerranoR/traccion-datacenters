@@ -9,74 +9,99 @@
   color-scheme: light;
   --bg: #f6f5f2; --surface: #fcfcfb; --border: #e3e2dd; --grid: #ecebe6;
   --text: #0b0b0b; --text-2: #52514e; --text-3: #7a7974;
-  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a;
-  --night: rgba(98, 80, 214, .08); --free: rgba(27, 175, 122, .14); --limit: #e34948;
-  --seq-0: #f1f6fd; --seq-1: #0d366b;
+  --o1: #2a78d6; --o2: #eb6834; --o3: #1baf7a; --o4: #eda100; --o5: #e87ba4;
+  --l1: #6250d6; --l2: #008300;
+  --train: #7a7974; --batt: #6250d6; --terrain: #e3e2dd;
+  --night: rgba(98, 80, 214, .08); --limit: #e34948;
+  --seq-0: #f1f6fd; --seq-1: #0d366b; --accent: #2a78d6;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
     --bg: #121211; --surface: #1a1a19; --border: #2e2e2c; --grid: #262624;
     --text: #f0efec; --text-2: #c3c2b7; --text-3: #8f8e88;
-    --s1: #3987e5; --s2: #d95926; --s3: #199e70;
-    --night: rgba(144, 133, 233, .12); --free: rgba(25, 158, 112, .2); --limit: #e66767;
-    --seq-0: #1f2530; --seq-1: #86b6ef;
+    --o1: #3987e5; --o2: #d95926; --o3: #199e70; --o4: #c98500; --o5: #d55181;
+    --l1: #9085e9; --l2: #008300;
+    --train: #8f8e88; --batt: #9085e9; --terrain: #2e2e2c;
+    --night: rgba(144, 133, 233, .12); --limit: #e66767;
+    --seq-0: #1f2530; --seq-1: #86b6ef; --accent: #3987e5;
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
   --bg: #121211; --surface: #1a1a19; --border: #2e2e2c; --grid: #262624;
   --text: #f0efec; --text-2: #c3c2b7; --text-3: #8f8e88;
-  --s1: #3987e5; --s2: #d95926; --s3: #199e70;
-  --night: rgba(144, 133, 233, .12); --free: rgba(25, 158, 112, .2); --limit: #e66767;
-  --seq-0: #1f2530; --seq-1: #86b6ef;
+  --o1: #3987e5; --o2: #d95926; --o3: #199e70; --o4: #c98500; --o5: #d55181;
+  --l1: #9085e9; --l2: #008300;
+  --train: #8f8e88; --batt: #9085e9; --terrain: #2e2e2c;
+  --night: rgba(144, 133, 233, .12); --limit: #e66767;
+  --seq-0: #1f2530; --seq-1: #86b6ef; --accent: #3987e5;
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text);
   font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-main { max-width: 1180px; margin: 0 auto; padding: 24px 16px 48px; }
-h1 { font-size: 24px; margin: 0 0 4px; font-weight: 650; }
+main { max-width: 1200px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 26px; margin: 0 0 4px; font-weight: 650; letter-spacing: -.01em; }
 h2 { font-size: 16px; margin: 0 0 2px; font-weight: 600; }
-.sub { color: var(--text-2); margin: 0 0 20px; }
+h3 { font-size: 14px; margin: 0 0 4px; font-weight: 600; }
+.sub { color: var(--text-2); margin: 0 0 16px; max-width: 900px; }
 .note { color: var(--text-3); font-size: 13px; margin: 0 0 10px; }
-.controls { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
+.sect { font-size: 12px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: var(--text-3); margin: 28px 0 10px; }
+.controls { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center;
   background: var(--bg); padding: 10px 0; margin-bottom: 8px; border-bottom: 1px solid var(--border); }
-.ctl { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-2); }
-.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface); }
-.seg button { border: 0; background: none; color: var(--text); padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer; }
+.ctl { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; color: var(--text-2); }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg button { border: 0; background: none; color: var(--text); padding: 6px 11px; font: inherit; font-size: 14px; cursor: pointer; }
 .seg button + button { border-left: 1px solid var(--border); }
 .seg button[aria-pressed="true"] { background: var(--text); color: var(--surface); }
 select { font: inherit; font-size: 14px; padding: 5px 8px; border-radius: 8px; border: 1px solid var(--border);
-  background: var(--surface); color: var(--text); }
-.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 16px 0; }
+  background: var(--surface); color: var(--text); max-width: 220px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 12px; margin: 12px 0; }
 .kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
 .kpi .l { font-size: 13px; color: var(--text-2); }
 .kpi .v { font-size: 26px; font-weight: 650; font-variant-numeric: tabular-nums; }
-.kpi .v.t { font-size: 22px; white-space: nowrap; line-height: 39px; }
 .kpi .v small { font-size: 14px; font-weight: 500; color: var(--text-2); margin-left: 3px; }
 .kpi .d { font-size: 12px; color: var(--text-3); }
 .kpi .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; }
-.grid2 { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; }
-@media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
+.grid2 { display: grid; grid-template-columns: 3fr 2fr; gap: 12px; }
+.grid2e { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 860px) { .grid2, .grid2e { grid-template-columns: 1fr; } .controls { position: static; } }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 12px; min-width: 0; }
-.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--text-2); margin: 6px 0 4px; }
+.concl { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px 22px; counter-reset: c; }
+.concl div { padding-left: 30px; position: relative; font-size: 14px; color: var(--text-2); }
+.concl div::before { counter-increment: c; content: counter(c); position: absolute; left: 0; top: 1px; width: 21px; height: 21px;
+  border-radius: 50%; background: var(--text); color: var(--surface); font-size: 12px; font-weight: 650; text-align: center; line-height: 21px; }
+.concl b { display: block; color: var(--text); font-weight: 600; font-size: 14.5px; margin-bottom: 1px; }
+.reg { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 640px) { .reg { grid-template-columns: 1fr; } }
+.reg > div { border: 1px solid var(--border); border-radius: 10px; padding: 12px; }
+.reg .big { font-size: 24px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.reg ul { margin: 6px 0 0; padding-left: 18px; color: var(--text-2); font-size: 13px; }
+.tag { display: inline-block; font-size: 11px; font-weight: 650; letter-spacing: .04em; text-transform: uppercase; padding: 2px 7px;
+  border-radius: 6px; border: 1px solid var(--border); color: var(--text-2); margin-bottom: 4px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; color: var(--text-2); margin: 6px 0 4px; }
 .legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px;
   margin-right: 6px; vertical-align: -1px; background: var(--c); }
 .legend span.line::before { height: 2px; vertical-align: 3px; width: 14px; }
 .legend span.dash::before { height: 0; border-top: 2px dashed var(--c); background: none; vertical-align: 3px; width: 14px; }
+.legend span.hatch::before { background: repeating-linear-gradient(45deg, var(--c) 0 2px, transparent 2px 4px); outline: 1px solid var(--c); }
 svg { display: block; width: 100%; overflow: visible; }
 svg text { fill: var(--text-2); font-size: 12px; font-family: inherit; }
-.axis line, .gridline { stroke: var(--grid); }
+svg text.lab { fill: var(--text); font-weight: 600; }
+svg text.mut { fill: var(--text-3); font-size: 11px; }
+.gridline { stroke: var(--grid); }
+.hit { fill: transparent; cursor: pointer; }
 .tip { position: fixed; pointer-events: none; background: var(--surface); color: var(--text); border: 1px solid var(--border);
   border-radius: 8px; padding: 8px 10px; font-size: 13px; box-shadow: 0 4px 16px rgba(0,0,0,.12); display: none; z-index: 10;
-  font-variant-numeric: tabular-nums; max-width: 260px; }
+  font-variant-numeric: tabular-nums; max-width: 300px; }
 .tip b { font-weight: 600; }
 .tip .row { display: flex; justify-content: space-between; gap: 14px; }
 .tip .k::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; background: var(--c, transparent); }
 table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
 th, td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: right; white-space: nowrap; }
-th { color: var(--text-2); font-weight: 600; }
+th { color: var(--text-2); font-weight: 600; vertical-align: bottom; white-space: normal; }
 th:first-child, td:first-child, .txt { text-align: left; white-space: normal; }
+tr.sel td { background: var(--grid); }
 .scroll { overflow-x: auto; }
 details summary { cursor: pointer; font-weight: 600; }
 footer { color: var(--text-3); font-size: 12px; margin-top: 20px; }
@@ -84,68 +109,117 @@ footer { color: var(--text-3); font-size: 12px; margin-top: 20px; }
 </head>
 <body>
 <main>
-  <h1>Subestaciones de la LAV Madrid–Barcelona y centros de datos</h1>
+  <h1>Subestaciones de alta velocidad y centros de datos</h1>
   <p class="sub" id="sub"></p>
 
+  <section class="card">
+    <h2>Conclusiones</h2>
+    <p class="note">Escenario central: el acceso que REE tiene concedido hoy a cada subestación de Adif y la carga del tren simulada (×1,0). Los bloques de abajo se recalculan con los selectores.</p>
+    <div class="concl" id="concl"></div>
+  </section>
+
   <div class="controls">
-    <div class="ctl">Acceso a red por subestación <div class="seg" id="c-acceso"></div></div>
+    <div class="ctl">Línea <div class="seg" id="c-linea"></div></div>
+    <div class="ctl">Acceso a la red <div class="seg" id="c-acceso"></div></div>
     <div class="ctl">Carga del tren <div class="seg" id="c-carga"></div></div>
     <div class="ctl">Subestación <select id="c-se"></select></div>
   </div>
 
   <div class="kpis" id="kpis"></div>
 
+  <div class="sect">Qué cabe hoy y qué cabría con una reforma</div>
+  <section class="card">
+    <h2>Dos escenarios regulatorios</h2>
+    <p class="note">Hoy el permiso de acceso de Adif no se puede ceder. Lo que sí encaja es que Adif reduzca su permiso y el centro de datos pida acceso propio (flexible) en el mismo nudo. Compartir el acceso con prioridad del tren exigiría una reforma.</p>
+    <div class="reg" id="reg"></div>
+  </section>
+
   <div class="grid2">
     <section class="card">
-      <h2>Capacidad compartible por subestación</h2>
-      <p class="note">MW que podría usar un centro de datos conectado en el embarrado de alta tensión, sin quitar potencia al tren. Pulsa una barra para ver su curva de carga.</p>
-      <div class="legend">
-        <span style="--c:var(--s1)">Firme (resiste el fallo de una vecina)</span>
-        <span style="--c:var(--s2)">Sin batería</span>
-        <span style="--c:var(--s3)">Con batería de 20 MW / 20 MWh</span>
-      </div>
+      <h2>Capacidad para centros de datos por subestación</h2>
+      <p class="note">MW que podría usar un centro de datos en cada subestación sin quitar potencia al tren. Pulsa una subestación para ver su día.</p>
+      <div class="legend" id="lg-opt"></div>
       <div id="ch-se"></div>
     </section>
     <section class="card">
-      <h2>Total de la línea según el acceso</h2>
-      <p class="note">Suma de las 11 subestaciones, con la carga del tren elegida.</p>
-      <div id="ch-tot"></div>
+      <h2>Las dos líneas, frente a frente</h2>
+      <p class="note">Total de la línea con el acceso y la carga elegidos. Solo cuentan subestaciones con al menos 10 MW.</p>
+      <div class="legend" id="lg-lin"></div>
+      <div id="ch-cmp"></div>
     </section>
   </div>
 
+  <div class="sect">La línea</div>
+  <section class="card">
+    <h2 id="t-perfil"></h2>
+    <p class="note">Perfil de cotas aproximado (±50 m) con estaciones y subestaciones. El tamaño del círculo es la capacidad firme de cada subestación en el escenario elegido; pasa el ratón para ver los detalles.</p>
+    <div id="ch-perfil"></div>
+  </section>
+
+  <div class="grid2e">
+    <section class="card">
+      <h2>Carga media por hora en cada subestación</h2>
+      <p class="note">MW medios del tren en cada hora. Cuanto más oscuro, más carga.</p>
+      <div id="ch-heat"></div>
+    </section>
+    <section class="card">
+      <h2>Sensibilidad al acceso</h2>
+      <p class="note">Total de la línea según la capacidad de acceso de cada subestación, el dato que más pesa y que no es público.</p>
+      <div class="legend" id="lg-sens"></div>
+      <div id="ch-sens"></div>
+    </section>
+  </div>
+
+  <div class="sect">Perfil del centro de datos</div>
   <section class="card">
     <h2 id="t-dia"></h2>
-    <p class="note">Potencia del tren en la subestación, en medias de 1 minuto. La zona verde es el hueco que queda libre bajo el límite utilizable (90 % del acceso). La banda morada es la franja sin trenes en toda la línea.</p>
-    <div class="legend">
-      <span class="line" style="--c:var(--s1)">Carga del tren</span>
-      <span class="dash" style="--c:var(--limit)">Límite utilizable</span>
-      <span style="--c:var(--free)">Hueco libre</span>
-      <span style="--c:var(--night)">Sin trenes en la línea</span>
-    </div>
+    <p class="note" id="n-dia"></p>
+    <div class="ctl" style="margin:4px 0 8px">Opción del centro de datos <div class="seg" id="c-opt"></div></div>
+    <div class="legend" id="lg-dia"></div>
     <div id="ch-dia"></div>
+    <div class="kpis" id="kpis-dia" style="margin-bottom:0"></div>
   </section>
 
+  <div class="grid2e">
+    <section class="card">
+      <h2 id="t-bat"></h2>
+      <p class="note">Cuánto centro de datos cabe según la energía de la batería. El punto marca el tamaño óptimo: se amplía mientras cada MW extra cueste menos de 1 M€ en batería. En gris, el resto de subestaciones.</p>
+      <div id="ch-bat"></div>
+    </section>
+    <section class="card">
+      <h2>Ingresos para Adif</h2>
+      <p class="note">Canon de 40 €/kW·año por la capacidad compartida; la línea fina va de 20 a 80 €/kW·año. Supuesto de partida, no una tarifa existente.</p>
+      <div class="legend" id="lg-fin"></div>
+      <div id="ch-fin"></div>
+    </section>
+  </div>
+
+  <div class="sect">Cifras financieras</div>
   <section class="card">
-    <h2>Carga media por hora en cada subestación</h2>
-    <p class="note">MW medios en cada hora. Cuanto más oscuro, más carga. Se ve la ventana nocturna y las horas punta.</p>
-    <div id="ch-heat"></div>
+    <h2 id="t-fin"></h2>
+    <p class="note">Orden de magnitud con los supuestos de la tabla de abajo. «Valor de adelantar» es el margen que gana el promotor por no esperar 3 años a una conexión propia.</p>
+    <div class="scroll"><table id="tb-fin"></table></div>
   </section>
 
+  <div class="sect">Datos</div>
   <section class="card">
     <h2 id="t-tabla"></h2>
-    <p class="note">La batería indicada es la necesaria para el valor «con batería» (techo de 20 MW / 20 MWh).</p>
     <div class="scroll"><table id="tb-se"></table></div>
   </section>
-
   <section class="card">
     <h2>Simulación del día</h2>
     <div class="scroll"><table id="tb-sim"></table></div>
   </section>
-
   <section class="card">
     <details>
-      <summary>Supuestos del modelo</summary>
+      <summary>Supuestos técnicos</summary>
       <div class="scroll" style="margin-top:10px"><table id="tb-sup"></table></div>
+    </details>
+  </section>
+  <section class="card">
+    <details>
+      <summary>Supuestos financieros</summary>
+      <div class="scroll" style="margin-top:10px"><table id="tb-supf"></table></div>
     </details>
   </section>
 
@@ -156,21 +230,29 @@ footer { color: var(--text-3); font-size: 12px; margin-top: 20px; }
 <script>
 const D = /*__DATA__*/null;
 const NS = "http://www.w3.org/2000/svg";
-const SES = D.subestaciones;
-const ACCESOS = [...new Set(D.capacidad.map(r => r.acceso_MW))].sort((a, b) => a - b);
-const CARGAS = [...new Set(D.capacidad.map(r => r.carga_x))].sort((a, b) => a - b);
-const SERIES = [
-  { key: "firme_MW", name: "Firme", c: "var(--s1)" },
-  { key: "sin_bateria_MW", name: "Sin batería", c: "var(--s2)" },
-  { key: "con_bateria_MW", name: "Con batería", c: "var(--s3)" },
+const LINES = Object.keys(D.lineas);
+const LCOL = { MZB: "var(--l1)", MS: "var(--l2)" };
+const OPTS = [
+  { k: "firme", n: "Firme (hoy)", c: "var(--o1)" },
+  { k: "sin_bateria", n: "Sin batería", c: "var(--o2)" },
+  { k: "flexible", n: "CPD flexible 30 %", c: "var(--o3)" },
+  { k: "bateria_opt", n: "Batería óptima", c: "var(--o4)" },
 ];
-const st = { acceso: ACCESOS.includes(60) ? 60 : ACCESOS[0], carga: CARGAS[0], se: SES[0] };
+const OPT5 = [OPTS[0], { k: "firme_flex", n: "Firme + flexible (hoy)", c: "var(--o5)" }, ...OPTS.slice(1)];
+const ACCS = [...new Set(D.capacidad.map(r => String(r.acceso)))].sort((a, b) => (+a || -1e9 + (a === "trafo")) - (+b || -1e9 + (b === "trafo")));
+const CARGAS = [...new Set(D.capacidad.map(r => r.carga_x))].sort((a, b) => a - b);
+const st = { linea: LINES[0], acceso: ACCS.includes("REE") ? "REE" : ACCS[0], carga: CARGAS[0], se: null, opt: "flexible" };
 
 const nf = (v, d = 0) => Number(v).toLocaleString("es-ES", { minimumFractionDigits: d, maximumFractionDigits: d });
 const hhmm = m => String(Math.floor(m / 60) % 24).padStart(2, "0") + ":" + String(Math.round(m) % 60).padStart(2, "0");
-const xLabel = x => "×" + nf(x, 1);
-const rows = () => D.capacidad.filter(r => r.acceso_MW === st.acceso && r.carga_x === st.carga);
-const pk = se => (D.capacidad.find(r => r.subestacion === se) || {}).pk_km;
+const G = () => D.lineas[st.linea];
+const SES = () => G().subestaciones.map(s => s.nombre);
+const rows = (l = st.linea, a = st.acceso, c = st.carga) =>
+  D.capacidad.filter(r => r.linea === l && String(r.acceso) === a && r.carga_x === c);
+const row = () => rows().find(r => r.se === st.se);
+const sum = (rs, k) => rs.reduce((a, x) => a + x[k], 0);
+const accLabel = a => ({ REE: "Concedido por REE", trafo: "Ampliado (transformadores)" })[a] || ("todas a " + a + " MW");
+const fin = (l, opt) => D.finanzas.find(r => r.linea === l && String(r.acceso) === st.acceso && r.carga_x === st.carga && r.opcion === opt);
 
 function el(tag, attrs = {}, parent) {
   const e = document.createElementNS(NS, tag);
@@ -178,29 +260,35 @@ function el(tag, attrs = {}, parent) {
   if (parent) parent.appendChild(e);
   return e;
 }
-// escala con marcas redondas (1, 2 o 5 × 10^n); devuelve el maximo del eje y guarda el paso
-let STEP = 1;
-function niceMax(v) {
-  v = Math.max(v, 1e-9);
-  const raw = v / 4, p = Math.pow(10, Math.floor(Math.log10(raw))), n = raw / p;
-  STEP = (n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10) * p;
-  return Math.ceil(v / STEP - 1e-9) * STEP;
+function svgBox(id, w, h) {
+  const box = document.getElementById(id); box.innerHTML = "";
+  return el("svg", { viewBox: `0 0 ${w} ${h}`, role: "img" }, box);
 }
-function yAxis(svg, m, w, h, max, unit) {
-  const g = el("g", { class: "axis" }, svg), n = Math.round(max / STEP);
+const txt = (g, x, y, s, a = {}) => { const t = el("text", { x, y, ...a }, g); t.textContent = s; return t; };
+function ticks(max) {
+  max = Math.max(max, 1e-9);
+  const raw = max / 4, p = Math.pow(10, Math.floor(Math.log10(raw))), n = raw / p;
+  const step = (n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10) * p;
+  return { max: Math.ceil(max / step - 1e-9) * step, step };
+}
+function yAxis(svg, m, w, h, t, unit) {
+  const g = el("g", {}, svg), n = Math.round(t.max / t.step);
   for (let i = 0; i <= n; i++) {
-    const v = STEP * i, y = m.t + h - h * v / max;
+    const v = t.step * i, y = m.t + h - h * v / t.max;
     el("line", { x1: m.l, x2: m.l + w, y1: y, y2: y, class: "gridline" }, g);
-    el("text", { x: m.l - 6, y: y + 4, "text-anchor": "end" }, g).textContent = nf(v) + (i === n && unit ? " " + unit : "");
+    txt(g, m.l - 6, y + 4, nf(v) + (i === n && unit ? " " + unit : ""), { "text-anchor": "end" });
   }
 }
-// barra con la punta redondeada (4 px) y la base recta sobre el eje
 function bar(g, x, y, w, h, fill) {
-  if (h <= 0) return el("rect", { x, y: y - 1, width: w, height: 1, fill, opacity: .5 }, g);
+  if (h <= 0.5) return el("rect", { x, y: y - 1, width: w, height: 1.5, fill, opacity: .6 }, g);
   const r = Math.min(4, w / 2, h);
   return el("path", { d: `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`, fill }, g);
 }
-
+function hbar(g, x, y, w, h, fill) {
+  if (w <= 0.5) return el("rect", { x, y, width: 1.5, height: h, fill, opacity: .6 }, g);
+  const r = Math.min(4, h / 2, w);
+  return el("path", { d: `M${x},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h - r}Q${x + w},${y + h} ${x + w - r},${y + h}H${x}Z`, fill }, g);
+}
 const tip = document.getElementById("tip");
 function showTip(ev, html) {
   tip.innerHTML = html; tip.style.display = "block";
@@ -212,199 +300,365 @@ function showTip(ev, html) {
 }
 const hideTip = () => { tip.style.display = "none"; };
 const tipRow = (k, v, c) => `<div class="row"><span class="k" style="--c:${c || "transparent"}">${k}</span><b>${v}</b></div>`;
+const legend = (id, items) => { document.getElementById(id).innerHTML = items.map(([n, c, cls]) => `<span class="${cls || ""}" style="--c:${c}">${n}</span>`).join(""); };
 
 // ---------- controles ----------
-function seg(id, values, label, key) {
-  const box = document.getElementById(id);
+function seg(id, values, label, key, after) {
+  const box = document.getElementById(id); box.innerHTML = "";
   values.forEach(v => {
     const b = document.createElement("button");
-    b.textContent = label(v);
-    b.onclick = () => { st[key] = v; render(); };
-    b.dataset.v = v; box.appendChild(b);
+    b.textContent = label(v); b.dataset.v = v;
+    b.onclick = () => { st[key] = v; if (after) after(); render(); };
+    box.appendChild(b);
   });
 }
-seg("c-acceso", ACCESOS, v => v + " MW", "acceso");
-seg("c-carga", CARGAS, v => xLabel(v) + (v > 1 ? " (pendientes)" : ""), "carga");
 const sel = document.getElementById("c-se");
-SES.forEach(se => { const o = document.createElement("option"); o.value = se; o.textContent = `${se} · PK ${pk(se)}`; sel.appendChild(o); });
+function fillSE() {
+  sel.innerHTML = "";
+  G().subestaciones.forEach(s => { const o = document.createElement("option"); o.value = s.nombre; o.textContent = `${s.nombre} · PK ${nf(s.pk)}`; sel.appendChild(o); });
+  const rs = rows(); st.se = rs.reduce((a, r) => r.pico_min > a.pico_min ? r : a, rs[0]).se;   // la mas cargada
+}
+seg("c-linea", LINES, l => D.lineas[l].corto + (D.lineas[l].densidad === "alta" ? " · alta densidad" : " · baja densidad"), "linea", fillSE);
+seg("c-acceso", ACCS, accLabel, "acceso");
+seg("c-carga", CARGAS, v => "×" + nf(v, 1) + (v > 1 ? " (+50 %)" : ""), "carga");
+seg("c-opt", OPTS.map(o => o.k), k => OPTS.find(o => o.k === k).n, "opt");
 sel.onchange = () => { st.se = sel.value; render(); };
+const pressed = () => document.querySelectorAll(".seg button").forEach(b => {
+  const key = { "c-linea": "linea", "c-acceso": "acceso", "c-carga": "carga", "c-opt": "opt" }[b.parentNode.id];
+  b.setAttribute("aria-pressed", String(st[key]) === b.dataset.v);
+});
 
-// ---------- cabecera y KPIs ----------
-function renderHead() {
-  const sim = D.simulacion[D.simulacion.length - 1];
-  const dia = (D.supuestos.find(s => /d[ií]a simulado/i.test(s.parametro)) || {}).valor || "";
+// ---------- cabecera, conclusiones, KPIs ----------
+function renderStatic() {
+  const s = D.supuestos.find(x => /d[ií]a simulado/i.test(x.parametro));
   document.getElementById("sub").textContent =
-    `${dia ? dia[0].toUpperCase() + dia.slice(1) + " · " : ""}${sim.escenario} · ${sim.trenes} trenes · ${SES.length} subestaciones supuestas`;
-  const r = rows(), tot = k => r.reduce((a, x) => a + x[k], 0);
-  const n = D.noche;
+    `¿Cuánta capacidad de conexión a la red dejan libre las subestaciones de tracción de alta velocidad, y cuántos MW de centros de datos podrían usarla sin afectar al tren? ` +
+    `Simulación segundo a segundo de un ${s ? s.valor : "día laborable"} en ${LINES.map(l => D.lineas[l].corto).join(" y ")}, con Renfe, Iryo y Ouigo.`;
+  document.getElementById("concl").innerHTML = D.conclusiones.map(c => `<div><b>${c.t}</b>${c.x}</div>`).join("");
+}
+function simRow(l = st.linea) { return D.simulacion.find(r => r.linea === l && /Iryo/.test(r.escenario)); }
+function renderKPIs() {
+  const s = simRow(), rs = rows(), n = D.noche[st.linea];
+  const uso = sum(rs, "media") / sum(rs, "acceso_MW") * 100;
+  const f = fin(st.linea, "bateria_opt"), ff = fin(st.linea, "firme");
   const k = [
-    { l: "Trenes al día", v: nf(sim.trenes), d: nf(sim.tren_km) + " tren-km" },
-    { l: "Energía de tracción", v: nf(sim.energia_red_MWh), u: "MWh/día", d: "media " + nf(sim.potencia_media_linea_MW, 1) + " MW en toda la línea" },
-    { l: "Franja sin trenes", cls: "t", v: hhmm(n.inicio) + "–" + hhmm(n.inicio + n.minutos), d: nf(n.minutos) + " min seguidos (ventana de mantenimiento)" },
-    ...SERIES.map(s => ({ l: s.name, sw: s.c, v: nf(tot(s.key)), u: "MW", d: `línea completa · ${st.acceso} MW · ${xLabel(st.carga)}` })),
+    ["Trenes al día", nf(s.trenes), "", `${nf(s.trenes_Renfe)} Renfe · ${nf(s.trenes_Iryo)} Iryo · ${nf(s.trenes_Ouigo)} Ouigo`],
+    ["Energía del tren", nf(s.energia_red_MWh), "MWh/día", `${nf(s.kWh_tren_km, 1)} kWh/tren-km · ${nf(s.tren_km)} tren-km`],
+    ["Uso medio del acceso", nf(uso, 1), "%", `pico de la línea ${nf(s.pico_linea_MW)} MW (1 min)`],
+    ["Noche sin trenes", hhmm(n.inicio) + "–" + hhmm(n.inicio + n.minutos), "", `${nf(n.minutos / 60, 1)} h seguidas en toda la línea`],
+    ["Firme (hoy)", nf(sum(rs, "firme")), "MW", "resiste el fallo de una vecina", "var(--o1)"],
+    ["Con reforma y batería", nf(sum(rs, "bateria_opt")), "MW", `${nf(sum(rs, "batopt_MWh"))} MWh de baterías · ${nf(sum(rs, "batopt_MEUR"))} M€`, "var(--o4)"],
+    ["Ingresos para Adif", nf(ff.ingreso_adif_MEUR_año, 1) + "–" + nf(f.ingreso_adif_MEUR_año, 1), "M€/año", "de solo firme a reforma con batería"],
   ];
-  document.getElementById("kpis").innerHTML = k.map(x =>
-    `<div class="kpi"><div class="l">${x.sw ? `<span class="sw" style="background:${x.sw}"></span>` : ""}${x.l}</div>` +
-    `<div class="v${x.cls ? " " + x.cls : ""}">${x.v}${x.u ? `<small>${x.u}</small>` : ""}</div><div class="d">${x.d}</div></div>`).join("");
+  document.getElementById("kpis").innerHTML = k.map(([l, v, u, d, c]) =>
+    `<div class="kpi"><div class="l">${c ? `<span class="sw" style="background:${c}"></span>` : ""}${l}</div><div class="v">${v}<small>${u}</small></div><div class="d">${d}</div></div>`).join("");
+}
+function renderReg() {
+  const rs = rows(), L = G().corto, n10 = k => rs.filter(r => r[k] >= 10).length;
+  document.getElementById("reg").innerHTML = `
+    <div><span class="tag">Hoy</span><div class="big">${nf(sum(rs, "firme"))}–${nf(sum(rs, "firme_flex"))} MW</div>
+      <div class="note" style="margin:0">en ${L}, ${n10("firme")} subestaciones con ≥ 10 MW firmes</div>
+      <ul><li>Solo la capacidad que Adif nunca usa, ni con una subestación vecina caída (N-1).</li>
+      <li>Adif reduce su permiso y el centro de datos pide acceso flexible propio en el mismo nudo de la red de transporte.</li>
+      <li>El rango superior supone un 30 % de carga recortable en el centro de datos.</li></ul></div>
+    <div><span class="tag">Con reforma</span><div class="big">${nf(sum(rs, "sin_bateria"))}–${nf(sum(rs, "bateria_opt"))} MW</div>
+      <div class="note" style="margin:0">en ${L}, de sin batería a batería óptima</div>
+      <ul><li>Permiso de acceso compartido con un límite conjunto y prioridad del tren.</li>
+      <li>El centro de datos se recorta según la carga ferroviaria, o una batería cubre los picos.</li>
+      <li>Batería óptima: ${nf(sum(rs, "batopt_MW"))} MW / ${nf(sum(rs, "batopt_MWh"))} MWh en total.</li></ul></div>`;
 }
 
-// ---------- barras agrupadas por subestación ----------
+// ---------- capacidad por subestacion ----------
 function renderSE() {
-  const box = document.getElementById("ch-se"); box.innerHTML = "";
-  const r = rows(), W = box.clientWidth, H = 300, m = { t: 12, r: 8, b: 40, l: 48 };
-  const w = W - m.l - m.r, h = H - m.t - m.b;
-  const max = niceMax(Math.max(1, ...D.capacidad.filter(x => x.acceso_MW === st.acceso).flatMap(x => SERIES.map(s => x[s.key]))));
-  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, height: H }, box);
-  yAxis(svg, m, w, h, max, "MW");
-  const gw = w / r.length, bw = Math.max(3, Math.min(18, (gw - 10) / 3 - 2));
-  r.forEach((row, i) => {
-    const gx = m.l + i * gw, x0 = gx + (gw - (bw * 3 + 4)) / 2;
-    const g = el("g", { style: "cursor:pointer" }, svg);
-    if (row.subestacion === st.se) el("rect", { x: gx + 1, y: m.t, width: gw - 2, height: h, fill: "var(--grid)", rx: 6 }, g);
-    SERIES.forEach((s, j) => { const bh = h * row[s.key] / max; bar(g, x0 + j * (bw + 2), m.t + h - bh, bw, bh, s.c); });
-    const narrow = gw < 44;
-    if (!narrow || i % 2 === 0) el("text", { x: gx + gw / 2, y: H - m.b + 16, "text-anchor": "middle" }, g).textContent = narrow ? row.subestacion.replace("SE", "") : row.subestacion;
-    if (!narrow) el("text", { x: gx + gw / 2, y: H - m.b + 30, "text-anchor": "middle", style: "fill:var(--text-3);font-size:11px" }, g).textContent = "PK " + row.pk_km;
-    el("rect", { x: gx, y: m.t, width: gw, height: h + 34, fill: "transparent" }, g);
-    g.onmousemove = ev => showTip(ev, `<b>${row.subestacion}</b> · PK ${row.pk_km}<br>` +
-      SERIES.map(s => tipRow(s.name, nf(row[s.key], 1) + " MW", s.c)).join("") +
-      tipRow("Uso medio del acceso", nf(row.uso_medio_pct, 1) + " %") + tipRow("Pico en N-1", nf(row.pico_N1_MW, 1) + " MW"));
-    g.onmouseleave = hideTip;
-    g.onclick = () => { st.se = row.subestacion; render(); };
+  legend("lg-opt", OPTS.map(o => [o.n, o.c]));
+  const rs = rows(), W = 680, H = 300, m = { l: 44, r: 6, t: 10, b: 58 }, w = W - m.l - m.r, h = H - m.t - m.b;
+  const svg = svgBox("ch-se", W, H), t = ticks(Math.max(...rs.map(r => Math.max(...OPTS.map(o => r[o.k])))));
+  yAxis(svg, m, w, h, t, "MW");
+  const gw = w / rs.length, bw = Math.min(14, (gw - 10) / OPTS.length - 2);
+  rs.forEach((r, i) => {
+    const x0 = m.l + i * gw + (gw - OPTS.length * (bw + 2)) / 2, g = el("g", {}, svg);
+    if (r.se === st.se) el("rect", { x: m.l + i * gw + 1, y: m.t, width: gw - 2, height: h, fill: "var(--grid)", rx: 6 }, g);
+    OPTS.forEach((o, j) => { const v = r[o.k], bh = h * v / t.max; bar(g, x0 + j * (bw + 2), m.t + h - bh, bw, bh, o.c); });
+    const lb = txt(g, m.l + i * gw + gw / 2, m.t + h + 14, r.se, { "text-anchor": "end", transform: `rotate(-35 ${m.l + i * gw + gw / 2} ${m.t + h + 14})` });
+    if (r.se === st.se) lb.setAttribute("class", "lab");
+    const hit = el("rect", { x: m.l + i * gw, y: m.t, width: gw, height: h + m.b, class: "hit" }, g);
+    hit.onmousemove = ev => showTip(ev, `<b>${r.se}</b> · PK ${nf(r.pk)}<br>` + OPTS.map(o => tipRow(o.n, nf(r[o.k], 1) + " MW", o.c)).join("") +
+      tipRow("Pico del tren (1 min)", nf(r.pico_min, 1) + " MW") + tipRow("Pico en N-1", nf(r.pico_N1, 1) + " MW") +
+      tipRow("Batería óptima", `${nf(r.batopt_MW, 1)} MW / ${nf(r.batopt_MWh, 1)} MWh`));
+    hit.onmouseleave = hideTip;
+    hit.onclick = () => { st.se = r.se; render(); };
+  });
+}
+function renderCmp() {
+  legend("lg-lin", LINES.map(l => [D.lineas[l].corto, LCOL[l]]));
+  const W = 440, H = 300, m = { l: 132, r: 52, t: 6, b: 6 }, w = W - m.l - m.r, h = H - m.t - m.b;
+  const svg = svgBox("ch-cmp", W, H);
+  const v = (l, k) => fin(l, k).cpd_MW_red;
+  const max = ticks(Math.max(...OPT5.flatMap(o => LINES.map(l => v(l, o.k))))).max;
+  const gh = h / OPT5.length, bh = Math.min(16, (gh - 12) / 2);
+  OPT5.forEach((o, i) => {
+    const y0 = m.t + i * gh, g = el("g", {}, svg);
+    txt(g, m.l - 8, y0 + gh / 2 + 4, o.n, { "text-anchor": "end" });
+    LINES.forEach((l, j) => {
+      const y = y0 + (gh - 2 * bh - 3) / 2 + j * (bh + 3), val = v(l, o.k), bw = w * val / max;
+      hbar(g, m.l, y, bw, bh, LCOL[l]);
+      txt(g, m.l + bw + 5, y + bh - 3, nf(val), { class: "mut" });
+    });
+    const hit = el("rect", { x: 0, y: y0, width: W, height: gh, class: "hit" }, g);
+    hit.onmousemove = ev => showTip(ev, `<b>${o.n}</b>` + LINES.map(l => tipRow(D.lineas[l].corto, `${nf(v(l, o.k))} MW · ${fin(l, o.k).emplazamientos} subest.`, LCOL[l])).join(""));
+    hit.onmouseleave = hideTip;
+  });
+  el("line", { x1: m.l, x2: m.l, y1: m.t, y2: m.t + h, stroke: "var(--border)" }, svg);
+}
+
+// ---------- perfil de la linea ----------
+function renderPerfil() {
+  const g0 = G(), rs = rows();
+  document.getElementById("t-perfil").textContent = `${g0.nombre} · ${nf(g0.L)} km · ${g0.sistema} · subestaciones ${g0.pos_subestaciones}`;
+  const W = 1100, H = 280, m = { l: 48, r: 14, t: 56, b: 36 }, w = W - m.l - m.r, h = H - m.t - m.b;
+  const svg = svgBox("ch-perfil", W, H), zt = ticks(1300);
+  yAxis(svg, m, w, h, zt, "m");
+  const X = pk => m.l + w * pk / g0.L, Y = z => m.t + h - h * z / zt.max;
+  const pts = g0.cotas.map(([k, z]) => `${X(k)},${Y(z)}`).join(" L");
+  el("path", { d: `M${X(0)},${Y(0)} L${pts} L${X(g0.L)},${Y(0)}Z`, fill: "var(--terrain)" }, svg);
+  el("path", { d: `M${pts}`, fill: "none", stroke: "var(--text-3)", "stroke-width": 2 }, svg);
+  g0.estaciones.forEach(([n, k]) => {
+    el("line", { x1: X(k), x2: X(k), y1: m.t + h, y2: m.t + h + 5, stroke: "var(--text-3)" }, svg);
+    txt(svg, X(k), m.t + h + 18, n, { "text-anchor": k === 0 ? "start" : k === g0.L ? "end" : "middle", class: "mut" });
+  });
+  const fmax = Math.max(1, ...rs.map(r => r.firme));
+  rs.forEach(r => {
+    const z = g0.cotas.reduce((a, c) => Math.abs(c[0] - r.pk) < Math.abs(a[0] - r.pk) ? c : a)[1];
+    const x = X(r.pk), y = Y(z), rad = 4 + 10 * Math.sqrt(r.firme / fmax), g = el("g", {}, svg);
+    el("line", { x1: x, x2: x, y1: y, y2: m.t - 26, stroke: "var(--border)", "stroke-dasharray": "3 3" }, g);
+    el("circle", { cx: x, cy: m.t - 26, r: rad, fill: "var(--o1)", stroke: "var(--surface)", "stroke-width": 2, opacity: r.firme > 0 ? 1 : .35 }, g);
+    if (r.se === st.se) el("circle", { cx: x, cy: m.t - 26, r: rad + 4, fill: "none", stroke: "var(--text)", "stroke-width": 1.5 }, g);
+    const hit = el("circle", { cx: x, cy: m.t + h / 2, r: 22, class: "hit" }, g);
+    el("rect", { x: x - 14, y: m.t - 44, width: 28, height: h + 44, class: "hit" }, g).onmousemove = hit.onmousemove = ev => showTip(ev,
+      `<b>${r.se}</b> · PK ${nf(r.pk)} · ${nf(z)} m<br>` + tipRow("Firme (hoy)", nf(r.firme, 1) + " MW", "var(--o1)") +
+      tipRow("Batería óptima", nf(r.bateria_opt, 1) + " MW", "var(--o4)") + tipRow("Carga media del tren", nf(r.media, 1) + " MW") + tipRow("Pico (1 min)", nf(r.pico_min, 1) + " MW"));
+    g.onmouseleave = hideTip; g.onclick = () => { st.se = r.se; render(); };
   });
 }
 
-// ---------- total por escenario de acceso ----------
-function renderTot() {
-  const box = document.getElementById("ch-tot"); box.innerHTML = "";
-  const W = box.clientWidth, H = 300, m = { t: 12, r: 8, b: 40, l: 56 };
-  const w = W - m.l - m.r, h = H - m.t - m.b;
-  const tots = ACCESOS.map(a => {
-    const r = D.capacidad.filter(x => x.acceso_MW === a && x.carga_x === st.carga);
-    return Object.fromEntries(SERIES.map(s => [s.key, r.reduce((t, x) => t + x[s.key], 0)]));
-  });
-  const max = niceMax(Math.max(1, ...D.capacidad.length ? ACCESOS.flatMap(a => CARGAS.map(c =>
-    D.capacidad.filter(x => x.acceso_MW === a && x.carga_x === c).reduce((t, x) => t + x.con_bateria_MW, 0))) : [1]));
-  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, height: H }, box);
-  yAxis(svg, m, w, h, max, "MW");
-  const gw = w / ACCESOS.length, bw = Math.min(26, (gw - 16) / 3 - 2);
-  tots.forEach((t, i) => {
-    const gx = m.l + i * gw, x0 = gx + (gw - (bw * 3 + 4)) / 2, a = ACCESOS[i];
-    const g = el("g", { style: "cursor:pointer" }, svg);
-    if (a === st.acceso) el("rect", { x: gx + 2, y: m.t, width: gw - 4, height: h, fill: "var(--grid)", rx: 6 }, g);
-    SERIES.forEach((s, j) => { const bh = h * t[s.key] / max; bar(g, x0 + j * (bw + 2), m.t + h - bh, bw, bh, s.c); });
-    const lbl = el("text", { x: gx + gw / 2, y: H - m.b + 18, "text-anchor": "middle" }, g);
-    lbl.textContent = a + " MW"; if (a === st.acceso) lbl.setAttribute("style", "fill:var(--text);font-weight:600");
-    if (gw > 90) el("text", { x: gx + gw / 2, y: H - m.b + 32, "text-anchor": "middle", style: "fill:var(--text-3);font-size:11px" }, g).textContent = "por subestación";
-    el("rect", { x: gx, y: m.t, width: gw, height: h + 34, fill: "transparent" }, g);
-    g.onmousemove = ev => showTip(ev, `<b>Acceso ${a} MW</b> · carga ${xLabel(st.carga)}<br>` +
-      SERIES.map(s => tipRow(s.name, nf(t[s.key]) + " MW", s.c)).join(""));
-    g.onmouseleave = hideTip;
-    g.onclick = () => { st.acceso = a; render(); };
-  });
-}
-
-// ---------- curva del día ----------
-function renderDia() {
-  const se = st.se, lim = 0.9 * st.acceso, f = st.carga;
-  document.getElementById("t-dia").textContent = `Carga del tren a lo largo del día · ${se} (PK ${pk(se)}) · acceso ${st.acceso} MW · carga ${xLabel(f)}`;
-  const box = document.getElementById("ch-dia"); box.innerHTML = "";
-  const L = D.minuto[se].map(v => v * f), N = L.length;
-  const W = box.clientWidth, H = 300, m = { t: 12, r: 12, b: 28, l: 48 };
-  const w = W - m.l - m.r, h = H - m.t - m.b;
-  const max = niceMax(Math.max(lim, ...L) * 1.05);
-  const X = i => m.l + w * i / N, Y = v => m.t + h - h * Math.min(v, max) / max;
-  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, height: H }, box);
-  // franja sin trenes (puede cruzar la medianoche)
-  const n = D.noche, a = n.inicio, b = n.inicio + n.minutos;
-  [[a, Math.min(b, N)], [0, Math.max(0, b - N)]].forEach(([s, e]) => {
-    if (e > s) el("rect", { x: X(s), y: m.t, width: X(e) - X(s), height: h, fill: "var(--night)" }, svg);
-  });
-  yAxis(svg, m, w, h, max, "MW");
-  for (let hr = 0; hr <= 24; hr += (w < 500 ? 6 : 3))
-    el("text", { x: X(hr * 60), y: H - 8, "text-anchor": "middle" }, svg).textContent = hhmm(hr * 60 % 1440).replace(":00", "h");
-  // hueco libre entre la carga y el límite
-  let d = `M${X(0)},${Y(lim)}`;
-  for (let i = 0; i < N; i++) d += `L${X(i)},${Y(Math.min(L[i], lim))}`;
-  d += `L${X(N)},${Y(Math.min(L[N - 1], lim))}L${X(N)},${Y(lim)}Z`;
-  el("path", { d, fill: "var(--free)" }, svg);
-  el("line", { x1: m.l, x2: m.l + w, y1: Y(lim), y2: Y(lim), stroke: "var(--limit)", "stroke-width": 2, "stroke-dasharray": "6 4" }, svg);
-  el("text", { x: m.l + w - 4, y: Y(lim) - 6, "text-anchor": "end", style: "fill:var(--text)" }, svg).textContent = `Límite ${nf(lim)} MW`;
-  el("path", { d: "M" + L.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join("L"), fill: "none", stroke: "var(--s1)", "stroke-width": 1.5, "stroke-linejoin": "round" }, svg);
-  // cruz y tooltip
-  const cross = el("line", { y1: m.t, y2: m.t + h, stroke: "var(--text-3)", "stroke-width": 1, visibility: "hidden" }, svg);
-  const dot = el("circle", { r: 4, fill: "var(--s1)", stroke: "var(--surface)", "stroke-width": 2, visibility: "hidden" }, svg);
-  const hit = el("rect", { x: m.l, y: m.t, width: w, height: h, fill: "transparent" }, svg);
-  hit.onmousemove = ev => {
-    const p = svg.createSVGPoint(); p.x = ev.clientX; p.y = ev.clientY;
-    const q = p.matrixTransform(svg.getScreenCTM().inverse());
-    const i = Math.max(0, Math.min(N - 1, Math.round((q.x - m.l) / w * N)));
-    cross.setAttribute("x1", X(i)); cross.setAttribute("x2", X(i)); cross.setAttribute("visibility", "visible");
-    dot.setAttribute("cx", X(i)); dot.setAttribute("cy", Y(L[i])); dot.setAttribute("visibility", "visible");
-    showTip(ev, `<b>${hhmm(i)}</b> · ${se}<br>` + tipRow("Carga del tren", nf(L[i], 1) + " MW", "var(--s1)") +
-      tipRow("Hueco libre", nf(Math.max(0, lim - L[i]), 1) + " MW", "var(--s3)"));
-  };
-  hit.onmouseleave = () => { hideTip(); cross.setAttribute("visibility", "hidden"); dot.setAttribute("visibility", "hidden"); };
-}
-
-// ---------- mapa de calor hora × subestación ----------
+// ---------- mapa de calor ----------
 function mix(t) {
   const cs = getComputedStyle(document.documentElement);
-  const hex = s => s.trim().match(/\w\w/g).map(x => parseInt(x, 16));
-  const a = hex(cs.getPropertyValue("--seq-0")), b = hex(cs.getPropertyValue("--seq-1"));
+  const p = s => s.trim().match(/\w\w/g).map(x => parseInt(x, 16));
+  const a = p(cs.getPropertyValue("--seq-0")), b = p(cs.getPropertyValue("--seq-1"));
   return `rgb(${a.map((v, i) => Math.round(v + (b[i] - v) * t)).join(",")})`;
 }
 function renderHeat() {
-  const box = document.getElementById("ch-heat"); box.innerHTML = "";
-  const f = st.carga, W = box.clientWidth, m = { t: 6, r: 8, b: 26, l: 82 };
-  const cell = 22, H = m.t + m.b + SES.length * cell, w = W - m.l - m.r, cw = w / 24;
-  const vals = SES.map(se => D.hora_media[se].map(v => v * f));
-  const max = Math.max(1, ...vals.flat());
-  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, height: H }, box);
-  SES.forEach((se, r) => {
-    el("text", { x: m.l - 8, y: m.t + r * cell + cell / 2 + 4, "text-anchor": "end" }, svg).textContent = `${se} · PK ${pk(se)}`;
-    vals[r].forEach((v, c) => {
-      const rc = el("rect", { x: m.l + c * cw + 1, y: m.t + r * cell + 1, width: Math.max(1, cw - 2), height: cell - 2, rx: 3,
-        fill: mix(Math.sqrt(v / max)) }, svg);
-      rc.onmousemove = ev => showTip(ev, `<b>${se}</b> · ${hhmm(c * 60)}–${hhmm(c * 60 + 60)}<br>` + tipRow("Carga media", nf(v, 1) + " MW"));
-      rc.onmouseleave = hideTip;
+  const hm = D.hora_media[st.linea], ses = SES(), W = 540, rh = 17, m = { l: 92, r: 6, t: 4, b: 24 };
+  const H = m.t + ses.length * rh + m.b, w = W - m.l - m.r, cw = w / 24, svg = svgBox("ch-heat", W, H);
+  const max = Math.max(...ses.flatMap(s => hm[s]));
+  ses.forEach((se, i) => {
+    const lb = txt(svg, m.l - 6, m.t + i * rh + rh / 2 + 4, se, { "text-anchor": "end" });
+    if (se === st.se) lb.setAttribute("class", "lab");
+    hm[se].forEach((v, hr) => {
+      const r = el("rect", { x: m.l + hr * cw + 1, y: m.t + i * rh + 1, width: cw - 2, height: rh - 2, rx: 2, fill: mix(Math.sqrt(v / max)) }, svg);
+      r.onmousemove = ev => showTip(ev, `<b>${se}</b> · ${String(hr).padStart(2, "0")}:00–${String(hr + 1).padStart(2, "0")}:00<br>${nf(v, 1)} MW de media`);
+      r.onmouseleave = hideTip; r.style.cursor = "pointer"; r.onclick = () => { st.se = se; render(); };
     });
   });
-  for (let c = 0; c < 24; c += (cw < 26 ? 3 : 1))
-    el("text", { x: m.l + c * cw + cw / 2, y: H - 8, "text-anchor": "middle" }, svg).textContent = c + "h";
+  for (let hr = 0; hr <= 24; hr += 3) txt(svg, m.l + hr * cw, H - 8, String(hr).padStart(2, "0") + "h", { "text-anchor": "middle", class: "mut" });
+}
+
+// ---------- sensibilidad al acceso ----------
+function renderSens() {
+  legend("lg-sens", OPTS.map(o => [o.n, o.c, "line"]));
+  const accs = ACCS.filter(a => !isNaN(+a)), W = 540, H = 250, m = { l: 50, r: 70, t: 10, b: 28 }, w = W - m.l - m.r, h = H - m.t - m.b;
+  const svg = svgBox("ch-sens", W, H), val = (a, k) => sum(rows(st.linea, a, st.carga), k);
+  const t = ticks(Math.max(...accs.flatMap(a => OPTS.map(o => val(a, o.k)))));
+  yAxis(svg, m, w, h, t, "MW");
+  const X = a => m.l + w * (+a - 30) / (120 - 30), Y = v => m.t + h - h * v / t.max;
+  accs.forEach(a => txt(svg, X(a), H - 8, a + " MW", { "text-anchor": "middle", class: "mut" }));
+  OPTS.forEach(o => {
+    el("path", { d: "M" + accs.map(a => `${X(a)},${Y(val(a, o.k))}`).join(" L"), fill: "none", stroke: o.c, "stroke-width": 2 }, svg);
+    accs.forEach(a => {
+      const c = el("circle", { cx: X(a), cy: Y(val(a, o.k)), r: 4.5, fill: o.c, stroke: "var(--surface)", "stroke-width": 2 }, svg);
+      c.onmousemove = ev => showTip(ev, `<b>${accLabel(a)} por subestación</b><br>` + OPTS.map(p => tipRow(p.n, nf(val(a, p.k)) + " MW", p.c)).join(""));
+      c.onmouseleave = hideTip;
+    });
+  });
+  const a = accs[accs.length - 1];
+  txt(svg, X(a) + 8, Y(val(a, "bateria_opt")) + 4, "batería", { class: "mut" });
+  txt(svg, X(a) + 8, Y(val(a, "firme")) + 4, "firme", { class: "mut" });
+  if (!isNaN(+st.acceso)) el("line", { x1: X(st.acceso), x2: X(st.acceso), y1: m.t, y2: m.t + h, stroke: "var(--text-3)", "stroke-dasharray": "2 3" }, svg);
+}
+
+// ---------- perfil del dia del CPD ----------
+function dayProfile(r, opt) {
+  const L = D.minuto[st.linea][st.se].map(v => v * st.carga), cap = 0.9 * r.acceso_MW, Dm = r[opt];
+  const out = { L, cap, D: Dm, dc: [], bat_out: [], bat_in: [], cut: [] };
+  if (opt === "bateria_opt") {
+    const Pb = r.batopt_MW, Eb = r.batopt_MWh; let e = Eb;
+    for (let pass = 0; pass < 2; pass++) for (let i = 0; i < 1440; i++) {
+      const Hh = Math.max(0, cap - L[i]); let dis = 0, ch = 0;
+      if (Dm > Hh) { dis = Math.min(Dm - Hh, Pb, e * 60); e -= dis / 60; }
+      else { ch = Math.min(Hh - Dm, Pb, (Eb - e) * 60); e += ch / 60; }
+      if (pass) { out.dc.push(Dm - dis); out.bat_out.push(dis); out.bat_in.push(ch); out.cut.push(0); }
+    }
+  } else for (let i = 0; i < 1440; i++) {
+    const Hh = Math.max(0, cap - L[i]), d = opt === "flexible" ? Math.min(Dm, Hh) : Dm;
+    out.dc.push(d); out.cut.push(Dm - d); out.bat_out.push(0); out.bat_in.push(0);
+  }
+  return out;
+}
+function renderDia() {
+  const r = row(), o = OPTS.find(x => x.k === st.opt), p = dayProfile(r, st.opt), nt = D.noche[st.linea];
+  document.getElementById("t-dia").textContent = `Un día en ${r.se} con un centro de datos de ${nf(p.D)} MW (${o.n.toLowerCase()})`;
+  document.getElementById("n-dia").textContent =
+    `Medias de 1 minuto. El tren tiene prioridad: el centro de datos usa el hueco que deja bajo el límite utilizable (90 % de ${nf(r.acceso_MW)} MW de acceso). ` +
+    ({ firme: "En la opción firme el centro de datos es constante y cabe incluso con una subestación vecina caída.",
+       sin_bateria: "Sin batería el centro de datos es constante y cabe en el peor minuto en operación normal.",
+       flexible: "Con un 30 % flexible, el centro de datos baja su consumo en los picos del tren (zona rayada).",
+       bateria_opt: "La batería se descarga en los picos del tren y se recarga con el hueco que queda." })[st.opt];
+  legend("lg-dia", [["Tren", "var(--train)"], ["Centro de datos (red)", o.c], ...(st.opt === "flexible" ? [["Recorte del centro de datos", o.c, "hatch"]] : []),
+    ...(st.opt === "bateria_opt" ? [["Carga de la batería", "var(--batt)"], ["Batería al centro de datos", "var(--batt)", "hatch"]] : []),
+    ["Límite utilizable", "var(--limit)", "dash"], ["Sin trenes en la línea", "var(--night)"]]);
+  const W = 1100, H = 300, m = { l: 48, r: 14, t: 10, b: 26 }, w = W - m.l - m.r, h = H - m.t - m.b;
+  const svg = svgBox("ch-dia", W, H), t = ticks(Math.max(r.acceso_MW, ...p.L.map((v, i) => v + p.dc[i] + p.bat_in[i] + p.bat_out[i] + p.cut[i])));
+  const X = i => m.l + w * i / 1440, Y = v => m.t + h - h * v / t.max;
+  const defs = el("defs", {}, svg);
+  [["hz-o", o.c], ["hz-b", "var(--batt)"]].forEach(([id, c]) => {
+    const pt = el("pattern", { id, width: 6, height: 6, patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)" }, defs);
+    el("rect", { width: 2.5, height: 6, fill: c }, pt);
+  });
+  for (let k = 0; k < 2; k++) {               // franja nocturna (puede cruzar medianoche)
+    const a = nt.inicio - k * 1440, b = a + nt.minutos, x0 = Math.max(0, a), x1 = Math.min(1440, b);
+    if (x1 > x0) el("rect", { x: X(x0), y: m.t, width: X(x1) - X(x0), height: h, fill: "var(--night)" }, svg);
+  }
+  yAxis(svg, m, w, h, t, "MW");
+  for (let hr = 0; hr <= 24; hr += 2) txt(svg, X(hr * 60), H - 6, String(hr).padStart(2, "0") + "h", { "text-anchor": "middle", class: "mut" });
+  const layers = [["L", "var(--train)"], ["dc", o.c], ["bat_in", "var(--batt)"], ["bat_out", "url(#hz-b)"], ["cut", "url(#hz-o)"]];
+  const base = new Array(1440).fill(0);
+  layers.forEach(([k, fill]) => {
+    const arr = p[k]; if (!arr.some(v => v > 0.01)) return;
+    const top = base.map((b, i) => b + arr[i]);
+    let d = "M" + top.map((v, i) => `${X(i)},${Y(v)}`).join(" L");
+    for (let i = 1439; i >= 0; i--) d += ` L${X(i)},${Y(base[i])}`;
+    el("path", { d: d + "Z", fill, stroke: "none", opacity: k === "L" ? .9 : 1 }, svg);
+    top.forEach((v, i) => base[i] = v);
+  });
+  el("line", { x1: m.l, x2: m.l + w, y1: Y(p.cap), y2: Y(p.cap), stroke: "var(--limit)", "stroke-width": 2, "stroke-dasharray": "6 4" }, svg);
+  txt(svg, m.l + w - 4, Y(p.cap) - 6, "límite utilizable", { "text-anchor": "end", class: "mut" });
+  const cross = el("line", { y1: m.t, y2: m.t + h, stroke: "var(--text-3)", visibility: "hidden" }, svg);
+  const hit = el("rect", { x: m.l, y: m.t, width: w, height: h, class: "hit" }, svg);
+  hit.onmousemove = ev => {
+    const b = svg.getBoundingClientRect(), i = Math.max(0, Math.min(1439, Math.round((ev.clientX - b.left) / b.width * W - m.l) / w * 1440 | 0));
+    cross.setAttribute("x1", X(i)); cross.setAttribute("x2", X(i)); cross.setAttribute("visibility", "visible");
+    showTip(ev, `<b>${hhmm(i)}</b>` + tipRow("Tren", nf(p.L[i], 1) + " MW", "var(--train)") + tipRow("Centro de datos (red)", nf(p.dc[i], 1) + " MW", o.c) +
+      (st.opt === "flexible" ? tipRow("Recortado", nf(p.cut[i], 1) + " MW") : "") +
+      (st.opt === "bateria_opt" ? tipRow("Batería → CPD", nf(p.bat_out[i], 1) + " MW", "var(--batt)") + tipRow("Carga batería", nf(p.bat_in[i], 1) + " MW", "var(--batt)") : "") +
+      tipRow("Hueco libre", nf(Math.max(0, p.cap - p.L[i] - p.dc[i] - p.bat_in[i]), 1) + " MW"));
+  };
+  hit.onmouseleave = () => { hideTip(); cross.setAttribute("visibility", "hidden"); };
+  // KPIs del dia
+  const E = a => a.reduce((x, y) => x + y, 0) / 60;
+  const Ecpd = E(p.dc) + E(p.bat_out), Eraw = p.D * 24;
+  const k = [
+    ["Centro de datos", nf(p.D), "MW", `${nf(p.D / 1.3)} MW de IT con PUE 1,3`],
+    ["Energía del centro de datos", nf(Ecpd), "MWh/día", `frente a ${nf(E(p.L))} MWh/día del tren`],
+    ["Uso del acceso", nf((E(p.L) + E(p.dc) + E(p.bat_in)) / (r.acceso_MW * 24) * 100, 0), "%", `solo el tren: ${nf(E(p.L) / (r.acceso_MW * 24) * 100, 1)} %`],
+    st.opt === "flexible" ? ["Energía recortada", nf(E(p.cut) / Math.max(Eraw, 1e-9) * 100, 2), "%", "del consumo del centro de datos"] :
+    st.opt === "bateria_opt" ? ["Batería", `${nf(r.batopt_MW)} / ${nf(r.batopt_MWh, 1)}`, "MW / MWh", `${nf(r.batopt_MEUR, 1)} M€ de inversión`] :
+    ["Pico del tren", nf(r.pico_min, 1), "MW", `${nf(r.pico_N1, 1)} MW si cae una vecina`],
+  ];
+  document.getElementById("kpis-dia").innerHTML = k.map(([l, v, u, d]) =>
+    `<div class="kpi"><div class="l">${l}</div><div class="v">${v}<small>${u}</small></div><div class="d">${d}</div></div>`).join("");
+}
+
+// ---------- curva de bateria ----------
+function renderBat() {
+  const r = row(), cv = (D.curvas[st.linea][st.acceso] || {});
+  document.getElementById("t-bat").textContent = `Batería en ${r.se} (${accLabel(st.acceso)}, carga ×1,0)`;
+  const W = 540, H = 270, m = { l: 46, r: 14, t: 10, b: 34 }, w = W - m.l - m.r, h = H - m.t - m.b;
+  const svg = svgBox("ch-bat", W, H), all = Object.values(cv).flat();
+  if (!all.length) return;
+  const tx = ticks(Math.max(...all.map(p => p[2]))), ty = ticks(Math.max(...all.map(p => p[0])));
+  yAxis(svg, m, w, h, ty, "MW");
+  const X = e => m.l + w * e / tx.max, Y = v => m.t + h - h * v / ty.max;
+  for (let v = 0; v <= tx.max + 1e-9; v += tx.step) txt(svg, X(v), m.t + h + 16, nf(v, tx.step < 1 ? 1 : 0), { "text-anchor": "middle", class: "mut" });
+  txt(svg, m.l + w, H - 2, "energía de la batería (MWh)", { "text-anchor": "end", class: "mut" });
+  const path = pts => "M" + pts.map(p => `${X(p[2])},${Y(p[0])}`).join(" L");
+  Object.entries(cv).forEach(([se, pts]) => { if (se !== st.se) el("path", { d: path(pts), fill: "none", stroke: "var(--border)", "stroke-width": 1.5 }, svg); });
+  const pts = cv[st.se] || [];
+  el("path", { d: path(pts), fill: "none", stroke: "var(--o4)", "stroke-width": 2.5 }, svg);
+  const rr = D.capacidad.find(x => x.linea === st.linea && String(x.acceso) === st.acceso && x.carga_x === 1 && x.se === st.se);
+  if (rr) {
+    el("circle", { cx: X(rr.batopt_MWh), cy: Y(rr.bateria_opt), r: 6, fill: "var(--o4)", stroke: "var(--surface)", "stroke-width": 2 }, svg);
+    txt(svg, X(rr.batopt_MWh) + 9, Y(rr.bateria_opt) + 14, `óptimo: ${nf(rr.bateria_opt)} MW con ${nf(rr.batopt_MW)} MW / ${nf(rr.batopt_MWh, 1)} MWh`, { class: "lab" });
+  }
+  const hit = el("rect", { x: m.l, y: m.t, width: w, height: h, class: "hit" }, svg);
+  hit.onmousemove = ev => {
+    const b = svg.getBoundingClientRect(), e = ((ev.clientX - b.left) / b.width * W - m.l) / w * tx.max;
+    const p = pts.reduce((a, q) => Math.abs(q[2] - e) < Math.abs(a[2] - e) ? q : a, pts[0]);
+    if (p) showTip(ev, `<b>${st.se}</b>` + tipRow("Centro de datos", nf(p[0], 1) + " MW", "var(--o4)") + tipRow("Batería", `${nf(p[1], 1)} MW / ${nf(p[2], 2)} MWh`));
+  };
+  hit.onmouseleave = hideTip;
+}
+
+// ---------- finanzas ----------
+function renderFin() {
+  legend("lg-fin", LINES.map(l => [D.lineas[l].corto, LCOL[l]]));
+  const W = 540, H = 270, m = { l: 150, r: 60, t: 6, b: 6 }, w = W - m.l - m.r, h = H - m.t - m.b;
+  const svg = svgBox("ch-fin", W, H), max = ticks(Math.max(...OPT5.flatMap(o => LINES.map(l => fin(l, o.k).ingreso_adif_alto_MEUR_año)))).max;
+  const gh = h / OPT5.length, bh = Math.min(14, (gh - 12) / 2);
+  OPT5.forEach((o, i) => {
+    const y0 = m.t + i * gh, g = el("g", {}, svg);
+    txt(g, m.l - 8, y0 + gh / 2 + 4, o.n, { "text-anchor": "end" });
+    LINES.forEach((l, j) => {
+      const f = fin(l, o.k), y = y0 + (gh - 2 * bh - 3) / 2 + j * (bh + 3), X = v => m.l + w * v / max;
+      hbar(g, m.l, y, X(f.ingreso_adif_MEUR_año) - m.l, bh, LCOL[l]);
+      el("line", { x1: X(f.ingreso_adif_bajo_MEUR_año), x2: X(f.ingreso_adif_alto_MEUR_año), y1: y + bh / 2, y2: y + bh / 2, stroke: "var(--text-3)", "stroke-width": 1 }, g);
+      txt(g, X(f.ingreso_adif_alto_MEUR_año) + 5, y + bh - 3, nf(f.ingreso_adif_MEUR_año, 1), { class: "mut" });
+    });
+    const hit = el("rect", { x: 0, y: y0, width: W, height: gh, class: "hit" }, g);
+    hit.onmousemove = ev => showTip(ev, `<b>${o.n}</b>` + LINES.map(l => { const f = fin(l, o.k);
+      return tipRow(D.lineas[l].corto, `${nf(f.ingreso_adif_MEUR_año, 1)} M€/año (${nf(f.ingreso_adif_bajo_MEUR_año, 1)}–${nf(f.ingreso_adif_alto_MEUR_año, 1)})`, LCOL[l]); }).join(""));
+    hit.onmouseleave = hideTip;
+  });
+  el("line", { x1: m.l, x2: m.l, y1: m.t, y2: m.t + h, stroke: "var(--border)" }, svg);
+
+  document.getElementById("t-fin").textContent = `${G().corto} · ${accLabel(st.acceso)} por subestación · carga ×${nf(st.carga, 1)}`;
+  const cols = [["Opción", r => r.opcion_txt, 1], ["Emplaz.", r => nf(r.emplazamientos)], ["CPD (MW red)", r => nf(r.cpd_MW_red)], ["CPD (MW IT)", r => nf(r.cpd_MW_IT)],
+    ["Energía CPD (GWh/año)", r => nf(r.energia_GWh_año)], ["Inversión CPD (M€)", r => nf(r.inversion_cpd_MEUR)], ["Inversión batería (M€)", r => nf(r.inversion_bateria_MEUR, 1)],
+    ["Ingresos Adif (M€/año)", r => `${nf(r.ingreso_adif_MEUR_año, 1)} <span style="color:var(--text-3)">(${nf(r.ingreso_adif_bajo_MEUR_año, 1)}–${nf(r.ingreso_adif_alto_MEUR_año, 1)})</span>`],
+    ["VAN ingresos Adif 20 años (M€)", r => nf(r.ingreso_adif_VAN_MEUR)], ["Conexiones evitadas (M€)", r => nf(r.conexiones_evitadas_MEUR)], ["Valor de adelantar 3 años (M€)", r => nf(r.valor_adelanto_MEUR)]];
+  const rs = OPT5.map(o => fin(st.linea, o.k));
+  document.getElementById("tb-fin").innerHTML = `<tr>${cols.map(c => `<th>${c[0]}</th>`).join("")}</tr>` +
+    rs.map(r => `<tr>${cols.map(c => `<td>${c[1](r)}</td>`).join("")}</tr>`).join("");
 }
 
 // ---------- tablas ----------
-function table(id, head, body) {
-  document.getElementById(id).innerHTML = "<thead><tr>" + head.map(h => `<th>${h}</th>`).join("") + "</tr></thead><tbody>" +
-    body.map(r => "<tr>" + r.map((c, i) => `<td${typeof c === "string" && i > 0 && isNaN(c.replace(/<[^>]+>/g, "").replace(/[.,\s%]/g, "")) ? ' class="txt"' : ""}>${c}</td>`).join("") + "</tr>").join("") + "</tbody>";
+function table(id, head, body, selFn) {
+  document.getElementById(id).innerHTML = `<tr>${head.map(h => `<th>${h}</th>`).join("")}</tr>` +
+    body.map((r, i) => `<tr${selFn && selFn(i) ? ' class="sel"' : ""}>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("");
 }
 function renderTables() {
-  document.getElementById("t-tabla").textContent = `Detalle por subestación · acceso ${st.acceso} MW · carga ${xLabel(st.carga)}`;
-  const r = rows();
-  const sum = k => r.reduce((a, x) => a + x[k], 0);
-  table("tb-se", ["Subestación", "PK (km)", "Uso medio del acceso", "Pico en N-1 (MW)", "Firme (MW)", "Sin batería (MW)", "Con batería (MW)", "Batería (MW)", "Batería (MWh)"],
-    r.map(x => [x.subestacion, nf(x.pk_km), nf(x.uso_medio_pct, 1) + " %", nf(x.pico_N1_MW, 1), nf(x.firme_MW, 1), nf(x.sin_bateria_MW, 1),
-      nf(x.con_bateria_MW, 1), nf(x.bateria_MW, 1), nf(x.bateria_MWh, 1)])
-      .concat([["<b>Total</b>", "", "", "", `<b>${nf(sum("firme_MW"))}</b>`, `<b>${nf(sum("sin_bateria_MW"))}</b>`, `<b>${nf(sum("con_bateria_MW"))}</b>`, "", ""]]));
+  const rs = rows();
+  document.getElementById("t-tabla").textContent = `Detalle por subestación · ${G().corto} · ${accLabel(st.acceso)} · carga ×${nf(st.carga, 1)}`;
+  table("tb-se", ["Subestación", "PK", "Acceso (MW)", "Uso medio", "Pico 1 min", "Pico N-1", "Firme", "Firme + flex", "Sin batería", "Flexible 30 %", "Recorte flex", "Bat. 20 MW/20 MWh", "Bat. óptima", "Batería óptima (MW / MWh)", "Coste batería (M€)"],
+    rs.map(r => [r.se, nf(r.pk), nf(r.acceso_MW), nf(r.uso_medio_pct, 1) + " %", nf(r.pico_min, 1), nf(r.pico_N1, 1), nf(r.firme, 1), nf(r.firme_flex, 1), nf(r.sin_bateria, 1),
+      nf(r.flexible, 1), nf(r.flex_recorte_pct, 2) + " %", nf(r.bateria_20, 1), nf(r.bateria_opt, 1), `${nf(r.batopt_MW, 1)} / ${nf(r.batopt_MWh, 1)}`, nf(r.batopt_MEUR, 1)]),
+    i => rs[i].se === st.se);
 }
-function renderStatic() {
-  table("tb-sim", ["Escenario", "Trenes", "Tren-km", "Energía de red (MWh)", "Devuelta a la red (MWh)", "kWh/tren-km", "Potencia media línea (MW)", "Minutos sin trenes"],
-    D.simulacion.map(s => [s.escenario, nf(s.trenes), nf(s.tren_km), nf(s.energia_red_MWh, 1), nf(s.devuelta_red_MWh, 1), nf(s.kWh_tren_km, 1),
-      nf(s.potencia_media_linea_MW, 1), nf(s.minutos_sin_trenes)]));
-  table("tb-sup", ["Parámetro", "Valor", "Fuente / comentario"],
-    D.supuestos.map(s => [s.parametro, `${s.valor}${s.unidad ? " " + s.unidad : ""}`, s.fuente]));
-  document.querySelectorAll("#tb-sup td").forEach(td => td.classList.add("txt"));
+function renderStaticTables() {
+  table("tb-sim", ["Línea", "Escenario", "Trenes", "Tren-km", "Energía de red (MWh)", "Regenerada (MWh)", "Devuelta a la red (MWh)", "kWh/tren-km", "Potencia media (MW)", "Pico de la línea (MW)"],
+    D.simulacion.map(r => [D.lineas[r.linea].corto, r.escenario, nf(r.trenes), nf(r.tren_km), nf(r.energia_red_MWh), nf(r.regenerada_MWh), nf(r.devuelta_red_MWh), nf(r.kWh_tren_km, 1),
+      nf(r.potencia_media_linea_MW, 1), !isFinite(r.pico_linea_MW) || r.pico_linea_MW === null ? "–" : nf(r.pico_linea_MW, 1)]));
+  table("tb-sup", ["Parámetro", "Valor", "Unidad", "Fuente"], D.supuestos.map(s => [s.parametro, `<span class="txt">${s.valor}</span>`, s.unidad, `<span class="txt">${s.fuente}</span>`]));
+  table("tb-supf", ["Parámetro", "Central", "Bajo", "Alto", "Unidad", "Fuente"], D.supuestos_fin.map(s => [s.parametro, nf(s.valor, s.valor % 1 ? 2 : 0), nf(s.bajo, s.bajo % 1 ? 2 : 0), nf(s.alto, s.alto % 1 ? 2 : 0), s.unidad, `<span class="txt">${s.fuente}</span>`]));
+  document.querySelectorAll("#tb-sup td:nth-child(2), #tb-sup td:nth-child(4), #tb-supf td:last-child").forEach(td => { td.style.whiteSpace = "normal"; td.style.textAlign = "left"; });
 }
 
 function render() {
-  document.querySelectorAll("#c-acceso button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.v === st.acceso));
-  document.querySelectorAll("#c-carga button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.v === st.carga));
-  sel.value = st.se;
-  renderHead(); renderSE(); renderTot(); renderDia(); renderHeat(); renderTables();
+  if (!SES().includes(st.se)) fillSE();
+  sel.value = st.se; pressed();
+  renderKPIs(); renderReg(); renderSE(); renderCmp(); renderPerfil(); renderHeat(); renderSens(); renderDia(); renderBat(); renderFin(); renderTables();
 }
-renderStatic(); render();
-let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(render, 120); });
+renderStatic(); renderStaticTables(); fillSE(); render();
 matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
 </script>
 </body>

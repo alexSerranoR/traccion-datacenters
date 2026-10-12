@@ -1,12 +1,12 @@
 # Subestaciones de alta velocidad y centros de datos
 
-¿Cuánta capacidad de conexión a la red tienen sin usar las subestaciones de tracción de la LAV
-Madrid–Zaragoza–Barcelona, y cuántos MW de centros de datos podrían compartirla sin afectar al
-servicio ferroviario?
+¿Cuánta capacidad de conexión a la red tienen sin usar las subestaciones de tracción de alta velocidad,
+y cuántos MW de centros de datos podrían compartirla sin afectar al servicio ferroviario? Se estudian
+dos líneas: Madrid–Zaragoza–Barcelona (alta densidad) y Madrid–Sevilla (baja densidad).
 
 Prueba de concepto para una propuesta de investigación. Los resultados son preliminares: varios
-parámetros clave (potencia de cada subestación, su ubicación exacta, su curva de carga real) no
-son públicos y se han supuesto.
+parámetros clave (potencia de cada subestación, su zona y PK exactos, su curva de carga real) no
+son públicos y se han estimado.
 
 ## Idea
 
@@ -17,40 +17,47 @@ son públicos y se han supuesto.
   transformador, podría usar la capacidad que el tren deja libre. El tren tiene siempre prioridad,
   y una batería cubre sus picos.
 
-## Resultados preliminares
+## Resultados preliminares (v2)
 
-Miércoles laborable, 199 trenes (Renfe según su GTFS y estimación de Iryo y Ouigo), 11
-subestaciones supuestas cada ~60 km:
+Miércoles laborable con Renfe (GTFS), Iryo (horarios reales) y Ouigo (frecuencias anunciadas), pendientes
+aproximadas y las subestaciones reales con el acceso que REE tiene concedido a cada una:
 
-| Acceso por subestación | Firme (resiste el fallo de una vecina) | Sin batería | Con batería de 20 MW / 20 MWh |
-|---|---|---|---|
-| 30 MW  | 0 MW   | 23 MW  | 226 MW  |
-| 60 MW  | 150 MW | 250 MW | 453 MW  |
-| 120 MW | 742 MW | 844 MW | 1.047 MW |
+| | Madrid–Barcelona (alta densidad) | Madrid–Sevilla (baja densidad) |
+|---|---|---|
+| Trenes / tren-km al día | 210 / 98.602 | 280 / 63.976 |
+| Energía del tren | 1.292 MWh/día (12,8 kWh/tren-km) | 723 MWh/día (10,9 kWh/tren-km) |
+| Subestaciones / acceso concedido | 13 / 516 MW | 12 / 512 MW |
+| **Hoy**: capacidad firme (resiste N-1) | 35 MW (49 con CPD flexible) | 174 MW (248 con CPD flexible) |
+| **Con reforma**: sin batería / CPD flexible 30 % | 70 / 100 MW | 227 / 314 MW |
+| **Con reforma** y batería óptima | 380 MW (89 MWh, 84 M€) | 412 MW (36 MWh, 46 M€) |
+| Acceso ampliado a los transformadores: firme / con batería | 595 / 1.046 MW | 292 / 544 MW |
 
-- Con 60 MW de acceso, los trenes usan de media solo el 5–8 % de la capacidad.
-- Casi 6 horas cada noche sin trenes en toda la línea.
-- Los picos del tren duran minutos: la batería necesaria es de mucha potencia y poca energía
-  (normalmente menos de 5 MWh).
-- El frenado regenerativo que vuelve a la red es poco (~27 MWh/día, menos del 3 %), porque en
-  alterna ya lo aprovechan otros trenes.
+- El tren usa de media el 6–10 % del acceso, pero sus picos de un minuto (30–45 MW) se acercan al acceso
+  concedido: Adif parece haber pedido a REE justo lo que necesitan sus picos.
+- Hoy el permiso de Adif no se puede ceder; lo que encaja es que Adif reduzca su permiso y el CPD pida acceso
+  propio en el mismo nudo. Eso solo libera la capacidad firme. Compartir el acceso con prioridad del tren
+  necesitaría una reforma.
+- La batería necesaria es de potencia y poca energía (unos 15 minutos).
+- Cifras financieras orientativas en `results/finanzas.csv` (canon a Adif, inversión, valor de no esperar a una
+  conexión propia), con los supuestos en `results/supuestos_financieros.csv`.
 
-Las tablas completas están en [`results/`](results/). Para consultarlas de forma visual, abre
-[`results/dashboard.html`](results/dashboard.html) con doble clic: es un panel interactivo que no
-necesita servidor ni internet, con selectores de acceso (30/60/120 MW), carga del tren (×1,0/×1,5)
-y subestación.
+Para consultarlo de forma visual, abre [`results/dashboard.html`](results/dashboard.html) con doble clic: panel
+interactivo sin servidor con conclusiones, comparación de líneas, perfil de la línea, perfil de un día de centro de
+datos (firme, flexible, con batería), dimensionado de baterías y cifras financieras.
 
 ## Estructura
 
 ```
-src/extract.py    1. Lee el GTFS y saca los trenes que usan la LAV, como tramos sobre el PK
-src/sim.py        2. Simula cada tren segundo a segundo y suma la potencia por subestación
-src/analysis.py   3. Calcula la capacidad compartible (firme, normal, con batería) por escenario
-src/export.py     4. Exporta las tablas de results/
-src/dashboard.py  5. Genera el panel results/dashboard.html a partir de esas tablas
-run_all.py        Ejecuta los cinco pasos
-data/             Instrucciones para descargar el GTFS de Renfe (no se versiona)
-results/          Tablas de resultados (CSV)
+src/lines.py      Definición de las líneas: estaciones, perfil de cotas, subestaciones, Iryo y Ouigo
+src/extract.py    1. Lee el GTFS y saca los trenes que usan cada línea, como tramos sobre el PK
+src/sim.py        2. Simula cada tren segundo a segundo (con pendientes) y suma la potencia por subestación
+src/analysis.py   3. Capacidad para CPD por subestación: firme, sin batería, flexible, batería óptima
+src/finance.py    4. Cifras financieras orientativas
+src/export.py     5. Exporta las tablas de results/
+src/dashboard.py  6. Genera el panel results/dashboard.html a partir de esas tablas
+run_all.py        Ejecuta todo para las dos líneas
+data/             Subestaciones y acceso de REE; instrucciones para el GTFS de Renfe (no se versiona)
+results/          Tablas de resultados (CSV) y panel
 docs/             Estado del arte y motivación
 ```
 
@@ -70,21 +77,21 @@ En Windows, usa `py` en lugar de `python` si hace falta.
 
 ## Supuestos principales (a contrastar con Adif)
 
-Están todos en [`results/supuestos.csv`](results/supuestos.csv) y en la cabecera de cada script.
-Los que más pesan:
+Están en [`results/supuestos.csv`](results/supuestos.csv), [`results/supuestos_financieros.csv`](results/supuestos_financieros.csv)
+y en la cabecera de cada script. Los que más pesan:
 
-1. **Capacidad de acceso de cada subestación.** Se prueban 30, 60 y 120 MW. Es el dato que más
-   cambia el resultado.
-2. **Ubicación de las subestaciones.** Repartidas cada ~60 km. Las reales están en IDEADIF (Adif).
-3. **Trenes de Iryo y Ouigo.** No están en el GTFS de Renfe; se añaden 22 por sentido.
-4. **Pendientes.** No se modelan, así que el consumo sale bajo (~11 kWh/tren-km). El escenario
-   de carga ×1,5 lo cubre.
-5. **Criterio N-1.** Si cae una subestación, cada vecina asume la mitad de su carga.
+1. **Acceso real y zona de cada subestación.** El acceso concedido es público (REE), pero en 6 subestaciones no se ha
+   identificado la posición y los PK son estimados (±10 km).
+2. **Pendientes.** Perfil de cotas aproximado (±50 m) a partir de estaciones y puertos; falta el perfil de Adif.
+3. **Horas de Ouigo.** Solo se conocen sus frecuencias.
+4. **Criterio N-1.** Si cae una subestación, cada vecina asume la mitad de su carga.
+5. **CPD flexible.** Un 30 % de su carga se puede recortar en los picos del tren.
+6. **Cifras financieras.** Canon a Adif de 40 €/kW·año (20–80), baterías a 0,20 M€/MW + 0,25 M€/MWh, 3 años de
+   espera evitados. Son órdenes de magnitud, no una valoración.
 
 ## Siguientes pasos
 
-- Pedir a Adif potencias y curvas de carga reales de las subestaciones (convenio o Portal de
-  Transparencia).
-- Añadir perfil de pendientes y posiciones reales de las subestaciones.
-- Modelar la carga del centro de datos con trazas reales y su parte desplazable.
-- Repetir para Madrid–Sevilla como caso de baja densidad.
+- Pedir a Adif potencias, zonas y curvas de carga reales de las subestaciones (solicitud de transparencia).
+- Perfil longitudinal real y horarios reales de Ouigo (GTFS del Punto de Acceso Nacional).
+- Margen de capacidad de cada nudo de REE para el escenario de ampliación.
+- Trazas reales de carga de centros de datos de IA para calibrar la parte flexible.
