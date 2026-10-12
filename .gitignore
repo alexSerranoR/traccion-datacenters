@@ -17,3 +17,6 @@ desktop.ini
 .vscode/
 .idea/
 data/gtfs
+# Ficheros temporales del vídeo
+video/build.html
+video/still_*.png

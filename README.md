@@ -45,6 +45,12 @@ Para consultarlo de forma visual, abre [`results/dashboard.html`](results/dashbo
 interactivo sin servidor con conclusiones, comparación de líneas, perfil de la línea, perfil de un día de centro de
 datos (firme, flexible, con batería), dimensionado de baterías y cifras financieras.
 
+## Vídeo explicativo
+
+[`video/trenes_y_centros_de_datos.mp4`](video/trenes_y_centros_de_datos.mp4): introducción animada de 55 s para
+público no técnico, con subtítulos y sin voz. El guion cronometrado y el origen de cada cifra están en
+[`video/guion.md`](video/guion.md); el vídeo se genera con `video/render.js` a partir de `video/escena.html`.
+
 ## Estructura
 
 ```
@@ -58,6 +64,7 @@ src/dashboard.py  6. Genera el panel results/dashboard.html a partir de esas tab
 run_all.py        Ejecuta todo para las dos líneas
 data/             Subestaciones y acceso de REE; instrucciones para el GTFS de Renfe (no se versiona)
 results/          Tablas de resultados (CSV) y panel
+video/            Vídeo explicativo, su guion y el código que lo genera
 docs/             Estado del arte y motivación
 ```
 
