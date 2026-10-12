@@ -1,14 +1,19 @@
 parametro,valor,unidad,fuente
-Día simulado,miércoles 21 oct 2026,,Horarios GTFS de Renfe (datos abiertos)
-Trenes de otros operadores,22 por sentido,,Supuesto: Iryo y Ouigo no están en el GTFS de Renfe; se clonan trenes Madrid–Barcelona desplazados 20 min
-Subestaciones,"11, cada ~60 km",,Supuesto: posiciones reales en IDEADIF de Adif
-Potencia máxima tren AVE,"8,8",MW,Ficha S-103 / S-112
-Masa tren AVE,425,t,Ficha S-103
-Potencia máxima Alvia / Avant,"4,8 / 4,4",MW,Fichas S-130 y S-121
-Margen de regularidad del horario,8,%,Supuesto habitual: el tren marcha más rápido y gasta el margen parado
+Día simulado,miércoles 21 oct 2026,,GTFS de Renfe descargado el 12/10/2026 (datos abiertos)
+Líneas,Madrid–Barcelona (621 km) y Madrid–Sevilla (471 km),,Alta y baja densidad de tráfico
+Trenes de Iryo,horarios reales,,Horarios de lunes a viernes de octubre de 2026 (blablacar.es)
+Trenes de Ouigo,6/sentido Madrid–Barcelona; 4 Madrid–Sevilla; 3 Madrid–Málaga,,"Frecuencias anunciadas (Hosteltur, dic. 2025). Horas supuestas entre las 7 y las 20 h"
+Tramos compartidos,"Levante (25 km), Toledo (53 km), Málaga (358 km)",,Trenes de otras líneas que usan parte de Madrid–Sevilla
+Subestaciones,13 en Madrid–Barcelona y 12 en Madrid–Sevilla (reales),,"Dossier de Adif, elEconomista 07/2025, nudos de REE; PK estimados ±10 km (data/subestaciones_traccion.csv)"
+Acceso a la red,concedido por REE (12–66 MW); ampliado: ~100 MW (2×25 kV) y ~55 MW (1×25 kV),,"REE, capacidad de acceso de demanda por posición (01/10/2026); 35–40 MW donde no se conoce"
+Pendientes,perfil de cotas aproximado (±50 m),,Supuesto: a sustituir por el perfil longitudinal de Adif
+Material,"AVE 425 t / 8,8 MW; Iryo 500 t / 9,8 MW; Ouigo 430 t / 9,3 MW",,"Fichas S-103/S-112, Frecciarossa 1000 y TGV Euroduplex (masa en carga estimada)"
+Alvia / Avant,"4,8 / 4,4",MW,Fichas S-130 y S-121
+Margen de regularidad del horario,8,%,El tren marcha más rápido y gasta el margen parado
 Rendimiento tracción / regeneración,85 / 80,%,Supuesto
-Pendientes,no modeladas,,"Limitación: se cubre con el escenario de carga ×1,5"
-Conexión del centro de datos,embarrado de AT (220/400 kV),,"Comparte la capacidad de acceso, no los transformadores de tracción"
+Conexión del centro de datos,embarrado de AT (220/400 kV),,"Transformador propio; comparte la capacidad de acceso, no los transformadores de tracción"
 Margen de seguridad sobre el acceso,10,%,Supuesto
 Contingencia N-1,+50 % de la carga de la vecina más cargada,,Supuesto simplificado
-Batería de referencia,20 MW / 20 MWh,,Supuesto
+Parte flexible del CPD,30,%,Supuesto: entrenamiento de IA y cargas por lotes que se pueden recortar
+Batería óptima,se amplía mientras cada MW extra de CPD cueste < 1 M€ en batería,,"0,20 M€/MW + 0,25 M€/MWh (supuesto)"
+Encaje regulatorio,«hoy» = solo capacidad firme; «con reforma» = acceso compartido con prioridad del tren,,Hilo «Encaje regulatorio»: el permiso de Adif no se puede ceder hoy

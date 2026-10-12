@@ -1,0 +1,26 @@
+linea,orden,subestacion,municipio,pk_est_km,nudo_ree,tension_kV,posicion_ree,acceso_ocupado_MW,transformadores_MVA,acceso_escenario_bajo_MW,acceso_escenario_alto_MW,confianza_nudo,confianza_pk,fuente_set,notas
+MZB,1,Villaverde Bajo,Madrid,5,VILLAVERDE BAJO (B),220,VVB220-VVGF1,32,2x60 (tipico),32,60,alta,media,BOE-B-2002-284127; REE 2026-10-01,Origen Iberdrola Distribucion; hoy nudo RdT
+MZB,2,Anchuelo,Anchuelo (Madrid),40,ANCHUELO,400,ANC400-GIF1,51,2x60 (tipico),51,100,alta,baja,CNMC 1571333; REE 2026-10-01,
+MZB,3,Brihuega,Fuentes de la Alcarria (Guadalajara),97,FUENTES DE LA ALCARRIA,400,FTE400-GIF2,45,2x60 (tipico),45,100,alta,baja,BOE 25-07-2001; REE 2026-10-01,
+MZB,4,Medinaceli,Medinaceli (Soria),155,MEDINACELI,400,MCL400-GIF2,66,2x60 (tipico),66,100,alta,baja,CNMC 1578063; REE 2026-10-01,Mayor acceso de la linea (rampas de Medinaceli)
+MZB,5,Terrer,Terrer (Zaragoza),212,TERRER,400,TEE400-GIF1,34,2x60 (tipico),34,100,alta,media,CNMC 1578074; REE 2026-10-01,
+MZB,6,Rueda de Jalón,Rueda de Jalón (Zaragoza),260,RUEDA DE JALON,400,RUD400-GIF2,12,2x60 (tipico),12,100,alta,baja,CNMC 1578526; REE 2026-10-01,12 MW anomalamente bajo: posible solo una posicion o valor pendiente; verificar
+MZB,7,Feria de Muestras,Zaragoza (oeste),292,desconocido (anillo 220 kV Zaragoza),220,,,2x60 (tipico),35,100,baja,baja,Dossier Adif LAV Madrid-Barcelona,Sin posicion identificada en REE; quiza alimentada desde distribucion
+MZB,8,Zaragoza,Zaragoza (sureste),310,AVE ZARAGOZA,220,AVZ220-GIF1,34,2x60 (tipico),34,100,media,media,Planificacion 2002-2011; REE 2026-10-01,
+MZB,9,Peñalba,Peñalba (Huesca),380,PEÑALBA,400,PBA400-GIF1,49,2x60 (tipico),49,100,alta,baja,CNMC 1578426; REE 2026-10-01,
+MZB,10,Lleida,Lleida (Segria),435,MANGRANERS (TAV),220,,,2x60,35,100,media,media,Planificacion 2002-2011 (Mangraners TAV),Posicion Adif no identificada en el listado REE
+MZB,11,L'Espluga,L'Espluga de Francoli (Tarragona),485,LA ESPLUGA,400,EPG400-TRP1,55,2x60,55,100,alta,baja,BOE 15-10-2004; Syneox; REE 2026-10-01,Codigo TRP = traccion (inferido: igual que SET Segovia y Olmedo)
+MZB,12,La Gornal,Castellet i la Gornal (Barcelona),550,CASTELLET,220,CLT220-GOR1,33,2x60,33,100,alta,baja,BOE 04-01-2006; REE 2026-10-01,
+MZB,13,Sant Boi,Sant Boi de Llobregat (Barcelona),608,desconocido (Sant Boi 220 o Begues 400/220),220,,,2x60,35,100,baja,baja,Dossier Adif LAV Madrid-Barcelona,Sin posicion identificada en REE
+MS,1,El Hornillo,Torrejon de Velasco/Pinto (Madrid),26,HORNILLO,220,HOR220-TF1,35,2x30 (tipico),35,55,alta,media,Transportes 06-02-2024; REE 2026-10-01,Codigo TF = traccion ferroviaria (inferido)
+MS,2,Añover,Añover de Tajo (Toledo),48,AÑOVER,220,ANV220-TF1,43,2x30 (tipico),43,55,alta,baja,elEconomista 07-2025; REE 2026-10-01,
+MS,3,Mora,Mora (Toledo),83,MORA,220,MOA220-TRP1,45,2x30 (tipico),45,55,alta,baja,elEconomista 07-2025; REE 2026-10-01,
+MS,4,El Emperador,Los Yebenes/Malagon (Toledo/C. Real),125,EL EMPERADOR,220,EMP220-TF1,42,2x30 (tipico),42,55,alta,baja,elEconomista 07-2025; REE 2026-10-01,
+MS,5,Ciudad Real,Ciudad Real,170,PICON,220,PCN220-CRF1,45,2x30 (tipico),45,55,media,media,elEconomista 07-2025; REE 2026-10-01,Asociacion SET Ciudad Real - nudo Picon inferida
+MS,6,La Nava,Puertollano/Brazatortas (C. Real),210,LA NAVA,220,NAV220-TF1,45,2x30 (tipico),45,55,alta,baja,elEconomista 07-2025; REE 2026-10-01,
+MS,7,Venta La Inés,Almodovar del Campo (C. Real),255,VENTA INES,220,VIN220-TF2,52.84,2x30 (tipico),52.84,55,alta,baja,elEconomista 07-2025; REE 2026-10-01,Inicio rampa de Sierra Morena
+MS,8,Arroyo Valle,Montoro (Cordoba),305,ARROYO VALLE,220,ARR220-TF1,39,2x30 (tipico),39,55,alta,baja,BOP Cordoba 2014; REE 2026-10-01,
+MS,9,La Lancha,Cordoba,340,LANCHA (inferido),220,,,2x30 (tipico),40,55,media,media,elEconomista 07-2025,Posicion no identificada en REE (quiza RdD)
+MS,10,Posadas,Posadas (Cordoba),378,ALMODOVAR DEL RIO (inferido),220,AMR220-GIF2,45,2x30 (tipico),45,55,baja,baja,elEconomista 07-2025; REE 2026-10-01,Codigo GIF sugiere que la posicion puede alimentar Cordoba-Malaga; asociacion dudosa
+MS,11,Lora del Río,Lora del Río (Sevilla),415,desconocido,220,,,2x30 (tipico),40,55,baja,baja,elEconomista 07-2025,Posicion no identificada en REE (quiza RdD)
+MS,12,Rinconada,La Rinconada (Sevilla),455,desconocido,220,,,2x30 (tipico),40,55,baja,baja,elEconomista 07-2025,Posicion no identificada en REE (quiza RdD)

@@ -1,3 +1,5 @@
-escenario,trenes,tren_km,energia_red_MWh,devuelta_red_MWh,kWh_tren_km,potencia_media_linea_MW,minutos_sin_trenes
-Solo Renfe (GTFS),155,64447,748.3,26.3,11.2,31.2,363
-Renfe + Iryo y Ouigo estimados,199,91771,1082.5,27.5,11.5,45.1,343
+linea,escenario,trenes,tren_km,energia_red_MWh,devuelta_red_MWh,regenerada_MWh,kWh_tren_km,potencia_media_linea_MW,pico_linea_MW,minutos_sin_trenes,trenes_Renfe,trenes_Iryo,trenes_Ouigo,kWh_tren_km_tipo
+MZB,Solo Renfe (GTFS),170,73762,927.0,32.6,50.6,12.1,38.6,,,170,0,0,"{""ALVIA"": 6.9, ""AVE"": 13.1, ""AVANT"": 8.1}"
+MZB,Renfe + Iryo + Ouigo,210,98602,1291.9,31.0,67.9,12.8,53.8,151.2,352.0,170,28,12,"{""ALVIA"": 6.9, ""AVE"": 13.1, ""AVANT"": 8.1, ""IRYO"": 15.5, ""OUIGO"": 12.9}"
+MS,Solo Renfe (GTFS),245,49073,532.6,22.2,38.9,10.4,22.2,,,245,0,0,"{""ALVIA"": 7.8, ""AVE"": 11.9, ""AVANT"": 7.2}"
+MS,Renfe + Iryo + Ouigo,280,63976,722.7,23.0,50.2,10.9,30.1,89.8,374.0,245,21,14,"{""ALVIA"": 7.8, ""AVE"": 11.9, ""AVANT"": 7.2, ""IRYO"": 12.6, ""OUIGO"": 12.7}"

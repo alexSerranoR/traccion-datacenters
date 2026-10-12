@@ -1,0 +1,15 @@
+parametro,valor,bajo,alto,unidad,fuente
+canon_adif,40.0,20.0,80.0,EUR/kW·año,"Supuesto: pago del CPD a Adif por usar capacidad de acceso ya construida. Del orden de 2-4 veces los peajes y cargos de potencia de alta tension, como prima por acceso inmediato"
+pue,1.3,1.2,1.4,-,PUE de un CPD moderno; la potencia de red incluye refrigeracion
+factor_carga,0.85,0.75,0.95,-,Uso medio de la potencia contratada por el CPD
+precio_energia,70.0,50.0,100.0,EUR/MWh,Precio medio de la electricidad para el CPD (mercado + peajes)
+capex_cpd,9.0,7.0,12.0,M EUR/MW IT,Coste de construir un CPD (orden de magnitud de informes de mercado 2024-2025)
+ebitda_cpd,0.8,0.5,1.2,M EUR/MW IT·año,Margen anual de colocation mayorista (~150 EUR/kW IT·mes con ~45 % de margen)
+espera_evitada,3.0,2.0,6.0,años,Retraso tipico para obtener acceso y conexion propios en un nudo saturado
+conexion_evitada,10.0,5.0,20.0,M EUR por emplazamiento,"Nueva posicion de 220/400 kV, linea y subestacion propias que el CPD no necesita construir"
+bat_P,0.2,0.15,0.3,M EUR/MW,"Bateria de ion-litio: parte de potencia (inversores, conexion)"
+bat_E,0.25,0.18,0.35,M EUR/MWh,"Bateria de ion-litio: parte de energia (celdas, contenedores)"
+bat_om,2.0,1.5,3.0,%/año,Operacion y mantenimiento de la bateria sobre su inversion
+tasa,7.0,5.0,10.0,%,Tasa de descuento real
+horizonte,20.0,15.0,25.0,años,Vida del acuerdo de uso compartido
+min_cpd,10.0,5.0,20.0,MW,Tamano minimo de CPD para que un emplazamiento cuente

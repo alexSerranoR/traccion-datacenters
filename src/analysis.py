@@ -1,80 +1,144 @@
-"""Paso 3: capacidad que podria compartirse con un centro de datos conectado en el embarrado de AT
-de cada subestacion. Uso: python -I analysis.py <dir_escenario> <salida.json>
+"""Paso 3: capacidad que podria usar un centro de datos (CPD) conectado en el embarrado de AT de cada
+subestacion, para varias opciones tecnicas y escenarios de acceso.
+Uso: python analysis.py <dir_simulacion> <linea MZB|MS> <salida.json>
 
-Supuestos (todos parametrizables):
- - El centro de datos (CPD) se conecta al embarrado de alta tension de la subestacion con su propio
-   transformador trifasico; comparte la CAPACIDAD DE ACCESO C de ese punto, no los transformadores
-   de traccion. El tren tiene siempre prioridad.
- - Margen de seguridad: solo se usa el 90 % de C.
- - N-1: si cae una subestacion vecina, esta asume la mitad de la carga de la vecina mas cargada.
- - 'Firme' = cabe incluso en N-1 y en el peor minuto del dia, sin bateria.
- - 'Con bateria' = cabe en operacion normal usando una bateria que cubre los picos del tren.
+Opciones (todas con margen de seguridad del 10 % sobre el acceso C y el tren siempre con prioridad):
+ - firme        : cabe incluso si cae la subestacion vecina (N-1) en el peor minuto, sin bateria.
+                  Es la capacidad que Adif nunca usa: la unica que encaja con la regulacion actual
+                  (Adif reduce su permiso y el CPD pide acceso propio en el mismo nudo).
+ - sin_bateria  : cabe en operacion normal en el peor minuto del dia.
+ - flexible     : el CPD tiene una parte flexible (FLEX, p. ej. entrenamiento de IA) que se recorta
+                  cuando el tren la necesita. D * (1 - FLEX) <= hueco minimo.
+ - firme_flex   : como 'firme' pero con la parte flexible recortable en N-1.
+ - bateria_20   : bateria fija de 20 MW / 20 MWh (referencia de la v1).
+ - bateria_opt  : bateria dimensionada para cada subestacion: se amplia el CPD mientras cada MW
+                  adicional cueste menos de VAL_MW en bateria.
+Escenarios de acceso por subestacion:
+ - REE   : capacidad de acceso concedida hoy por REE a cada posicion de Adif (data/subestaciones_traccion.csv;
+           donde no se conoce, 35-40 MW).
+ - trafo : lo que admitirian los transformadores de traccion si se ampliara el acceso (~100 MW en 2x25 kV con
+           2x60 MVA; ~55 MW en 1x25 kV con 2x30 MVA).
+ - 30/60/120 : el mismo acceso en todas las subestaciones (sensibilidad).
 """
 import sys, json
-import numpy as np
+import numpy as np, pandas as pd
+from lines import LINES, SE_DATA
 
-D, OUT = sys.argv[1], sys.argv[2]
-P = np.clip(np.load(f"{D}/Pse_1s.npy").astype(float), 0, None)
+D_, LINE, OUT = sys.argv[1], sys.argv[2], sys.argv[3]
+CFG = LINES[LINE]
+SE_NAMES = [s for s, _ in CFG["subestaciones"]]; SE_PK = [p for _, p in CFG["subestaciones"]]
+
+SAFETY = 0.90          # se usa el 90 % del acceso
+FLEX = 0.30            # SUPUESTO: 30 % de la carga del CPD es flexible (entrenamiento IA, lotes)
+N1_SHARE = 0.5         # SUPUESTO: si cae una vecina, esta subestacion asume la mitad de su carga
+BAT_P_COST = 0.20      # M EUR por MW de bateria (SUPUESTO, ver finance.py)
+BAT_E_COST = 0.25      # M EUR por MWh de bateria
+VAL_MW = 1.0           # M EUR: lo maximo que se paga en bateria por cada MW adicional de CPD (SUPUESTO)
+ACCESS = [30, 60, 120]
+LOADS = [1.0, 1.5]     # 1,5 = carga del tren +50 % (crecimiento de trafico, incertidumbre de consumo)
+
+P = np.clip(np.load(f"{D_}/Pse_1s.npy").astype(float), 0, None)
 NSE = P.shape[0]
 L = P.reshape(NSE, 1440, 60).mean(axis=2)                 # MW, medias de 1 minuto
-SE_PK = [15, 70, 130, 190, 250, 305, 365, 425, 485, 545, 605]
+
 
 def n1(L):
     out = L.copy()
     for k in range(NSE):
         nb = [L[j] for j in (k - 1, k + 1) if 0 <= j < NSE]
-        out[k] = L[k] + 0.5 * np.max(nb, axis=0)
+        out[k] = L[k] + N1_SHARE * np.max(nb, axis=0)
     return out
 
+
 def battery_need(H, D):
-    """Bateria (MW, MWh) para mantener un CPD constante de D MW con techo de red H(t) (1 min)."""
-    s = (H - D) / 60.0                                      # MWh por minuto (+ sobra, - falta)
-    e, emin = 0.0, 0.0
-    for _ in range(2):                                      # dos vueltas: el dia es ciclico
-        for v in s:
-            e = min(0.0, e + v); emin = min(emin, e)
-    return max(0.0, float((D - H).max())), -emin
+    """Bateria (MW, MWh) para mantener un CPD constante de D MW con techo H(t) (1 min, dia ciclico).
+    La energia necesaria es la maxima caida de la suma acumulada (recurrencia de Lindley)."""
+    s = np.tile((H - D) / 60.0, 2)
+    S = np.cumsum(s)
+    dd = np.maximum.accumulate(np.maximum(S, 0)) - S
+    return max(0.0, float((D - H).max())), float(dd.max())
+
+
+def bat_cost(pb, eb):
+    return BAT_P_COST * pb + BAT_E_COST * eb
+
 
 def max_D(H, Pb, Eb):
     lo, hi = 0.0, float(H.max())
-    for _ in range(40):
+    for _ in range(30):
         m = (lo + hi) / 2
         pb, eb = battery_need(H, m)
         (lo, hi) = (m, hi) if (pb <= Pb and eb <= Eb) else (lo, m)
     return lo
 
-res = {"escenarios": []}
-for C in (30, 60, 120):
-    for f in (1.0, 1.5):           # f = 1.5: carga del tren +50 % (pendientes, crecimiento de trafico...)
-        Lf = L * f; LN1 = n1(Lf); cap = 0.9 * C
+
+def battery_curve(H, step=1.0):
+    """CPD (MW) frente a bateria necesaria, desde 'sin bateria' hasta el maximo fisico."""
+    D0 = max(0.0, float(H.min())); pts = []
+    for D in np.arange(np.floor(D0), float(H.mean()), step):
+        D = max(D, D0); pb, eb = battery_need(H, D)
+        pts.append((round(float(D), 1), round(pb, 1), round(eb, 2)))
+    return pts
+
+
+def optimal_battery(curve):
+    best = curve[0] if curve else (0.0, 0.0, 0.0)
+    for a, b in zip(curve[:-1], curve[1:]):
+        dD = b[0] - a[0]
+        if dD <= 0: continue
+        if (bat_cost(b[1], b[2]) - bat_cost(a[1], a[2])) / dD > VAL_MW: break
+        best = b
+    return best
+
+
+def curtailed(H, D):
+    if D <= 0: return 0.0
+    return float(np.clip(D - H, 0, None).sum() / (D * len(H)) * 100)
+
+
+by = {r["subestacion"]: r for r in SE_DATA[LINE]}
+scen = [(k, np.array([float(by[s][col]) for s in SE_NAMES])) for k, col in
+        (("REE", "acceso_escenario_bajo_MW"), ("trafo", "acceso_escenario_alto_MW"))]
+scen += [(str(C), np.full(NSE, float(C))) for C in ACCESS]
+
+res = {"linea": LINE, "nombre": CFG["nombre"], "escenarios": [], "curvas_bateria": {},
+       "parametros": dict(margen=SAFETY, flex=FLEX, n1=N1_SHARE, val_MW=VAL_MW,
+                          bat_P_coste=BAT_P_COST, bat_E_coste=BAT_E_COST)}
+for name, Cv in scen:
+    for f in LOADS:
+        Lf = L * f; LN1 = n1(Lf)
         rows = []
         for k in range(NSE):
-            H = cap - Lf[k]
-            firm = max(0.0, cap - LN1[k].max())
-            nobat = max(0.0, float(H.min()))
-            bat = max_D(np.clip(H, 0, None), Pb=20, Eb=20)
-            pb, eb = battery_need(np.clip(H, 0, None), bat)
-            rows.append(dict(se=f"SE{k+1}", pk=SE_PK[k], firme=round(firm, 1), sin_bateria=round(nobat, 1),
-                             con_bateria=round(bat, 1), bat_MW=round(pb, 1), bat_MWh=round(eb, 1),
-                             uso_medio_pct=round(100 * Lf[k].mean() / C, 1),
-                             pico_N1=round(float(LN1[k].max()), 1)))
-        res["escenarios"].append(dict(C=C, f=f, filas=rows,
-            total_firme=round(sum(r["firme"] for r in rows)), total_sin_bat=round(sum(r["sin_bateria"] for r in rows)),
-            total_con_bat=round(sum(r["con_bateria"] for r in rows))))
+            cap = SAFETY * Cv[k]; H = np.clip(cap - Lf[k], 0, None)
+            firm = max(0.0, cap - float(LN1[k].max()))
+            nobat = float(H.min())
+            flex = min(nobat / (1 - FLEX), cap)
+            curve = battery_curve(H)
+            Dopt, pb_o, eb_o = optimal_battery(curve)
+            b20 = max_D(H, 20, 20); pb20, eb20 = battery_need(H, b20)
+            if f == 1.0: res["curvas_bateria"].setdefault(name, {})[SE_NAMES[k]] = curve
+            rows.append(dict(
+                se=SE_NAMES[k], pk=SE_PK[k], acceso_MW=round(float(Cv[k]), 1),
+                firme=round(firm, 1), firme_flex=round(min(firm / (1 - FLEX), cap), 1),
+                sin_bateria=round(nobat, 1), flexible=round(flex, 1),
+                flex_recorte_pct=round(curtailed(H, flex), 2),
+                bateria_20=round(b20, 1), bat20_MW=round(pb20, 1), bat20_MWh=round(eb20, 1),
+                bateria_opt=round(Dopt, 1), batopt_MW=round(pb_o, 1), batopt_MWh=round(eb_o, 1),
+                batopt_MEUR=round(bat_cost(pb_o, eb_o), 1),
+                uso_medio_pct=round(100 * float(Lf[k].mean()) / Cv[k], 1),
+                pico_min=round(float(Lf[k].max()), 1), pico_N1=round(float(LN1[k].max()), 1),
+                media=round(float(Lf[k].mean()), 2)))
+        tot = {c: round(sum(r[c] for r in rows), 1) for c in
+               ("firme", "firme_flex", "sin_bateria", "flexible", "bateria_20", "bateria_opt",
+                "batopt_MW", "batopt_MWh", "batopt_MEUR")}
+        res["escenarios"].append(dict(acceso=name, f=f, filas=rows, total=tot))
 
-# perfiles horarios para graficas: carga media y maxima por hora de cada subestacion
-res["perfil_min"] = {f"SE{k+1}": [round(float(v), 2) for v in L[k]] for k in range(NSE)}
-res["hora_media"] = {f"SE{k+1}": [round(float(v), 2) for v in L[k].reshape(24, 60).mean(axis=1)] for k in range(NSE)}
-res["hora_max"] = {f"SE{k+1}": [round(float(v), 2) for v in L[k].reshape(24, 60).max(axis=1)] for k in range(NSE)}
-res["linea_hora_media"] = [round(float(v), 1) for v in L.sum(axis=0).reshape(24, 60).mean(axis=1)]
-# franja nocturna sin trenes
 tot = L.sum(axis=0)
-idle = tot < 0.5 * len(L) * 0.0 + 1.0
 res["minutos_sin_trenes"] = int((tot < 1.0).sum())
 json.dump(res, open(OUT, "w"), ensure_ascii=False)
 for e in res["escenarios"]:
-    print(f"C={e['C']:>3} MW  carga x{e['f']}:  firme {e['total_firme']:>5} MW | sin bateria {e['total_sin_bat']:>5} MW | "
-          f"con bateria 20MW/20MWh {e['total_con_bat']:>5} MW")
+    t = e["total"]
+    print(f"{LINE} acceso={e['acceso']:>8} carga x{e['f']}: firme {t['firme']:>6} | firme+flex {t['firme_flex']:>6} | "
+          f"sin bat {t['sin_bateria']:>6} | flex {t['flexible']:>6} | bat20 {t['bateria_20']:>6} | "
+          f"bat opt {t['bateria_opt']:>6} ({t['batopt_MWh']} MWh, {t['batopt_MEUR']} MEUR)")
 print("minutos/dia con <1 MW en toda la linea:", res["minutos_sin_trenes"])
-e = [x for x in res["escenarios"] if x["C"] == 60 and x["f"] == 1.0][0]
-for r in e["filas"]: print(r)
