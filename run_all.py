@@ -1,6 +1,7 @@
 """Ejecuta todo el modelo de principio a fin.
 Uso:  python run_all.py [carpeta_gtfs] [fecha YYYYMMDD]
-Por defecto: data/gtfs y 20261021 (miercoles laborable). Resultados en results/.
+Por defecto: data/gtfs y 20261021 (miercoles laborable). Resultados en results/,
+incluido el panel results/dashboard.html (se abre con doble clic, sin servidor).
 """
 import sys, subprocess, pathlib
 
@@ -22,3 +23,5 @@ run("sim.py", WORK / "tramos.csv", WORK / "todos", "--competencia", 22)
 run("analysis.py", WORK / "renfe", WORK / "res_renfe.json")
 run("analysis.py", WORK / "todos", WORK / "res_todos.json")
 run("export.py", WORK, RES)
+run("dashboard.py", RES)
+print(f"\nAbre {RES / 'dashboard.html'} con doble clic para ver los resultados.")

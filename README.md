@@ -35,7 +35,10 @@ subestaciones supuestas cada ~60 km:
 - El frenado regenerativo que vuelve a la red es poco (~27 MWh/día, menos del 3 %), porque en
   alterna ya lo aprovechan otros trenes.
 
-Las tablas completas están en [`results/`](results/).
+Las tablas completas están en [`results/`](results/). Para consultarlas de forma visual, abre
+[`results/dashboard.html`](results/dashboard.html) con doble clic: es un panel interactivo que no
+necesita servidor ni internet, con selectores de acceso (30/60/120 MW), carga del tren (×1,0/×1,5)
+y subestación.
 
 ## Estructura
 
@@ -44,7 +47,8 @@ src/extract.py    1. Lee el GTFS y saca los trenes que usan la LAV, como tramos 
 src/sim.py        2. Simula cada tren segundo a segundo y suma la potencia por subestación
 src/analysis.py   3. Calcula la capacidad compartible (firme, normal, con batería) por escenario
 src/export.py     4. Exporta las tablas de results/
-run_all.py        Ejecuta los cuatro pasos
+src/dashboard.py  5. Genera el panel results/dashboard.html a partir de esas tablas
+run_all.py        Ejecuta los cinco pasos
 data/             Instrucciones para descargar el GTFS de Renfe (no se versiona)
 results/          Tablas de resultados (CSV)
 docs/             Estado del arte y motivación
@@ -59,6 +63,7 @@ pip install -r requirements.txt
 # descomprime google_transit.zip de Renfe en data/gtfs/  (ver data/README.md)
 python run_all.py                     # usa data/gtfs y el 21/10/2026
 python run_all.py data/gtfs 20261104  # otra fecha dentro del calendario del GTFS
+python src/dashboard.py results       # rehace solo el panel, sin volver a simular
 ```
 
 En Windows, usa `py` en lugar de `python` si hace falta.

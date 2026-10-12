@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subestaciones LAV y centros de datos</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f6f5f2; --surface: #fcfcfb; --border: #e3e2dd; --grid: #ecebe6;
+  --text: #0b0b0b; --text-2: #52514e; --text-3: #7a7974;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a;
+  --night: rgba(98, 80, 214, .08); --free: rgba(27, 175, 122, .14); --limit: #e34948;
+  --seq-0: #f1f6fd; --seq-1: #0d366b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #121211; --surface: #1a1a19; --border: #2e2e2c; --grid: #262624;
+    --text: #f0efec; --text-2: #c3c2b7; --text-3: #8f8e88;
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+    --night: rgba(144, 133, 233, .12); --free: rgba(25, 158, 112, .2); --limit: #e66767;
+    --seq-0: #1f2530; --seq-1: #86b6ef;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #121211; --surface: #1a1a19; --border: #2e2e2c; --grid: #262624;
+  --text: #f0efec; --text-2: #c3c2b7; --text-3: #8f8e88;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70;
+  --night: rgba(144, 133, 233, .12); --free: rgba(25, 158, 112, .2); --limit: #e66767;
+  --seq-0: #1f2530; --seq-1: #86b6ef;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+main { max-width: 1180px; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 24px; margin: 0 0 4px; font-weight: 650; }
+h2 { font-size: 16px; margin: 0 0 2px; font-weight: 600; }
+.sub { color: var(--text-2); margin: 0 0 20px; }
+.note { color: var(--text-3); font-size: 13px; margin: 0 0 10px; }
+.controls { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
+  background: var(--bg); padding: 10px 0; margin-bottom: 8px; border-bottom: 1px solid var(--border); }
+.ctl { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-2); }
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg button { border: 0; background: none; color: var(--text); padding: 6px 12px; font: inherit; font-size: 14px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--border); }
+.seg button[aria-pressed="true"] { background: var(--text); color: var(--surface); }
+select { font: inherit; font-size: 14px; padding: 5px 8px; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 16px 0; }
+.kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+.kpi .l { font-size: 13px; color: var(--text-2); }
+.kpi .v { font-size: 26px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.kpi .v.t { font-size: 22px; white-space: nowrap; line-height: 39px; }
+.kpi .v small { font-size: 14px; font-weight: 500; color: var(--text-2); margin-left: 3px; }
+.kpi .d { font-size: 12px; color: var(--text-3); }
+.kpi .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; }
+.grid2 { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; }
+@media (max-width: 860px) { .grid2 { grid-template-columns: 1fr; } }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 12px; min-width: 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--text-2); margin: 6px 0 4px; }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px;
+  margin-right: 6px; vertical-align: -1px; background: var(--c); }
+.legend span.line::before { height: 2px; vertical-align: 3px; width: 14px; }
+.legend span.dash::before { height: 0; border-top: 2px dashed var(--c); background: none; vertical-align: 3px; width: 14px; }
+svg { display: block; width: 100%; overflow: visible; }
+svg text { fill: var(--text-2); font-size: 12px; font-family: inherit; }
+.axis line, .gridline { stroke: var(--grid); }
+.tip { position: fixed; pointer-events: none; background: var(--surface); color: var(--text); border: 1px solid var(--border);
+  border-radius: 8px; padding: 8px 10px; font-size: 13px; box-shadow: 0 4px 16px rgba(0,0,0,.12); display: none; z-index: 10;
+  font-variant-numeric: tabular-nums; max-width: 260px; }
+.tip b { font-weight: 600; }
+.tip .row { display: flex; justify-content: space-between; gap: 14px; }
+.tip .k::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; background: var(--c, transparent); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+th, td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: right; white-space: nowrap; }
+th { color: var(--text-2); font-weight: 600; }
+th:first-child, td:first-child, .txt { text-align: left; white-space: normal; }
+.scroll { overflow-x: auto; }
+details summary { cursor: pointer; font-weight: 600; }
+footer { color: var(--text-3); font-size: 12px; margin-top: 20px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Subestaciones de la LAV Madrid–Barcelona y centros de datos</h1>
+  <p class="sub" id="sub"></p>
+
+  <div class="controls">
+    <div class="ctl">Acceso a red por subestación <div class="seg" id="c-acceso"></div></div>
+    <div class="ctl">Carga del tren <div class="seg" id="c-carga"></div></div>
+    <div class="ctl">Subestación <select id="c-se"></select></div>
+  </div>
+
+  <div class="kpis" id="kpis"></div>
+
+  <div class="grid2">
+    <section class="card">
+      <h2>Capacidad compartible por subestación</h2>
+      <p class="note">MW que podría usar un centro de datos conectado en el embarrado de alta tensión, sin quitar potencia al tren. Pulsa una barra para ver su curva de carga.</p>
+      <div class="legend">
+        <span style="--c:var(--s1)">Firme (resiste el fallo de una vecina)</span>
+        <span style="--c:var(--s2)">Sin batería</span>
+        <span style="--c:var(--s3)">Con batería de 20 MW / 20 MWh</span>
+      </div>
+      <div id="ch-se"></div>
+    </section>
+    <section class="card">
+      <h2>Total de la línea según el acceso</h2>
+      <p class="note">Suma de las 11 subestaciones, con la carga del tren elegida.</p>
+      <div id="ch-tot"></div>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2 id="t-dia"></h2>
+    <p class="note">Potencia del tren en la subestación, en medias de 1 minuto. La zona verde es el hueco que queda libre bajo el límite utilizable (90 % del acceso). La banda morada es la franja sin trenes en toda la línea.</p>
+    <div class="legend">
+      <span class="line" style="--c:var(--s1)">Carga del tren</span>
+      <span class="dash" style="--c:var(--limit)">Límite utilizable</span>
+      <span style="--c:var(--free)">Hueco libre</span>
+      <span style="--c:var(--night)">Sin trenes en la línea</span>
+    </div>
+    <div id="ch-dia"></div>
+  </section>
+
+  <section class="card">
+    <h2>Carga media por hora en cada subestación</h2>
+    <p class="note">MW medios en cada hora. Cuanto más oscuro, más carga. Se ve la ventana nocturna y las horas punta.</p>
+    <div id="ch-heat"></div>
+  </section>
+
+  <section class="card">
+    <h2 id="t-tabla"></h2>
+    <p class="note">La batería indicada es la necesaria para el valor «con batería» (techo de 20 MW / 20 MWh).</p>
+    <div class="scroll"><table id="tb-se"></table></div>
+  </section>
+
+  <section class="card">
+    <h2>Simulación del día</h2>
+    <div class="scroll"><table id="tb-sim"></table></div>
+  </section>
+
+  <section class="card">
+    <details>
+      <summary>Supuestos del modelo</summary>
+      <div class="scroll" style="margin-top:10px"><table id="tb-sup"></table></div>
+    </details>
+  </section>
+
+  <footer>Resultados preliminares de una prueba de concepto. Generado automáticamente por <code>run_all.py</code> a partir de las tablas de <code>results/</code>.</footer>
+</main>
+<div class="tip" id="tip"></div>
+
+<script>
+const D = /*__DATA__*/null;
+const NS = "http://www.w3.org/2000/svg";
+const SES = D.subestaciones;
+const ACCESOS = [...new Set(D.capacidad.map(r => r.acceso_MW))].sort((a, b) => a - b);
+const CARGAS = [...new Set(D.capacidad.map(r => r.carga_x))].sort((a, b) => a - b);
+const SERIES = [
+  { key: "firme_MW", name: "Firme", c: "var(--s1)" },
+  { key: "sin_bateria_MW", name: "Sin batería", c: "var(--s2)" },
+  { key: "con_bateria_MW", name: "Con batería", c: "var(--s3)" },
+];
+const st = { acceso: ACCESOS.includes(60) ? 60 : ACCESOS[0], carga: CARGAS[0], se: SES[0] };
+
+const nf = (v, d = 0) => Number(v).toLocaleString("es-ES", { minimumFractionDigits: d, maximumFractionDigits: d });
+const hhmm = m => String(Math.floor(m / 60) % 24).padStart(2, "0") + ":" + String(Math.round(m) % 60).padStart(2, "0");
+const xLabel = x => "×" + nf(x, 1);
+const rows = () => D.capacidad.filter(r => r.acceso_MW === st.acceso && r.carga_x === st.carga);
+const pk = se => (D.capacidad.find(r => r.subestacion === se) || {}).pk_km;
+
+function el(tag, attrs = {}, parent) {
+  const e = document.createElementNS(NS, tag);
+  for (const k in attrs) e.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(e);
+  return e;
+}
+// escala con marcas redondas (1, 2 o 5 × 10^n); devuelve el maximo del eje y guarda el paso
+let STEP = 1;
+function niceMax(v) {
+  v = Math.max(v, 1e-9);
+  const raw = v / 4, p = Math.pow(10, Math.floor(Math.log10(raw))), n = raw / p;
+  STEP = (n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10) * p;
+  return Math.ceil(v / STEP - 1e-9) * STEP;
+}
+function yAxis(svg, m, w, h, max, unit) {
+  const g = el("g", { class: "axis" }, svg), n = Math.round(max / STEP);
+  for (let i = 0; i <= n; i++) {
+    const v = STEP * i, y = m.t + h - h * v / max;
+    el("line", { x1: m.l, x2: m.l + w, y1: y, y2: y, class: "gridline" }, g);
+    el("text", { x: m.l - 6, y: y + 4, "text-anchor": "end" }, g).textContent = nf(v) + (i === n && unit ? " " + unit : "");
+  }
+}
+// barra con la punta redondeada (4 px) y la base recta sobre el eje
+function bar(g, x, y, w, h, fill) {
+  if (h <= 0) return el("rect", { x, y: y - 1, width: w, height: 1, fill, opacity: .5 }, g);
+  const r = Math.min(4, w / 2, h);
+  return el("path", { d: `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`, fill }, g);
+}
+
+const tip = document.getElementById("tip");
+function showTip(ev, html) {
+  tip.innerHTML = html; tip.style.display = "block";
+  const r = tip.getBoundingClientRect();
+  let x = ev.clientX + 14, y = ev.clientY + 14;
+  if (x + r.width > innerWidth - 8) x = ev.clientX - r.width - 14;
+  if (y + r.height > innerHeight - 8) y = ev.clientY - r.height - 14;
+  tip.style.left = x + "px"; tip.style.top = y + "px";
+}
+const hideTip = () => { tip.style.display = "none"; };
+const tipRow = (k, v, c) => `<div class="row"><span class="k" style="--c:${c || "transparent"}">${k}</span><b>${v}</b></div>`;
+
+// ---------- controles ----------
+function seg(id, values, label, key) {
+  const box = document.getElementById(id);
+  values.forEach(v => {
+    const b = document.createElement("button");
+    b.textContent = label(v);
+    b.onclick = () => { st[key] = v; render(); };
+    b.dataset.v = v; box.appendChild(b);
+  });
+}
+seg("c-acceso", ACCESOS, v => v + " MW", "acceso");
+seg("c-carga", CARGAS, v => xLabel(v) + (v > 1 ? " (pendientes)" : ""), "carga");
+const sel = document.getElementById("c-se");
+SES.forEach(se => { const o = document.createElement("option"); o.value = se; o.textContent = `${se} · PK ${pk(se)}`; sel.appendChild(o); });
+sel.onchange = () => { st.se = sel.value; render(); };
+
+// ---------- cabecera y KPIs ----------
+function renderHead() {
+  const sim = D.simulacion[D.simulacion.length - 1];
+  const dia = (D.supuestos.find(s => /d[ií]a simulado/i.test(s.parametro)) || {}).valor || "";
+  document.getElementById("sub").textContent =
+    `${dia ? dia[0].toUpperCase() + dia.slice(1) + " · " : ""}${sim.escenario} · ${sim.trenes} trenes · ${SES.length} subestaciones supuestas`;
+  const r = rows(), tot = k => r.reduce((a, x) => a + x[k], 0);
+  const n = D.noche;
+  const k = [
+    { l: "Trenes al día", v: nf(sim.trenes), d: nf(sim.tren_km) + " tren-km" },
+    { l: "Energía de tracción", v: nf(sim.energia_red_MWh), u: "MWh/día", d: "media " + nf(sim.potencia_media_linea_MW, 1) + " MW en toda la línea" },
+    { l: "Franja sin trenes", cls: "t", v: hhmm(n.inicio) + "–" + hhmm(n.inicio + n.minutos), d: nf(n.minutos) + " min seguidos (ventana de mantenimiento)" },
+    ...SERIES.map(s => ({ l: s.name, sw: s.c, v: nf(tot(s.key)), u: "MW", d: `línea completa · ${st.acceso} MW · ${xLabel(st.carga)}` })),
+  ];
+  document.getElementById("kpis").innerHTML = k.map(x =>
+    `<div class="kpi"><div class="l">${x.sw ? `<span class="sw" style="background:${x.sw}"></span>` : ""}${x.l}</div>` +
+    `<div class="v${x.cls ? " " + x.cls : ""}">${x.v}${x.u ? `<small>${x.u}</small>` : ""}</div><div class="d">${x.d}</div></div>`).join("");
+}
+
+// ---------- barras agrupadas por subestación ----------
+function renderSE() {
+  const box = document.getElementById("ch-se"); box.innerHTML = "";
+  const r = rows(), W = box.clientWidth, H = 300, m = { t: 12, r: 8, b: 40, l: 48 };
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const max = niceMax(Math.max(1, ...D.capacidad.filter(x => x.acceso_MW === st.acceso).flatMap(x => SERIES.map(s => x[s.key]))));
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, height: H }, box);
+  yAxis(svg, m, w, h, max, "MW");
+  const gw = w / r.length, bw = Math.max(3, Math.min(18, (gw - 10) / 3 - 2));
+  r.forEach((row, i) => {
+    const gx = m.l + i * gw, x0 = gx + (gw - (bw * 3 + 4)) / 2;
+    const g = el("g", { style: "cursor:pointer" }, svg);
+    if (row.subestacion === st.se) el("rect", { x: gx + 1, y: m.t, width: gw - 2, height: h, fill: "var(--grid)", rx: 6 }, g);
+    SERIES.forEach((s, j) => { const bh = h * row[s.key] / max; bar(g, x0 + j * (bw + 2), m.t + h - bh, bw, bh, s.c); });
+    const narrow = gw < 44;
+    if (!narrow || i % 2 === 0) el("text", { x: gx + gw / 2, y: H - m.b + 16, "text-anchor": "middle" }, g).textContent = narrow ? row.subestacion.replace("SE", "") : row.subestacion;
+    if (!narrow) el("text", { x: gx + gw / 2, y: H - m.b + 30, "text-anchor": "middle", style: "fill:var(--text-3);font-size:11px" }, g).textContent = "PK " + row.pk_km;
+    el("rect", { x: gx, y: m.t, width: gw, height: h + 34, fill: "transparent" }, g);
+    g.onmousemove = ev => showTip(ev, `<b>${row.subestacion}</b> · PK ${row.pk_km}<br>` +
+      SERIES.map(s => tipRow(s.name, nf(row[s.key], 1) + " MW", s.c)).join("") +
+      tipRow("Uso medio del acceso", nf(row.uso_medio_pct, 1) + " %") + tipRow("Pico en N-1", nf(row.pico_N1_MW, 1) + " MW"));
+    g.onmouseleave = hideTip;
+    g.onclick = () => { st.se = row.subestacion; render(); };
+  });
+}
+
+// ---------- total por escenario de acceso ----------
+function renderTot() {
+  const box = document.getElementById("ch-tot"); box.innerHTML = "";
+  const W = box.clientWidth, H = 300, m = { t: 12, r: 8, b: 40, l: 56 };
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const tots = ACCESOS.map(a => {
+    const r = D.capacidad.filter(x => x.acceso_MW === a && x.carga_x === st.carga);
+    return Object.fromEntries(SERIES.map(s => [s.key, r.reduce((t, x) => t + x[s.key], 0)]));
+  });
+  const max = niceMax(Math.max(1, ...D.capacidad.length ? ACCESOS.flatMap(a => CARGAS.map(c =>
+    D.capacidad.filter(x => x.acceso_MW === a && x.carga_x === c).reduce((t, x) => t + x.con_bateria_MW, 0))) : [1]));
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, height: H }, box);
+  yAxis(svg, m, w, h, max, "MW");
+  const gw = w / ACCESOS.length, bw = Math.min(26, (gw - 16) / 3 - 2);
+  tots.forEach((t, i) => {
+    const gx = m.l + i * gw, x0 = gx + (gw - (bw * 3 + 4)) / 2, a = ACCESOS[i];
+    const g = el("g", { style: "cursor:pointer" }, svg);
+    if (a === st.acceso) el("rect", { x: gx + 2, y: m.t, width: gw - 4, height: h, fill: "var(--grid)", rx: 6 }, g);
+    SERIES.forEach((s, j) => { const bh = h * t[s.key] / max; bar(g, x0 + j * (bw + 2), m.t + h - bh, bw, bh, s.c); });
+    const lbl = el("text", { x: gx + gw / 2, y: H - m.b + 18, "text-anchor": "middle" }, g);
+    lbl.textContent = a + " MW"; if (a === st.acceso) lbl.setAttribute("style", "fill:var(--text);font-weight:600");
+    if (gw > 90) el("text", { x: gx + gw / 2, y: H - m.b + 32, "text-anchor": "middle", style: "fill:var(--text-3);font-size:11px" }, g).textContent = "por subestación";
+    el("rect", { x: gx, y: m.t, width: gw, height: h + 34, fill: "transparent" }, g);
+    g.onmousemove = ev => showTip(ev, `<b>Acceso ${a} MW</b> · carga ${xLabel(st.carga)}<br>` +
+      SERIES.map(s => tipRow(s.name, nf(t[s.key]) + " MW", s.c)).join(""));
+    g.onmouseleave = hideTip;
+    g.onclick = () => { st.acceso = a; render(); };
+  });
+}
+
+// ---------- curva del día ----------
+function renderDia() {
+  const se = st.se, lim = 0.9 * st.acceso, f = st.carga;
+  document.getElementById("t-dia").textContent = `Carga del tren a lo largo del día · ${se} (PK ${pk(se)}) · acceso ${st.acceso} MW · carga ${xLabel(f)}`;
+  const box = document.getElementById("ch-dia"); box.innerHTML = "";
+  const L = D.minuto[se].map(v => v * f), N = L.length;
+  const W = box.clientWidth, H = 300, m = { t: 12, r: 12, b: 28, l: 48 };
+  const w = W - m.l - m.r, h = H - m.t - m.b;
+  const max = niceMax(Math.max(lim, ...L) * 1.05);
+  const X = i => m.l + w * i / N, Y = v => m.t + h - h * Math.min(v, max) / max;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, height: H }, box);
+  // franja sin trenes (puede cruzar la medianoche)
+  const n = D.noche, a = n.inicio, b = n.inicio + n.minutos;
+  [[a, Math.min(b, N)], [0, Math.max(0, b - N)]].forEach(([s, e]) => {
+    if (e > s) el("rect", { x: X(s), y: m.t, width: X(e) - X(s), height: h, fill: "var(--night)" }, svg);
+  });
+  yAxis(svg, m, w, h, max, "MW");
+  for (let hr = 0; hr <= 24; hr += (w < 500 ? 6 : 3))
+    el("text", { x: X(hr * 60), y: H - 8, "text-anchor": "middle" }, svg).textContent = hhmm(hr * 60 % 1440).replace(":00", "h");
+  // hueco libre entre la carga y el límite
+  let d = `M${X(0)},${Y(lim)}`;
+  for (let i = 0; i < N; i++) d += `L${X(i)},${Y(Math.min(L[i], lim))}`;
+  d += `L${X(N)},${Y(Math.min(L[N - 1], lim))}L${X(N)},${Y(lim)}Z`;
+  el("path", { d, fill: "var(--free)" }, svg);
+  el("line", { x1: m.l, x2: m.l + w, y1: Y(lim), y2: Y(lim), stroke: "var(--limit)", "stroke-width": 2, "stroke-dasharray": "6 4" }, svg);
+  el("text", { x: m.l + w - 4, y: Y(lim) - 6, "text-anchor": "end", style: "fill:var(--text)" }, svg).textContent = `Límite ${nf(lim)} MW`;
+  el("path", { d: "M" + L.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join("L"), fill: "none", stroke: "var(--s1)", "stroke-width": 1.5, "stroke-linejoin": "round" }, svg);
+  // cruz y tooltip
+  const cross = el("line", { y1: m.t, y2: m.t + h, stroke: "var(--text-3)", "stroke-width": 1, visibility: "hidden" }, svg);
+  const dot = el("circle", { r: 4, fill: "var(--s1)", stroke: "var(--surface)", "stroke-width": 2, visibility: "hidden" }, svg);
+  const hit = el("rect", { x: m.l, y: m.t, width: w, height: h, fill: "transparent" }, svg);
+  hit.onmousemove = ev => {
+    const p = svg.createSVGPoint(); p.x = ev.clientX; p.y = ev.clientY;
+    const q = p.matrixTransform(svg.getScreenCTM().inverse());
+    const i = Math.max(0, Math.min(N - 1, Math.round((q.x - m.l) / w * N)));
+    cross.setAttribute("x1", X(i)); cross.setAttribute("x2", X(i)); cross.setAttribute("visibility", "visible");
+    dot.setAttribute("cx", X(i)); dot.setAttribute("cy", Y(L[i])); dot.setAttribute("visibility", "visible");
+    showTip(ev, `<b>${hhmm(i)}</b> · ${se}<br>` + tipRow("Carga del tren", nf(L[i], 1) + " MW", "var(--s1)") +
+      tipRow("Hueco libre", nf(Math.max(0, lim - L[i]), 1) + " MW", "var(--s3)"));
+  };
+  hit.onmouseleave = () => { hideTip(); cross.setAttribute("visibility", "hidden"); dot.setAttribute("visibility", "hidden"); };
+}
+
+// ---------- mapa de calor hora × subestación ----------
+function mix(t) {
+  const cs = getComputedStyle(document.documentElement);
+  const hex = s => s.trim().match(/\w\w/g).map(x => parseInt(x, 16));
+  const a = hex(cs.getPropertyValue("--seq-0")), b = hex(cs.getPropertyValue("--seq-1"));
+  return `rgb(${a.map((v, i) => Math.round(v + (b[i] - v) * t)).join(",")})`;
+}
+function renderHeat() {
+  const box = document.getElementById("ch-heat"); box.innerHTML = "";
+  const f = st.carga, W = box.clientWidth, m = { t: 6, r: 8, b: 26, l: 82 };
+  const cell = 22, H = m.t + m.b + SES.length * cell, w = W - m.l - m.r, cw = w / 24;
+  const vals = SES.map(se => D.hora_media[se].map(v => v * f));
+  const max = Math.max(1, ...vals.flat());
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, height: H }, box);
+  SES.forEach((se, r) => {
+    el("text", { x: m.l - 8, y: m.t + r * cell + cell / 2 + 4, "text-anchor": "end" }, svg).textContent = `${se} · PK ${pk(se)}`;
+    vals[r].forEach((v, c) => {
+      const rc = el("rect", { x: m.l + c * cw + 1, y: m.t + r * cell + 1, width: Math.max(1, cw - 2), height: cell - 2, rx: 3,
+        fill: mix(Math.sqrt(v / max)) }, svg);
+      rc.onmousemove = ev => showTip(ev, `<b>${se}</b> · ${hhmm(c * 60)}–${hhmm(c * 60 + 60)}<br>` + tipRow("Carga media", nf(v, 1) + " MW"));
+      rc.onmouseleave = hideTip;
+    });
+  });
+  for (let c = 0; c < 24; c += (cw < 26 ? 3 : 1))
+    el("text", { x: m.l + c * cw + cw / 2, y: H - 8, "text-anchor": "middle" }, svg).textContent = c + "h";
+}
+
+// ---------- tablas ----------
+function table(id, head, body) {
+  document.getElementById(id).innerHTML = "<thead><tr>" + head.map(h => `<th>${h}</th>`).join("") + "</tr></thead><tbody>" +
+    body.map(r => "<tr>" + r.map((c, i) => `<td${typeof c === "string" && i > 0 && isNaN(c.replace(/<[^>]+>/g, "").replace(/[.,\s%]/g, "")) ? ' class="txt"' : ""}>${c}</td>`).join("") + "</tr>").join("") + "</tbody>";
+}
+function renderTables() {
+  document.getElementById("t-tabla").textContent = `Detalle por subestación · acceso ${st.acceso} MW · carga ${xLabel(st.carga)}`;
+  const r = rows();
+  const sum = k => r.reduce((a, x) => a + x[k], 0);
+  table("tb-se", ["Subestación", "PK (km)", "Uso medio del acceso", "Pico en N-1 (MW)", "Firme (MW)", "Sin batería (MW)", "Con batería (MW)", "Batería (MW)", "Batería (MWh)"],
+    r.map(x => [x.subestacion, nf(x.pk_km), nf(x.uso_medio_pct, 1) + " %", nf(x.pico_N1_MW, 1), nf(x.firme_MW, 1), nf(x.sin_bateria_MW, 1),
+      nf(x.con_bateria_MW, 1), nf(x.bateria_MW, 1), nf(x.bateria_MWh, 1)])
+      .concat([["<b>Total</b>", "", "", "", `<b>${nf(sum("firme_MW"))}</b>`, `<b>${nf(sum("sin_bateria_MW"))}</b>`, `<b>${nf(sum("con_bateria_MW"))}</b>`, "", ""]]));
+}
+function renderStatic() {
+  table("tb-sim", ["Escenario", "Trenes", "Tren-km", "Energía de red (MWh)", "Devuelta a la red (MWh)", "kWh/tren-km", "Potencia media línea (MW)", "Minutos sin trenes"],
+    D.simulacion.map(s => [s.escenario, nf(s.trenes), nf(s.tren_km), nf(s.energia_red_MWh, 1), nf(s.devuelta_red_MWh, 1), nf(s.kWh_tren_km, 1),
+      nf(s.potencia_media_linea_MW, 1), nf(s.minutos_sin_trenes)]));
+  table("tb-sup", ["Parámetro", "Valor", "Fuente / comentario"],
+    D.supuestos.map(s => [s.parametro, `${s.valor}${s.unidad ? " " + s.unidad : ""}`, s.fuente]));
+  document.querySelectorAll("#tb-sup td").forEach(td => td.classList.add("txt"));
+}
+
+function render() {
+  document.querySelectorAll("#c-acceso button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.v === st.acceso));
+  document.querySelectorAll("#c-carga button").forEach(b => b.setAttribute("aria-pressed", +b.dataset.v === st.carga));
+  sel.value = st.se;
+  renderHead(); renderSE(); renderTot(); renderDia(); renderHeat(); renderTables();
+}
+renderStatic(); render();
+let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(render, 120); });
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", render);
+</script>
+</body>
+</html>
