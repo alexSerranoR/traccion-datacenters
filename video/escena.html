@@ -1,0 +1,247 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  html,body{margin:0;padding:0;width:1920px;height:1080px;overflow:hidden;background:#f6f4ef;font-family:Inter,sans-serif;}
+  svg{display:block}
+  .t{font-family:Inter,sans-serif;fill:#1d2433}
+  #sub{position:absolute;left:0;right:0;bottom:70px;text-align:center;}
+  #sub span{display:inline-block;max-width:1500px;background:rgba(20,24,34,.86);color:#fff;font:500 46px/1.3 Inter,sans-serif;padding:16px 34px;border-radius:14px;}
+</style></head>
+<body>
+<svg id="s" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>
+<div id="sub"><span id="subt"></span></div>
+<script>
+const PERFIL = __PERFIL__;   // MW por minuto, subestación Brihuega (modelo v2, día laborable)
+const ACCESO = 45;           // MW de acceso concedido (REE)
+const CPD = 33;              // MW de centro de datos con batería (modelo v2, Brihuega)
+
+const C = {ink:'#1d2433', mute:'#6b7280', grid:'#c9c3b6', train:'#e8743b', free:'#2f9e6e', dc:'#3a6fd8', red:'#d64545', bat:'#8a5cd6'};
+
+const SUBS = [
+  [0.5,4.5,'La red eléctrica española está saturada.'],
+  [4.5,9,'Un centro de datos puede esperar años para conseguir conexión.'],
+  [9,13,'Pero junto a las vías del AVE ya hay subestaciones…'],
+  [13,17,'…con grandes conexiones a esa misma red.'],
+  [17,22.5,'Los trenes solo las usan a ratos: picos cortos al pasar.'],
+  [22.5,29,'De noche, casi nada. De media, alrededor de un 10 %.'],
+  [29,35,'La idea: un centro de datos flexible al lado, que use ese hueco.'],
+  [35,41,'El tren siempre tiene prioridad. Una batería cubre los picos.'],
+  [41,46,'En Madrid–Barcelona cabrían unos 380 MW de centros de datos…'],
+  [46,51,'…con un cambio de normativa y conexiones que ya existen.'],
+];
+const DUR = 55;
+
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const ease=x=>{x=clamp(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const prog=(t,a,b)=>ease((t-a)/(b-a));
+// opacidad de una escena con entrada y salida suaves
+const win=(t,a,b,f=.6)=>Math.min(prog(t,a,a+f),1-prog(t,b-f,b));
+
+function tower(x,y,s,col){
+  return `<g transform="translate(${x},${y}) scale(${s})" stroke="${col}" stroke-width="4" fill="none" stroke-linejoin="round">
+    <path d="M-30,120 L-8,-40 L8,-40 L30,120 M-20,80 L20,80 M-14,30 L14,30 M-26,105 L14,30 M26,105 L-14,30 M-50,-20 L50,-20 M-36,10 L36,10 M0,-40 L0,-60"/></g>`;
+}
+function building(x,y,w,h,col,o=1){
+  let r='';
+  for(let i=0;i<4;i++) r+=`<rect x="${x+24}" y="${y+28+i*(h-50)/4}" width="${w-48}" height="${(h-50)/4-16}" rx="6" fill="#fff" opacity=".9"/>
+     <circle cx="${x+w-50}" cy="${y+28+i*(h-50)/4+((h-50)/4-16)/2}" r="6" fill="${C.free}"/>`;
+  return `<g opacity="${o}"><rect x="${x}" y="${y}" width="${w}" height="${h}" rx="14" fill="${col}"/>${r}</g>`;
+}
+function bolt(x,y,s,col){
+  return `<path transform="translate(${x},${y}) scale(${s})" d="M4,-22 L-10,3 L0,3 L-4,22 L10,-3 L0,-3 Z" fill="${col}"/>`;
+}
+function substation(x,y,o,glow=0){
+  return `<g opacity="${o}" transform="translate(${x},${y})">
+    ${glow?`<circle r="${46}" fill="${C.free}" opacity="${.25*glow}"/>`:''}
+    <rect x="-28" y="-28" width="56" height="56" rx="10" fill="${C.ink}"/>${bolt(0,0,1.15,'#ffd34d')}</g>`;
+}
+function train(x,y,o=1){
+  return `<g transform="translate(${x},${y})" opacity="${o}">
+    <path d="M-120,-16 L60,-16 Q100,-16 118,8 L118,16 L-120,16 Z" fill="#fff" stroke="${C.ink}" stroke-width="4"/>
+    <rect x="-108" y="-8" width="150" height="10" rx="3" fill="${C.dc}"/>
+    <path d="M70,-8 Q92,-8 104,6 L70,6 Z" fill="${C.ink}"/></g>`;
+}
+function text(x,y,str,size,col=C.ink,w=600,anchor='middle',o=1){
+  return `<text class="t" x="${x}" y="${y}" font-size="${size}" font-weight="${w}" fill="${col}" text-anchor="${anchor}" opacity="${o}">${str}</text>`;
+}
+
+// ---------- Escena 1: red saturada (0–9 s)
+function scene1(t){
+  const o=win(t,0,9.2); if(o<=0) return '';
+  let g=text(960,150,'Conectarse a la red eléctrica',64,C.ink,700,'middle',prog(t,.2,1));
+  // torres y cable
+  const xs=[220,520,820];
+  xs.forEach((x,i)=>g+=`<g opacity="${prog(t,.3+i*.25,1+i*.25)}">${tower(x,470,1.6,C.ink)}</g>`);
+  g+=`<path d="M140,390 Q370,450 520,390 Q670,450 820,390 Q900,420 960,405" stroke="${C.ink}" stroke-width="4" fill="none" opacity="${prog(t,1.2,2)}"/>`;
+  // sello saturada
+  const sp=prog(t,1.8,2.4);
+  g+=`<g transform="translate(520,720) rotate(-6) scale(${.6+.4*sp})" opacity="${sp}">
+       <rect x="-200" y="-52" width="400" height="104" rx="14" fill="none" stroke="${C.red}" stroke-width="8"/>
+       ${text(0,22,'SATURADA',64,C.red,800)}</g>`;
+  // centro de datos esperando
+  const bp=prog(t,4.3,5.1);
+  g+=`<g transform="translate(${1300+(1-bp)*80},0)" opacity="${bp}">${building(0,330,380,360,C.dc)}
+       ${text(190,760,'Centro de datos',44,C.ink,700)}</g>`;
+  // cable cortado + reloj de espera
+  const cp=prog(t,5.2,6);
+  g+=`<g opacity="${cp}"><path d="M1000,405 L1110,405" stroke="${C.ink}" stroke-width="4" stroke-dasharray="14 12"/>
+       <path d="M1140,385 L1180,425 M1180,385 L1140,425" stroke="${C.red}" stroke-width="7"/>
+       <path d="M1210,405 L1290,405" stroke="${C.ink}" stroke-width="4" stroke-dasharray="14 12"/></g>`;
+  const hp=prog(t,6,6.8), rot=Math.max(0,t-6.8)*60;
+  g+=`<g transform="translate(1110,580)" opacity="${hp}">
+       <circle r="78" fill="#fff" stroke="${C.ink}" stroke-width="6"/>
+       <line x1="0" y1="0" x2="0" y2="-52" stroke="${C.ink}" stroke-width="7" stroke-linecap="round" transform="rotate(${rot*6})"/>
+       <line x1="0" y1="0" x2="34" y2="0" stroke="${C.ink}" stroke-width="7" stroke-linecap="round" transform="rotate(${rot/2})"/>
+       ${text(0,138,'años de espera',40,C.red,700)}</g>`;
+  return `<g opacity="${o}">${g}</g>`;
+}
+
+// ---------- Escena 2: línea AVE con subestaciones (9–17 s)
+const LX0=180, LX1=1740, LY=640, L=621;
+const SE_PK=[5,40,97,155,212,260,292,310,380,435,485,550,608];
+const pkx=pk=>LX0+(LX1-LX0)*pk/L;
+function lineBase(t,a, glowAll=0){
+  let g='';
+  // red eléctrica arriba
+  g+=`<path d="M${LX0-60},300 L${LX1+60},300" stroke="${C.grid}" stroke-width="6" opacity="${prog(t,a+3.8,a+4.6)}"/>`;
+  g+=text(LX0-60,270,'Red eléctrica de alta tensión',34,C.mute,600,'start',prog(t,a+3.8,a+4.6));
+  // vía
+  const lp=prog(t,a,a+1.6);
+  g+=`<path d="M${LX0},${LY} L${LX0+(LX1-LX0)*lp},${LY}" stroke="${C.ink}" stroke-width="10" stroke-linecap="round"/>`;
+  [['Madrid',0],['Zaragoza',306],['Barcelona',621]].forEach(([n,pk],i)=>{
+    const op=prog(t,a+.3+i*.4,a+.9+i*.4);
+    g+=`<circle cx="${pkx(pk)}" cy="${LY}" r="16" fill="#fff" stroke="${C.ink}" stroke-width="7" opacity="${op}"/>`+text(pkx(pk),LY+80,n,40,C.ink,700,'middle',op);
+  });
+  SE_PK.forEach((pk,i)=>{
+    const op=prog(t,a+1.4+i*.14,a+1.9+i*.14);
+    const x=pkx(pk);
+    const lk=prog(t,a+3.9+i*.06,a+4.6+i*.06);
+    g+=`<path d="M${x},${300} L${x},${300+(LY-80-300)*lk}" stroke="${C.grid}" stroke-width="5" opacity="${lk}"/>`;
+    g+=`<path d="M${x},${LY-52} L${x},${LY-8}" stroke="${C.ink}" stroke-width="4" opacity="${op}"/>`;
+    g+=substation(x,LY-80,op,glowAll);
+  });
+  return g;
+}
+function scene2(t){
+  const o=win(t,8.8,17.2); if(o<=0) return '';
+  let g=text(960,150,'Las líneas de alta velocidad',64,C.ink,700,'middle',prog(t,9,9.8));
+  g+=lineBase(t,9);
+  const tp=clamp((t-10.5)/6.5);
+  g+=train(LX0+(LX1-LX0)*tp,LY-32,prog(t,10.4,10.8));
+  g+=text(960,840,'13 subestaciones entre Madrid y Barcelona',40,C.mute,600,'middle',prog(t,11.5,12.3));
+  return `<g opacity="${o}">${g}</g>`;
+}
+
+// ---------- Gráfica 24 h (escenas 3 y 4)
+const GX0=230, GX1=1720, GY0=750, GY1=250, YMAX=50;
+const gx=m=>GX0+(GX1-GX0)*m/1440, gy=v=>GY0-(GY0-GY1)*v/YMAX;
+function areaPath(f,from=0,to=1440,base=()=>0){
+  let d=`M${gx(from)},${gy(base(from))}`;
+  for(let m=from;m<=to;m++) d+=`L${gx(m).toFixed(1)},${gy(f(m)).toFixed(1)}`;
+  for(let m=to;m>=from;m--) d+=`L${gx(m).toFixed(1)},${gy(base(m)).toFixed(1)}`;
+  return d+'Z';
+}
+const tr=m=>PERFIL[Math.min(1439,m)];
+function chartFrame(o){
+  let g=`<g opacity="${o}">`;
+  g+=`<line x1="${GX0}" y1="${GY0}" x2="${GX1}" y2="${GY0}" stroke="${C.ink}" stroke-width="3"/>`;
+  [0,6,12,18,24].forEach(h=>g+=text(gx(h*60),GY0+50,h+' h',32,C.mute,500));
+  return g+'</g>';
+}
+function scene3(t){
+  const o=win(t,16.8,29.4); if(o<=0) return '';
+  const a=17;
+  let g=text(960,150,'¿Cuánto usa el tren esa conexión?',64,C.ink,700,'middle',prog(t,a,a+.8));
+  g+=chartFrame(prog(t,a+.2,a+.9));
+  // límite de la conexión
+  const lp=prog(t,a+.6,a+1.4);
+  g+=`<line x1="${GX0}" y1="${gy(ACCESO)}" x2="${GX0+(GX1-GX0)*lp}" y2="${gy(ACCESO)}" stroke="${C.ink}" stroke-width="5" stroke-dasharray="18 12"/>`;
+  g+=text(GX0,gy(ACCESO)-22,'Conexión de la subestación',34,C.ink,700,'start',lp);
+  // consumo del tren dibujándose
+  const rp=prog(t,a+1.4,a+5.2), mEnd=Math.round(1440*rp);
+  if(mEnd>1) g+=`<path d="${areaPath(tr,0,mEnd)}" fill="${C.train}"/>`;
+  g+=`<g opacity="${prog(t,a+3,a+3.6)}"><rect x="${GX1-400}" y="${GY0+70}" width="28" height="28" rx="5" fill="${C.train}"/>${text(GX1-360,GY0+94,'Consumo de los trenes',30,C.ink,600,'start')}</g>`;
+  // noche
+  const np=prog(t,a+5.6,a+6.3);
+  g+=`<g opacity="${np}"><rect x="${gx(0)}" y="${gy(ACCESO)+10}" width="${gx(360)-gx(0)}" height="${GY0-gy(ACCESO)-12}" fill="#25304a" opacity=".12"/>
+      <circle cx="${gx(180)}" cy="${gy(30)}" r="34" fill="#25304a" opacity=".8"/><circle cx="${gx(180)+16}" cy="${gy(30)-10}" r="30" fill="#e9e6df"/>
+      ${text(gx(180),gy(18),'Noche',36,C.ink,700)}</g>`;
+  // hueco libre
+  const fp=prog(t,a+7,a+8);
+  g+=`<path d="${areaPath(()=>ACCESO,0,1439,tr)}" fill="${C.free}" opacity="${.32*fp}"/>`;
+  g+=`<g opacity="${prog(t,a+7.6,a+8.4)}"><rect x="${gx(760)-270}" y="${gy(38)-58}" width="540" height="86" rx="14" fill="#fff" stroke="${C.free}" stroke-width="4"/>
+      ${text(gx(760),gy(38),'Capacidad sin usar',44,C.free,800)}</g>`;
+  g+=`<g opacity="${prog(t,a+8.6,a+9.4)}"><rect x="${gx(1230)-170}" y="${gy(38)-55}" width="340" height="76" rx="14" fill="${C.train}"/>
+      ${text(gx(1230),gy(38)-4,'Uso medio ≈ 10 %',38,'#fff',800)}</g>`;
+  return `<g opacity="${o}">${g}</g>`;
+}
+
+function scene4(t){
+  const o=win(t,28.8,41.4); if(o<=0) return '';
+  const a=29;
+  let g=text(960,150,'Un centro de datos que se adapta al tren',64,C.ink,700,'middle',prog(t,a,a+.8));
+  g+=chartFrame(1);
+  g+=`<line x1="${GX0}" y1="${gy(ACCESO)}" x2="${GX1}" y2="${gy(ACCESO)}" stroke="${C.ink}" stroke-width="5" stroke-dasharray="18 12"/>`;
+  g+=text(GX0,gy(ACCESO)-22,'Conexión de la subestación',34,C.ink,700,'start');
+  // centro de datos crece desde abajo; desde la red toma lo que deja el tren
+  const up=prog(t,a+.8,a+3.4);
+  const dcGrid=m=>Math.min(CPD*up,ACCESO-tr(m));
+  g+=`<path d="${areaPath(dcGrid,0,1439)}" fill="${C.dc}" opacity=".9"/>`;
+  // tren encima (prioridad)
+  g+=`<path d="${areaPath(m=>dcGrid(m)+tr(m),0,1439,dcGrid)}" fill="${C.train}"/>`;
+  // leyenda
+  const lg=(y,col,str,op)=>`<g opacity="${op}"><rect x="${GX1-420}" y="${y}" width="28" height="28" rx="5" fill="${col}"/>${text(GX1-380,y+24,str,30,C.ink,600,'start')}</g>`;
+  g+=lg(GY0+70,C.dc,'Centro de datos',prog(t,a+1,a+1.6));
+  g+=lg(GY0+110,C.train,'Trenes (siempre primero)',prog(t,a+3.8,a+4.4));
+  g+=`<g opacity="${prog(t,a+6.2,a+6.8)}"><rect x="${GX0}" y="${GY0+70}" width="28" height="28" rx="5" fill="${C.bat}"/>${text(GX0+40,GY0+94,'Batería: cubre al centro de datos en los picos del tren',30,C.ink,600,'start')}</g>`;
+  // icono batería
+  const ip=prog(t,a+6.4,a+7.2), lvl=.55+.35*Math.sin((t-a)*1.5);
+  g+=`<g transform="translate(${gx(1183)+110},${gy(12)})" opacity="${ip}">
+       <path d="M-58,0 L-98,0 M-86,-12 L-100,0 L-86,12" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="-48" y="-26" width="96" height="52" rx="8" fill="#fff" stroke="${C.bat}" stroke-width="5"/><rect x="48" y="-10" width="8" height="20" rx="2" fill="${C.bat}"/>
+       <rect x="-40" y="-18" width="${80*lvl}" height="36" rx="4" fill="${C.bat}"/></g>`;
+  return `<g opacity="${o}">${g}</g>`;
+}
+
+// ---------- Escena 5: la cifra (41–51 s)
+function scene5(t){
+  const o=win(t,40.8,51.2); if(o<=0) return '';
+  const a=41;
+  let g=text(960,150,'Madrid – Barcelona',64,C.ink,700,'middle',prog(t,a,a+.8));
+  const np=prog(t,a+.6,a+2.6), n=Math.round(380*np);
+  g+=`<g opacity="${prog(t,a+.5,a+1)}">${text(960,430,'≈ '+n+' MW',190,C.dc,800)}
+      ${text(960,510,'para centros de datos, en 13 subestaciones',44,C.ink,600)}</g>`;
+  // subestaciones iluminadas sobre la vía
+  const y=690;
+  g+=`<path d="M${LX0},${y} L${LX1},${y}" stroke="${C.ink}" stroke-width="10" stroke-linecap="round" opacity="${prog(t,a+1,a+1.6)}"/>`;
+  SE_PK.forEach((pk,i)=>{const op=prog(t,a+1.2+i*.1,a+1.7+i*.1);
+    g+=`<circle cx="${pkx(pk)}" cy="${y}" r="${30*op}" fill="${C.free}" opacity="${.35*op}"/><circle cx="${pkx(pk)}" cy="${y}" r="13" fill="${C.free}" opacity="${op}"/>`;});
+  [['Madrid',0,'start'],['Barcelona',621,'end']].forEach(([s,pk,an])=>g+=text(pkx(pk),y+70,s,36,C.mute,600,an,prog(t,a+1,a+1.6)));
+  // condiciones
+  const cp=prog(t,a+5,a+5.8);
+  g+=`<g opacity="${cp}">${text(960,845,'Con baterías y una reforma de la normativa · sin nuevas líneas eléctricas',36,C.mute,600)}</g>`;
+  return `<g opacity="${o}">${g}</g>`;
+}
+
+// ---------- Cierre (51–55 s)
+function scene6(t){
+  const o=prog(t,51,51.8); if(o<=0) return '';
+  let g=`<g opacity="${o}">`;
+  g+=bolt(960,330,4,'#e8a92b');
+  g+=text(960,520,'Trenes y centros de datos',84,C.ink,800);
+  g+=text(960,600,'compartiendo la misma conexión a la red',50,C.ink,500);
+  g+=text(960,720,'Propuesta de investigación · LAV Madrid–Barcelona y Madrid–Sevilla',34,C.mute,500);
+  return g+'</g>';
+}
+
+function render(t){
+  document.getElementById('s').innerHTML = scene1(t)+scene2(t)+scene3(t)+scene4(t)+scene5(t)+scene6(t);
+  const cue=SUBS.find(([a,b])=>t>=a&&t<b);
+  const sub=document.getElementById('sub');
+  sub.style.display=cue?'block':'none';
+  if(cue){ document.getElementById('subt').textContent=cue[2];
+    sub.style.opacity=Math.min(clamp((t-cue[0])/.25),clamp((cue[1]-t)/.25)); }
+}
+window.render=render; window.DUR=DUR;
+render(0);
+</script>
+</body></html>
