@@ -5,7 +5,7 @@ y cuántos MW de centros de datos (CPD) podrían compartirla sin afectar al serv
 se conectaría ese CPD y qué le pasa si se cae la subestación? Se estudian dos líneas: Madrid–Zaragoza–Barcelona
 (alta densidad) y Madrid–Sevilla (baja densidad).
 
-Es la base de un paper conceptual y de una propuesta de investigación. Los resultados son preliminares: varios
+Es el material de apoyo de un artículo de investigación. Los resultados son preliminares: varios
 datos clave (potencia de cada subestación, su zona y PK exactos, su curva de carga real) no son públicos y se han
 estimado.
 
@@ -16,8 +16,8 @@ estimado.
 | 1 minuto | [`video/trenes_y_centros_de_datos.mp4`](video/trenes_y_centros_de_datos.mp4) | La idea en 55 s, para público no técnico |
 | 5 minutos | [`results/dashboard.html`](results/dashboard.html) (doble clic) | Panel interactivo con las conclusiones, las dos líneas, el día de un CPD, las baterías y las cifras financieras |
 | Ganas de entender la instalación | [`docs/esquema_instalacion.html`](docs/esquema_instalacion.html) (doble clic) | Esquema unifilar interactivo de Anchuelo: red, transformadores, batería, solar, grupos y servidores en 4 escenarios (día normal, pico del tren, cae la vecina, apagón) |
-| Que escribir el paper | La sección [Documentos](#documentos) | Arquitectura, respuesta ante caídas, encaje regulatorio, fuentes de datos |
-| Que tocar el modelo | La sección [El modelo](#el-modelo) | Qué hace cada script y cómo ejecutarlo |
+| Interés en el detalle técnico y regulatorio | La sección [Documentos](#documentos) | Arquitectura, respuesta ante caídas, encaje regulatorio, fuentes de datos |
+| Interés en reproducir los resultados | La sección [El modelo](#el-modelo) | Qué hace cada script y cómo ejecutarlo |
 
 ## La idea
 
@@ -78,8 +78,6 @@ Proyecto de RD de centros de datos ([`docs/encaje_regulatorio.md`](docs/encaje_r
 | [`docs/esquema_instalacion.html`](docs/esquema_instalacion.html) | El mismo diseño dibujado, interactivo, con los números de Anchuelo |
 | [`docs/encaje_regulatorio.md`](docs/encaje_regulatorio.md) | Qué permite hoy la normativa (acceso flexible Tipo 3, reducción voluntaria del permiso de Adif), qué reforma haría falta y cómo nos afecta el proyecto de RD de centros de datos (80 % renovable horario, PUE ≤ 1,15) |
 | [`docs/capacidad_acceso.md`](docs/capacidad_acceso.md) | De dónde sale el acceso de cada subestación (REE, CNMC, BOE) y qué falta |
-| [`docs/preguntas_adif.md`](docs/preguntas_adif.md) | Las 14 preguntas para Adif, REE y el material rodante que más cambiarían los resultados, y qué parte del modelo toca cada una |
-| [`docs/solicitud_transparencia_adif.md`](docs/solicitud_transparencia_adif.md) | Texto para pedir a Adif los datos reales de sus subestaciones |
 | [`docs/estado_del_arte.md`](docs/estado_del_arte.md) | Trabajos cercanos y hueco que cubre este estudio |
 | [`data/README.md`](data/README.md) | Datos de entrada: GTFS de Renfe, Iryo y Ouigo, subestaciones |
 | [`video/guion.md`](video/guion.md) | Guion del vídeo y origen de cada cifra |
@@ -154,12 +152,12 @@ y en la cabecera de cada script. Los que más pesan:
 9. **Cifras financieras.** Canon a Adif de 40 €/kW·año (20–80), baterías a 0,20 M€/MW + 0,25 M€/MWh, 3 años de
    espera evitados. Son órdenes de magnitud, no una valoración.
 
-## Estado y siguientes pasos
+## Limitaciones y trabajo futuro
 
-- **Ahora:** paper conceptual que desarrolle bien la idea (arquitectura, modelo, regulación y riesgos), orientado a
-  revistas Q1. Después, papers sobre casos concretos.
-- **Datos de Adif, REE y del material rodante:** la lista concreta, ordenada por lo que pesa, está en
-  [`docs/preguntas_adif.md`](docs/preguntas_adif.md). Lo primero es saber con qué resolución se vigila el límite de
-  potencia y las curvas de carga reales.
+- **Validación con datos del gestor de infraestructura y del operador del sistema:** curvas de carga reales de las
+  subestaciones, zonas de alimentación, resolución con la que se controla la potencia de cada posición, tiempo de
+  reconfiguración de la catenaria ante la pérdida de una subestación y potencia de cortocircuito de cada nudo.
+- **Material rodante:** consumos reales por tren-km y curvas de tracción y freno de cada serie.
 - **Modelo:** perfil longitudinal real, horarios reales de Ouigo, perfiles de plantas renovables concretas (el perfil
   peninsular es optimista para el 80 % horario) y trazas reales de carga de CPD de IA para calibrar la parte flexible.
+- **Trabajos posteriores:** estudios de caso por emplazamiento (cortocircuito, armónicos, protecciones y suelo disponible).

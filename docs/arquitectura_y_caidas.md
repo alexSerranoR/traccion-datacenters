@@ -1,6 +1,6 @@
 # Arquitectura de conexión y respuesta ante pérdida de suministro
 
-Material de trabajo para el paper conceptual (17/10/2026). Las cifras salen del modelo v2 (acceso REE concedido, carga del tren ×1,0, margen del 90 %) y de `src/arquitectura.py` (tabla completa por subestación en `results/arquitectura.csv`). Los valores marcados como **supuesto** hay que confirmarlos.
+Material de apoyo para el artículo (octubre de 2026). Las cifras salen del modelo v2 (acceso REE concedido, carga del tren ×1,0, margen del 90 %) y de `src/arquitectura.py` (tabla completa por subestación en `results/arquitectura.csv`). Los valores marcados como **supuesto** hay que confirmarlos.
 
 ## 1. Arquitectura de conexión
 
@@ -58,9 +58,9 @@ Alternativas para el paper: celdas LTO (>15.000 ciclos) o un híbrido con superc
 | Madrid–Barcelona | 59 MW | 70 MW | 234 MW |
 | Madrid–Sevilla | 210 MW | 227 MW | 337 MW |
 
-El término de potencia se factura con el maxímetro cuartohorario, pero los límites de seguridad de REE y las protecciones actúan mucho más rápido. **Pregunta para Adif y REE:** con qué resolución se vigilaría un acceso compartido.
+El término de potencia se factura con el maxímetro cuartohorario, pero los límites de seguridad de REE y las protecciones actúan mucho más rápido. Queda por confirmar con qué resolución se vigilaría un acceso compartido.
 
-**Desequilibrio.** Estimado como VUF ≈ S_tren/Scc con el pico de 1 s y Scc **supuesta** de 12 GVA a 400 kV y 5 GVA a 220 kV (6 y 2,5 GVA en nudo débil): sale **0,2-0,8 %**, y hasta **1,9 %** en nudos débiles de 220 kV (Madrid–Sevilla, El Hornillo). Es conservador, porque la conexión en V de Adif y la rotación de fases entre subestaciones lo reducen. Referencias: nivel de planificación en AT ≈1,4 % (IEC TR 61000-3-13); los SAI con rectificador activo toleran ≈2 %; los motores de refrigeración se desclasifican por encima de ≈1 %. El CPD, que es una carga equilibrada, no empeora el desequilibrio. **Acción:** pedir a REE la Scc real de cada nudo.
+**Desequilibrio.** Estimado como VUF ≈ S_tren/Scc con el pico de 1 s y Scc **supuesta** de 12 GVA a 400 kV y 5 GVA a 220 kV (6 y 2,5 GVA en nudo débil): sale **0,2-0,8 %**, y hasta **1,9 %** en nudos débiles de 220 kV (Madrid–Sevilla, El Hornillo). Es conservador, porque la conexión en V de Adif y la rotación de fases entre subestaciones lo reducen. Referencias: nivel de planificación en AT ≈1,4 % (IEC TR 61000-3-13); los SAI con rectificador activo toleran ≈2 %; los motores de refrigeración se desclasifican por encima de ≈1 %. El CPD, que es una carga equilibrada, no empeora el desequilibrio. Queda por confirmar con la Scc real de cada nudo.
 
 **Armónicos.** Los trenes modernos llevan convertidores de 4 cuadrantes PWM y emiten poco en baja frecuencia, aunque pueden excitar resonancias. Los SAI y fuentes del CPD con rectificador activo también. Hace falta un estudio de armónicos por emplazamiento, pero no parece una barrera.
 
@@ -128,8 +128,8 @@ La parte eléctrica es ≈10 % del CPD, y el ahorro de grupos del bloque flexibl
 su posición y sus transformadores.
 
 ## 4. Pendiente
-- Confirmar con Adif y Garrido el tiempo de reconfiguración de la catenaria en N-1 y si la protección de sobrecarga es por trafo o por posición.
-- Pedir a REE la Scc de cada nudo.
+- Validar con el gestor de infraestructura el tiempo de reconfiguración de la catenaria en N-1 y si la protección de sobrecarga es por trafo o por posición.
+- Obtener la potencia de cortocircuito real de cada nudo.
 
 ## Fuentes
 - NERC / DCD, evento de Virginia de 2024: https://datacenterdynamics.com/en/news/virginia-narrowly-avoided-power-cuts-when-60-data-centers-dropped-off-the-grid-at-once ; https://www.ferc.gov/sites/default/files/2025-04/Presentation%20NERC%20Seeks%20to%20Address%20Reliability%20Impacts%20from%C2%A0Large%20Load%20Integration_1.pdf

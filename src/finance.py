@@ -1,7 +1,7 @@
 """Paso 4: cifras financieras orientativas a partir de la capacidad compartible.
 Uso: python finance.py <dir_trabajo> <dir_results>
 
-Todo son SUPUESTOS de orden de magnitud para una propuesta de investigacion, no una valoracion.
+Todo son SUPUESTOS de orden de magnitud para un trabajo de investigacion, no una valoracion.
 Se escriben en results/supuestos_financieros.csv para que se puedan discutir y cambiar.
 """
 import sys, json
