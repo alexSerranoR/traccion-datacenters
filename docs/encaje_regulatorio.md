@@ -1,8 +1,8 @@
 # Encaje regulatorio: compartir la capacidad de acceso de una subestación de tracción con un centro de datos
 
 Revisión a 12/10/2026. No es asesoramiento jurídico: es la lectura técnica de la normativa
-para plantear el trabajo. Antes de publicar conviene que la revise alguien de derecho
-energético.
+para plantear el trabajo. Se recomienda su revisión por especialistas en derecho
+energético antes de su publicación.
 
 ## Resumen
 
@@ -104,7 +104,7 @@ Qué tendría que cambiar para la vía E:
   perturbadora. Un CD trifásico en el mismo nudo no compensa el desequilibrio, pero sí obliga
   a un estudio conjunto de calidad de onda.
 - REE calcula con **percentiles (98 % en 2026)** y admite sobrecargas N-1 breves. El modelo
-  usa N-1 = +50 % del vecino más cargado. Conviene alinearlo con este criterio.
+  usa N-1 = +50 % del vecino más cargado. Se propone alinearlo con este criterio.
 - Un CD en acceso flexible tiene que poder **reducir consumo con poco preaviso**. Encaja con la
   parte desplazable de la carga de IA y con baterías, y también ayuda a cumplir la casación
   horaria renovable del proyecto de RD.
@@ -121,8 +121,8 @@ Qué tendría que cambiar para la vía E:
      o "con batería" del modelo actual.
 3. **Propuesta regulatoria concreta**: los cuatro cambios de la sección 3, como contribución
    del trabajo.
-4. **Limitación explícita**: la capacidad real de acceso por subestación no es pública. Habría
-   que pedirla a Adif o a REE, o estimarla por la potencia de los transformadores.
+4. **Limitación explícita**: la capacidad real de acceso por subestación no es pública. Se
+   estima a partir de la publicación de REE por posición y de la potencia de los transformadores.
 
 ## 7. Proyecto de RD de centros de datos (estado a 19/10/2026)
 
@@ -132,7 +132,7 @@ Gobierno quiere aprobarlo entre finales de octubre y principios de noviembre. **
 texto puede cambiar.
 
 **Qué exige el proyecto**
-- **Ámbito:** centros con 1 MW o más de acceso. Nuestros emplazamientos (6–52 MW) entran todos.
+- **Ámbito:** centros con 1 MW o más de acceso. Todos los emplazamientos estudiados (6–52 MW) quedan dentro.
 - **Es condición para obtener y conservar el permiso de acceso.** Hay que presentar tres declaraciones
   responsables con la solicitud: soberanía digital, eficiencia y renovables. Las solicitudes que no las acrediten
   no se admiten ni cuentan para los concursos de capacidad.
@@ -149,7 +149,7 @@ texto puede cambiar.
 - **Transitorio:** los permisos concedidos y no conectados tienen 6 meses para acreditar los requisitos o caducan,
   y las solicitudes en trámite tienen 3 meses.
 
-**Qué supone para nuestra propuesta**
+**Qué supone para la propuesta**
 
 | Tema | Efecto | Lectura |
 |---|---|---|
@@ -158,10 +158,10 @@ texto puede cambiar.
 | Correlación horaria del 80 % | Es lo más difícil para un CPD que consume plano 24 h. La batería del modelo (12–15 min) no sirve para desplazar energía entre horas, y la FV propia solo cubre ≈5 % | El bloque flexible puede concentrar consumo en horas renovables, igual que cede potencia al tren. Así la misma flexibilidad sirve para dos cosas. Recortar consumo nunca penaliza, porque se mide lo consumido |
 | Adicionalidad y PPA | Para cubrir el 80 % hora a hora hace falta una cartera de PPA nuevos de eólica y solar varias veces mayor que la potencia del CPD (ver 7.1) | Las líneas cruzan Aragón, Soria, Guadalajara y Castilla-La Mancha, con mucha renovable nueva cerca. En Madrid–Sevilla el sol del sur ayuda |
 | PUE ≤ 1,15 | El modelo usaba 1,3 | Se cambia el valor central de `src/finance.py` a 1,15. Varias subestaciones están en la meseta alta (Medinaceli, Brihuega, Terrer), con clima frío que favorece el free cooling |
-| WUE ≤ 0,1 L/kWh | Obliga a refrigeración seca o en circuito cerrado | Encaja con la España interior seca. Cuidado: tensiona el PUE en los veranos de Zaragoza, Lleida y Córdoba |
+| WUE ≤ 0,1 L/kWh | Obliga a refrigeración seca o en circuito cerrado | Encaja con la España interior seca. No obstante, tensiona el PUE en los veranos de Zaragoza, Lleida y Córdoba |
 | Priorización (renovable nueva, agua y suelo eficientes, autonomía tecnológica) | — | **A favor:** se reutiliza un nudo y un suelo ya existentes, sin nuevas líneas ni subestaciones de transporte, y en infraestructura pública |
 | Soberanía digital | Neutro: depende del operador del CPD | Un CPD sobre infraestructura pública ferroviaria encaja con el discurso de soberanía y de la gigafactoría de IA |
-| CNMC: pide reconocer almacenamiento, gestión de demanda, reducciones temporales y servicios de balance | Aún no está en el texto | **Es el argumento central del paper:** nuestro CPD es justo ese tipo de demanda flexible. Conviene proponer que el texto final lo premie |
+| CNMC: pide reconocer almacenamiento, gestión de demanda, reducciones temporales y servicios de balance | Aún no está en el texto | **Es el argumento central del trabajo:** el CPD propuesto es precisamente ese tipo de demanda flexible. Se propone que el texto final lo reconozca |
 | Caducidad de permisos no conectados | Liberará capacidad en nudos saturados (≈12 GW concedidos y ≈27 GW en cola para CPD) | **En contra:** puede reducir la escasez de acceso que da valor a la idea. El argumento de "no esperar 3 años" hay que matizarlo |
 
 ### 7.1 Cuánta renovable hace falta para el 80 % horario

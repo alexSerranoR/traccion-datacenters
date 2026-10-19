@@ -18,7 +18,7 @@ W, OUT = sys.argv[1], sys.argv[2]
 SAFETY = 0.90          # igual que analysis.py
 N1_SHARE = 0.5         # igual que analysis.py
 FLEX = 0.30            # igual que analysis.py
-SCC = {400: (12000, 6000), 220: (5000, 2500)}   # MVA, SUPUESTO (central, nudo debil): pedir a REE la Scc real
+SCC = {400: (12000, 6000), 220: (5000, 2500)}   # MVA, SUPUESTO (central, nudo debil): Scc real no publicada
 
 
 def battery_need(H, D, dt):

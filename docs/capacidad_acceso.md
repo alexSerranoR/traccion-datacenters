@@ -26,14 +26,14 @@ No hay potencia por SET publicada. Valores típicos: 2×60 MVA en 2×25 kV (MZB;
 
 ## Escenarios propuestos para el modelo (columnas `acceso_escenario_*`)
 - **bajo / real** = capacidad de acceso concedida hoy por REE. Donde falta (5 SET), 35–40 MW (mediana de la línea redondeada a la baja).
-  Rueda de Jalón (12 MW) es sospechosa; conviene probar el modelo también con 35 MW.
+  El valor de Rueda de Jalón (12 MW) es anómalo; se recomienda un análisis de sensibilidad con 35 MW.
 - **alto / ampliación** = lo que admitirían los transformadores de tracción si Adif (o el CPD) obtuviera más acceso de REE:
   ~100 MW en MZB (2×60 MVA, fp≈0,95, con margen) y ~55 MW en MS (2×30 MVA). Depende del margen del nudo REE, que es dato público
   (fichero por nudo, columnas "MARGEN CAPACIDAD DE ACCESO TOTAL PARA CONEXIÓN A LA RDT"):
   https://www.ree.es/sites/default/files/12_CLIENTES/Documentos/2026_10_01_GRT_demanda.xlsx
-  No se pudo descargar desde la nube (bloqueo de red); hay que bajarlo a mano y cruzarlo por `nudo_ree`.
+  Aún no se ha incorporado al modelo; se cruzaría por `nudo_ree`.
 
-## Pendiente
+## Limitaciones
 - Nudo y acceso de: Feria de Muestras, Lleida, Sant Boi (MZB); La Lancha, Lora del Río, Rinconada (MS). Probablemente conectadas a distribución.
 - Pliego técnico de la renovación de MS (Plataforma de Contratación, DocumentId 3de12f87-5e1d-4230-b1cd-18e92e232472): probablemente lista las 12 SET con datos.
-- Solicitud por transparencia: [`solicitud_transparencia_adif.md`](solicitud_transparencia_adif.md).
+- Resto de datos no públicos: [`limitaciones_y_datos.md`](limitaciones_y_datos.md).

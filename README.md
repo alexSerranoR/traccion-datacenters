@@ -1,35 +1,37 @@
 # Subestaciones de alta velocidad y centros de datos
 
-¿Cuánta capacidad de conexión a la red tienen sin usar las subestaciones de tracción de alta velocidad,
-y cuántos MW de centros de datos (CPD) podrían compartirla sin afectar al servicio ferroviario? ¿Cómo
-se conectaría ese CPD y qué le pasa si se cae la subestación? Se estudian dos líneas: Madrid–Zaragoza–Barcelona
-(alta densidad) y Madrid–Sevilla (baja densidad).
+Este trabajo estudia la capacidad de acceso a la red de transporte que las subestaciones de tracción de alta
+velocidad tienen concedida y no utilizan, y cuánta potencia de centros de proceso de datos (CPD) podría compartirla
+sin afectar al servicio ferroviario. Analiza además la arquitectura de conexión de ese CPD, su respuesta ante la
+pérdida de suministro y el encaje regulatorio de la propuesta. Se estudian dos líneas: Madrid–Zaragoza–Barcelona
+(alta densidad de tráfico) y Madrid–Sevilla (baja densidad).
 
-Es la base de un paper conceptual y de una propuesta de investigación. Los resultados son preliminares: varios
-datos clave (potencia de cada subestación, su zona y PK exactos, su curva de carga real) no son públicos y se han
-estimado.
+El repositorio sirve de base a un artículo conceptual y a una propuesta de investigación. Los resultados son
+preliminares: varios parámetros relevantes (potencia de cada subestación, tramo alimentado y PK exactos, curva de
+carga real) no son públicos y se han estimado (ver [`docs/limitaciones_y_datos.md`](docs/limitaciones_y_datos.md)).
 
-## Por dónde empezar
+## Guía de lectura
 
-| Si tienes... | Abre | Qué vas a ver |
-|---|---|---|
-| 1 minuto | [`video/trenes_y_centros_de_datos.mp4`](video/trenes_y_centros_de_datos.mp4) | La idea en 55 s, para público no técnico |
-| 5 minutos | [`results/dashboard.html`](results/dashboard.html) (doble clic) | Panel interactivo con las conclusiones, las dos líneas, el día de un CPD, las baterías y las cifras financieras |
-| Ganas de entender la instalación | [`docs/esquema_instalacion.html`](docs/esquema_instalacion.html) (doble clic) | Esquema unifilar interactivo de Anchuelo: red, transformadores, batería, solar, grupos y servidores en 4 escenarios (día normal, pico del tren, cae la vecina, apagón) |
-| Que escribir el paper | La sección [Documentos](#documentos) | Arquitectura, respuesta ante caídas, encaje regulatorio, fuentes de datos |
-| Que tocar el modelo | La sección [El modelo](#el-modelo) | Qué hace cada script y cómo ejecutarlo |
+| Material | Contenido |
+|---|---|
+| [`video/trenes_y_centros_de_datos.mp4`](video/trenes_y_centros_de_datos.mp4) | Presentación divulgativa de la propuesta (55 s) |
+| [`results/dashboard.html`](results/dashboard.html) | Panel interactivo con las conclusiones, las dos líneas, la operación diaria de un CPD, las baterías y las cifras financieras |
+| [`docs/esquema_instalacion.html`](docs/esquema_instalacion.html) | Esquema unifilar interactivo del emplazamiento de Anchuelo en cuatro escenarios (operación normal, pico de tracción, pérdida de la subestación vecina y apagón) |
+| Sección [Documentos](#documentos) | Arquitectura, respuesta ante caídas, encaje regulatorio, fuentes de datos y limitaciones |
+| Sección [El modelo](#el-modelo) | Descripción de cada script e instrucciones de ejecución |
 
-## La idea
+## Planteamiento
 
-- Las subestaciones de tracción de alta velocidad están conectadas a la red de transporte de REE a 220/400 kV y
-  tienen concedidos 30–66 MW de acceso cada una. El tren solo usa de media el 6–10 %, pero sus picos de minutos
-  llenan ese acceso.
-- En España, la falta de acceso a la red es el principal freno para nuevos centros de datos.
-- Un CPD con su propia posición en el mismo nudo, su propio transformador y una batería podría usar la capacidad
-  que el tren deja libre. **El tren tiene siempre prioridad**: la batería se come sus picos y la parte flexible del
-  CPD (entrenamiento de IA, cálculo por lotes) cede potencia cuando hace falta.
-- Hoy la regulación no permite compartir el acceso de Adif. El paper cuantifica cuánta capacidad está bloqueada y
-  propone la reforma: un "acceso compartido con prioridad".
+- Las subestaciones de tracción de alta velocidad están conectadas a la red de transporte a 220/400 kV y tienen
+  concedidos entre 30 y 66 MW de acceso cada una. La carga ferroviaria media apenas alcanza el 6–10 % de ese valor,
+  aunque sus picos de pocos minutos sí lo ocupan.
+- En España, la falta de capacidad de acceso a la red es la principal barrera para la implantación de nuevos CPD.
+- Un CPD con posición propia en el mismo nudo, transformación propia y almacenamiento en baterías podría utilizar la
+  capacidad que el ferrocarril deja libre. **El servicio ferroviario mantiene siempre la prioridad**: la batería absorbe
+  sus picos y la fracción flexible de la carga del CPD (entrenamiento de IA, cálculo por lotes) se reduce cuando es
+  necesario.
+- La regulación vigente no permite compartir el permiso de acceso de Adif. El trabajo cuantifica la capacidad
+  bloqueada y propone una reforma: el "acceso compartido con prioridad".
 
 ## Resultados principales
 
@@ -49,26 +51,26 @@ aproximadas y las subestaciones reales con el acceso que REE tiene concedido a c
 Arquitectura y caídas ([`docs/arquitectura_y_caidas.md`](docs/arquitectura_y_caidas.md), tabla en
 [`results/arquitectura.csv`](results/arquitectura.csv)):
 
-- **La batería es de potencia.** Con la energía mínima se descargaría entera en 12–15 min y haría 4–6 ciclos al día (duraría
-  unos 3 años). El modelo la limita a 2C: unos 30 min de energía, ≈2,8 ciclos al día y unos 8 años de vida.
-- **Cómo se mida el límite lo cambia todo.** Sin batería, el CPD pasa de 70 a 234 MW en Madrid–Barcelona si el
-  límite se vigila con medias de 15 min en vez de 1 min.
-- **Cuando cae una subestación vecina**, el CPD con batería tiene que recortar 71 de 385 MW en Madrid–Barcelona
-  (≈21 % por emplazamiento) y 57 de 417 MW en Madrid–Sevilla. Cabe en el 30 % de carga flexible supuesto.
+- **La batería es de potencia.** Con la energía mínima se descargaría por completo en 12–15 min y haría 4–6 ciclos al día
+  (vida útil de unos 3 años). El modelo la limita a 2C: unos 30 min de energía, ≈2,8 ciclos al día y unos 8 años de vida.
+- **La resolución con la que se evalúa el límite es determinante.** Sin batería, la capacidad para el CPD en
+  Madrid–Barcelona pasa de 70 a 234 MW si el límite se evalúa con medias de 15 min en lugar de 1 min.
+- **Cuando cae una subestación vecina**, el CPD con batería debe reducir 71 de 385 MW en Madrid–Barcelona
+  (≈21 % por emplazamiento) y 57 de 417 MW en Madrid–Sevilla. La reducción cabe en el 30 % de carga flexible supuesto.
 - **La instalación eléctrica completa** (posición propia, dos transformadores, batería y grupos) cuesta unos 317 M€ en
-  Madrid–Barcelona y 296 M€ en Madrid–Sevilla, ≈10 % de lo que cuesta el propio CPD. No poner grupos al bloque flexible
+  Madrid–Barcelona y 296 M€ en Madrid–Sevilla, ≈10 % de lo que cuesta el propio CPD. Prescindir de grupos en el bloque flexible
   ahorra 62–69 M€.
 - **El CPD conserva su Tier III**, porque para Uptime la red no es la fuente fiable, sino los grupos del propio
   emplazamiento. Se propone un diseño en dos bloques: uno firme con SAI y grupos, y otro flexible sin grupos.
-- **El desequilibrio del tren monofásico** sale entre un 0,2 y un 0,8 % en el nudo de alta tensión (Scc supuesta).
+- **El desequilibrio introducido por la tracción monofásica** se sitúa entre un 0,2 y un 0,8 % en el nudo de alta tensión (Scc supuesta).
 
 Proyecto de RD de centros de datos ([`docs/encaje_regulatorio.md`](docs/encaje_regulatorio.md#7-proyecto-de-rd-de-centros-de-datos-estado-a-19102026)):
 
-- Exige que en cada hora el 80 % del consumo esté cubierto por renovable nueva. Con los perfiles horarios de REE de 2025,
+- Exige que, en cada hora, el 80 % del consumo esté cubierto por renovable nueva. Con los perfiles horarios de REE de 2025,
   un CPD plano necesita unos 9,5 MW de eólica y FV por MW para cumplir en el 95 % de las horas. **Si el bloque flexible
   baja en las horas sin viento ni sol, bastan 6,75 MW y cuesta ≈10 €/MWh menos.** La misma flexibilidad que cede
-  potencia al tren abarata cumplir el decreto.
-- El modelo usa ya el PUE de 1,15 que pide el proyecto.
+  potencia al ferrocarril reduce el coste de cumplimiento del decreto.
+- El modelo adopta el PUE de 1,15 que establece el proyecto.
 
 ## Documentos
 
@@ -76,12 +78,11 @@ Proyecto de RD de centros de datos ([`docs/encaje_regulatorio.md`](docs/encaje_r
 |---|---|
 | [`docs/arquitectura_y_caidas.md`](docs/arquitectura_y_caidas.md) | Cómo se conecta el CPD (posición, transformadores, 30 kV, batería, solar, grupos, control) y qué pasa en cada tipo de caída, con tiempos y Tier III/IV |
 | [`docs/esquema_instalacion.html`](docs/esquema_instalacion.html) | El mismo diseño dibujado, interactivo, con los números de Anchuelo |
-| [`docs/encaje_regulatorio.md`](docs/encaje_regulatorio.md) | Qué permite hoy la normativa (acceso flexible Tipo 3, reducción voluntaria del permiso de Adif), qué reforma haría falta y cómo nos afecta el proyecto de RD de centros de datos (80 % renovable horario, PUE ≤ 1,15) |
-| [`docs/capacidad_acceso.md`](docs/capacidad_acceso.md) | De dónde sale el acceso de cada subestación (REE, CNMC, BOE) y qué falta |
-| [`docs/preguntas_adif.md`](docs/preguntas_adif.md) | Las 14 preguntas para Adif, REE y el material rodante que más cambiarían los resultados, y qué parte del modelo toca cada una |
-| [`docs/solicitud_transparencia_adif.md`](docs/solicitud_transparencia_adif.md) | Texto para pedir a Adif los datos reales de sus subestaciones |
-| [`docs/estado_del_arte.md`](docs/estado_del_arte.md) | Trabajos cercanos y hueco que cubre este estudio |
-| [`data/README.md`](data/README.md) | Datos de entrada: GTFS de Renfe, Iryo y Ouigo, subestaciones |
+| [`docs/encaje_regulatorio.md`](docs/encaje_regulatorio.md) | Qué permite hoy la normativa (acceso flexible Tipo 3, reducción voluntaria del permiso de Adif), qué reforma haría falta y efecto del proyecto de RD de centros de datos (80 % renovable horario, PUE ≤ 1,15) |
+| [`docs/capacidad_acceso.md`](docs/capacidad_acceso.md) | Fuentes y método para el acceso de cada subestación (REE, CNMC, BOE) |
+| [`docs/limitaciones_y_datos.md`](docs/limitaciones_y_datos.md) | Parámetros no públicos que se han estimado, su efecto sobre los resultados y el parámetro del modelo al que afectan |
+| [`docs/estado_del_arte.md`](docs/estado_del_arte.md) | Trabajos relacionados y contribución de este estudio |
+| [`data/README.md`](data/README.md) | Datos de entrada: GTFS de Renfe, Iryo y Ouigo, subestaciones y perfiles horarios de REE |
 | [`video/guion.md`](video/guion.md) | Guion del vídeo y origen de cada cifra |
 
 ## El modelo
@@ -122,7 +123,7 @@ python run_all.py data/gtfs 20261104  # otra fecha dentro del calendario del GTF
 python src/dashboard.py results       # rehace solo el panel, sin volver a simular
 ```
 
-En Windows, usa `py` en lugar de `python` si hace falta.
+En Windows puede ser necesario usar `py` en lugar de `python`.
 
 ### Tablas de resultados
 
@@ -137,29 +138,29 @@ En Windows, usa `py` en lugar de `python` si hace falta.
 | `results/simulacion.csv`, `lineas.json` | Resumen de la simulación y de las líneas |
 | `results/supuestos.csv`, `supuestos_financieros.csv` | Todos los supuestos, con su fuente |
 
-## Supuestos principales (a contrastar con Adif)
+## Supuestos principales
 
 Están en [`results/supuestos.csv`](results/supuestos.csv), [`results/supuestos_financieros.csv`](results/supuestos_financieros.csv)
-y en la cabecera de cada script. Los que más pesan:
+y en la cabecera de cada script. Los de mayor influencia son:
 
 1. **Acceso real y zona de cada subestación.** El acceso concedido es público (REE), pero en 6 subestaciones no se ha
    identificado la posición y los PK son estimados (±10 km).
-2. **Pendientes.** Perfil de cotas aproximado (±50 m) a partir de estaciones y puertos; falta el perfil de Adif.
+2. **Pendientes.** Perfil de cotas aproximado (±50 m) a partir de estaciones y puertos; no se dispone del perfil longitudinal oficial.
 3. **Horas de Ouigo.** Solo se conocen sus frecuencias.
 4. **Criterio N-1.** Si cae una subestación, cada vecina asume la mitad de su carga.
-5. **CPD flexible.** Un 30 % de su carga se puede recortar en los picos del tren.
-6. **Ventana del límite.** El modelo vigila el límite con medias de 1 minuto; con 15 minutos la capacidad sube mucho.
+5. **CPD flexible.** Un 30 % de su carga puede reducirse durante los picos de tracción.
+6. **Ventana del límite.** El modelo evalúa el límite con medias de 1 minuto; con 15 minutos la capacidad aumenta de forma notable.
 7. **Potencia de cortocircuito de cada nudo** (para el desequilibrio): 12 GVA a 400 kV y 5 GVA a 220 kV, supuestos.
 8. **PUE de 1,15**, el tope del proyecto de RD de centros de datos.
 9. **Cifras financieras.** Canon a Adif de 40 €/kW·año (20–80), baterías a 0,20 M€/MW + 0,25 M€/MWh, 3 años de
    espera evitados. Son órdenes de magnitud, no una valoración.
 
-## Estado y siguientes pasos
+## Estado y líneas futuras
 
-- **Ahora:** paper conceptual que desarrolle bien la idea (arquitectura, modelo, regulación y riesgos), orientado a
-  revistas Q1. Después, papers sobre casos concretos.
-- **Datos de Adif, REE y del material rodante:** la lista concreta, ordenada por lo que pesa, está en
-  [`docs/preguntas_adif.md`](docs/preguntas_adif.md). Lo primero es saber con qué resolución se vigila el límite de
-  potencia y las curvas de carga reales.
+- **Fase actual:** artículo conceptual que desarrolle la propuesta (arquitectura, modelo, regulación y riesgos),
+  orientado a revistas Q1. Posteriormente, estudios de casos concretos.
+- **Validación:** los parámetros no públicos con mayor efecto sobre los resultados se recogen, ordenados por su peso,
+  en [`docs/limitaciones_y_datos.md`](docs/limitaciones_y_datos.md). Los más influyentes son la resolución temporal
+  con la que se evalúa el límite de potencia y las curvas de carga reales de las subestaciones.
 - **Modelo:** perfil longitudinal real, horarios reales de Ouigo, perfiles de plantas renovables concretas (el perfil
   peninsular es optimista para el 80 % horario) y trazas reales de carga de CPD de IA para calibrar la parte flexible.

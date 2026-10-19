@@ -1,6 +1,6 @@
 # Estado del arte y motivación
 
-Notas para situar el trabajo. Pendiente de ampliar con una búsqueda bibliográfica formal.
+Revisión preliminar para situar el trabajo, que se completará con una búsqueda bibliográfica sistemática.
 
 ## Trabajos cercanos
 - **Baterías transportadas por ferrocarril.** Moraski, Popovich y Phadke (2023), *Leveraging
