@@ -94,7 +94,7 @@ Qué tendría que cambiar para la vía E:
   uso de la red de tracción para cargas no ferroviarias.
 - **CNMC 2023 sobre Adif AV**: autoconsumo renovable de las empresas ferroviarias y
   recomendación de abrir información y suelo de subestaciones.
-- No he encontrado ningún caso en que un CD comparta la capacidad de acceso de una
+- No se ha encontrado ningún caso en que un CD comparta la capacidad de acceso de una
   subestación de tracción de alta velocidad, ni en España ni fuera. Es un hueco, y también un
   riesgo: no hay jurisprudencia ni práctica administrativa que lo respalde.
 

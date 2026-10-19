@@ -20,3 +20,5 @@ data/gtfs
 # Ficheros temporales del vídeo
 video/build.html
 video/still_*.png
+# Web publicada (se genera en el despliegue, ver vercel.json)
+public/
