@@ -124,6 +124,46 @@ Qué tendría que cambiar para la vía E:
 4. **Limitación explícita**: la capacidad real de acceso por subestación no es pública. Habría
    que pedirla a Adif o a REE, o estimarla por la potencia de los transformadores.
 
+## 7. Proyecto de RD de centros de datos (estado a 19/10/2026)
+
+El RDL 7/2026 mandó aprobar un real decreto con requisitos para los centros de datos. El proyecto salió a
+audiencia pública por urgencia el 27/8/2026, la CNMC emitió su informe el 22/9/2026 (IPN/CNMC/038/26) y el
+Gobierno quiere aprobarlo entre finales de octubre y principios de noviembre. **Todavía no está en el BOE** y el
+texto puede cambiar.
+
+**Qué exige el proyecto**
+- **Ámbito:** centros con 1 MW o más de acceso. Nuestros emplazamientos (6–52 MW) entran todos.
+- **Es condición para obtener y conservar el permiso de acceso.** Hay que presentar tres declaraciones
+  responsables con la solicitud: soberanía digital, eficiencia y renovables. Las solicitudes que no las acrediten
+  no se admiten ni cuentan para los concursos de capacidad.
+- **Renovables, mientras la cuota del sistema esté por debajo del 90 %:**
+  - **Adicionalidad.** El 80 % del consumo debe salir de renovables nuevas, puestas en servicio como mucho
+    18 meses antes de que arranque el centro. Valen autoconsumo cercano o PPA de 10 años o más con plantas en
+    España. Las garantías de origen solas no sirven.
+  - **Correlación horaria.** En cada hora, al menos el 80 % de lo consumido debe estar cubierto por renovable
+    generada en esa misma hora.
+- **Eficiencia, en régimen transitorio hasta la etiqueta europea de 2027:** PUE ≤ 1,15 y WUE ≤ 0,1 L/kWh.
+  Superarlos dos años seguidos es incumplimiento.
+- **Recargos sobre peajes y cargos** de hasta el 500 %. Se pierde el permiso con cinco años seguidos por debajo
+  del 60 % de adicionalidad o con un 20 % o más de horas sin correlación.
+- **Transitorio:** los permisos concedidos y no conectados tienen 6 meses para acreditar los requisitos o caducan,
+  y las solicitudes en trámite tienen 3 meses.
+
+**Qué supone para nuestra propuesta**
+
+| Tema | Efecto | Lectura |
+|---|---|---|
+| Vía "hoy" (permiso propio del CPD) | El CPD queda sujeto al decreto completo | Es igual que para cualquier CPD nuevo. No es una desventaja específica |
+| Vía "con reforma" (permiso compartido) | El decreto define su ámbito por la potencia de acceso del CPD | La reforma tiene que dejar claro que el CPD que comparte el permiso de Adif cumple el decreto con su propia potencia máxima |
+| Correlación horaria del 80 % | Es lo más difícil para un CPD que consume plano 24 h. La batería del modelo (12–15 min) no sirve para desplazar energía entre horas, y la FV propia solo cubre ≈5 % | El bloque flexible puede concentrar consumo en horas renovables, igual que cede potencia al tren. Así la misma flexibilidad sirve para dos cosas. Recortar consumo nunca penaliza, porque se mide lo consumido |
+| Adicionalidad y PPA | Para cubrir el 80 % hora a hora hace falta una cartera de PPA nuevos de eólica y solar bastante mayor que la potencia del CPD (del orden de 2–3 veces, estimación propia sin calcular) | Las líneas cruzan Aragón, Soria, Guadalajara y Castilla-La Mancha, con mucha renovable nueva cerca. En Madrid–Sevilla el sol del sur ayuda |
+| PUE ≤ 1,15 | El modelo usaba 1,3 | Se cambia el valor central de `src/finance.py` a 1,15. Varias subestaciones están en la meseta alta (Medinaceli, Brihuega, Terrer), con clima frío que favorece el free cooling |
+| WUE ≤ 0,1 L/kWh | Obliga a refrigeración seca o en circuito cerrado | Encaja con la España interior seca. Cuidado: tensiona el PUE en los veranos de Zaragoza, Lleida y Córdoba |
+| Priorización (renovable nueva, agua y suelo eficientes, autonomía tecnológica) | — | **A favor:** se reutiliza un nudo y un suelo ya existentes, sin nuevas líneas ni subestaciones de transporte, y en infraestructura pública |
+| Soberanía digital | Neutro: depende del operador del CPD | Un CPD sobre infraestructura pública ferroviaria encaja con el discurso de soberanía y de la gigafactoría de IA |
+| CNMC: pide reconocer almacenamiento, gestión de demanda, reducciones temporales y servicios de balance | Aún no está en el texto | **Es el argumento central del paper:** nuestro CPD es justo ese tipo de demanda flexible. Conviene proponer que el texto final lo premie |
+| Caducidad de permisos no conectados | Liberará capacidad en nudos saturados (≈12 GW concedidos y ≈27 GW en cola para CPD) | **En contra:** puede reducir la escasez de acceso que da valor a la idea. El argumento de "no esperar 3 años" hay que matizarlo |
+
 ## Fuentes
 
 - Circular 1/2024 de la CNMC, de 27 de septiembre: https://www.boe.es/buscar/doc.php?id=BOE-A-2024-20760
@@ -139,3 +179,7 @@ Qué tendría que cambiar para la vía E:
 - RD 314/2023, redes de distribución cerradas (nota de Pérez-Llorca): https://www.perezllorca.com/wp-content/uploads/2023/05/Nota-Juridica-Aprobada-la-regulacion-para-las-redes-de-distribucion-de-energia-electrica-cerradas.pdf
 - Ley 38/2015 del Sector Ferroviario: https://www.boe.es/buscar/act.php?id=BOE-A-2015-11724
 - Dwarkasing (2026), *Load Hosting Capacity of Urban Traction Networks*, TU Delft: https://repository.tudelft.nl/record/uuid:2d0dc733-75c5-423e-86d5-719b473f4b49
+- CNMC, informe IPN/CNMC/038/26 sobre el proyecto (resumen en DCD): https://www.datacenterdynamics.com/es/noticias/la-cnmc-pide-flexibilizar-las-exigencias-energ%C3%A9ticas-del-decreto-de-centros-de-datos/
+- DLA Piper, análisis del proyecto (16/9/2026): https://www.dlapiper.com/es-es/insights/publications/2026/09/proyecto-de-real-decreto-sobre-requisitos-de-sostenibilidad-y-soberania-digital
+- Encast, requisitos para conseguir y conservar el acceso: https://encastenergy.com/regulacion/real-decreto-centros-de-datos-acceso-red
+- Energías Renovables, calendario de aprobación (5/10/2026): https://www.energias-renovables.com/panorama/el-gobierno-prev--aprobar-este-mes-20261005
