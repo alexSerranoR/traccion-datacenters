@@ -102,256 +102,71 @@ footer { border-top: 1px solid var(--border); padding: 24px 0 48px; color: var(-
   <div class="wrap">
     <div class="brand">Subestaciones de tracción y centros de datos</div>
     <nav>
-      <a href="#resultados">Resultados</a><a href="#arquitectura">Arquitectura</a><a href="#contingencias">Contingencias</a><a href="#regulacion">Regulación</a><a href="#panel">Panel</a>
+      <a href="#video">Vídeo</a><a href="#idea">La idea</a><a href="#arquitectura">Arquitectura</a>
     </nav>
   </div>
 </header>
 
 <main class="wrap">
   <div class="hero">
-    <p class="eyebrow">Líneas de alta velocidad Madrid–Zaragoza–Barcelona y Madrid–Sevilla</p>
-    <h1>Las subestaciones de tracción reservan una capacidad de acceso que el tren apenas usa. Un centro de datos flexible podría aprovecharla.</h1>
-    <p class="lead">Las SET de alta velocidad tienen concedidos 30–66 MW de acceso a la red de transporte cada una, pero la carga de tracción media es solo el 6–10 % de esa cifra. Con prioridad absoluta del tren, una batería y una reforma regulatoria, cabrían unos 400 MW de centros de proceso de datos (CPD) por línea sin nuevas líneas de transporte.</p>
-    <span class="draft">Trabajo en curso · resultados preliminares · no citar</span>
-    <div class="kpis">
-      <div class="kpi"><div class="v">6–10 <small>%</small></div><div class="l">Uso medio del acceso concedido por la carga de tracción</div></div>
-      <div class="kpi"><div class="v">35 / 174 <small>MW</small></div><div class="l">CPD con la regulación actual y firmeza N-1 (Madrid–Barcelona / Madrid–Sevilla)</div></div>
-      <div class="kpi"><div class="v">385 / 417 <small>MW</small></div><div class="l">CPD con acceso compartido con prioridad y batería</div></div>
-      <div class="kpi"><div class="v">≈10 <small>%</small></div><div class="l">Peso de la instalación eléctrica sobre la inversión del CPD</div></div>
-    </div>
+    <p class="eyebrow">Líneas de alta velocidad españolas</p>
+    <h1>Las subestaciones de tracción tienen una conexión a la red que el tren apenas usa. Un centro de datos flexible podría aprovecharla.</h1>
+    <span class="draft">Trabajo en curso · no citar</span>
   </div>
 
   <section id="video">
     <h2>La propuesta en 55 segundos</h2>
-    <p class="intro">Vídeo divulgativo, sin audio.</p>
     <div class="video"><video src="video.mp4" controls playsinline preload="metadata"></video></div>
   </section>
 
-  <section id="resultados">
-    <h2>Acceso concedido frente a carga de tracción</h2>
-    <p class="intro">Simulación segundo a segundo de un miércoles laborable con los horarios de Renfe, Iryo y Ouigo, con perfil de pendientes, frente al acceso que REE tiene concedido a cada posición de Adif. Los picos de un minuto ocupan el acceso; la media queda muy por debajo.</p>
-    <div class="seg" role="group" aria-label="Línea">
-      <button type="button" data-line="MZB" aria-pressed="true">Madrid–Barcelona</button>
-      <button type="button" data-line="MS" aria-pressed="false">Madrid–Sevilla</button>
+  <section id="idea">
+    <h2>La idea</h2>
+    <div class="grid2" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))">
+      <div class="card">
+        <h3>El problema</h3>
+        <p style="margin:0">Los centros de datos no encuentran dónde conectarse: muchos nudos de la red de transporte están saturados.</p>
+      </div>
+      <div class="card">
+        <h3>Lo que sobra</h3>
+        <p style="margin:0">Cada subestación de tracción tiene concedidos 30–66 MW a 220/400 kV, dimensionados para los picos de tráfico. De media, el tren usa menos del 10 %.</p>
+      </div>
+      <div class="card">
+        <h3>La propuesta</h3>
+        <p style="margin:0">Conectar en el mismo nudo un centro de datos que use la capacidad libre y ceda potencia en cuanto el tren la necesita.</p>
+      </div>
+      <div class="card">
+        <h3>La condición</h3>
+        <p style="margin:0">El tren tiene siempre prioridad. Para compartir el acceso de Adif hace falta una reforma regulatoria: un acceso compartido con prioridad.</p>
+      </div>
     </div>
-    <div class="legend">
-      <span><i style="background:var(--track);outline:1px solid var(--border)"></i>Acceso concedido (REE)</span>
-      <span><i style="background:var(--train)"></i>Carga media del tren</span>
-      <span><i style="background:var(--peak);width:3px"></i>Pico del tren (media de 1 min)</span>
-      <span><i style="background:var(--cpd);border-radius:50%;width:10px"></i>CPD posible con batería (cifra en azul)</span>
-    </div>
-    <div class="card"><div class="chart" id="chart-se" aria-live="polite"></div></div>
-    <p class="note">SET ordenadas por PK (estimado, ±10 km). Acceso: REE, «Capacidad de acceso de demanda ocupada por posición», 01/10/2026. En seis SET no se ha identificado la posición y se suponen 35–40 MW. Donde el pico simulado supera el acceso (p. ej., Rueda de Jalón, 12 MW), la discrepancia apunta a un acceso infraestimado o a una carga sobrestimada; se tratará en la validación.</p>
-  </section>
-
-  <section>
-    <h2>Capacidad para CPD según el escenario</h2>
-    <p class="intro">Suma por línea de la potencia de CPD compatible con el servicio ferroviario. La reforma y la batería multiplican por más de diez la capacidad en la línea más cargada.</p>
-    <div class="card"><div class="chart" id="chart-esc"></div></div>
-    <p class="note">«Firme»: resiste el N-1 de la SET vecina sin recortar. «Flexible»: el 30 % de la carga del CPD puede reducirse durante los picos de tracción. Batería limitada a 2C (≈30 min de energía, ≈8 años de vida).</p>
   </section>
 
   <section id="arquitectura">
     <h2>Arquitectura de conexión</h2>
-    <p class="intro">El CPD no cuelga del embarrado ni de la posición de Adif: tiene posición propia en el mismo parque de REE. Con la reforma se comparte el límite de potencia del nudo, no la aparamenta, lo que evita modos comunes de fallo con la alimentación de tracción.</p>
-    <pre class="chain">Red de transporte REE (220/400 kV, nudo de la SET de tracción)
- ├─ Posición Adif → transformadores de tracción → 2×25 kV → catenaria
- └─ Posición propia del CPD
-      └─ 2 transformadores 400(220)/30 kV, cada uno al 100 % (N-1 interno)
-           └─ Barras de 30 kV en anillo
-                ├─ BESS de MT, acoplado en alterna, inversor grid-forming
-                ├─ Grupos electrógenos de MT (solo pérdida real de suministro)
-                └─ Salas: transformadores 30/0,4 kV → SAI → equipos IT</pre>
-    <h3 style="margin-top:22px">Esquema unifilar interactivo: SET de Anchuelo con el CPD</h3>
-    <p class="intro" style="margin-bottom:12px">Red, transformadores, batería, fotovoltaica, grupos y servidores con los valores del modelo. Seleccione un escenario (operación normal, pico de tracción, N-1 de la vecina o apagón) o un elemento para ver su función.</p>
+    <p class="intro">El centro de datos tiene posición propia en el parque de REE, dos transformadores 400(220)/30 kV al 100 %, un anillo de 30 kV, una batería grid-forming, fotovoltaica opcional y grupos solo para pérdida de suministro. El esquema muestra cómo se reparte la potencia en cuatro situaciones: operación normal, pico de tracción, caída de la subestación vecina y apagón.</p>
     <div class="bleed"><iframe class="embed" src="esquema.html" title="Esquema unifilar interactivo" loading="lazy"></iframe></div>
     <p class="note"><a href="esquema.html">Abrir el esquema a pantalla completa →</a></p>
-    <div class="grid2" style="margin-top:14px">
-      <div class="card">
-        <h3>Prioridad del tren por escalas de tiempo</h3>
-        <ol class="steps">
-          <li><b>0–1 s:</b> el BESS absorbe el exceso. La carga de tracción sube hasta 32 MW en 10 s en una SET.</li>
-          <li><b>1–10 s:</b> limitación de potencia de los servidores.</li>
-          <li><b>Minutos:</b> pausa y traslado de trabajos flexibles.</li>
-          <li><b>Respaldo:</b> relé limitador que abre una salida del CPD si tren + CPD superan el límite.</li>
-        </ol>
-        <p class="note">Señal: telemedida a 1 s de la posición de Adif; hueco disponible H(t) = 0,9·C − P<sub>tren</sub>(t).</p>
-      </div>
-      <div class="card">
-        <h3>Calidad de suministro</h3>
-        <p style="margin:0 0 8px"><b>Desequilibrio</b> por la carga bifásica de tracción: 0,2–0,8 % en el nudo (hasta 1,9 % en nudos débiles de 220 kV), con Scc supuesta. Inferior al nivel de planificación de ≈1,4 % (IEC TR 61000-3-13).</p>
-        <p style="margin:0"><b>Armónicos:</b> trenes con convertidores de cuatro cuadrantes y SAI con rectificador activo. Requiere estudio por emplazamiento, sin indicios de barrera.</p>
-      </div>
-    </div>
-    <div class="tbl" style="margin-top:14px">
-      <table>
-        <thead><tr><th>Ventana con la que se evalúa el límite</th><th class="num">1 s</th><th class="num">1 min (modelo)</th><th class="num">15 min (maxímetro)</th></tr></thead>
-        <tbody>
-          <tr><td>CPD sin batería, Madrid–Barcelona</td><td class="num">59 MW</td><td class="num">70 MW</td><td class="num">234 MW</td></tr>
-          <tr><td>CPD sin batería, Madrid–Sevilla</td><td class="num">210 MW</td><td class="num">227 MW</td><td class="num">337 MW</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">La resolución temporal del límite es el parámetro con más influencia en los resultados.</p>
-  </section>
-
-  <section id="contingencias">
-    <h2>Respuesta ante contingencias</h2>
-    <p class="intro">El CPD mantiene su clasificación Tier III: para Uptime Institute la fuente fiable son los grupos del emplazamiento, no la red. Se propone un diseño en dos bloques: uno firme, con SAI y grupos al 100 %, y otro flexible (≈30 %), sin grupos, que absorbe los recortes.</p>
-    <div class="tbl">
-      <table>
-        <thead><tr><th>Evento</th><th>Duración</th><th>Respuesta</th></tr></thead>
-        <tbody>
-          <tr><td>Hueco de tensión por falta en la red de transporte</td><td>80–150 ms</td><td>SAI, sin efecto en el servicio</td></tr>
-          <tr><td>N-1 de la SET vecina: esta SET alimenta parte de su tramo</td><td>Minutos–horas</td><td>El BESS cubre los primeros segundos; después se recorta el bloque flexible: 71 de 385 MW en Madrid–Barcelona y 57 de 417 MW en Madrid–Sevilla</td></tr>
-          <tr><td>Fallo de un transformador o una línea del CPD</td><td>Horas</td><td>El segundo transformador asume la carga en menos de 1 s</td></tr>
-          <tr><td>Pérdida del nudo de REE o apagón general</td><td>Minutos–horas</td><td>BESS grid-forming → arranque de grupos en 10–15 s y toma de carga en 30–60 s; combustible ≥ 12 h. Sin conflicto con el tren, también detenido</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="note">Supuesto: ante el N-1, cada SET vecina asume el 50 % de la carga de la SET fuera de servicio.</p>
-  </section>
-
-  <section id="regulacion">
-    <h2>Encaje regulatorio</h2>
-    <p class="intro">El permiso de acceso de Adif es suyo y no puede cederse. El trabajo cuantifica la capacidad bloqueada y propone la figura que falta: un permiso de acceso compartido con prioridad del tren.</p>
-    <div class="tbl">
-      <table>
-        <thead><tr><th>Vía</th><th>¿Viable hoy?</th></tr></thead>
-        <tbody>
-          <tr><td>CPD en el embarrado de Adif, bajo su permiso</td><td><span class="pill no">No</span> suministro a un tercero</td></tr>
-          <tr><td>CPD con permiso y posición propios, acceso flexible Tipo 3 (Circular CNMC 1/2024)</td><td><span class="pill ok">Sí</span> solo con margen en el nudo tras restar el permiso completo de Adif</td></tr>
-          <tr><td>Lo anterior más una reducción voluntaria del permiso de Adif</td><td><span class="pill warn">Con riesgo</span> la capacidad liberada no se asigna al CPD</td></tr>
-          <tr><td>CPD compartiendo la posición de Adif</td><td><span class="pill no">No antes de 2029</span> el Tipo 3 exige posición dedicada</td></tr>
-          <tr><td><b>Acceso compartido con prioridad</b>: límite conjunto igual al permiso actual de Adif, el CPD se recorta según la carga de tracción</td><td><span class="pill warn">Requiere reforma</span> propuesta del trabajo</td></tr>
-        </tbody>
-      </table>
-    </div>
     <div class="card" style="margin-top:14px">
-      <h3>Proyecto de real decreto de centros de datos</h3>
-      <p style="margin:0">Exige cubrir en cada hora el 80 % del consumo con renovable nueva y un PUE ≤ 1,15. Con los perfiles horarios de REE de 2025, un CPD de consumo constante necesita ≈9,5 MW de eólica y fotovoltaica por MW. Si el bloque flexible reduce consumo en las horas sin recurso, bastan ≈6,75 MW y el coste baja ≈10 €/MWh. La flexibilidad que cede potencia al tren abarata también el cumplimiento del decreto.</p>
+      <h3>Cómo se garantiza la prioridad del tren</h3>
+      <ol class="steps">
+        <li><b>Milisegundos:</b> la batería absorbe los picos de tracción.</li>
+        <li><b>Segundos:</b> los servidores limitan su potencia.</li>
+        <li><b>Minutos:</b> se pausan los trabajos flexibles.</li>
+        <li><b>Respaldo:</b> un relé limitador desconecta parte del centro de datos si se supera el límite.</li>
+      </ol>
     </div>
-  </section>
-
-  <section id="panel">
-    <h2>Panel de resultados</h2>
-    <p class="intro">Las dos líneas SET a SET, la operación diaria de un CPD junto a la carga de tracción, el dimensionado de baterías, los escenarios de acceso y las cifras financieras. Todos los controles son interactivos.</p>
-    <div class="bleed"><iframe class="embed" src="panel.html" title="Panel de resultados" loading="lazy"></iframe></div>
-    <p class="note"><a href="panel.html">Abrir el panel a pantalla completa →</a></p>
-  </section>
-
-  <section id="limitaciones">
-    <h2>Limitaciones</h2>
-    <p class="intro">Los resultados se basan en datos públicos de REE, CNMC, BOE y los operadores. Los parámetros no públicos se han estimado y se tratarán con análisis de sensibilidad:</p>
-    <ul class="lim">
-      <li>Resolución temporal con la que se controla el límite de potencia de cada posición.</li>
-      <li>Curvas de carga reales de las SET, tramo alimentado y PK exactos.</li>
-      <li>Reconfiguración de la catenaria ante el N-1: tiempo y reparto de carga entre SET vecinas.</li>
-      <li>Potencia de los transformadores de tracción y potencia de cortocircuito de cada nudo.</li>
-      <li>Consumo real por tren-km (el modelo obtiene 12,8 y 10,9 kWh/tren-km) y curvas de tracción y freno del material rodante.</li>
-    </ul>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    Fuentes: REE (capacidad de acceso por posición, 01/10/2026; perfiles horarios peninsulares de 2025), CNMC (Circular 1/2024; Resolución de 1/12/2025), BOE, MITECO (proyecto de RD de centros de datos), GTFS de Renfe e horarios de Iryo y Ouigo. Cifras de un miércoles laborable (21/10/2026). Versión de trabajo, octubre de 2026.
-  </div>
+  <div class="wrap">Versión de trabajo, octubre de 2026. Basado en datos públicos de REE, CNMC y operadores ferroviarios.</div>
 </footer>
 
 <script>
 (() => {
-  const NS = "http://www.w3.org/2000/svg";
-  const fmt = v => v.toLocaleString("es-ES", { maximumFractionDigits: 0 });
-  const el = (tag, attrs, parent, text) => {
-    const n = document.createElementNS(NS, tag);
-    for (const k in attrs) n.setAttribute(k, attrs[k]);
-    if (text != null) n.textContent = text;
-    if (parent) parent.appendChild(n);
-    return n;
-  };
-  const parseCSV = t => {
-    const [h, ...rows] = t.trim().split(/\r?\n/).map(l => l.split(","));
-    return rows.map(r => Object.fromEntries(h.map((k, i) => [k, isNaN(+r[i]) || r[i] === "" ? r[i] : +r[i]])));
-  };
-  const narrow = () => document.getElementById("chart-se").clientWidth < 560;
-
-  let cap = [], lines = {}, line = "MZB";
-
-  function drawSE() {
-    const box = document.getElementById("chart-se");
-    const rows = cap.filter(r => r.linea === line && r.acceso === "REE" && r.carga_x === 1).sort((a, b) => a.pk - b.pk);
-    const meta = Object.fromEntries((lines[line]?.subestaciones || []).map(s => [s.se, s]));
-    const W = Math.max(box.clientWidth, 300), labW = narrow() ? 112 : 170, R = 30, top = 24;
-    const xMax = Math.ceil(Math.max(...rows.map(r => Math.max(r.acceso_MW, r.bateria_opt, meta[r.se]?.pico_1min_MW || 0))) / 10) * 10;
-    const H = top + rows.length * R + 8;
-    const x = v => labW + (W - labW - 44) * v / xMax;
-    box.innerHTML = "";
-    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img",
-      "aria-label": `Acceso concedido, carga media, pico del tren y CPD posible por subestación, ${lines[line]?.corto || line}` }, box);
-    for (let v = 0; v <= xMax; v += 10) {
-      el("line", { x1: x(v), x2: x(v), y1: top - 6, y2: H - 4, stroke: "var(--grid)" }, svg);
-      el("text", { x: x(v), y: 12, "text-anchor": "middle" }, svg, v + (v === xMax ? " MW" : ""));
-    }
-    rows.forEach((r, i) => {
-      const y = top + i * R, m = meta[r.se] || {};
-      el("text", { x: labW - 10, y: y + 15, "text-anchor": "end", class: "name" }, svg, r.se);
-      el("rect", { x: x(0), y: y + 4, width: x(r.acceso_MW) - x(0), height: 16, rx: 3, fill: "var(--track)", stroke: "var(--border)" }, svg);
-      if (m.media_MW != null) el("rect", { x: x(0), y: y + 8, width: Math.max(x(m.media_MW) - x(0), 1.5), height: 8, rx: 2, fill: "var(--train)" }, svg);
-      if (m.pico_1min_MW != null) el("rect", { x: x(m.pico_1min_MW) - 1.5, y: y + 1, width: 3, height: 22, rx: 1, fill: "var(--peak)" }, svg);
-      if (r.bateria_opt > 0) el("circle", { cx: x(r.bateria_opt), cy: y + 12, r: 5.5, fill: "var(--cpd)", stroke: "var(--surface)", "stroke-width": 1.5 }, svg);
-      el("text", { x: x(Math.max(r.acceso_MW, r.bateria_opt, m.pico_1min_MW || 0)) + 8, y: y + 16, class: "val", style: "fill:var(--cpd)" }, svg, fmt(r.bateria_opt) + " MW");
-      const t = el("title", {}, svg.lastChild);
-      t.textContent = `${r.se}: acceso ${fmt(r.acceso_MW)} MW · media tren ${m.media_MW ?? "–"} MW · pico 1 min ${m.pico_1min_MW ?? "–"} MW · CPD con batería ${fmt(r.bateria_opt)} MW`;
-    });
-  }
-
-  function drawEsc() {
-    const box = document.getElementById("chart-esc");
-    const sum = (L, k) => cap.filter(r => r.linea === L && r.acceso === "REE" && r.carga_x === 1).reduce((s, r) => s + r[k], 0);
-    const esc = [
-      ["Hoy · firme", "firme"], ["Hoy · firme con CPD flexible", "firme_flex"],
-      ["Reforma · sin batería", "sin_bateria"], ["Reforma · CPD flexible", "flexible"], ["Reforma · con batería", "bateria_opt"]];
-    const L = [["MZB", "Madrid–Barcelona", "var(--cpd)"], ["MS", "Madrid–Sevilla", "var(--train)"]];
-    const nar = narrow(), W = Math.max(box.clientWidth, 300), labW = nar ? 4 : 220, G = nar ? 74 : 52, top = 30, off = nar ? 22 : 0;
-    const H = top + esc.length * G;
-    const xMax = 450, x = v => labW + (W - labW - 50) * v / xMax;
-    box.innerHTML = "";
-    const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, width: W, height: H, role: "img", "aria-label": "Capacidad para CPD por escenario y línea" }, box);
-    L.forEach(([, name, c], j) => {
-      const lx = (nar ? 4 : labW) + j * 150;
-      el("rect", { x: lx, y: 2, width: 12, height: 10, rx: 2, fill: c }, svg);
-      el("text", { x: lx + 18, y: 11 }, svg, name);
-    });
-    esc.forEach(([lab, k], i) => {
-      const y = top + i * G;
-      el("text", nar ? { x: 4, y: y + 14, class: "name" } : { x: labW - 10, y: y + 22, "text-anchor": "end", class: "name" }, svg, lab);
-      L.forEach(([id, , c], j) => {
-        const v = sum(id, k), yy = y + 6 + off + j * 18;
-        el("rect", { x: x(0), y: yy, width: Math.max(x(v) - x(0), 2), height: 14, rx: 2, fill: c }, svg);
-        el("text", { x: x(v) + 6, y: yy + 11.5, class: "val" }, svg, fmt(v) + " MW");
-      });
-    });
-  }
-
   const fit = f => { try { const d = f.contentDocument; if (!d) return; const h = () => { f.style.height = d.documentElement.scrollHeight + 2 + "px"; };
     h(); new ResizeObserver(h).observe(d.body); } catch (e) {} };
   document.querySelectorAll("iframe.embed").forEach(f => { f.addEventListener("load", () => fit(f)); if (f.contentDocument?.readyState === "complete") fit(f); });
-
-  const redraw = () => { if (cap.length) { drawSE(); drawEsc(); } };
-  document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => {
-    line = b.dataset.line;
-    document.querySelectorAll(".seg button").forEach(o => o.setAttribute("aria-pressed", o === b));
-    drawSE();
-  }));
-  let rt; addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(redraw, 120); });
-
-  Promise.all([fetch("datos/capacidad.csv").then(r => r.text()), fetch("datos/lineas.json").then(r => r.json())])
-    .then(([c, l]) => { cap = parseCSV(c); lines = l; redraw(); })
-    .catch(() => {
-      for (const id of ["chart-se", "chart-esc"])
-        document.getElementById(id).innerHTML = '<p class="note">No se han podido cargar los datos del gráfico.</p>';
-    });
 })();
 </script>
 </body>
