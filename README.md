@@ -74,7 +74,7 @@ Proyecto de RD de centros de datos ([`docs/encaje_regulatorio.md`](docs/encaje_r
 ## Web del proyecto
 
 [`web/index.html`](web/index.html) es la puerta de entrada para quien no va a abrir el repositorio. No duplica nada:
-al desplegar, [`vercel.json`](vercel.json) copia en `public/` la página, el panel, el esquema, el vídeo y los datos que
+al desplegar, [`vercel.json`](vercel.json) ejecuta [`web/build.sh`](web/build.sh), que copia en `public/` la página, el panel, el esquema, el vídeo y los datos que
 leen sus gráficos (`results/capacidad.csv`, `results/lineas.json`), así que se actualiza sola cada vez que se regeneran
 los resultados. Solo se publican esos ficheros, y la web pide a los buscadores que no la indexen. Para publicarla gratis:
 
