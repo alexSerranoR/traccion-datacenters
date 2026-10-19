@@ -32,7 +32,7 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--bg); color: var(--text);
+body { margin: 0; overflow-x: clip; background: var(--bg); color: var(--text);
   font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
 a { color: var(--accent); }
 .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
@@ -91,6 +91,8 @@ ol.steps li { margin-bottom: 8px; }
 .tool .go { color: var(--accent); font-size: 14px; font-weight: 600; margin-top: 12px; }
 ul.lim { margin: 0; padding-left: 20px; }
 ul.lim li { margin-bottom: 8px; }
+.bleed { width: min(1240px, calc(100vw - 32px)); margin-left: 50%; transform: translateX(-50%); }
+.embed { display: block; width: 100%; height: 900px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); }
 footer { border-top: 1px solid var(--border); padding: 24px 0 48px; color: var(--text-3); font-size: 13px; }
 @media (max-width: 640px) { nav { display: none; } .hero { padding-top: 28px; } section { padding: 28px 0; } }
 </style>
@@ -100,7 +102,7 @@ footer { border-top: 1px solid var(--border); padding: 24px 0 48px; color: var(-
   <div class="wrap">
     <div class="brand">Subestaciones de tracción y centros de datos</div>
     <nav>
-      <a href="#resultados">Resultados</a><a href="#arquitectura">Arquitectura</a><a href="#contingencias">Contingencias</a><a href="#regulacion">Regulación</a><a href="#herramientas">Herramientas</a>
+      <a href="#resultados">Resultados</a><a href="#arquitectura">Arquitectura</a><a href="#contingencias">Contingencias</a><a href="#regulacion">Regulación</a><a href="#panel">Panel</a>
     </nav>
   </div>
 </header>
@@ -160,6 +162,10 @@ footer { border-top: 1px solid var(--border); padding: 24px 0 48px; color: var(-
                 ├─ BESS de MT, acoplado en alterna, inversor grid-forming
                 ├─ Grupos electrógenos de MT (solo pérdida real de suministro)
                 └─ Salas: transformadores 30/0,4 kV → SAI → equipos IT</pre>
+    <h3 style="margin-top:22px">Esquema unifilar interactivo: SET de Anchuelo con el CPD</h3>
+    <p class="intro" style="margin-bottom:12px">Red, transformadores, batería, fotovoltaica, grupos y servidores con los valores del modelo. Seleccione un escenario (operación normal, pico de tracción, N-1 de la vecina o apagón) o un elemento para ver su función.</p>
+    <div class="bleed"><iframe class="embed" src="esquema.html" title="Esquema unifilar interactivo" loading="lazy"></iframe></div>
+    <p class="note"><a href="esquema.html">Abrir el esquema a pantalla completa →</a></p>
     <div class="grid2" style="margin-top:14px">
       <div class="card">
         <h3>Prioridad del tren por escalas de tiempo</h3>
@@ -227,21 +233,11 @@ footer { border-top: 1px solid var(--border); padding: 24px 0 48px; color: var(-
     </div>
   </section>
 
-  <section id="herramientas">
-    <h2>Explorar en detalle</h2>
-    <p class="intro">Ambas herramientas se abren en el navegador, sin instalar nada.</p>
-    <div class="tools">
-      <a class="tool" href="esquema.html">
-        <div class="t">Esquema unifilar interactivo</div>
-        <div class="d">SET de Anchuelo con el CPD: red, transformadores, batería, fotovoltaica, grupos y servidores, en cuatro escenarios: operación normal, pico de tracción, N-1 de la vecina y apagón.</div>
-        <div class="go">Abrir el esquema →</div>
-      </a>
-      <a class="tool" href="panel.html">
-        <div class="t">Panel de resultados</div>
-        <div class="d">Las dos líneas SET a SET, la operación diaria de un CPD, el dimensionado de baterías, los escenarios de acceso y las cifras financieras.</div>
-        <div class="go">Abrir el panel →</div>
-      </a>
-    </div>
+  <section id="panel">
+    <h2>Panel de resultados</h2>
+    <p class="intro">Las dos líneas SET a SET, la operación diaria de un CPD junto a la carga de tracción, el dimensionado de baterías, los escenarios de acceso y las cifras financieras. Todos los controles son interactivos.</p>
+    <div class="bleed"><iframe class="embed" src="panel.html" title="Panel de resultados" loading="lazy"></iframe></div>
+    <p class="note"><a href="panel.html">Abrir el panel a pantalla completa →</a></p>
   </section>
 
   <section id="limitaciones">
@@ -337,6 +333,10 @@ footer { border-top: 1px solid var(--border); padding: 24px 0 48px; color: var(-
       });
     });
   }
+
+  const fit = f => { try { const d = f.contentDocument; if (!d) return; const h = () => { f.style.height = d.documentElement.scrollHeight + 2 + "px"; };
+    h(); new ResizeObserver(h).observe(d.body); } catch (e) {} };
+  document.querySelectorAll("iframe.embed").forEach(f => { f.addEventListener("load", () => fit(f)); if (f.contentDocument?.readyState === "complete") fit(f); });
 
   const redraw = () => { if (cap.length) { drawSE(); drawEsc(); } };
   document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => {

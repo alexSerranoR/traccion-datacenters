@@ -95,7 +95,7 @@ footer{font-size:.85rem;color:var(--muted);max-width:80ch}
   <header>
     <div class="eyebrow">Esquema unifilar · ejemplo con números del modelo v2</div>
     <h1>Subestación de Anchuelo compartida entre el AVE y un centro de datos</h1>
-    <p class="lede">Es la instalación propuesta para el paper, dibujada con los números de Anchuelo (Madrid–Barcelona): REE tiene concedidos 51 MW a Adif, de los que usamos el 90&nbsp;%, es decir, 46&nbsp;MW. Elige un escenario para ver por dónde va la energía, y toca cualquier pieza para ver qué es.</p>
+    <p class="lede">Instalación propuesta, con los valores de Anchuelo (Madrid–Barcelona): REE tiene concedidos 51 MW a Adif, de los que el límite conjunto toma el 90&nbsp;%, es decir, 46&nbsp;MW. Seleccione un escenario para ver los flujos de potencia, o un elemento para ver su función.</p>
   </header>
 
   <div class="scen" role="group" aria-label="Escenario">
@@ -325,7 +325,7 @@ const CAP = 46;
 const C = {
   red:{t:"Red de transporte (REE)",q:"Las líneas de 400 kV de Red Eléctrica que llegan a la subestación. Son las autopistas de la electricidad.",p:"Es de donde sale toda la energía. Lo escaso es el permiso para conectarse a ella (el acceso), no la energía.",n:"Nudo de 400 kV · Adif tiene concedidos 51 MW de acceso"},
   embarrado:{t:"Embarrado 400 kV",q:"Barras metálicas gruesas de la subestación de REE donde se enchufa todo. Funciona como una regleta, y cada enchufe es una posición.",p:"Adif y el CPD se enchufan en la misma regleta, cada uno en su hueco. Lo que comparten es el límite de potencia del nudo, no los cables.",n:"Suele ser de doble barra: si falla una, se pasa todo a la otra"},
-  posAdif:{t:"Posición de Adif",q:"El hueco de Adif en el embarrado: un interruptor que puede cortar la corriente y un contador que mide cuánto consume el tren.",p:"Su contador es la señal clave: el control del CPD lo lee cada segundo para saber cuánto hueco deja el tren.",n:"Acceso concedido 51 MW · usamos el 90 % = 46 MW"},
+  posAdif:{t:"Posición de Adif",q:"El hueco de Adif en el embarrado: un interruptor que puede cortar la corriente y un contador que mide cuánto consume el tren.",p:"Su contador es la señal clave: el control del CPD lo lee cada segundo para saber cuánto hueco deja el tren.",n:"Acceso concedido 51 MW · límite conjunto al 90 % = 46 MW"},
   trafoTrac:{t:"Transformadores de tracción",q:"Bajan de 400 kV a 2×25 kV para la catenaria. Son monofásicos: solo usan 2 de las 3 fases de la red.",p:"Son de Adif y no se tocan. Al ser monofásicos desequilibran la red, y el CPD lo nota un poco.",n:"2 × 60 MVA típicos · desequilibrio estimado 0,2–0,8 %"},
   catenaria:{t:"Catenaria y trenes",q:"El cable sobre la vía del que el tren toma la electricidad con el pantógrafo.",p:"El tren consume poco de media pero pega picos fuertes cuando acelera o sube rampas. Siempre tiene prioridad.",n:"Media 3,9 MW · pico 1 min 35 MW · saltos de hasta 24 MW en 10 s"},
   vecina:{t:"Subestación vecina",q:"La siguiente subestación de tracción de la línea, a unos 40–60 km. Entre las dos hay una zona neutra que separa sus tramos de catenaria.",p:"Si la vecina cae, Anchuelo alimenta también parte de su tramo, así que el tren pide más y el CPD tiene que ceder.",n:"Con la vecina caída el pico del tren sube a 44 MW"},
