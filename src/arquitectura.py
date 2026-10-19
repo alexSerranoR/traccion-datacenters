@@ -2,7 +2,8 @@
 Uso: python arquitectura.py <dir_trabajo> <dir_results>
 
 Parte de la simulacion a 1 s (build/<linea>/Pse_1s.npy) y de la bateria optima de analysis.py (acceso REE, carga x1,0):
- - bateria: relacion P/E (C-rate), ciclos equivalentes al dia y energia si se limita a 2C (E >= P/2) para alargar su vida
+ - bateria: relacion P/E (C-rate) y ciclos equivalentes al dia de la bateria del modelo (limitada a 2C en analysis.py)
+   frente a la de energia minima, que duraria mucho menos
  - N-1 de la vecina: CPD que se sostiene con la misma bateria si cae una subestacion vecina, y cuanto hay que recortar
  - ventana de medida: hueco minimo libre para el CPD si el limite se vigila con medias de 1 s, 1 min o 15 min
  - rampas: mayor salto de la carga del tren en 1 s y en 10 s (la velocidad que debe tener el control)
@@ -17,7 +18,6 @@ W, OUT = sys.argv[1], sys.argv[2]
 SAFETY = 0.90          # igual que analysis.py
 N1_SHARE = 0.5         # igual que analysis.py
 FLEX = 0.30            # igual que analysis.py
-C_MAX = 2.0            # C-rate maximo recomendado para que la bateria dure ~8 anos con 2-3 ciclos/dia
 SCC = {400: (12000, 6000), 220: (5000, 2500)}   # MVA, SUPUESTO (central, nudo debil): pedir a REE la Scc real
 
 
@@ -56,6 +56,7 @@ for line in ("MZB", "MS"):
         HN1 = np.clip(cap - (L1[k] + N1_SHARE * np.max(nb, axis=0)), 0, None)
         D, pb, eb = r["bateria_opt"], r["batopt_MW"], r["batopt_MWh"]
         descarga = np.clip(D - H, 0, None).sum() / 60                       # MWh/dia que da la bateria
+        eb_min = battery_need(H, D, 60)[1] if D > 0 else 0.0                # energia minima, sin limite de C-rate
         D_n1 = max_D(HN1, pb, eb, 60) if D > 0 else 0.0
         kv = int(by[se]["tension_kV"]); scc, scc_debil = SCC[kv]
         rows.append(dict(
@@ -63,9 +64,8 @@ for line in ("MZB", "MS"):
             cpd_bateria_MW=D, bat_MW=pb, bat_MWh=eb,
             bat_C=round(pb / eb, 1) if eb else None,
             bat_ciclos_dia=round(descarga / eb, 1) if eb else None,
-            bat_MWh_2C=round(max(eb, pb / C_MAX), 1),
-            bat_ciclos_dia_2C=round(descarga / max(eb, pb / C_MAX), 1) if pb else None,
-            bat_MEUR_2C=round(0.20 * pb + 0.25 * max(eb, pb / C_MAX), 1),
+            bat_MWh_minima=round(eb_min, 1),
+            bat_ciclos_dia_minima=round(descarga / eb_min, 1) if eb_min else None,
             cpd_N1_vecina_MW=round(D_n1, 1), recorte_N1_MW=round(D - D_n1, 1),
             recorte_N1_pct=round(100 * (D - D_n1) / D) if D else None,
             cpd_flexible_MW=r["flexible"],
@@ -81,8 +81,8 @@ for line in ("MZB", "MS"):
 
 df = pd.DataFrame(rows)
 df.to_csv(f"{OUT}/arquitectura.csv", index=False)
-tot = df.groupby("linea")[["cpd_bateria_MW", "bat_MW", "bat_MWh", "bat_MWh_2C", "bat_MEUR_2C", "cpd_N1_vecina_MW",
+tot = df.groupby("linea")[["cpd_bateria_MW", "bat_MW", "bat_MWh", "bat_MWh_minima", "cpd_N1_vecina_MW",
                            "recorte_N1_MW", "hueco_min_1s_MW", "hueco_min_1min_MW", "hueco_min_15min_MW"]].sum().round(1)
 print(tot.T.to_string())
-print(df.groupby("linea")[["bat_C", "bat_ciclos_dia", "bat_ciclos_dia_2C", "recorte_N1_pct", "rampa_10s_MW",
+print(df.groupby("linea")[["bat_C", "bat_ciclos_dia", "bat_ciclos_dia_minima", "recorte_N1_pct", "rampa_10s_MW",
                            "desequilibrio_pct"]].median().T.to_string())

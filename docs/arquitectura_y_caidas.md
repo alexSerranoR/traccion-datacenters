@@ -42,14 +42,14 @@ La señal sería la medida de potencia de la posición de Adif (telemedida a 1 s
 
 ### 1.4 Resultados nuevos del modelo
 
-**Batería de potencia muy exigida.** Con el dimensionado óptimo actual la relación P/E es de ≈4-5 (descarga completa en 12-15 min) y la batería hace una mediana de **5-6 ciclos equivalentes al día**: unos 2.000 al año, con lo que una LFP de unos 6.000 ciclos duraría ≈3 años. Si se limita a 2C (E ≥ P/2), los ciclos bajan a 2,5-3 al día (≈8 años de vida):
+**Batería de potencia muy exigida, ahora limitada a 2C.** Con la energía mínima necesaria, la batería tendría una relación P/E de ≈4-5 (descarga completa en 12-15 min) y haría 4-6 ciclos equivalentes al día: unos 2.000 al año, así que una LFP de 6.000-8.000 ciclos duraría ≈3 años. Por eso el modelo (`src/analysis.py`, `BAT_C_MAX = 2`) obliga a que la energía sea al menos la mitad de la potencia (E ≥ P/2). Con eso la batería hace ≈2,8 ciclos al día y dura ≈8 años, que es la vida que usa `src/finance.py` para anualizarla:
 
-| Línea | BESS actual | Coste | BESS limitado a 2C | Coste |
+| Línea | Batería con la energía mínima | Batería del modelo (2C) | CPD con batería | Coste |
 |---|---|---|---|---|
-| Madrid–Barcelona | 310 MW / 89 MWh | 84 M€ | 310 MW / 156 MWh | 101 M€ |
-| Madrid–Sevilla | 185 MW / 36 MWh | 46 M€ | 185 MW / 93 MWh | 60 M€ |
+| Madrid–Barcelona | 315 MW / 116 MWh | 315 MW / 161 MWh | 385 MW | 103 M€ |
+| Madrid–Sevilla | 190 MW / 68 MWh | 190 MW / 99 MWh | 417 MW | 63 M€ |
 
-Alternativas: celdas LTO (>15.000 ciclos) o un híbrido con supercondensadores o volantes de inercia para los picos de segundos. **Acción:** añadir al modelo la restricción de C-rate y el coste de degradación.
+Alternativas para el paper: celdas LTO (>15.000 ciclos) o un híbrido con supercondensadores o volantes de inercia para los picos de segundos.
 
 **La ventana de medida del límite domina el resultado.** Capacidad del CPD sin batería (hueco mínimo) según con qué media se vigile el límite:
 
@@ -85,12 +85,12 @@ El término de potencia se factura con el maxímetro cuartohorario, pero los lí
 
 | Línea | CPD con batería | Sostenible con vecina caída | A recortar |
 |---|---|---|---|
-| Madrid–Barcelona | 380 MW | 294 MW | 86 MW (mediana ≈25 % por emplazamiento) |
-| Madrid–Sevilla | 412 MW | 350 MW | 62 MW (mediana ≈12 %) |
+| Madrid–Barcelona | 385 MW | 314 MW | 71 MW (mediana ≈21 % por emplazamiento) |
+| Madrid–Sevilla | 417 MW | 360 MW | 57 MW (mediana ≈10 %) |
 
 Esto cuadra con el supuesto del 30 % de carga flexible. El recorte se puede hacer en los minutos que tarda Adif en reconfigurar la catenaria, mientras el BESS cubre la transición.
 
-**El BESS hace de puente.** Ejemplo en Anchuelo: con 27,8 MW / 5,4 MWh y el IT limitado a esa potencia aguanta ≈11 min, muy por encima de los 30-60 s que tardan los grupos. Basta con reservar un SoC mínimo (≈D × 2 min) para esta función.
+**El BESS hace de puente.** Ejemplo en Anchuelo: con 28,8 MW / 14,4 MWh y el IT limitado a esa potencia aguanta ≈30 min, muy por encima de los 30-60 s que tardan los grupos. Basta con reservar un SoC mínimo (≈D × 2 min) para esta función.
 
 ### 2.3 Diseño en dos bloques
 
@@ -106,8 +106,28 @@ El 10/7/2024, en Virginia, una falta en una línea de 230 kV hizo que unos 60 CP
 3. Que los grupos no se usen para los recortes por prioridad del tren.
 4. Que las oscilaciones de potencia del entrenamiento de IA se filtren con el BESS.
 
-## 3. Pendiente
-- Introducir en el modelo la restricción de C-rate, la degradación, la ventana de medida (1 min frente a 15 min) y el recorte en N-1 de la vecina.
+## 3. Coste de la instalación eléctrica
+
+Calculado en `src/finance.py` (columnas `inversion_*` de `results/finanzas.csv`) para la opción con reforma y batería, con
+el acceso de REE y los emplazamientos de 10 MW o más. Los precios unitarios son **supuestos** de orden de magnitud y están en
+`results/supuestos_financieros.csv`.
+
+| Partida | Supuesto | Madrid–Barcelona (379 MW) | Madrid–Sevilla (417 MW) |
+|---|---|---|---|
+| Posición propia de 220/400 kV | 3 M€ por emplazamiento | 69,7 M€ (con los trafos) | 73,1 M€ (con los trafos) |
+| Dos transformadores 400(220)/30 kV al 100 % | 0,04 M€/MVA, cada uno de D/0,9 MVA | (incluido arriba) | (incluido arriba) |
+| Batería (2C) | 0,20 M€/MW + 0,25 M€/MWh | 101 M€ | 63 M€ |
+| Grupos del bloque firme (70 %), N+1 | 0,5 M€/MW | 146 M€ | 161 M€ |
+| **Total eléctrico** | | **317 M€** | **296 M€** |
+| Ahorro por no poner grupos al bloque flexible | | 62 M€ | 69 M€ |
+| FV opcional (0,25 MWp por MW de CPD) | 0,55 M€/MWp | 52 M€ (aparte) | 57 M€ (aparte) |
+| Para comparar: construir el CPD | 9 M€/MW IT | 2.966 M€ | 3.263 M€ |
+
+La parte eléctrica es ≈10 % del CPD, y el ahorro de grupos del bloque flexible paga más de la mitad de la batería. La
+"conexión evitada" baja de 10 a 7 M€ por emplazamiento: el CPD se ahorra la línea y la subestación nuevas, pero sigue pagando
+su posición y sus transformadores.
+
+## 4. Pendiente
 - Confirmar con Adif y Garrido el tiempo de reconfiguración de la catenaria en N-1 y si la protección de sobrecarga es por trafo o por posición.
 - Pedir a REE la Scc de cada nudo.
 

@@ -70,6 +70,8 @@ rec = max(cap[(cap.acceso == A0) & (cap.carga_x == 1.0)].flex_recorte_pct)
 cotas = {l: max(z for _, z in geo[l]["cotas"]) for l in LINES}
 acc = {l: c[l].acceso_MW.sum() for l in LINES}
 bh = {l: T(l, "batopt_MWh") / max(T(l, "batopt_MW"), 1) * 60 for l in LINES}
+arq = pd.read_csv(RES / "arquitectura.csv") if (RES / "arquitectura.csv").exists() else None
+ren = pd.read_csv(RES / "renovable_horaria.csv") if (RES / "renovable_horaria.csv").exists() else None
 concl = [
     ("Los trenes usan poca energía, pero sus picos llenan el acceso",
      f"Con el acceso que REE tiene concedido hoy a cada subestación ({n(acc[H])} MW en {nm[H]}, {n(acc[B])} MW en "
@@ -90,7 +92,8 @@ concl = [
      f"Una batería dimensionada para cada subestación lleva el CPD a {n(T(H, 'bateria_opt'))} MW en {nm[H]} "
      f"({n(T(H, 'batopt_MW'))} MW / {n(T(H, 'batopt_MWh'))} MWh, {n(T(H, 'batopt_MEUR'))} M€) y a "
      f"{n(T(B, 'bateria_opt'))} MW en {nm[B]} ({n(T(B, 'batopt_MW'))} MW / {n(T(B, 'batopt_MWh'))} MWh, "
-     f"{n(T(B, 'batopt_MEUR'))} M€). Son baterías de unos {n(bh[H])} minutos: cubren picos, no desplazan energía."),
+     f"{n(T(B, 'batopt_MEUR'))} M€). Son baterías de unos {n(bh[H])} minutos, con la energía limitada a 2C para que "
+     f"duren unos 8 años: cubren picos, no desplazan energía."),
     ("Ampliar el acceso cambia la escala",
      f"Si se ampliara el acceso hasta lo que admiten los transformadores de tracción (~100 MW por subestación en "
      f"{nm[H]}, ~55 MW en {nm[B]}), la capacidad firme pasaría a {n(T(H, 'firme', AX))} MW en {nm[H]} y "
@@ -111,6 +114,30 @@ concl = [
      f"{n(fn(H, A0, 'bateria_opt', 'valor_adelanto_MEUR'))} M€ en {nm[H]}, frente a "
      f"{n(fn(H, A0, 'bateria_opt', 'inversion_bateria_MEUR'))} M€ de batería."),
 ]
+if arq is not None:
+    q = {l: arq[arq.linea == l] for l in LINES}
+    concl.append(("Si cae una subestación vecina, el CPD cede una parte",
+        f"Con la batería del modelo, si cae una vecina el CPD tiene que recortar {n(q[H].recorte_N1_MW.sum())} de "
+        f"{n(q[H].cpd_bateria_MW.sum())} MW en {nm[H]} y {n(q[B].recorte_N1_MW.sum())} de {n(q[B].cpd_bateria_MW.sum())} MW "
+        f"en {nm[B]} (mediana del {n(q[H].recorte_N1_pct.median())} % y del {n(q[B].recorte_N1_pct.median())} % por "
+        f"emplazamiento), dentro del 30 % flexible. Sin batería, vigilar el límite con medias de 15 minutos en vez de 1 "
+        f"subiría el CPD de {n(q[H].hueco_min_1min_MW.sum())} a {n(q[H].hueco_min_15min_MW.sum())} MW en {nm[H]}."))
+    concl.append(("La instalación eléctrica completa",
+        f"Posición propia, dos transformadores, batería y grupos suman {n(fn(H, A0, 'bateria_opt', 'inversion_electrica_MEUR'))} M€ "
+        f"en {nm[H]} y {n(fn(B, A0, 'bateria_opt', 'inversion_electrica_MEUR'))} M€ en {nm[B]}, frente a "
+        f"{n(fn(H, A0, 'bateria_opt', 'inversion_cpd_MEUR'))} y {n(fn(B, A0, 'bateria_opt', 'inversion_cpd_MEUR'))} M€ del "
+        f"propio CPD. No poner grupos al bloque flexible ahorra {n(fn(H, A0, 'bateria_opt', 'ahorro_grupos_bloque_flexible_MEUR'))} "
+        f"y {n(fn(B, A0, 'bateria_opt', 'ahorro_grupos_bloque_flexible_MEUR'))} M€."))
+if ren is not None:
+    g = lambda h, fl: ren[(ren.limite_horas_fallo_pct == 5) & (ren.bateria_h == h) & (ren.flexible == fl)].iloc[0]
+    a0, a1, a4 = g(0, False), g(0, True), g(4, True)
+    concl.append(("El 80 % renovable cada hora del decreto",
+        f"Con los perfiles horarios de REE de 2025, para que como mucho el 5 % de las horas no lleguen al 80 % un CPD "
+        f"plano necesita {n(a0.eolica_MW + a0.fv_MW, 1)} MW de eólica y FV nuevas por cada MW, con un coste neto de "
+        f"{n(a0.coste_neto_EUR_MWh_cpd)} €/MWh. Si el bloque flexible baja en las horas sin viento ni sol, bastan "
+        f"{n(a1.eolica_MW + a1.fv_MW, 1)} MW ({n(a1.coste_neto_EUR_MWh_cpd)} €/MWh, recortando el {n(a1.recorte_pct, 1)} % "
+        f"de su energía), y con una batería de 4 h, {n(a4.eolica_MW + a4.fv_MW, 1)} MW ({n(a4.coste_neto_EUR_MWh_cpd)} €/MWh). "
+        f"La flexibilidad que cede potencia al tren también abarata cumplir el decreto."))
 if len(tight[H]) + len(tight[B]):
     concl.append(("Un dato a revisar",
         "En " + ", ".join(tight[H].se.tolist() + tight[B].se.tolist()) + " el pico simulado del tren en operación normal "
