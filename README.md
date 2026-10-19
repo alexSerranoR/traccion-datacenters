@@ -65,7 +65,7 @@ Arquitectura y caídas ([`docs/arquitectura_y_caidas.md`](docs/arquitectura_y_ca
 |---|---|
 | [`docs/arquitectura_y_caidas.md`](docs/arquitectura_y_caidas.md) | Cómo se conecta el CPD (posición, transformadores, 30 kV, batería, solar, grupos, control) y qué pasa en cada tipo de caída, con tiempos y Tier III/IV |
 | [`docs/esquema_instalacion.html`](docs/esquema_instalacion.html) | El mismo diseño dibujado, interactivo, con los números de Anchuelo |
-| [`docs/encaje_regulatorio.md`](docs/encaje_regulatorio.md) | Qué permite hoy la normativa (acceso flexible Tipo 3, reducción voluntaria del permiso de Adif) y qué reforma haría falta |
+| [`docs/encaje_regulatorio.md`](docs/encaje_regulatorio.md) | Qué permite hoy la normativa (acceso flexible Tipo 3, reducción voluntaria del permiso de Adif), qué reforma haría falta y cómo nos afecta el proyecto de RD de centros de datos (80 % renovable horario, PUE ≤ 1,15) |
 | [`docs/capacidad_acceso.md`](docs/capacidad_acceso.md) | De dónde sale el acceso de cada subestación (REE, CNMC, BOE) y qué falta |
 | [`docs/solicitud_transparencia_adif.md`](docs/solicitud_transparencia_adif.md) | Texto para pedir a Adif los datos reales de sus subestaciones |
 | [`docs/estado_del_arte.md`](docs/estado_del_arte.md) | Trabajos cercanos y hueco que cubre este estudio |
@@ -135,7 +135,8 @@ y en la cabecera de cada script. Los que más pesan:
 5. **CPD flexible.** Un 30 % de su carga se puede recortar en los picos del tren.
 6. **Ventana del límite.** El modelo vigila el límite con medias de 1 minuto; con 15 minutos la capacidad sube mucho.
 7. **Potencia de cortocircuito de cada nudo** (para el desequilibrio): 12 GVA a 400 kV y 5 GVA a 220 kV, supuestos.
-8. **Cifras financieras.** Canon a Adif de 40 €/kW·año (20–80), baterías a 0,20 M€/MW + 0,25 M€/MWh, 3 años de
+8. **PUE de 1,15**, el tope del proyecto de RD de centros de datos.
+9. **Cifras financieras.** Canon a Adif de 40 €/kW·año (20–80), baterías a 0,20 M€/MW + 0,25 M€/MWh, 3 años de
    espera evitados. Son órdenes de magnitud, no una valoración.
 
 ## Estado y siguientes pasos

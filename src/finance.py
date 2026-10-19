@@ -14,7 +14,8 @@ A = {
     "canon_adif": (40, 20, 80, "EUR/kW·año",
                    "Supuesto: pago del CPD a Adif por usar capacidad de acceso ya construida. Del orden de 2-4 veces "
                    "los peajes y cargos de potencia de alta tension, como prima por acceso inmediato"),
-    "pue": (1.3, 1.2, 1.4, "-", "PUE de un CPD moderno; la potencia de red incluye refrigeracion"),
+    "pue": (1.15, 1.10, 1.30, "-", "Tope del proyecto de RD de centros de datos (regimen transitorio, PUE <= 1,15); "
+                               "la potencia de red incluye refrigeracion"),
     "factor_carga": (0.85, 0.75, 0.95, "-", "Uso medio de la potencia contratada por el CPD"),
     "precio_energia": (70, 50, 100, "EUR/MWh", "Precio medio de la electricidad para el CPD (mercado + peajes)"),
     "capex_cpd": (9, 7, 12, "M EUR/MW IT", "Coste de construir un CPD (orden de magnitud de informes de mercado 2024-2025)"),
