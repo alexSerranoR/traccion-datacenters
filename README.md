@@ -12,7 +12,7 @@ carga real) no son públicos y se han estimado (ver [`docs/limitaciones_y_datos.
 
 ## Guía de lectura
 
-La vía de entrada recomendada es la **web del proyecto** ([`web/index.html`](web/index.html)), que reúne en una sola página la propuesta, los resultados, la arquitectura, la regulación y el acceso al panel, al esquema y al vídeo. Se publica en Vercel con [`vercel.json`](vercel.json), que genera la carpeta `public/` a partir de los ficheros del repositorio sin duplicarlos.
+La vía de entrada recomendada es la **web del proyecto** ([`web/index.html`](web/index.html)): una sola página con la idea, el vídeo y el esquema unifilar interactivo. Se publica en Vercel con [`vercel.json`](vercel.json) y [`web/build.sh`](web/build.sh), que reutilizan los ficheros del repositorio sin duplicarlos.
 
 | Material | Contenido |
 |---|---|
