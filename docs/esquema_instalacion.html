@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nudo Anchuelo: tren y CPD</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@500;700&family=Source+Sans+3:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: esquema unifilar a todo ancho arriba, escenarios y ficha de cada pieza debajo */
+:root{
+  --bg:#eef1f3; --paper:#f8fafb; --ink:#1c2830; --muted:#5b6a74; --rule:#c4ccd2;
+  --power:#d97a06; --batt:#0f8a7e; --solar:#6a8f12; --gen:#8a4fbf; --alert:#c2362b; --signal:#2e6fb0;
+  --display:"Saira Semi Condensed","Arial Narrow",sans-serif;
+  --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121a1f; --paper:#18232a; --ink:#e3eaee; --muted:#93a3ad; --rule:#34444e;
+  --power:#f0a03a; --batt:#3cc3b4; --solar:#a4c94a; --gen:#b98ae6; --alert:#ef6b5f; --signal:#6aa6e0; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121a1f; --paper:#18232a; --ink:#e3eaee; --muted:#93a3ad; --rule:#34444e;
+  --power:#f0a03a; --batt:#3cc3b4; --solar:#a4c94a; --gen:#b98ae6; --alert:#ef6b5f; --signal:#6aa6e0; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}
+.wrap{max-width:1120px;margin:0 auto;padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:20px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(1.6rem,4vw,2.3rem);line-height:1.1;margin:0;text-wrap:balance}
+h2{font-family:var(--display);font-weight:700;font-size:1.25rem;margin:0}
+.lede{color:var(--muted);max-width:68ch;margin:6px 0 0}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.diagram{background:var(--paper);border:1px solid var(--rule);border-radius:6px;overflow-x:auto}
+.diagram svg{display:block;min-width:820px;width:100%;height:auto}
+.hint{font-size:.85rem;color:var(--muted);margin:0}
+/* SVG */
+.t{fill:var(--ink);font-family:var(--body);font-size:13px}
+.ts{fill:var(--muted);font-family:var(--body);font-size:11.5px}
+.th{fill:var(--ink);font-family:var(--display);font-weight:700;font-size:14px;letter-spacing:.02em}
+.tm{fill:var(--muted);font-family:var(--mono);font-size:11px}
+.wire{stroke:var(--ink);stroke-width:2;fill:none}
+.bus{stroke:var(--ink);stroke-width:5;fill:none;stroke-linecap:round}
+.dc{stroke:var(--ink);stroke-width:2;fill:none;stroke-dasharray:1 0}
+.sig{stroke:var(--signal);stroke-width:1.6;fill:none;stroke-dasharray:5 4}
+.box{fill:var(--paper);stroke:var(--ink);stroke-width:1.6}
+.coil{fill:none;stroke:var(--ink);stroke-width:2}
+.brk{fill:var(--paper);stroke:var(--ink);stroke-width:2}
+.comp{cursor:pointer}
+.comp:hover .hl,.comp.sel .hl{stroke:var(--power);stroke-width:2.5;fill:color-mix(in srgb,var(--power) 10%,transparent)}
+.hl{fill:transparent;stroke:transparent;stroke-width:2;rx:6}
+.comp:focus{outline:none}.comp:focus-visible .hl{stroke:var(--signal);stroke-width:3}
+.flow{fill:none;stroke-width:6;stroke-linecap:round;stroke-dasharray:2 14;opacity:0;transition:opacity .3s}
+.flow.on{opacity:.95;animation:run 1s linear infinite}
+.flow.rev{opacity:.95;animation:run 1s linear infinite reverse}
+.flow.dim{opacity:.35;animation:run 2.4s linear infinite}
+@keyframes run{to{stroke-dashoffset:-16}}
+.fp{stroke:var(--power)}.fb{stroke:var(--batt)}.fs{stroke:var(--solar)}.fg{stroke:var(--gen)}
+.down .box,.down .coil{stroke:var(--alert)}
+.xmark{stroke:var(--alert);stroke-width:4;opacity:0;transition:opacity .3s}
+.xmark.on{opacity:1}
+@media (prefers-reduced-motion:reduce){.flow.on,.flow.rev,.flow.dim{animation:none}}
+/* Escenarios */
+.scen{display:flex;flex-wrap:wrap;gap:8px}
+.scen button{font:600 .95rem var(--body);color:var(--ink);background:var(--paper);border:1.5px solid var(--rule);border-radius:999px;padding:8px 14px;cursor:pointer}
+.scen button[aria-pressed="true"]{border-color:var(--power);background:color-mix(in srgb,var(--power) 14%,var(--paper))}
+.scen button:focus-visible,.cards button:focus-visible{outline:3px solid var(--signal);outline-offset:2px}
+.panel{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px}
+@media (max-width:760px){.panel{grid-template-columns:minmax(0,1fr)}}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:16px 18px;display:grid;gap:12px;min-width:0}
+.card p{margin:0}
+.meters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:480px){.meters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.m{border-top:3px solid var(--rule);padding-top:6px}
+.m b{display:block;font-family:var(--mono);font-size:1.25rem;font-variant-numeric:tabular-nums}
+.m span{font-size:.8rem;color:var(--muted)}
+.m.p{border-color:var(--power)}.m.b{border-color:var(--batt)}.m.g{border-color:var(--gen)}.m.c{border-color:var(--ink)}
+.limit{display:grid;gap:4px}
+.bar{position:relative;height:18px;background:color-mix(in srgb,var(--rule) 55%,transparent);border-radius:3px;overflow:hidden;display:flex}
+.bar i{display:block;height:100%}
+.bar .tr{background:var(--power)}.bar .dcg{background:var(--ink);opacity:.75}.bar .ch{background:var(--batt)}
+.bar .cap{position:absolute;top:0;bottom:0;width:2px;background:var(--alert)}
+.limit small{font-family:var(--mono);font-size:.75rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.steps{margin:0;padding-left:1.2em;display:grid;gap:4px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.cards button{text-align:left;font:600 .9rem var(--body);color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:8px 10px;cursor:pointer}
+.cards button[aria-pressed="true"]{border-color:var(--power);box-shadow:inset 3px 0 0 var(--power)}
+dl{margin:0;display:grid;gap:8px}dt{font-weight:600}dd{margin:0;color:var(--ink)}
+.num{font-family:var(--mono);font-size:.85rem;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--muted)}
+.legend span::before{content:"";display:inline-block;width:18px;height:4px;margin-right:6px;vertical-align:middle;background:var(--c)}
+footer{font-size:.85rem;color:var(--muted);max-width:80ch}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Esquema unifilar · ejemplo con números del modelo v2</div>
+    <h1>Subestación de Anchuelo compartida entre el AVE y un centro de datos</h1>
+    <p class="lede">Es la instalación propuesta para el paper, dibujada con los números de Anchuelo (Madrid–Barcelona): REE tiene concedidos 51 MW a Adif, de los que usamos el 90&nbsp;%, es decir, 46&nbsp;MW. Elige un escenario para ver por dónde va la energía, y toca cualquier pieza para ver qué es.</p>
+  </header>
+
+  <div class="scen" role="group" aria-label="Escenario">
+    <button id="s-normal" data-s="normal" aria-pressed="true">Día normal</button>
+    <button id="s-pico" data-s="pico" aria-pressed="false">Pico del tren</button>
+    <button id="s-vecina" data-s="vecina" aria-pressed="false">Cae la subestación vecina</button>
+    <button id="s-apagon" data-s="apagon" aria-pressed="false">Apagón de la red</button>
+  </div>
+
+  <div class="diagram">
+  <svg viewBox="0 0 1000 690" role="img" aria-label="Esquema unifilar de la subestación con el centro de datos">
+    <!-- Red REE -->
+    <g class="comp" data-c="red" tabindex="0">
+      <rect class="hl" x="150" y="4" width="700" height="60"/>
+      <path class="wire" d="M200 14 V100 M800 14 V100"/>
+      <text class="th" x="214" y="30">Línea 400 kV</text><text class="ts" x="214" y="46">red de transporte de REE</text>
+      <text class="th" x="680" y="30">Línea 400 kV</text><text class="ts" x="664" y="46">red de transporte de REE</text>
+    </g>
+    <path class="flow fp" data-f="red" d="M200 14 V100 M800 14 V100"/>
+    <line class="xmark" data-x="red" x1="185" y1="40" x2="215" y2="70"/><line class="xmark" data-x="red" x1="215" y1="40" x2="185" y2="70"/>
+    <line class="xmark" data-x="red" x1="785" y1="40" x2="815" y2="70"/><line class="xmark" data-x="red" x1="815" y1="40" x2="785" y2="70"/>
+
+    <!-- Embarrado -->
+    <g class="comp" data-c="embarrado" tabindex="0">
+      <rect class="hl" x="50" y="88" width="900" height="34"/>
+      <path class="bus" d="M60 100 H940 M60 112 H940"/>
+      <text class="th" x="380" y="84">Embarrado 400 kV · nudo ANCHUELO</text>
+    </g>
+
+    <!-- Posicion Adif -->
+    <g class="comp" data-c="posAdif" tabindex="0">
+      <rect class="hl" x="222" y="116" width="150" height="86"/>
+      <path class="wire" d="M250 112 V140"/><rect class="brk" x="243" y="140" width="14" height="14"/>
+      <path class="wire" d="M250 154 V172"/><circle class="box" cx="250" cy="186" r="13"/>
+      <text class="tm" x="241" y="190">kWh</text>
+      <text class="t" x="270" y="150">Posición de Adif</text><text class="ts" x="270" y="166">interruptor + contador</text>
+    </g>
+    <path class="wire" d="M250 199 V214 M190 214 H310 M190 214 V232 M310 214 V232"/>
+
+    <!-- Trafos traccion -->
+    <g class="comp" data-c="trafoTrac" tabindex="0">
+      <rect class="hl" x="150" y="226" width="200" height="74"/>
+      <circle class="coil" cx="190" cy="248" r="15"/><circle class="coil" cx="190" cy="270" r="15"/>
+      <circle class="coil" cx="310" cy="248" r="15"/><circle class="coil" cx="310" cy="270" r="15"/>
+      <text class="ts" x="214" y="256">2 × 60 MVA</text><text class="ts" x="214" y="272">monofásicos</text>
+    </g>
+    <path class="wire" d="M190 285 V330 M310 285 V330"/>
+
+    <!-- Catenaria y tren -->
+    <g class="comp" data-c="catenaria" tabindex="0">
+      <rect class="hl" x="96" y="318" width="372" height="80"/>
+      <path class="wire" d="M100 330 H460" stroke-width="2.5"/>
+      <path class="wire" d="M100 390 H460" stroke-width="1.5"/>
+      <path class="wire" d="M330 330 L346 344 L330 356"/>
+      <rect class="box" x="290" y="356" width="150" height="26" rx="10"/>
+      <text class="tm" x="304" y="374">AVE · hasta 9 MW</text>
+      <text class="t" x="110" y="350">Catenaria 2×25 kV</text><text class="ts" x="110" y="366">el tren tira de 2 fases</text>
+    </g>
+
+    <!-- Subestacion vecina -->
+    <g class="comp" data-c="vecina" tabindex="0" id="g-vecina">
+      <rect class="hl" x="4" y="306" width="90" height="100"/>
+      <rect class="box" x="10" y="318" width="64" height="44"/>
+      <text class="t" x="16" y="337">Vecina</text><text class="ts" x="16" y="353">Brihuega</text>
+      <path class="wire" d="M74 330 H86" /><path class="wire" d="M90 324 V336" stroke-width="2.5"/>
+      <text class="ts" x="10" y="384">zona neutra</text>
+    </g>
+    <line class="xmark" data-x="vecina" x1="14" y1="320" x2="70" y2="360"/><line class="xmark" data-x="vecina" x1="70" y1="320" x2="14" y2="360"/>
+    <path class="flow fp" data-f="adif" d="M250 112 V214 H190 V330 H300 M250 214 H310 V330 H360"/>
+    <path class="flow fp" data-f="extiende" d="M190 330 H100"/>
+
+    <!-- EMS -->
+    <g class="comp" data-c="ems" tabindex="0">
+      <rect class="hl" x="420" y="150" width="150" height="62"/>
+      <rect class="box" x="428" y="158" width="134" height="46" rx="4" style="stroke:var(--signal)"/>
+      <text class="th" x="440" y="178">Control (EMS)</text><text class="ts" x="440" y="194">lee el tren cada segundo</text>
+    </g>
+    <path class="sig" d="M263 186 H428"/>
+    <path class="sig" d="M562 172 H640"/>
+    <path class="sig" d="M500 204 V376 H506"/>
+    <path class="sig" d="M540 204 V226 H850 V500 H882"/>
+
+    <!-- Posicion CPD -->
+    <g class="comp" data-c="posCPD" tabindex="0">
+      <rect class="hl" x="626" y="116" width="200" height="86"/>
+      <path class="wire" d="M650 112 V140"/><rect class="brk" x="643" y="140" width="14" height="14"/>
+      <path class="wire" d="M650 154 V172"/><circle class="box" cx="650" cy="186" r="13"/>
+      <text class="tm" x="641" y="190">kWh</text>
+            <text class="t" x="670" y="150">Posición del CPD</text><text class="ts" x="670" y="166">interruptor + relé limitador</text>
+    </g>
+    <path class="wire" d="M650 199 V214 M590 214 H710 M590 214 V228 M710 214 V228"/>
+
+    <!-- Trafos CPD -->
+    <g class="comp" data-c="trafoCPD" tabindex="0">
+      <rect class="hl" x="560" y="222" width="250" height="74"/>
+      <circle class="coil" cx="590" cy="244" r="15"/><circle class="coil" cx="590" cy="266" r="15"/>
+      <circle class="coil" cx="710" cy="244" r="15"/><circle class="coil" cx="710" cy="266" r="15"/>
+      <text class="ts" x="614" y="250">T1 · 50 MVA</text><text class="ts" x="734" y="250">T2 · 50 MVA</text>
+      <text class="ts" x="614" y="266">400/30 kV</text><text class="ts" x="734" y="266">400/30 kV</text>
+    </g>
+    <path class="wire" d="M590 281 V310 M710 281 V310"/>
+    <path class="flow fp" data-f="cpd" d="M650 112 V214 H590 V310 M650 214 H710 V310"/>
+
+    <!-- Barras 30 kV -->
+    <g class="comp" data-c="mt" tabindex="0">
+      <rect class="hl" x="476" y="300" width="490" height="22"/>
+      <path class="bus" d="M486 311 H956" style="stroke-width:4"/>
+      <text class="ts" x="820" y="300">Barras 30 kV (anillo)</text>
+    </g>
+
+    <!-- BESS -->
+    <g class="comp" data-c="bess" tabindex="0">
+      <rect class="hl" x="470" y="350" width="120" height="150"/>
+      <path class="wire" d="M530 311 V360"/>
+      <rect class="box" x="506" y="360" width="48" height="32"/><text class="tm" x="514" y="381">~ / =</text>
+      <path class="wire" d="M530 392 V420"/>
+      <rect class="box" x="490" y="420" width="80" height="44"/>
+      <path class="wire" d="M500 432 h10 M500 444 h10 M500 456 h10 M520 432 h10 M520 444 h10 M520 456 h10 M540 432 h10 M540 444 h10 M540 456 h10" style="stroke:var(--batt);stroke-width:5"/>
+      <text class="th" x="486" y="484">Batería BESS</text><text class="ts" x="486" y="498">28 MW · 5,4–14 MWh</text>
+    </g>
+    <path class="flow fb" data-f="bess" d="M530 311 V440"/>
+
+    <!-- FV -->
+    <g class="comp" data-c="fv" tabindex="0">
+      <rect class="hl" x="330" y="410" width="128" height="120"/>
+      <path class="wire" d="M440 442 H490"/>
+      <rect class="box" x="414" y="432" width="28" height="22"/><text class="tm" x="417" y="447">=/=</text>
+      <path class="wire" d="M400 443 H414"/>
+      <g style="stroke:var(--solar);stroke-width:1.5">
+        <rect x="340" y="428" width="56" height="34" fill="color-mix(in srgb,var(--solar) 18%,transparent)"/>
+        <path d="M354 428 V462 M368 428 V462 M382 428 V462 M340 445 H396" fill="none"/>
+      </g>
+      <text class="th" x="340" y="484">Solar</text><text class="ts" x="340" y="498">opcional · ~10 MWp</text><text class="ts" x="340" y="512">en continua</text>
+    </g>
+    <path class="flow fs" data-f="fv" d="M368 445 H490"/>
+
+    <!-- Grupos -->
+    <g class="comp" data-c="grupos" tabindex="0">
+      <rect class="hl" x="606" y="330" width="130" height="120"/>
+      <path class="wire" d="M640 311 V370 M700 311 V370"/>
+      <rect class="brk" x="633" y="340" width="14" height="14"/><rect class="brk" x="693" y="340" width="14" height="14"/>
+      <circle class="box" cx="640" cy="388" r="18" style="stroke:var(--gen)"/><text class="th" x="634" y="393">G</text>
+      <circle class="box" cx="700" cy="388" r="18" style="stroke:var(--gen)"/><text class="th" x="694" y="393">G</text>
+      <text class="ts" x="618" y="426">Grupos electrógenos</text><text class="ts" x="618" y="440">solo para apagones</text>
+    </g>
+    <path class="flow fg" data-f="grupos" d="M640 388 V311 M700 388 V311"/>
+
+    <!-- Salas -->
+    <g class="comp" data-c="salas" tabindex="0">
+      <rect class="hl" x="748" y="338" width="230" height="114"/>
+      <path class="wire" d="M800 311 V348 M910 311 V348"/>
+      <circle class="coil" cx="800" cy="360" r="11"/><circle class="coil" cx="800" cy="376" r="11"/>
+      <circle class="coil" cx="910" cy="360" r="11"/><circle class="coil" cx="910" cy="376" r="11"/>
+      <path class="wire" d="M800 387 V406 M910 387 V406"/>
+      <rect class="box" x="780" y="406" width="40" height="26"/><text class="tm" x="786" y="423">SAI</text>
+      <rect class="box" x="890" y="406" width="40" height="26"/><text class="tm" x="896" y="423">SAI</text>
+      <text class="ts" x="822" y="372">30/0,4 kV</text>
+    </g>
+    <path class="wire" d="M800 432 V470 M910 432 V470"/>
+
+    <!-- IT -->
+    <g class="comp" data-c="it" tabindex="0">
+      <rect class="hl" x="748" y="462" width="230" height="110"/>
+      <g id="rack1"><rect class="box" x="772" y="470" width="56" height="64"/>
+        <path class="wire" d="M778 482 h44 M778 494 h44 M778 506 h44 M778 518 h44" stroke-width="3"/></g>
+      <g id="rack2"><rect class="box" x="882" y="470" width="56" height="64"/>
+        <path class="wire" d="M888 482 h44 M888 494 h44 M888 506 h44 M888 518 h44" stroke-width="3"/></g>
+      <text class="t" x="760" y="552">Bloque firme</text><text class="ts" x="760" y="566">≈29 MW · Tier III</text>
+      <text class="t" x="872" y="552">Bloque flexible</text><text class="ts" x="872" y="566">≈10 MW · IA</text>
+    </g>
+    <path class="flow fp" data-f="sala1" d="M800 311 V470"/>
+    <path class="flow fp" data-f="sala2" d="M910 311 V470"/>
+
+    <!-- Leyenda -->
+    <text class="tm" x="40" y="610">RED (REE · ADIF)</text>
+    <text class="ts" x="40" y="628">Lo que ya existe: subestación de tracción de Adif conectada al nudo de REE.</text>
+    <text class="tm" x="560" y="610">CENTRO DE DATOS (NUEVO)</text>
+    <text class="ts" x="560" y="628">Todo lo que cuelga de la posición propia del CPD.</text>
+    <path d="M40 650 h30" class="sig"/><text class="ts" x="78" y="654">señal de control</text>
+    <path d="M200 650 h30" class="wire"/><text class="ts" x="238" y="654">conexión eléctrica</text>
+    <path d="M360 650 h30" stroke="var(--power)" stroke-width="5" stroke-dasharray="2 8" stroke-linecap="round"/><text class="ts" x="398" y="654">flujo de energía</text>
+    <path d="M520 600 V670" stroke="var(--rule)" stroke-width="1"/>
+  </svg>
+  </div>
+  <div class="legend">
+    <span style="--c:var(--power)">red</span><span style="--c:var(--batt)">batería</span><span style="--c:var(--solar)">solar</span><span style="--c:var(--gen)">grupos</span><span style="--c:var(--signal)">control</span>
+  </div>
+
+  <div class="panel">
+    <section class="card" aria-live="polite">
+      <div class="eyebrow" id="sc-eyebrow">Escenario</div>
+      <h2 id="sc-title"></h2>
+      <div class="meters">
+        <div class="m p"><b id="m-tren"></b><span>Tren</span></div>
+        <div class="m c"><b id="m-cpd"></b><span>Centro de datos</span></div>
+        <div class="m b"><b id="m-bat"></b><span id="m-bat-l">Batería</span></div>
+        <div class="m g"><b id="m-gen"></b><span>Grupos</span></div>
+      </div>
+      <div class="limit">
+        <div class="bar" id="bar"><i class="tr"></i><i class="dcg"></i><i class="ch"></i><span class="cap"></span></div>
+        <small id="bar-txt"></small>
+      </div>
+      <ol class="steps" id="sc-steps"></ol>
+    </section>
+    <section class="card">
+      <div class="eyebrow">Pieza seleccionada</div>
+      <h2 id="c-title"></h2>
+      <dl>
+        <div><dt>Qué es</dt><dd id="c-que"></dd></div>
+        <div><dt>Por qué está aquí</dt><dd id="c-por"></dd></div>
+        <div><dt>Números</dt><dd class="num" id="c-num"></dd></div>
+      </dl>
+    </section>
+  </div>
+
+  <section style="display:grid;gap:10px">
+    <h2>Todas las piezas</h2>
+    <p class="hint">En el móvil puedes deslizar el esquema hacia los lados, o tocar aquí cada pieza.</p>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <footer>Los números son de Anchuelo en el modelo v2 (acceso concedido por REE, carga del tren ×1,0). Los tamaños de los transformadores, los grupos y la solar son de orden de magnitud para un centro de 39 MW y habrá que afinarlos. Más detalle en docs/arquitectura_y_caidas.md.</footer>
+</div>
+
+<script>
+const CAP = 46;
+const C = {
+  red:{t:"Red de transporte (REE)",q:"Las líneas de 400 kV de Red Eléctrica que llegan a la subestación. Son las autopistas de la electricidad.",p:"Es de donde sale toda la energía. Lo escaso es el permiso para conectarse a ella (el acceso), no la energía.",n:"Nudo de 400 kV · Adif tiene concedidos 51 MW de acceso"},
+  embarrado:{t:"Embarrado 400 kV",q:"Barras metálicas gruesas de la subestación de REE donde se enchufa todo. Funciona como una regleta, y cada enchufe es una posición.",p:"Adif y el CPD se enchufan en la misma regleta, cada uno en su hueco. Lo que comparten es el límite de potencia del nudo, no los cables.",n:"Suele ser de doble barra: si falla una, se pasa todo a la otra"},
+  posAdif:{t:"Posición de Adif",q:"El hueco de Adif en el embarrado: un interruptor que puede cortar la corriente y un contador que mide cuánto consume el tren.",p:"Su contador es la señal clave: el control del CPD lo lee cada segundo para saber cuánto hueco deja el tren.",n:"Acceso concedido 51 MW · usamos el 90 % = 46 MW"},
+  trafoTrac:{t:"Transformadores de tracción",q:"Bajan de 400 kV a 2×25 kV para la catenaria. Son monofásicos: solo usan 2 de las 3 fases de la red.",p:"Son de Adif y no se tocan. Al ser monofásicos desequilibran la red, y el CPD lo nota un poco.",n:"2 × 60 MVA típicos · desequilibrio estimado 0,2–0,8 %"},
+  catenaria:{t:"Catenaria y trenes",q:"El cable sobre la vía del que el tren toma la electricidad con el pantógrafo.",p:"El tren consume poco de media pero pega picos fuertes cuando acelera o sube rampas. Siempre tiene prioridad.",n:"Media 3,9 MW · pico 1 min 35 MW · saltos de hasta 24 MW en 10 s"},
+  vecina:{t:"Subestación vecina",q:"La siguiente subestación de tracción de la línea, a unos 40–60 km. Entre las dos hay una zona neutra que separa sus tramos de catenaria.",p:"Si la vecina cae, Anchuelo alimenta también parte de su tramo, así que el tren pide más y el CPD tiene que ceder.",n:"Con la vecina caída el pico del tren sube a 44 MW"},
+  ems:{t:"Control del CPD (EMS)",q:"Un ordenador que lee el consumo del tren cada segundo y decide cuánto puede tomar el CPD de la red.",p:"Garantiza que tren + CPD nunca pasen de 46 MW. Actúa en orden: batería (milisegundos), bajar las GPU (segundos), pausar trabajos (minutos).",n:"Hueco libre = 46 MW − consumo del tren"},
+  posCPD:{t:"Posición del CPD",q:"El hueco propio del centro de datos en el embarrado, con su interruptor, su contador y un relé limitador.",p:"Hoy la ley exige que el CPD tenga permiso y posición propios. El relé limitador abre una salida si la suma pasa del límite: es la garantía física de que el tren manda.",n:"Permiso propio · acceso flexible (Tipo 3)"},
+  trafoCPD:{t:"Transformadores del CPD",q:"Bajan de 400 kV a 30 kV (media tensión) para repartir la energía dentro del recinto. Son trifásicos.",p:"Hay dos y cada uno puede con todo. Si uno falla o está en mantenimiento, el otro sigue (N-1).",n:"2 × 50 MVA · 400/30 kV"},
+  mt:{t:"Barras de 30 kV",q:"La red interna de media tensión del centro de datos, en anillo, para que cada sala se pueda alimentar por dos caminos.",p:"Aquí se juntan las cuatro fuentes: la red, la batería, la solar y los grupos.",n:"30 kV · anillo"},
+  bess:{t:"Batería (BESS)",q:"Una batería grande en contenedores con su inversor. Es grid-forming: si la red desaparece, puede crear ella sola la tensión de las barras de 30 kV.",p:"Hace dos trabajos: se come los picos del tren para que el CPD no tenga que bajar, y hace de puente hasta que arrancan los grupos si se va la red.",n:"27,8 MW · 5,4 MWh en el modelo; mejor 13,9 MWh (2C) para que dure unos 8 años"},
+  fv:{t:"Solar (opcional)",q:"Paneles fotovoltaicos conectados en continua a la batería, compartiendo su inversor.",p:"Aporta energía verde y abarata la factura, pero no amplía la capacidad, porque de noche o nublado no está. Entraría como autoconsumo sin excedentes.",n:"~10 MWp ≈ 16 GWh/año ≈ 5 % del consumo del CPD"},
+  grupos:{t:"Grupos electrógenos",q:"Motores diésel o de HVO con generador que arrancan solos si se va la red.",p:"Solo para cortes reales y solo para el bloque firme. No se usan para cubrir los picos del tren.",n:"Arrancan en 10–15 s · ≥12 h de combustible · ~29 MW (N+1)"},
+  salas:{t:"Salas: transformador y SAI",q:"En cada sala un transformador baja a 400 V y un SAI (baterías pequeñas) mantiene los servidores sin ni un microcorte.",p:"El SAI cubre el instante cero de cualquier hueco o corte, hasta que entran la batería grande o los grupos.",n:"30/0,4 kV · SAI de litio de 5–10 min"},
+  it:{t:"Servidores: bloque firme y flexible",q:"Los equipos de cálculo, separados en dos bloques.",p:"El bloque firme (servicios críticos) nunca se corta. El bloque flexible (entrenamiento de IA, cálculo) baja potencia cuando el tren lo necesita.",n:"39 MW en total · firme ≈29 MW · flexible ≈10 MW (≈25 %)"}
+};
+const S = {
+  normal:{t:"Día normal",e:"Escenario 1 de 4",tren:4,cpd:39,bat:-2,gen:0,batl:"Batería (cargando)",
+    f:{red:"on",adif:"dim",cpd:"on",bess:"on",fv:"on",sala1:"on",sala2:"on"},x:[],
+    st:["El tren consume poco (unos 4 MW de media) y queda mucho hueco.","El CPD funciona a tope, 39 MW, tomando energía de la red.","La batería aprovecha el hueco para cargarse, y la solar le ayuda al mediodía."]},
+  pico:{t:"Pico del tren",e:"Escenario 2 de 4",tren:35,cpd:39,bat:28,gen:0,batl:"Batería (dando)",
+    f:{red:"on",adif:"on",cpd:"dim",bess:"rev",sala1:"on",sala2:"on"},x:[],
+    st:["Varios trenes aceleran a la vez y el consumo sube a 35 MW en segundos.","El control lo ve en el contador de Adif: solo quedan 11 MW libres.","La batería da los 28 MW que faltan en milisegundos. Los servidores no notan nada.","Cuando pasa el pico, a los pocos minutos, la batería se vuelve a cargar."]},
+  vecina:{t:"Cae la subestación vecina",e:"Escenario 3 de 4",tren:44,cpd:29,bat:27,gen:0,batl:"Batería (dando)",
+    f:{red:"on",adif:"on",extiende:"on",cpd:"dim",bess:"rev",sala1:"on",sala2:"dim"},x:["vecina"],
+    st:["La vecina falla y Anchuelo alimenta también parte de su tramo: el pico del tren llega a 44 MW.","La batería cubre los primeros segundos.","Como esto puede durar horas, el CPD baja el bloque flexible unos 10 MW (≈25 %): las GPU bajan potencia y se pausan trabajos.","El bloque firme sigue al 100 %."]},
+  apagon:{t:"Apagón de la red",e:"Escenario 4 de 4",tren:0,cpd:29,bat:0,gen:29,batl:"Batería",
+    f:{grupos:"on",sala1:"on"},x:["red"],
+    st:["0 ms: se va la red. El SAI y la batería grid-forming mantienen los servidores sin cortes.","10–15 s: arrancan los grupos y en 30–60 s ya llevan toda la carga del bloque firme.","El bloque flexible guarda su trabajo y se para: no necesita grupos.","Horas: los grupos siguen con su combustible. Los trenes también están parados, así que no hay conflicto."]}
+};
+const $ = s=>document.querySelector(s), $$ = s=>[...document.querySelectorAll(s)];
+function fmt(v){return (v>0?"+":"")+v+" MW"}
+function setScenario(k){
+  const s=S[k];
+  $$(".scen button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.s===k));
+  $$(".flow").forEach(p=>{p.classList.remove("on","rev","dim");const st=s.f[p.dataset.f];if(st)p.classList.add(st)});
+  $$(".xmark").forEach(x=>x.classList.toggle("on",s.x.includes(x.dataset.x)));
+  $("#g-vecina").classList.toggle("down",s.x.includes("vecina"));
+  $("#sc-eyebrow").textContent=s.e;$("#sc-title").textContent=s.t;
+  $("#m-tren").textContent=s.tren+" MW";$("#m-cpd").textContent=s.cpd+" MW";
+  $("#m-bat").textContent=s.bat===0?"0 MW":(s.bat>0?s.bat+" MW":(-s.bat)+" MW");$("#m-bat-l").textContent=s.batl;
+  $("#m-gen").textContent=s.gen+" MW";
+  const grid = k==="apagon"?0:s.tren+(s.cpd-Math.max(s.bat,0))+Math.max(-s.bat,0);
+  const scale=v=>(v/50*100)+"%";
+  const [tr,dc,ch]=$$("#bar i");
+  tr.style.width=scale(k==="apagon"?0:s.tren);dc.style.width=scale(k==="apagon"?0:s.cpd-Math.max(s.bat,0));ch.style.width=scale(Math.max(-s.bat,0));
+  $("#bar .cap").style.left=scale(CAP);
+  $("#bar-txt").textContent=k==="apagon"?"Red caída: no entra nada por el nudo":`Tomado de la red: ${grid} MW de ${CAP} MW permitidos (naranja tren · gris CPD · verde carga batería · rojo límite)`;
+  $("#sc-steps").innerHTML=s.st.map(x=>`<li>${x}</li>`).join("");
+  try{localStorage.setItem("esc",k)}catch(e){}
+}
+function setComp(k){
+  const c=C[k];
+  $$(".comp").forEach(g=>g.classList.toggle("sel",g.dataset.c===k));
+  $$("#cards button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.c===k));
+  $("#c-title").textContent=c.t;$("#c-que").textContent=c.q;$("#c-por").textContent=c.p;$("#c-num").textContent=c.n;
+}
+$("#cards").innerHTML=Object.entries(C).map(([k,c])=>`<button id="card-${k}" data-c="${k}" aria-pressed="false">${c.t}</button>`).join("");
+$$("#cards button").forEach(b=>b.addEventListener("click",()=>setComp(b.dataset.c)));
+$$(".comp").forEach(g=>{g.addEventListener("click",()=>setComp(g.dataset.c));g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();setComp(g.dataset.c)}})});
+$$(".scen button").forEach(b=>b.addEventListener("click",()=>setScenario(b.dataset.s)));
+let start="normal";try{const v=localStorage.getItem("esc");if(v&&S[v])start=v}catch(e){}
+setScenario(start);setComp("bess");
+</script>
+</body>
+</html>

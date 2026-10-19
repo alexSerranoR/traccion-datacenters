@@ -24,6 +24,7 @@ for l in LINES:
     run("sim.py", WORK / f"tramos_{l}.csv", l, WORK / l)
     run("analysis.py", WORK / l, l, WORK / f"res_{l}.json")
 run("finance.py", WORK, RES)
+run("arquitectura.py", WORK, RES)
 run("export.py", WORK, RES)
 run("dashboard.py", RES)
 print(f"\nAbre {RES / 'dashboard.html'} con doble clic para ver los resultados.")
