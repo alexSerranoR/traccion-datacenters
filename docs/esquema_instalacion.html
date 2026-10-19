@@ -95,7 +95,7 @@ footer{font-size:.85rem;color:var(--muted);max-width:80ch}
   <header>
     <div class="eyebrow">Esquema unifilar · ejemplo con números del modelo v2</div>
     <h1>Subestación de Anchuelo compartida entre el AVE y un centro de datos</h1>
-    <p class="lede">Es la instalación propuesta para el paper, dibujada con los números de Anchuelo (Madrid–Barcelona): REE tiene concedidos 51 MW a Adif, de los que usamos el 90&nbsp;%, es decir, 46&nbsp;MW. Elige un escenario para ver por dónde va la energía, y toca cualquier pieza para ver qué es.</p>
+    <p class="lede">Instalación propuesta, con los valores de Anchuelo (Madrid–Barcelona): REE tiene concedidos 51 MW a Adif, de los que el límite conjunto toma el 90&nbsp;%, es decir, 46&nbsp;MW. Seleccione un escenario para ver los flujos de potencia, o un elemento para ver su función.</p>
   </header>
 
   <div class="scen" role="group" aria-label="Escenario">
@@ -325,7 +325,7 @@ const CAP = 46;
 const C = {
   red:{t:"Red de transporte (REE)",q:"Las líneas de 400 kV de Red Eléctrica que llegan a la subestación. Son las autopistas de la electricidad.",p:"Es de donde sale toda la energía. Lo escaso es el permiso para conectarse a ella (el acceso), no la energía.",n:"Nudo de 400 kV · Adif tiene concedidos 51 MW de acceso"},
   embarrado:{t:"Embarrado 400 kV",q:"Barras metálicas gruesas de la subestación de REE donde se enchufa todo. Funciona como una regleta, y cada enchufe es una posición.",p:"Adif y el CPD se enchufan en la misma regleta, cada uno en su hueco. Lo que comparten es el límite de potencia del nudo, no los cables.",n:"Suele ser de doble barra: si falla una, se pasa todo a la otra"},
-  posAdif:{t:"Posición de Adif",q:"El hueco de Adif en el embarrado: un interruptor que puede cortar la corriente y un contador que mide cuánto consume el tren.",p:"Su contador es la señal clave: el control del CPD lo lee cada segundo para saber cuánto hueco deja el tren.",n:"Acceso concedido 51 MW · usamos el 90 % = 46 MW"},
+  posAdif:{t:"Posición de Adif",q:"El hueco de Adif en el embarrado: un interruptor que puede cortar la corriente y un contador que mide cuánto consume el tren.",p:"Su contador es la señal clave: el control del CPD lo lee cada segundo para saber cuánto hueco deja el tren.",n:"Acceso concedido 51 MW · límite conjunto al 90 % = 46 MW"},
   trafoTrac:{t:"Transformadores de tracción",q:"Bajan de 400 kV a 2×25 kV para la catenaria. Son monofásicos: solo usan 2 de las 3 fases de la red.",p:"Son de Adif y no se tocan. Al ser monofásicos desequilibran la red, y el CPD lo nota un poco.",n:"2 × 60 MVA típicos · desequilibrio estimado 0,2–0,8 %"},
   catenaria:{t:"Catenaria y trenes",q:"El cable sobre la vía del que el tren toma la electricidad con el pantógrafo.",p:"El tren consume poco de media pero pega picos fuertes cuando acelera o sube rampas. Siempre tiene prioridad.",n:"Media 3,9 MW · pico 1 min 35 MW · saltos de hasta 24 MW en 10 s"},
   vecina:{t:"Subestación vecina",q:"La siguiente subestación de tracción de la línea, a unos 40–60 km. Entre las dos hay una zona neutra que separa sus tramos de catenaria.",p:"Si la vecina cae, Anchuelo alimenta también parte de su tramo, así que el tren pide más y el CPD tiene que ceder.",n:"Con la vecina caída el pico del tren sube a 44 MW"},
@@ -333,7 +333,7 @@ const C = {
   posCPD:{t:"Posición del CPD",q:"El hueco propio del centro de datos en el embarrado, con su interruptor, su contador y un relé limitador.",p:"Hoy la ley exige que el CPD tenga permiso y posición propios. El relé limitador abre una salida si la suma pasa del límite: es la garantía física de que el tren manda.",n:"Permiso propio · acceso flexible (Tipo 3)"},
   trafoCPD:{t:"Transformadores del CPD",q:"Bajan de 400 kV a 30 kV (media tensión) para repartir la energía dentro del recinto. Son trifásicos.",p:"Hay dos y cada uno puede con todo. Si uno falla o está en mantenimiento, el otro sigue (N-1).",n:"2 × 50 MVA · 400/30 kV"},
   mt:{t:"Barras de 30 kV",q:"La red interna de media tensión del centro de datos, en anillo, para que cada sala se pueda alimentar por dos caminos.",p:"Aquí se juntan las cuatro fuentes: la red, la batería, la solar y los grupos.",n:"30 kV · anillo"},
-  bess:{t:"Batería (BESS)",q:"Una batería grande en contenedores con su inversor. Es grid-forming: si la red desaparece, puede crear ella sola la tensión de las barras de 30 kV.",p:"Hace dos trabajos: se come los picos del tren para que el CPD no tenga que bajar, y hace de puente hasta que arrancan los grupos si se va la red.",n:"28,8 MW · 14,4 MWh (limitada a 2C para que dure unos 8 años) · como puente aguanta unos 30 min"},
+  bess:{t:"Batería (BESS)",q:"Una batería grande en contenedores con su inversor. Es grid-forming: si la red desaparece, puede crear ella sola la tensión de las barras de 30 kV.",p:"Hace dos trabajos: absorbe los picos del tren para que el CPD no tenga que bajar, y hace de puente hasta que arrancan los grupos si se va la red.",n:"28,8 MW · 14,4 MWh (limitada a 2C para que dure unos 8 años) · como puente aguanta unos 30 min"},
   fv:{t:"Solar (opcional)",q:"Paneles fotovoltaicos conectados en continua a la batería, compartiendo su inversor.",p:"Aporta energía verde y abarata la factura, pero no amplía la capacidad, porque de noche o nublado no está. Entraría como autoconsumo sin excedentes.",n:"~10 MWp ≈ 16 GWh/año ≈ 5 % del consumo del CPD"},
   grupos:{t:"Grupos electrógenos",q:"Motores diésel o de HVO con generador que arrancan solos si se va la red.",p:"Solo para cortes reales y solo para el bloque firme. No se usan para cubrir los picos del tren.",n:"Arrancan en 10–15 s · ≥12 h de combustible · ~33 MW (bloque firme, N+1)"},
   salas:{t:"Salas: transformador y SAI",q:"En cada sala un transformador baja a 400 V y un SAI (baterías pequeñas) mantiene los servidores sin ni un microcorte.",p:"El SAI cubre el instante cero de cualquier hueco o corte, hasta que entran la batería grande o los grupos.",n:"30/0,4 kV · SAI de litio de 5–10 min"},
@@ -342,7 +342,7 @@ const C = {
 const S = {
   normal:{t:"Día normal",e:"Escenario 1 de 4",tren:4,cpd:40,bat:-2,gen:0,batl:"Batería (cargando)",
     f:{red:"on",adif:"dim",cpd:"on",bess:"on",fv:"on",sala1:"on",sala2:"on"},x:[],
-    st:["El tren consume poco (unos 4 MW de media) y queda mucho hueco.","El CPD funciona a tope, 40 MW, tomando energía de la red.","La batería aprovecha el hueco para cargarse, y la solar le ayuda al mediodía."]},
+    st:["El tren consume poco (unos 4 MW de media) y queda mucho hueco.","El CPD funciona a plena carga, 40 MW, tomando energía de la red.","La batería aprovecha el hueco para cargarse, y la fotovoltaica contribuye al mediodía."]},
   pico:{t:"Pico del tren",e:"Escenario 2 de 4",tren:35,cpd:40,bat:29,gen:0,batl:"Batería (dando)",
     f:{red:"on",adif:"on",cpd:"dim",bess:"rev",sala1:"on",sala2:"on"},x:[],
     st:["Varios trenes aceleran a la vez y el consumo sube a 35 MW en segundos.","El control lo ve en el contador de Adif: solo quedan 11 MW libres.","La batería da los 29 MW que faltan en milisegundos. Los servidores no notan nada.","Cuando pasa el pico, a los pocos minutos, la batería se vuelve a cargar."]},
