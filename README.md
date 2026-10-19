@@ -13,7 +13,7 @@ estimado.
 
 | Si tienes... | Abre | Qué vas a ver |
 |---|---|---|
-| Una visión de conjunto | [`web/index.html`](web/index.html) (o su enlace publicado en Vercel) | Página única con la idea, los resultados por subestación, la arquitectura, las contingencias, la regulación y el acceso al panel, al esquema y al vídeo |
+| Una visión de conjunto | [`web/index.html`](web/index.html) (o su enlace publicado en Vercel) | Página sencilla con el vídeo, la idea y la arquitectura de conexión (con el esquema interactivo) |
 | 1 minuto | [`video/trenes_y_centros_de_datos.mp4`](video/trenes_y_centros_de_datos.mp4) | La idea en 55 s, para público no técnico |
 | 5 minutos | [`results/dashboard.html`](results/dashboard.html) (doble clic) | Panel interactivo con las conclusiones, las dos líneas, el día de un CPD, las baterías y las cifras financieras |
 | Ganas de entender la instalación | [`docs/esquema_instalacion.html`](docs/esquema_instalacion.html) (doble clic) | Esquema unifilar interactivo de Anchuelo: red, transformadores, batería, solar, grupos y servidores en 4 escenarios (día normal, pico del tren, cae la vecina, apagón) |
@@ -74,9 +74,8 @@ Proyecto de RD de centros de datos ([`docs/encaje_regulatorio.md`](docs/encaje_r
 ## Web del proyecto
 
 [`web/index.html`](web/index.html) es la puerta de entrada para quien no va a abrir el repositorio. No duplica nada:
-al desplegar, [`vercel.json`](vercel.json) ejecuta [`web/build.sh`](web/build.sh), que copia en `public/` la página, el panel, el esquema, el vídeo y los datos que
-leen sus gráficos (`results/capacidad.csv`, `results/lineas.json`), así que se actualiza sola cada vez que se regeneran
-los resultados. Solo se publican esos ficheros, y la web pide a los buscadores que no la indexen. Para publicarla gratis:
+al desplegar, [`vercel.json`](vercel.json) ejecuta [`web/build.sh`](web/build.sh), que copia en `public/` la página, el esquema y el vídeo.
+Solo se publican esos ficheros, y la web pide a los buscadores que no la indexen. Para publicarla gratis:
 
 1. Entrar en [vercel.com](https://vercel.com) con la cuenta de GitHub (plan Hobby, gratuito).
 2. *Add New → Project*, importar este repositorio y pulsar *Deploy* sin cambiar nada.
