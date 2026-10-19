@@ -34,6 +34,8 @@ N1_SHARE = 0.5         # SUPUESTO: si cae una vecina, esta subestacion asume la 
 BAT_P_COST = 0.20      # M EUR por MW de bateria (SUPUESTO, ver finance.py)
 BAT_E_COST = 0.25      # M EUR por MWh de bateria
 VAL_MW = 1.0           # M EUR: lo maximo que se paga en bateria por cada MW adicional de CPD (SUPUESTO)
+BAT_C_MAX = 2.0        # C-rate maximo: E >= P/2. Con 2C la bateria hace ~2,5-3 ciclos/dia y dura ~8 anos;
+                       # con la energia minima haria 5-6 ciclos/dia y duraria ~3 (ver arquitectura.py)
 ACCESS = [30, 60, 120]
 LOADS = [1.0, 1.5]     # 1,5 = carga del tren +50 % (crecimiento de trafico, incertidumbre de consumo)
 
@@ -73,10 +75,11 @@ def max_D(H, Pb, Eb):
 
 
 def battery_curve(H, step=1.0):
-    """CPD (MW) frente a bateria necesaria, desde 'sin bateria' hasta el maximo fisico."""
+    """CPD (MW) frente a bateria necesaria, desde 'sin bateria' hasta el maximo fisico.
+    La energia se sube a P/BAT_C_MAX si la necesaria es menor, para no degradar la bateria."""
     D0 = max(0.0, float(H.min())); pts = []
     for D in np.arange(np.floor(D0), float(H.mean()), step):
-        D = max(D, D0); pb, eb = battery_need(H, D)
+        D = max(D, D0); pb, eb = battery_need(H, D); eb = max(eb, pb / BAT_C_MAX)
         pts.append((round(float(D), 1), round(pb, 1), round(eb, 2)))
     return pts
 
@@ -103,7 +106,7 @@ scen += [(str(C), np.full(NSE, float(C))) for C in ACCESS]
 
 res = {"linea": LINE, "nombre": CFG["nombre"], "escenarios": [], "curvas_bateria": {},
        "parametros": dict(margen=SAFETY, flex=FLEX, n1=N1_SHARE, val_MW=VAL_MW,
-                          bat_P_coste=BAT_P_COST, bat_E_coste=BAT_E_COST)}
+                          bat_P_coste=BAT_P_COST, bat_E_coste=BAT_E_COST, bat_C_max=BAT_C_MAX)}
 for name, Cv in scen:
     for f in LOADS:
         Lf = L * f; LN1 = n1(Lf)

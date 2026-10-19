@@ -34,3 +34,17 @@ para Madrid–Sevilla; informes de la CNMC y BOE para los nudos. Detalle en la c
 - `acceso_escenario_bajo_MW`: acceso concedido hoy por REE (35–40 MW donde no se conoce).
 - `acceso_escenario_alto_MW`: lo que admitirían los transformadores de tracción (~100 MW con 2×60 MVA en 2×25 kV,
   ~55 MW con 2×30 MVA en 1×25 kV).
+
+## Perfiles horarios de REE (`ree_horario_2025.csv`)
+
+Generación por tecnología, intercambios y demanda del sistema peninsular, hora a hora, de todo 2025 (8760 filas). Sale del
+servicio de demanda en tiempo real de REE (demanda.ree.es, curva DEMANDAAU), que da potencia cada 5 minutos, promediada
+por hora (MWh/h). Son datos de tiempo real y no el cierre definitivo, así que pueden diferir algo de las estadísticas
+oficiales. La API REData (apidatos.ree.es) no da la generación por tecnología con resolución horaria.
+
+- `datetime`: hora local con su desfase (los cambios de hora están resueltos).
+- `eolica_MWh`, `solar_fv_MWh`, `solar_termica_MWh`, `hidraulica_MWh`, `demanda_MWh` y el resto de tecnologías con el
+  nombre original de REE (`nuc`, `cc`, `cogenResto`...). Exportaciones y consumo de bombeo y baterías salen en negativo.
+- Totales de 2025: eólica 55,6 TWh, FV 49,2 TWh, demanda 238,5 TWh. Las horas del apagón del 28/4/2025 están sin corregir.
+
+Lo usa `src/renovable_horaria.py` para el 80 % renovable horario del proyecto de RD de centros de datos.

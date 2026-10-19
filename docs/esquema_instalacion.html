@@ -214,7 +214,7 @@ footer{font-size:.85rem;color:var(--muted);max-width:80ch}
       <path class="wire" d="M530 392 V420"/>
       <rect class="box" x="490" y="420" width="80" height="44"/>
       <path class="wire" d="M500 432 h10 M500 444 h10 M500 456 h10 M520 432 h10 M520 444 h10 M520 456 h10 M540 432 h10 M540 444 h10 M540 456 h10" style="stroke:var(--batt);stroke-width:5"/>
-      <text class="th" x="486" y="484">Batería BESS</text><text class="ts" x="486" y="498">28 MW · 5,4–14 MWh</text>
+      <text class="th" x="486" y="484">Batería BESS</text><text class="ts" x="486" y="498">29 MW · 14 MWh</text>
     </g>
     <path class="flow fb" data-f="bess" d="M530 311 V440"/>
 
@@ -263,7 +263,7 @@ footer{font-size:.85rem;color:var(--muted);max-width:80ch}
         <path class="wire" d="M778 482 h44 M778 494 h44 M778 506 h44 M778 518 h44" stroke-width="3"/></g>
       <g id="rack2"><rect class="box" x="882" y="470" width="56" height="64"/>
         <path class="wire" d="M888 482 h44 M888 494 h44 M888 506 h44 M888 518 h44" stroke-width="3"/></g>
-      <text class="t" x="760" y="552">Bloque firme</text><text class="ts" x="760" y="566">≈29 MW · Tier III</text>
+      <text class="t" x="760" y="552">Bloque firme</text><text class="ts" x="760" y="566">≈30 MW · Tier III</text>
       <text class="t" x="872" y="552">Bloque flexible</text><text class="ts" x="872" y="566">≈10 MW · IA</text>
     </g>
     <path class="flow fp" data-f="sala1" d="M800 311 V470"/>
@@ -317,7 +317,7 @@ footer{font-size:.85rem;color:var(--muted);max-width:80ch}
     <div class="cards" id="cards"></div>
   </section>
 
-  <footer>Los números son de Anchuelo en el modelo v2 (acceso concedido por REE, carga del tren ×1,0). Los tamaños de los transformadores, los grupos y la solar son de orden de magnitud para un centro de 39 MW y habrá que afinarlos. Más detalle en docs/arquitectura_y_caidas.md.</footer>
+  <footer>Los números son de Anchuelo en el modelo v2 (acceso concedido por REE, carga del tren ×1,0). Los tamaños de los transformadores, los grupos y la solar son de orden de magnitud para un centro de 40 MW y habrá que afinarlos. Más detalle en docs/arquitectura_y_caidas.md.</footer>
 </div>
 
 <script>
@@ -333,23 +333,23 @@ const C = {
   posCPD:{t:"Posición del CPD",q:"El hueco propio del centro de datos en el embarrado, con su interruptor, su contador y un relé limitador.",p:"Hoy la ley exige que el CPD tenga permiso y posición propios. El relé limitador abre una salida si la suma pasa del límite: es la garantía física de que el tren manda.",n:"Permiso propio · acceso flexible (Tipo 3)"},
   trafoCPD:{t:"Transformadores del CPD",q:"Bajan de 400 kV a 30 kV (media tensión) para repartir la energía dentro del recinto. Son trifásicos.",p:"Hay dos y cada uno puede con todo. Si uno falla o está en mantenimiento, el otro sigue (N-1).",n:"2 × 50 MVA · 400/30 kV"},
   mt:{t:"Barras de 30 kV",q:"La red interna de media tensión del centro de datos, en anillo, para que cada sala se pueda alimentar por dos caminos.",p:"Aquí se juntan las cuatro fuentes: la red, la batería, la solar y los grupos.",n:"30 kV · anillo"},
-  bess:{t:"Batería (BESS)",q:"Una batería grande en contenedores con su inversor. Es grid-forming: si la red desaparece, puede crear ella sola la tensión de las barras de 30 kV.",p:"Hace dos trabajos: se come los picos del tren para que el CPD no tenga que bajar, y hace de puente hasta que arrancan los grupos si se va la red.",n:"27,8 MW · 5,4 MWh en el modelo; mejor 13,9 MWh (2C) para que dure unos 8 años"},
+  bess:{t:"Batería (BESS)",q:"Una batería grande en contenedores con su inversor. Es grid-forming: si la red desaparece, puede crear ella sola la tensión de las barras de 30 kV.",p:"Hace dos trabajos: se come los picos del tren para que el CPD no tenga que bajar, y hace de puente hasta que arrancan los grupos si se va la red.",n:"28,8 MW · 14,4 MWh (limitada a 2C para que dure unos 8 años) · como puente aguanta unos 30 min"},
   fv:{t:"Solar (opcional)",q:"Paneles fotovoltaicos conectados en continua a la batería, compartiendo su inversor.",p:"Aporta energía verde y abarata la factura, pero no amplía la capacidad, porque de noche o nublado no está. Entraría como autoconsumo sin excedentes.",n:"~10 MWp ≈ 16 GWh/año ≈ 5 % del consumo del CPD"},
-  grupos:{t:"Grupos electrógenos",q:"Motores diésel o de HVO con generador que arrancan solos si se va la red.",p:"Solo para cortes reales y solo para el bloque firme. No se usan para cubrir los picos del tren.",n:"Arrancan en 10–15 s · ≥12 h de combustible · ~29 MW (N+1)"},
+  grupos:{t:"Grupos electrógenos",q:"Motores diésel o de HVO con generador que arrancan solos si se va la red.",p:"Solo para cortes reales y solo para el bloque firme. No se usan para cubrir los picos del tren.",n:"Arrancan en 10–15 s · ≥12 h de combustible · ~33 MW (bloque firme, N+1)"},
   salas:{t:"Salas: transformador y SAI",q:"En cada sala un transformador baja a 400 V y un SAI (baterías pequeñas) mantiene los servidores sin ni un microcorte.",p:"El SAI cubre el instante cero de cualquier hueco o corte, hasta que entran la batería grande o los grupos.",n:"30/0,4 kV · SAI de litio de 5–10 min"},
-  it:{t:"Servidores: bloque firme y flexible",q:"Los equipos de cálculo, separados en dos bloques.",p:"El bloque firme (servicios críticos) nunca se corta. El bloque flexible (entrenamiento de IA, cálculo) baja potencia cuando el tren lo necesita.",n:"39 MW en total · firme ≈29 MW · flexible ≈10 MW (≈25 %)"}
+  it:{t:"Servidores: bloque firme y flexible",q:"Los equipos de cálculo, separados en dos bloques.",p:"El bloque firme (servicios críticos) nunca se corta. El bloque flexible (entrenamiento de IA, cálculo) baja potencia cuando el tren lo necesita.",n:"40 MW en total · firme ≈30 MW · flexible ≈10 MW (≈25 %)"}
 };
 const S = {
-  normal:{t:"Día normal",e:"Escenario 1 de 4",tren:4,cpd:39,bat:-2,gen:0,batl:"Batería (cargando)",
+  normal:{t:"Día normal",e:"Escenario 1 de 4",tren:4,cpd:40,bat:-2,gen:0,batl:"Batería (cargando)",
     f:{red:"on",adif:"dim",cpd:"on",bess:"on",fv:"on",sala1:"on",sala2:"on"},x:[],
-    st:["El tren consume poco (unos 4 MW de media) y queda mucho hueco.","El CPD funciona a tope, 39 MW, tomando energía de la red.","La batería aprovecha el hueco para cargarse, y la solar le ayuda al mediodía."]},
-  pico:{t:"Pico del tren",e:"Escenario 2 de 4",tren:35,cpd:39,bat:28,gen:0,batl:"Batería (dando)",
+    st:["El tren consume poco (unos 4 MW de media) y queda mucho hueco.","El CPD funciona a tope, 40 MW, tomando energía de la red.","La batería aprovecha el hueco para cargarse, y la solar le ayuda al mediodía."]},
+  pico:{t:"Pico del tren",e:"Escenario 2 de 4",tren:35,cpd:40,bat:29,gen:0,batl:"Batería (dando)",
     f:{red:"on",adif:"on",cpd:"dim",bess:"rev",sala1:"on",sala2:"on"},x:[],
-    st:["Varios trenes aceleran a la vez y el consumo sube a 35 MW en segundos.","El control lo ve en el contador de Adif: solo quedan 11 MW libres.","La batería da los 28 MW que faltan en milisegundos. Los servidores no notan nada.","Cuando pasa el pico, a los pocos minutos, la batería se vuelve a cargar."]},
-  vecina:{t:"Cae la subestación vecina",e:"Escenario 3 de 4",tren:44,cpd:29,bat:27,gen:0,batl:"Batería (dando)",
+    st:["Varios trenes aceleran a la vez y el consumo sube a 35 MW en segundos.","El control lo ve en el contador de Adif: solo quedan 11 MW libres.","La batería da los 29 MW que faltan en milisegundos. Los servidores no notan nada.","Cuando pasa el pico, a los pocos minutos, la batería se vuelve a cargar."]},
+  vecina:{t:"Cae la subestación vecina",e:"Escenario 3 de 4",tren:44,cpd:30,bat:28,gen:0,batl:"Batería (dando)",
     f:{red:"on",adif:"on",extiende:"on",cpd:"dim",bess:"rev",sala1:"on",sala2:"dim"},x:["vecina"],
     st:["La vecina falla y Anchuelo alimenta también parte de su tramo: el pico del tren llega a 44 MW.","La batería cubre los primeros segundos.","Como esto puede durar horas, el CPD baja el bloque flexible unos 10 MW (≈25 %): las GPU bajan potencia y se pausan trabajos.","El bloque firme sigue al 100 %."]},
-  apagon:{t:"Apagón de la red",e:"Escenario 4 de 4",tren:0,cpd:29,bat:0,gen:29,batl:"Batería",
+  apagon:{t:"Apagón de la red",e:"Escenario 4 de 4",tren:0,cpd:30,bat:0,gen:30,batl:"Batería",
     f:{grupos:"on",sala1:"on"},x:["red"],
     st:["0 ms: se va la red. El SAI y la batería grid-forming mantienen los servidores sin cortes.","10–15 s: arrancan los grupos y en 30–60 s ya llevan toda la carga del bloque firme.","El bloque flexible guarda su trabajo y se para: no necesita grupos.","Horas: los grupos siguen con su combustible. Los trenes también están parados, así que no hay conflicto."]}
 };

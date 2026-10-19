@@ -1,3009 +1,3009 @@
 linea,acceso,subestacion,cpd_MW,bateria_MW,bateria_MWh
 MZB,REE,Villaverde Bajo,0.0,0.0,0.0
-MZB,REE,Villaverde Bajo,1.0,1.0,0.02
-MZB,REE,Villaverde Bajo,2.0,2.0,0.03
-MZB,REE,Villaverde Bajo,3.0,3.0,0.05
-MZB,REE,Villaverde Bajo,4.0,4.0,0.07
-MZB,REE,Villaverde Bajo,5.0,5.0,0.08
-MZB,REE,Villaverde Bajo,6.0,6.0,0.1
-MZB,REE,Villaverde Bajo,7.0,7.0,0.12
-MZB,REE,Villaverde Bajo,8.0,8.0,0.13
-MZB,REE,Villaverde Bajo,9.0,9.0,0.15
-MZB,REE,Villaverde Bajo,10.0,10.0,0.18
-MZB,REE,Villaverde Bajo,11.0,11.0,0.21
-MZB,REE,Villaverde Bajo,12.0,12.0,0.25
-MZB,REE,Villaverde Bajo,13.0,13.0,0.28
-MZB,REE,Villaverde Bajo,14.0,14.0,0.33
-MZB,REE,Villaverde Bajo,15.0,15.0,0.38
-MZB,REE,Villaverde Bajo,16.0,16.0,0.43
-MZB,REE,Villaverde Bajo,17.0,17.0,0.55
-MZB,REE,Villaverde Bajo,18.0,18.0,0.7
-MZB,REE,Villaverde Bajo,19.0,19.0,0.85
-MZB,REE,Villaverde Bajo,20.0,20.0,1.0
-MZB,REE,Villaverde Bajo,21.0,21.0,1.17
-MZB,REE,Villaverde Bajo,22.0,22.0,1.34
-MZB,REE,Villaverde Bajo,23.0,23.0,1.5
-MZB,REE,Villaverde Bajo,24.0,24.0,1.67
-MZB,REE,Villaverde Bajo,25.0,25.0,2.4
-MZB,REE,Villaverde Bajo,26.0,26.0,8.77
+MZB,REE,Villaverde Bajo,1.0,1.0,0.5
+MZB,REE,Villaverde Bajo,2.0,2.0,1.0
+MZB,REE,Villaverde Bajo,3.0,3.0,1.5
+MZB,REE,Villaverde Bajo,4.0,4.0,2.0
+MZB,REE,Villaverde Bajo,5.0,5.0,2.5
+MZB,REE,Villaverde Bajo,6.0,6.0,3.0
+MZB,REE,Villaverde Bajo,7.0,7.0,3.5
+MZB,REE,Villaverde Bajo,8.0,8.0,4.0
+MZB,REE,Villaverde Bajo,9.0,9.0,4.5
+MZB,REE,Villaverde Bajo,10.0,10.0,5.0
+MZB,REE,Villaverde Bajo,11.0,11.0,5.5
+MZB,REE,Villaverde Bajo,12.0,12.0,6.0
+MZB,REE,Villaverde Bajo,13.0,13.0,6.5
+MZB,REE,Villaverde Bajo,14.0,14.0,7.0
+MZB,REE,Villaverde Bajo,15.0,15.0,7.5
+MZB,REE,Villaverde Bajo,16.0,16.0,8.0
+MZB,REE,Villaverde Bajo,17.0,17.0,8.5
+MZB,REE,Villaverde Bajo,18.0,18.0,9.0
+MZB,REE,Villaverde Bajo,19.0,19.0,9.5
+MZB,REE,Villaverde Bajo,20.0,20.0,10.0
+MZB,REE,Villaverde Bajo,21.0,21.0,10.5
+MZB,REE,Villaverde Bajo,22.0,22.0,11.0
+MZB,REE,Villaverde Bajo,23.0,23.0,11.5
+MZB,REE,Villaverde Bajo,24.0,24.0,12.0
+MZB,REE,Villaverde Bajo,25.0,25.0,12.5
+MZB,REE,Villaverde Bajo,26.0,26.0,13.0
 MZB,REE,Anchuelo,11.2,0.0,0.0
-MZB,REE,Anchuelo,12.0,0.8,0.01
-MZB,REE,Anchuelo,13.0,1.8,0.03
-MZB,REE,Anchuelo,14.0,2.8,0.05
-MZB,REE,Anchuelo,15.0,3.8,0.06
-MZB,REE,Anchuelo,16.0,4.8,0.08
-MZB,REE,Anchuelo,17.0,5.8,0.1
-MZB,REE,Anchuelo,18.0,6.8,0.11
-MZB,REE,Anchuelo,19.0,7.8,0.13
-MZB,REE,Anchuelo,20.0,8.8,0.15
-MZB,REE,Anchuelo,21.0,9.8,0.16
-MZB,REE,Anchuelo,22.0,10.8,0.19
-MZB,REE,Anchuelo,23.0,11.8,0.22
-MZB,REE,Anchuelo,24.0,12.8,0.3
-MZB,REE,Anchuelo,25.0,13.8,0.4
-MZB,REE,Anchuelo,26.0,14.8,0.5
-MZB,REE,Anchuelo,27.0,15.8,0.6
-MZB,REE,Anchuelo,28.0,16.8,0.7
-MZB,REE,Anchuelo,29.0,17.8,0.8
-MZB,REE,Anchuelo,30.0,18.8,0.91
-MZB,REE,Anchuelo,31.0,19.8,1.08
-MZB,REE,Anchuelo,32.0,20.8,1.33
-MZB,REE,Anchuelo,33.0,21.8,1.58
-MZB,REE,Anchuelo,34.0,22.8,1.83
-MZB,REE,Anchuelo,35.0,23.8,2.46
-MZB,REE,Anchuelo,36.0,24.8,3.13
-MZB,REE,Anchuelo,37.0,25.8,3.87
-MZB,REE,Anchuelo,38.0,26.8,4.63
-MZB,REE,Anchuelo,39.0,27.8,5.41
-MZB,REE,Anchuelo,40.0,28.8,9.0
+MZB,REE,Anchuelo,12.0,0.8,0.41
+MZB,REE,Anchuelo,13.0,1.8,0.91
+MZB,REE,Anchuelo,14.0,2.8,1.41
+MZB,REE,Anchuelo,15.0,3.8,1.91
+MZB,REE,Anchuelo,16.0,4.8,2.41
+MZB,REE,Anchuelo,17.0,5.8,2.91
+MZB,REE,Anchuelo,18.0,6.8,3.41
+MZB,REE,Anchuelo,19.0,7.8,3.91
+MZB,REE,Anchuelo,20.0,8.8,4.41
+MZB,REE,Anchuelo,21.0,9.8,4.91
+MZB,REE,Anchuelo,22.0,10.8,5.41
+MZB,REE,Anchuelo,23.0,11.8,5.91
+MZB,REE,Anchuelo,24.0,12.8,6.41
+MZB,REE,Anchuelo,25.0,13.8,6.91
+MZB,REE,Anchuelo,26.0,14.8,7.41
+MZB,REE,Anchuelo,27.0,15.8,7.91
+MZB,REE,Anchuelo,28.0,16.8,8.41
+MZB,REE,Anchuelo,29.0,17.8,8.91
+MZB,REE,Anchuelo,30.0,18.8,9.41
+MZB,REE,Anchuelo,31.0,19.8,9.91
+MZB,REE,Anchuelo,32.0,20.8,10.41
+MZB,REE,Anchuelo,33.0,21.8,10.91
+MZB,REE,Anchuelo,34.0,22.8,11.41
+MZB,REE,Anchuelo,35.0,23.8,11.91
+MZB,REE,Anchuelo,36.0,24.8,12.41
+MZB,REE,Anchuelo,37.0,25.8,12.91
+MZB,REE,Anchuelo,38.0,26.8,13.41
+MZB,REE,Anchuelo,39.0,27.8,13.91
+MZB,REE,Anchuelo,40.0,28.8,14.41
 MZB,REE,Anchuelo,41.0,29.8,21.15
 MZB,REE,Anchuelo,42.0,30.8,34.18
 MZB,REE,Brihuega,8.3,0.0,0.0
-MZB,REE,Brihuega,9.0,0.7,0.04
-MZB,REE,Brihuega,10.0,1.7,0.12
-MZB,REE,Brihuega,11.0,2.7,0.2
-MZB,REE,Brihuega,12.0,3.7,0.29
-MZB,REE,Brihuega,13.0,4.7,0.39
-MZB,REE,Brihuega,14.0,5.7,0.5
-MZB,REE,Brihuega,15.0,6.7,0.61
-MZB,REE,Brihuega,16.0,7.7,0.73
-MZB,REE,Brihuega,17.0,8.7,0.86
-MZB,REE,Brihuega,18.0,9.7,1.01
-MZB,REE,Brihuega,19.0,10.7,1.16
-MZB,REE,Brihuega,20.0,11.7,1.31
-MZB,REE,Brihuega,21.0,12.7,1.51
-MZB,REE,Brihuega,22.0,13.7,1.75
-MZB,REE,Brihuega,23.0,14.7,1.99
-MZB,REE,Brihuega,24.0,15.7,2.24
-MZB,REE,Brihuega,25.0,16.7,2.49
-MZB,REE,Brihuega,26.0,17.7,2.76
-MZB,REE,Brihuega,27.0,18.7,3.02
-MZB,REE,Brihuega,28.0,19.7,3.3
-MZB,REE,Brihuega,29.0,20.7,3.58
-MZB,REE,Brihuega,30.0,21.7,3.88
-MZB,REE,Brihuega,31.0,22.7,4.29
-MZB,REE,Brihuega,32.0,23.7,4.79
-MZB,REE,Brihuega,33.0,24.7,6.21
+MZB,REE,Brihuega,9.0,0.7,0.37
+MZB,REE,Brihuega,10.0,1.7,0.87
+MZB,REE,Brihuega,11.0,2.7,1.37
+MZB,REE,Brihuega,12.0,3.7,1.87
+MZB,REE,Brihuega,13.0,4.7,2.37
+MZB,REE,Brihuega,14.0,5.7,2.87
+MZB,REE,Brihuega,15.0,6.7,3.37
+MZB,REE,Brihuega,16.0,7.7,3.87
+MZB,REE,Brihuega,17.0,8.7,4.37
+MZB,REE,Brihuega,18.0,9.7,4.87
+MZB,REE,Brihuega,19.0,10.7,5.37
+MZB,REE,Brihuega,20.0,11.7,5.87
+MZB,REE,Brihuega,21.0,12.7,6.37
+MZB,REE,Brihuega,22.0,13.7,6.87
+MZB,REE,Brihuega,23.0,14.7,7.37
+MZB,REE,Brihuega,24.0,15.7,7.87
+MZB,REE,Brihuega,25.0,16.7,8.37
+MZB,REE,Brihuega,26.0,17.7,8.87
+MZB,REE,Brihuega,27.0,18.7,9.37
+MZB,REE,Brihuega,28.0,19.7,9.87
+MZB,REE,Brihuega,29.0,20.7,10.37
+MZB,REE,Brihuega,30.0,21.7,10.87
+MZB,REE,Brihuega,31.0,22.7,11.37
+MZB,REE,Brihuega,32.0,23.7,11.87
+MZB,REE,Brihuega,33.0,24.7,12.37
 MZB,REE,Brihuega,34.0,25.7,17.45
 MZB,REE,Brihuega,35.0,26.7,30.27
 MZB,REE,Medinaceli,20.9,0.0,0.0
-MZB,REE,Medinaceli,21.0,0.1,0.0
-MZB,REE,Medinaceli,22.0,1.1,0.02
-MZB,REE,Medinaceli,23.0,2.1,0.04
-MZB,REE,Medinaceli,24.0,3.1,0.07
-MZB,REE,Medinaceli,25.0,4.1,0.1
-MZB,REE,Medinaceli,26.0,5.1,0.14
-MZB,REE,Medinaceli,27.0,6.1,0.17
-MZB,REE,Medinaceli,28.0,7.1,0.24
-MZB,REE,Medinaceli,29.0,8.1,0.32
-MZB,REE,Medinaceli,30.0,9.1,0.41
-MZB,REE,Medinaceli,31.0,10.1,0.53
-MZB,REE,Medinaceli,32.0,11.1,0.65
-MZB,REE,Medinaceli,33.0,12.1,0.76
-MZB,REE,Medinaceli,34.0,13.1,0.88
-MZB,REE,Medinaceli,35.0,14.1,1.01
-MZB,REE,Medinaceli,36.0,15.1,1.14
-MZB,REE,Medinaceli,37.0,16.1,1.27
-MZB,REE,Medinaceli,38.0,17.1,1.41
-MZB,REE,Medinaceli,39.0,18.1,1.54
-MZB,REE,Medinaceli,40.0,19.1,1.67
-MZB,REE,Medinaceli,41.0,20.1,1.82
-MZB,REE,Medinaceli,42.0,21.1,1.97
-MZB,REE,Medinaceli,43.0,22.1,2.13
-MZB,REE,Medinaceli,44.0,23.1,2.32
-MZB,REE,Medinaceli,45.0,24.1,2.52
-MZB,REE,Medinaceli,46.0,25.1,2.72
-MZB,REE,Medinaceli,47.0,26.1,2.92
-MZB,REE,Medinaceli,48.0,27.1,3.12
-MZB,REE,Medinaceli,49.0,28.1,3.32
-MZB,REE,Medinaceli,50.0,29.1,4.55
-MZB,REE,Medinaceli,51.0,30.1,7.0
-MZB,REE,Medinaceli,52.0,31.1,9.98
+MZB,REE,Medinaceli,21.0,0.1,0.07
+MZB,REE,Medinaceli,22.0,1.1,0.57
+MZB,REE,Medinaceli,23.0,2.1,1.07
+MZB,REE,Medinaceli,24.0,3.1,1.57
+MZB,REE,Medinaceli,25.0,4.1,2.07
+MZB,REE,Medinaceli,26.0,5.1,2.57
+MZB,REE,Medinaceli,27.0,6.1,3.07
+MZB,REE,Medinaceli,28.0,7.1,3.57
+MZB,REE,Medinaceli,29.0,8.1,4.07
+MZB,REE,Medinaceli,30.0,9.1,4.57
+MZB,REE,Medinaceli,31.0,10.1,5.07
+MZB,REE,Medinaceli,32.0,11.1,5.57
+MZB,REE,Medinaceli,33.0,12.1,6.07
+MZB,REE,Medinaceli,34.0,13.1,6.57
+MZB,REE,Medinaceli,35.0,14.1,7.07
+MZB,REE,Medinaceli,36.0,15.1,7.57
+MZB,REE,Medinaceli,37.0,16.1,8.07
+MZB,REE,Medinaceli,38.0,17.1,8.57
+MZB,REE,Medinaceli,39.0,18.1,9.07
+MZB,REE,Medinaceli,40.0,19.1,9.57
+MZB,REE,Medinaceli,41.0,20.1,10.07
+MZB,REE,Medinaceli,42.0,21.1,10.57
+MZB,REE,Medinaceli,43.0,22.1,11.07
+MZB,REE,Medinaceli,44.0,23.1,11.57
+MZB,REE,Medinaceli,45.0,24.1,12.07
+MZB,REE,Medinaceli,46.0,25.1,12.57
+MZB,REE,Medinaceli,47.0,26.1,13.07
+MZB,REE,Medinaceli,48.0,27.1,13.57
+MZB,REE,Medinaceli,49.0,28.1,14.07
+MZB,REE,Medinaceli,50.0,29.1,14.57
+MZB,REE,Medinaceli,51.0,30.1,15.07
+MZB,REE,Medinaceli,52.0,31.1,15.57
 MZB,REE,Medinaceli,53.0,32.1,21.66
 MZB,REE,Medinaceli,54.0,33.1,34.93
 MZB,REE,Terrer,0.0,0.0,0.0
-MZB,REE,Terrer,1.0,1.0,0.15
-MZB,REE,Terrer,2.0,2.0,0.32
-MZB,REE,Terrer,3.0,3.0,0.49
-MZB,REE,Terrer,4.0,4.0,0.66
-MZB,REE,Terrer,5.0,5.0,0.85
-MZB,REE,Terrer,6.0,6.0,1.03
-MZB,REE,Terrer,7.0,7.0,1.21
-MZB,REE,Terrer,8.0,8.0,1.4
-MZB,REE,Terrer,9.0,9.0,1.58
-MZB,REE,Terrer,10.0,10.0,1.76
-MZB,REE,Terrer,11.0,11.0,1.95
-MZB,REE,Terrer,12.0,12.0,2.13
-MZB,REE,Terrer,13.0,13.0,2.31
-MZB,REE,Terrer,14.0,14.0,2.5
-MZB,REE,Terrer,15.0,15.0,2.68
-MZB,REE,Terrer,16.0,16.0,2.86
-MZB,REE,Terrer,17.0,17.0,3.06
-MZB,REE,Terrer,18.0,18.0,3.26
-MZB,REE,Terrer,19.0,19.0,3.46
-MZB,REE,Terrer,20.0,20.0,3.66
-MZB,REE,Terrer,21.0,21.0,4.77
-MZB,REE,Terrer,22.0,22.0,6.35
-MZB,REE,Terrer,23.0,23.0,9.27
+MZB,REE,Terrer,1.0,1.0,0.5
+MZB,REE,Terrer,2.0,2.0,1.0
+MZB,REE,Terrer,3.0,3.0,1.5
+MZB,REE,Terrer,4.0,4.0,2.0
+MZB,REE,Terrer,5.0,5.0,2.5
+MZB,REE,Terrer,6.0,6.0,3.0
+MZB,REE,Terrer,7.0,7.0,3.5
+MZB,REE,Terrer,8.0,8.0,4.0
+MZB,REE,Terrer,9.0,9.0,4.5
+MZB,REE,Terrer,10.0,10.0,5.0
+MZB,REE,Terrer,11.0,11.0,5.5
+MZB,REE,Terrer,12.0,12.0,6.0
+MZB,REE,Terrer,13.0,13.0,6.5
+MZB,REE,Terrer,14.0,14.0,7.0
+MZB,REE,Terrer,15.0,15.0,7.5
+MZB,REE,Terrer,16.0,16.0,8.0
+MZB,REE,Terrer,17.0,17.0,8.5
+MZB,REE,Terrer,18.0,18.0,9.0
+MZB,REE,Terrer,19.0,19.0,9.5
+MZB,REE,Terrer,20.0,20.0,10.0
+MZB,REE,Terrer,21.0,21.0,10.5
+MZB,REE,Terrer,22.0,22.0,11.0
+MZB,REE,Terrer,23.0,23.0,11.5
 MZB,REE,Terrer,24.0,24.0,12.72
 MZB,REE,Terrer,25.0,25.0,24.96
 MZB,REE,Terrer,26.0,26.0,39.33
 MZB,REE,Rueda de Jalón,0.0,0.0,0.0
-MZB,REE,Rueda de Jalón,1.0,1.0,0.15
-MZB,REE,Rueda de Jalón,2.0,2.0,0.37
-MZB,REE,Rueda de Jalón,3.0,3.0,0.62
-MZB,REE,Rueda de Jalón,4.0,4.0,0.92
-MZB,REE,Rueda de Jalón,5.0,5.0,2.15
+MZB,REE,Rueda de Jalón,1.0,1.0,0.5
+MZB,REE,Rueda de Jalón,2.0,2.0,1.0
+MZB,REE,Rueda de Jalón,3.0,3.0,1.5
+MZB,REE,Rueda de Jalón,4.0,4.0,2.0
+MZB,REE,Rueda de Jalón,5.0,5.0,2.5
 MZB,REE,Rueda de Jalón,6.0,6.0,4.24
 MZB,REE,Rueda de Jalón,7.0,7.0,15.34
 MZB,REE,Feria de Muestras,3.7,0.0,0.0
-MZB,REE,Feria de Muestras,4.0,0.3,0.01
-MZB,REE,Feria de Muestras,5.0,1.3,0.06
-MZB,REE,Feria de Muestras,6.0,2.3,0.11
-MZB,REE,Feria de Muestras,7.0,3.3,0.16
-MZB,REE,Feria de Muestras,8.0,4.3,0.21
-MZB,REE,Feria de Muestras,9.0,5.3,0.26
-MZB,REE,Feria de Muestras,10.0,6.3,0.31
-MZB,REE,Feria de Muestras,11.0,7.3,0.36
-MZB,REE,Feria de Muestras,12.0,8.3,0.41
-MZB,REE,Feria de Muestras,13.0,9.3,0.46
-MZB,REE,Feria de Muestras,14.0,10.3,0.52
-MZB,REE,Feria de Muestras,15.0,11.3,0.59
-MZB,REE,Feria de Muestras,16.0,12.3,0.68
-MZB,REE,Feria de Muestras,17.0,13.3,0.78
-MZB,REE,Feria de Muestras,18.0,14.3,0.89
-MZB,REE,Feria de Muestras,19.0,15.3,1.01
-MZB,REE,Feria de Muestras,20.0,16.3,1.14
-MZB,REE,Feria de Muestras,21.0,17.3,1.29
-MZB,REE,Feria de Muestras,22.0,18.3,1.44
-MZB,REE,Feria de Muestras,23.0,19.3,1.6
-MZB,REE,Feria de Muestras,24.0,20.3,1.78
-MZB,REE,Feria de Muestras,25.0,21.3,2.08
-MZB,REE,Feria de Muestras,26.0,22.3,2.43
-MZB,REE,Feria de Muestras,27.0,23.3,3.33
-MZB,REE,Feria de Muestras,28.0,24.3,6.15
+MZB,REE,Feria de Muestras,4.0,0.3,0.16
+MZB,REE,Feria de Muestras,5.0,1.3,0.66
+MZB,REE,Feria de Muestras,6.0,2.3,1.16
+MZB,REE,Feria de Muestras,7.0,3.3,1.66
+MZB,REE,Feria de Muestras,8.0,4.3,2.16
+MZB,REE,Feria de Muestras,9.0,5.3,2.66
+MZB,REE,Feria de Muestras,10.0,6.3,3.16
+MZB,REE,Feria de Muestras,11.0,7.3,3.66
+MZB,REE,Feria de Muestras,12.0,8.3,4.16
+MZB,REE,Feria de Muestras,13.0,9.3,4.66
+MZB,REE,Feria de Muestras,14.0,10.3,5.16
+MZB,REE,Feria de Muestras,15.0,11.3,5.66
+MZB,REE,Feria de Muestras,16.0,12.3,6.16
+MZB,REE,Feria de Muestras,17.0,13.3,6.66
+MZB,REE,Feria de Muestras,18.0,14.3,7.16
+MZB,REE,Feria de Muestras,19.0,15.3,7.66
+MZB,REE,Feria de Muestras,20.0,16.3,8.16
+MZB,REE,Feria de Muestras,21.0,17.3,8.66
+MZB,REE,Feria de Muestras,22.0,18.3,9.16
+MZB,REE,Feria de Muestras,23.0,19.3,9.66
+MZB,REE,Feria de Muestras,24.0,20.3,10.16
+MZB,REE,Feria de Muestras,25.0,21.3,10.66
+MZB,REE,Feria de Muestras,26.0,22.3,11.16
+MZB,REE,Feria de Muestras,27.0,23.3,11.66
+MZB,REE,Feria de Muestras,28.0,24.3,12.16
 MZB,REE,Feria de Muestras,29.0,25.3,14.37
 MZB,REE,Zaragoza,0.0,0.0,0.0
-MZB,REE,Zaragoza,1.0,1.0,0.02
-MZB,REE,Zaragoza,2.0,2.0,0.05
-MZB,REE,Zaragoza,3.0,3.0,0.09
-MZB,REE,Zaragoza,4.0,4.0,0.12
-MZB,REE,Zaragoza,5.0,5.0,0.15
-MZB,REE,Zaragoza,6.0,6.0,0.19
-MZB,REE,Zaragoza,7.0,7.0,0.25
-MZB,REE,Zaragoza,8.0,8.0,0.31
-MZB,REE,Zaragoza,9.0,9.0,0.4
-MZB,REE,Zaragoza,10.0,10.0,0.48
-MZB,REE,Zaragoza,11.0,11.0,0.61
-MZB,REE,Zaragoza,12.0,12.0,0.79
-MZB,REE,Zaragoza,13.0,13.0,0.99
-MZB,REE,Zaragoza,14.0,14.0,1.19
-MZB,REE,Zaragoza,15.0,15.0,1.39
-MZB,REE,Zaragoza,16.0,16.0,1.59
-MZB,REE,Zaragoza,17.0,17.0,1.79
-MZB,REE,Zaragoza,18.0,18.0,1.99
-MZB,REE,Zaragoza,19.0,19.0,2.19
-MZB,REE,Zaragoza,20.0,20.0,2.39
-MZB,REE,Zaragoza,21.0,21.0,2.59
-MZB,REE,Zaragoza,22.0,22.0,2.91
-MZB,REE,Zaragoza,23.0,23.0,4.28
-MZB,REE,Zaragoza,24.0,24.0,6.12
+MZB,REE,Zaragoza,1.0,1.0,0.5
+MZB,REE,Zaragoza,2.0,2.0,1.0
+MZB,REE,Zaragoza,3.0,3.0,1.5
+MZB,REE,Zaragoza,4.0,4.0,2.0
+MZB,REE,Zaragoza,5.0,5.0,2.5
+MZB,REE,Zaragoza,6.0,6.0,3.0
+MZB,REE,Zaragoza,7.0,7.0,3.5
+MZB,REE,Zaragoza,8.0,8.0,4.0
+MZB,REE,Zaragoza,9.0,9.0,4.5
+MZB,REE,Zaragoza,10.0,10.0,5.0
+MZB,REE,Zaragoza,11.0,11.0,5.5
+MZB,REE,Zaragoza,12.0,12.0,6.0
+MZB,REE,Zaragoza,13.0,13.0,6.5
+MZB,REE,Zaragoza,14.0,14.0,7.0
+MZB,REE,Zaragoza,15.0,15.0,7.5
+MZB,REE,Zaragoza,16.0,16.0,8.0
+MZB,REE,Zaragoza,17.0,17.0,8.5
+MZB,REE,Zaragoza,18.0,18.0,9.0
+MZB,REE,Zaragoza,19.0,19.0,9.5
+MZB,REE,Zaragoza,20.0,20.0,10.0
+MZB,REE,Zaragoza,21.0,21.0,10.5
+MZB,REE,Zaragoza,22.0,22.0,11.0
+MZB,REE,Zaragoza,23.0,23.0,11.5
+MZB,REE,Zaragoza,24.0,24.0,12.0
 MZB,REE,Zaragoza,25.0,25.0,16.6
 MZB,REE,Zaragoza,26.0,26.0,30.61
 MZB,REE,Peñalba,16.5,0.0,0.0
-MZB,REE,Peñalba,17.0,0.5,0.01
-MZB,REE,Peñalba,18.0,1.5,0.05
-MZB,REE,Peñalba,19.0,2.5,0.11
-MZB,REE,Peñalba,20.0,3.5,0.19
-MZB,REE,Peñalba,21.0,4.5,0.28
-MZB,REE,Peñalba,22.0,5.5,0.36
-MZB,REE,Peñalba,23.0,6.5,0.44
-MZB,REE,Peñalba,24.0,7.5,0.58
-MZB,REE,Peñalba,25.0,8.5,0.74
-MZB,REE,Peñalba,26.0,9.5,0.91
-MZB,REE,Peñalba,27.0,10.5,1.08
-MZB,REE,Peñalba,28.0,11.5,1.55
-MZB,REE,Peñalba,29.0,12.5,2.16
-MZB,REE,Peñalba,30.0,13.5,2.8
-MZB,REE,Peñalba,31.0,14.5,3.49
-MZB,REE,Peñalba,32.0,15.5,4.18
-MZB,REE,Peñalba,33.0,16.5,4.92
-MZB,REE,Peñalba,34.0,17.5,5.71
-MZB,REE,Peñalba,35.0,18.5,6.53
-MZB,REE,Peñalba,36.0,19.5,9.33
+MZB,REE,Peñalba,17.0,0.5,0.23
+MZB,REE,Peñalba,18.0,1.5,0.73
+MZB,REE,Peñalba,19.0,2.5,1.23
+MZB,REE,Peñalba,20.0,3.5,1.73
+MZB,REE,Peñalba,21.0,4.5,2.23
+MZB,REE,Peñalba,22.0,5.5,2.73
+MZB,REE,Peñalba,23.0,6.5,3.23
+MZB,REE,Peñalba,24.0,7.5,3.73
+MZB,REE,Peñalba,25.0,8.5,4.23
+MZB,REE,Peñalba,26.0,9.5,4.73
+MZB,REE,Peñalba,27.0,10.5,5.23
+MZB,REE,Peñalba,28.0,11.5,5.73
+MZB,REE,Peñalba,29.0,12.5,6.23
+MZB,REE,Peñalba,30.0,13.5,6.73
+MZB,REE,Peñalba,31.0,14.5,7.23
+MZB,REE,Peñalba,32.0,15.5,7.73
+MZB,REE,Peñalba,33.0,16.5,8.23
+MZB,REE,Peñalba,34.0,17.5,8.73
+MZB,REE,Peñalba,35.0,18.5,9.23
+MZB,REE,Peñalba,36.0,19.5,9.73
 MZB,REE,Peñalba,37.0,20.5,19.12
 MZB,REE,Peñalba,38.0,21.5,33.01
 MZB,REE,Lleida,0.0,0.0,0.0
-MZB,REE,Lleida,1.0,1.0,0.02
-MZB,REE,Lleida,2.0,2.0,0.03
-MZB,REE,Lleida,3.0,3.0,0.05
-MZB,REE,Lleida,4.0,4.0,0.08
-MZB,REE,Lleida,5.0,5.0,0.13
-MZB,REE,Lleida,6.0,6.0,0.2
-MZB,REE,Lleida,7.0,7.0,0.27
-MZB,REE,Lleida,8.0,8.0,0.33
-MZB,REE,Lleida,9.0,9.0,0.43
-MZB,REE,Lleida,10.0,10.0,0.55
-MZB,REE,Lleida,11.0,11.0,0.66
-MZB,REE,Lleida,12.0,12.0,0.78
-MZB,REE,Lleida,13.0,13.0,0.9
-MZB,REE,Lleida,14.0,14.0,1.12
-MZB,REE,Lleida,15.0,15.0,1.44
-MZB,REE,Lleida,16.0,16.0,1.75
-MZB,REE,Lleida,17.0,17.0,2.27
-MZB,REE,Lleida,18.0,18.0,2.86
-MZB,REE,Lleida,19.0,19.0,3.46
-MZB,REE,Lleida,20.0,20.0,4.09
-MZB,REE,Lleida,21.0,21.0,4.72
-MZB,REE,Lleida,22.0,22.0,5.35
-MZB,REE,Lleida,23.0,23.0,5.99
-MZB,REE,Lleida,24.0,24.0,6.62
+MZB,REE,Lleida,1.0,1.0,0.5
+MZB,REE,Lleida,2.0,2.0,1.0
+MZB,REE,Lleida,3.0,3.0,1.5
+MZB,REE,Lleida,4.0,4.0,2.0
+MZB,REE,Lleida,5.0,5.0,2.5
+MZB,REE,Lleida,6.0,6.0,3.0
+MZB,REE,Lleida,7.0,7.0,3.5
+MZB,REE,Lleida,8.0,8.0,4.0
+MZB,REE,Lleida,9.0,9.0,4.5
+MZB,REE,Lleida,10.0,10.0,5.0
+MZB,REE,Lleida,11.0,11.0,5.5
+MZB,REE,Lleida,12.0,12.0,6.0
+MZB,REE,Lleida,13.0,13.0,6.5
+MZB,REE,Lleida,14.0,14.0,7.0
+MZB,REE,Lleida,15.0,15.0,7.5
+MZB,REE,Lleida,16.0,16.0,8.0
+MZB,REE,Lleida,17.0,17.0,8.5
+MZB,REE,Lleida,18.0,18.0,9.0
+MZB,REE,Lleida,19.0,19.0,9.5
+MZB,REE,Lleida,20.0,20.0,10.0
+MZB,REE,Lleida,21.0,21.0,10.5
+MZB,REE,Lleida,22.0,22.0,11.0
+MZB,REE,Lleida,23.0,23.0,11.5
+MZB,REE,Lleida,24.0,24.0,12.0
 MZB,REE,Lleida,25.0,25.0,16.3
 MZB,REE,Lleida,26.0,26.0,29.43
 MZB,REE,L'Espluga,9.2,0.0,0.0
-MZB,REE,L'Espluga,10.0,0.8,0.01
-MZB,REE,L'Espluga,11.0,1.8,0.03
-MZB,REE,L'Espluga,12.0,2.8,0.06
-MZB,REE,L'Espluga,13.0,3.8,0.1
-MZB,REE,L'Espluga,14.0,4.8,0.19
-MZB,REE,L'Espluga,15.0,5.8,0.27
-MZB,REE,L'Espluga,16.0,6.8,0.35
-MZB,REE,L'Espluga,17.0,7.8,0.45
-MZB,REE,L'Espluga,18.0,8.8,0.56
-MZB,REE,L'Espluga,19.0,9.8,0.68
-MZB,REE,L'Espluga,20.0,10.8,0.8
-MZB,REE,L'Espluga,21.0,11.8,0.91
-MZB,REE,L'Espluga,22.0,12.8,1.03
-MZB,REE,L'Espluga,23.0,13.8,1.15
-MZB,REE,L'Espluga,24.0,14.8,1.26
-MZB,REE,L'Espluga,25.0,15.8,1.39
-MZB,REE,L'Espluga,26.0,16.8,1.54
-MZB,REE,L'Espluga,27.0,17.8,1.69
-MZB,REE,L'Espluga,28.0,18.8,1.84
-MZB,REE,L'Espluga,29.0,19.8,1.99
-MZB,REE,L'Espluga,30.0,20.8,2.14
-MZB,REE,L'Espluga,31.0,21.8,2.29
-MZB,REE,L'Espluga,32.0,22.8,2.44
-MZB,REE,L'Espluga,33.0,23.8,2.59
-MZB,REE,L'Espluga,34.0,24.8,2.74
-MZB,REE,L'Espluga,35.0,25.8,2.89
-MZB,REE,L'Espluga,36.0,26.8,3.04
-MZB,REE,L'Espluga,37.0,27.8,3.19
-MZB,REE,L'Espluga,38.0,28.8,3.79
-MZB,REE,L'Espluga,39.0,29.8,4.86
-MZB,REE,L'Espluga,40.0,30.8,5.92
-MZB,REE,L'Espluga,41.0,31.8,6.99
-MZB,REE,L'Espluga,42.0,32.8,8.53
+MZB,REE,L'Espluga,10.0,0.8,0.39
+MZB,REE,L'Espluga,11.0,1.8,0.89
+MZB,REE,L'Espluga,12.0,2.8,1.39
+MZB,REE,L'Espluga,13.0,3.8,1.89
+MZB,REE,L'Espluga,14.0,4.8,2.39
+MZB,REE,L'Espluga,15.0,5.8,2.89
+MZB,REE,L'Espluga,16.0,6.8,3.39
+MZB,REE,L'Espluga,17.0,7.8,3.89
+MZB,REE,L'Espluga,18.0,8.8,4.39
+MZB,REE,L'Espluga,19.0,9.8,4.89
+MZB,REE,L'Espluga,20.0,10.8,5.39
+MZB,REE,L'Espluga,21.0,11.8,5.89
+MZB,REE,L'Espluga,22.0,12.8,6.39
+MZB,REE,L'Espluga,23.0,13.8,6.89
+MZB,REE,L'Espluga,24.0,14.8,7.39
+MZB,REE,L'Espluga,25.0,15.8,7.89
+MZB,REE,L'Espluga,26.0,16.8,8.39
+MZB,REE,L'Espluga,27.0,17.8,8.89
+MZB,REE,L'Espluga,28.0,18.8,9.39
+MZB,REE,L'Espluga,29.0,19.8,9.89
+MZB,REE,L'Espluga,30.0,20.8,10.39
+MZB,REE,L'Espluga,31.0,21.8,10.89
+MZB,REE,L'Espluga,32.0,22.8,11.39
+MZB,REE,L'Espluga,33.0,23.8,11.89
+MZB,REE,L'Espluga,34.0,24.8,12.39
+MZB,REE,L'Espluga,35.0,25.8,12.89
+MZB,REE,L'Espluga,36.0,26.8,13.39
+MZB,REE,L'Espluga,37.0,27.8,13.89
+MZB,REE,L'Espluga,38.0,28.8,14.39
+MZB,REE,L'Espluga,39.0,29.8,14.89
+MZB,REE,L'Espluga,40.0,30.8,15.39
+MZB,REE,L'Espluga,41.0,31.8,15.89
+MZB,REE,L'Espluga,42.0,32.8,16.39
 MZB,REE,L'Espluga,43.0,33.8,21.93
 MZB,REE,L'Espluga,44.0,34.8,35.88
 MZB,REE,La Gornal,0.0,0.0,0.0
-MZB,REE,La Gornal,1.0,1.0,0.02
-MZB,REE,La Gornal,2.0,2.0,0.03
-MZB,REE,La Gornal,3.0,3.0,0.07
-MZB,REE,La Gornal,4.0,4.0,0.1
-MZB,REE,La Gornal,5.0,5.0,0.13
-MZB,REE,La Gornal,6.0,6.0,0.18
-MZB,REE,La Gornal,7.0,7.0,0.31
-MZB,REE,La Gornal,8.0,8.0,0.44
-MZB,REE,La Gornal,9.0,9.0,0.62
-MZB,REE,La Gornal,10.0,10.0,0.8
-MZB,REE,La Gornal,11.0,11.0,0.99
-MZB,REE,La Gornal,12.0,12.0,1.18
-MZB,REE,La Gornal,13.0,13.0,1.43
-MZB,REE,La Gornal,14.0,14.0,1.7
-MZB,REE,La Gornal,15.0,15.0,1.99
-MZB,REE,La Gornal,16.0,16.0,2.27
-MZB,REE,La Gornal,17.0,17.0,2.67
-MZB,REE,La Gornal,18.0,18.0,3.07
-MZB,REE,La Gornal,19.0,19.0,3.48
-MZB,REE,La Gornal,20.0,20.0,4.22
-MZB,REE,La Gornal,21.0,21.0,5.01
-MZB,REE,La Gornal,22.0,22.0,5.8
-MZB,REE,La Gornal,23.0,23.0,10.81
+MZB,REE,La Gornal,1.0,1.0,0.5
+MZB,REE,La Gornal,2.0,2.0,1.0
+MZB,REE,La Gornal,3.0,3.0,1.5
+MZB,REE,La Gornal,4.0,4.0,2.0
+MZB,REE,La Gornal,5.0,5.0,2.5
+MZB,REE,La Gornal,6.0,6.0,3.0
+MZB,REE,La Gornal,7.0,7.0,3.5
+MZB,REE,La Gornal,8.0,8.0,4.0
+MZB,REE,La Gornal,9.0,9.0,4.5
+MZB,REE,La Gornal,10.0,10.0,5.0
+MZB,REE,La Gornal,11.0,11.0,5.5
+MZB,REE,La Gornal,12.0,12.0,6.0
+MZB,REE,La Gornal,13.0,13.0,6.5
+MZB,REE,La Gornal,14.0,14.0,7.0
+MZB,REE,La Gornal,15.0,15.0,7.5
+MZB,REE,La Gornal,16.0,16.0,8.0
+MZB,REE,La Gornal,17.0,17.0,8.5
+MZB,REE,La Gornal,18.0,18.0,9.0
+MZB,REE,La Gornal,19.0,19.0,9.5
+MZB,REE,La Gornal,20.0,20.0,10.0
+MZB,REE,La Gornal,21.0,21.0,10.5
+MZB,REE,La Gornal,22.0,22.0,11.0
+MZB,REE,La Gornal,23.0,23.0,11.5
 MZB,REE,La Gornal,24.0,24.0,24.06
 MZB,REE,Sant Boi,0.0,0.0,0.0
-MZB,REE,Sant Boi,1.0,1.0,0.02
-MZB,REE,Sant Boi,2.0,2.0,0.05
-MZB,REE,Sant Boi,3.0,3.0,0.1
-MZB,REE,Sant Boi,4.0,4.0,0.15
-MZB,REE,Sant Boi,5.0,5.0,0.2
-MZB,REE,Sant Boi,6.0,6.0,0.25
-MZB,REE,Sant Boi,7.0,7.0,0.3
-MZB,REE,Sant Boi,8.0,8.0,0.35
-MZB,REE,Sant Boi,9.0,9.0,0.42
-MZB,REE,Sant Boi,10.0,10.0,0.5
-MZB,REE,Sant Boi,11.0,11.0,0.6
-MZB,REE,Sant Boi,12.0,12.0,0.7
-MZB,REE,Sant Boi,13.0,13.0,0.85
-MZB,REE,Sant Boi,14.0,14.0,1.14
-MZB,REE,Sant Boi,15.0,15.0,1.44
-MZB,REE,Sant Boi,16.0,16.0,1.74
-MZB,REE,Sant Boi,17.0,17.0,2.04
-MZB,REE,Sant Boi,18.0,18.0,2.34
-MZB,REE,Sant Boi,19.0,19.0,2.64
-MZB,REE,Sant Boi,20.0,20.0,2.94
-MZB,REE,Sant Boi,21.0,21.0,3.24
-MZB,REE,Sant Boi,22.0,22.0,3.56
-MZB,REE,Sant Boi,23.0,23.0,3.88
-MZB,REE,Sant Boi,24.0,24.0,4.19
-MZB,REE,Sant Boi,25.0,25.0,5.99
-MZB,REE,Sant Boi,26.0,26.0,8.96
+MZB,REE,Sant Boi,1.0,1.0,0.5
+MZB,REE,Sant Boi,2.0,2.0,1.0
+MZB,REE,Sant Boi,3.0,3.0,1.5
+MZB,REE,Sant Boi,4.0,4.0,2.0
+MZB,REE,Sant Boi,5.0,5.0,2.5
+MZB,REE,Sant Boi,6.0,6.0,3.0
+MZB,REE,Sant Boi,7.0,7.0,3.5
+MZB,REE,Sant Boi,8.0,8.0,4.0
+MZB,REE,Sant Boi,9.0,9.0,4.5
+MZB,REE,Sant Boi,10.0,10.0,5.0
+MZB,REE,Sant Boi,11.0,11.0,5.5
+MZB,REE,Sant Boi,12.0,12.0,6.0
+MZB,REE,Sant Boi,13.0,13.0,6.5
+MZB,REE,Sant Boi,14.0,14.0,7.0
+MZB,REE,Sant Boi,15.0,15.0,7.5
+MZB,REE,Sant Boi,16.0,16.0,8.0
+MZB,REE,Sant Boi,17.0,17.0,8.5
+MZB,REE,Sant Boi,18.0,18.0,9.0
+MZB,REE,Sant Boi,19.0,19.0,9.5
+MZB,REE,Sant Boi,20.0,20.0,10.0
+MZB,REE,Sant Boi,21.0,21.0,10.5
+MZB,REE,Sant Boi,22.0,22.0,11.0
+MZB,REE,Sant Boi,23.0,23.0,11.5
+MZB,REE,Sant Boi,24.0,24.0,12.0
+MZB,REE,Sant Boi,25.0,25.0,12.5
+MZB,REE,Sant Boi,26.0,26.0,13.0
 MZB,REE,Sant Boi,27.0,27.0,21.13
 MZB,trafo,Villaverde Bajo,21.8,0.0,0.0
-MZB,trafo,Villaverde Bajo,22.0,0.2,0.0
-MZB,trafo,Villaverde Bajo,23.0,1.2,0.02
-MZB,trafo,Villaverde Bajo,24.0,2.2,0.04
-MZB,trafo,Villaverde Bajo,25.0,3.2,0.05
-MZB,trafo,Villaverde Bajo,26.0,4.2,0.07
-MZB,trafo,Villaverde Bajo,27.0,5.2,0.09
-MZB,trafo,Villaverde Bajo,28.0,6.2,0.1
-MZB,trafo,Villaverde Bajo,29.0,7.2,0.12
-MZB,trafo,Villaverde Bajo,30.0,8.2,0.14
-MZB,trafo,Villaverde Bajo,31.0,9.2,0.15
-MZB,trafo,Villaverde Bajo,32.0,10.2,0.17
-MZB,trafo,Villaverde Bajo,33.0,11.2,0.19
-MZB,trafo,Villaverde Bajo,34.0,12.2,0.2
-MZB,trafo,Villaverde Bajo,35.0,13.2,0.23
-MZB,trafo,Villaverde Bajo,36.0,14.2,0.26
-MZB,trafo,Villaverde Bajo,37.0,15.2,0.3
-MZB,trafo,Villaverde Bajo,38.0,16.2,0.33
-MZB,trafo,Villaverde Bajo,39.0,17.2,0.36
-MZB,trafo,Villaverde Bajo,40.0,18.2,0.4
-MZB,trafo,Villaverde Bajo,41.0,19.2,0.44
-MZB,trafo,Villaverde Bajo,42.0,20.2,0.58
-MZB,trafo,Villaverde Bajo,43.0,21.2,0.73
-MZB,trafo,Villaverde Bajo,44.0,22.2,0.88
-MZB,trafo,Villaverde Bajo,45.0,23.2,1.03
-MZB,trafo,Villaverde Bajo,46.0,24.2,1.19
-MZB,trafo,Villaverde Bajo,47.0,25.2,1.36
-MZB,trafo,Villaverde Bajo,48.0,26.2,1.53
-MZB,trafo,Villaverde Bajo,49.0,27.2,1.69
-MZB,trafo,Villaverde Bajo,50.0,28.2,2.17
-MZB,trafo,Villaverde Bajo,51.0,29.2,6.77
+MZB,trafo,Villaverde Bajo,22.0,0.2,0.1
+MZB,trafo,Villaverde Bajo,23.0,1.2,0.6
+MZB,trafo,Villaverde Bajo,24.0,2.2,1.1
+MZB,trafo,Villaverde Bajo,25.0,3.2,1.6
+MZB,trafo,Villaverde Bajo,26.0,4.2,2.1
+MZB,trafo,Villaverde Bajo,27.0,5.2,2.6
+MZB,trafo,Villaverde Bajo,28.0,6.2,3.1
+MZB,trafo,Villaverde Bajo,29.0,7.2,3.6
+MZB,trafo,Villaverde Bajo,30.0,8.2,4.1
+MZB,trafo,Villaverde Bajo,31.0,9.2,4.6
+MZB,trafo,Villaverde Bajo,32.0,10.2,5.1
+MZB,trafo,Villaverde Bajo,33.0,11.2,5.6
+MZB,trafo,Villaverde Bajo,34.0,12.2,6.1
+MZB,trafo,Villaverde Bajo,35.0,13.2,6.6
+MZB,trafo,Villaverde Bajo,36.0,14.2,7.1
+MZB,trafo,Villaverde Bajo,37.0,15.2,7.6
+MZB,trafo,Villaverde Bajo,38.0,16.2,8.1
+MZB,trafo,Villaverde Bajo,39.0,17.2,8.6
+MZB,trafo,Villaverde Bajo,40.0,18.2,9.1
+MZB,trafo,Villaverde Bajo,41.0,19.2,9.6
+MZB,trafo,Villaverde Bajo,42.0,20.2,10.1
+MZB,trafo,Villaverde Bajo,43.0,21.2,10.6
+MZB,trafo,Villaverde Bajo,44.0,22.2,11.1
+MZB,trafo,Villaverde Bajo,45.0,23.2,11.6
+MZB,trafo,Villaverde Bajo,46.0,24.2,12.1
+MZB,trafo,Villaverde Bajo,47.0,25.2,12.6
+MZB,trafo,Villaverde Bajo,48.0,26.2,13.1
+MZB,trafo,Villaverde Bajo,49.0,27.2,13.6
+MZB,trafo,Villaverde Bajo,50.0,28.2,14.1
+MZB,trafo,Villaverde Bajo,51.0,29.2,14.6
 MZB,trafo,Anchuelo,55.3,0.0,0.0
-MZB,trafo,Anchuelo,56.0,0.7,0.01
-MZB,trafo,Anchuelo,57.0,1.7,0.03
-MZB,trafo,Anchuelo,58.0,2.7,0.05
-MZB,trafo,Anchuelo,59.0,3.7,0.06
-MZB,trafo,Anchuelo,60.0,4.7,0.08
-MZB,trafo,Anchuelo,61.0,5.7,0.1
-MZB,trafo,Anchuelo,62.0,6.7,0.11
-MZB,trafo,Anchuelo,63.0,7.7,0.13
-MZB,trafo,Anchuelo,64.0,8.7,0.15
-MZB,trafo,Anchuelo,65.0,9.7,0.16
-MZB,trafo,Anchuelo,66.0,10.7,0.18
-MZB,trafo,Anchuelo,67.0,11.7,0.22
-MZB,trafo,Anchuelo,68.0,12.7,0.29
-MZB,trafo,Anchuelo,69.0,13.7,0.39
-MZB,trafo,Anchuelo,70.0,14.7,0.49
-MZB,trafo,Anchuelo,71.0,15.7,0.59
-MZB,trafo,Anchuelo,72.0,16.7,0.69
-MZB,trafo,Anchuelo,73.0,17.7,0.79
-MZB,trafo,Anchuelo,74.0,18.7,0.9
-MZB,trafo,Anchuelo,75.0,19.7,1.05
-MZB,trafo,Anchuelo,76.0,20.7,1.3
-MZB,trafo,Anchuelo,77.0,21.7,1.55
-MZB,trafo,Anchuelo,78.0,22.7,1.8
-MZB,trafo,Anchuelo,79.0,23.7,2.4
-MZB,trafo,Anchuelo,80.0,24.7,3.06
-MZB,trafo,Anchuelo,81.0,25.7,3.79
-MZB,trafo,Anchuelo,82.0,26.7,4.55
-MZB,trafo,Anchuelo,83.0,27.7,5.32
-MZB,trafo,Anchuelo,84.0,28.7,8.45
+MZB,trafo,Anchuelo,56.0,0.7,0.36
+MZB,trafo,Anchuelo,57.0,1.7,0.86
+MZB,trafo,Anchuelo,58.0,2.7,1.36
+MZB,trafo,Anchuelo,59.0,3.7,1.86
+MZB,trafo,Anchuelo,60.0,4.7,2.36
+MZB,trafo,Anchuelo,61.0,5.7,2.86
+MZB,trafo,Anchuelo,62.0,6.7,3.36
+MZB,trafo,Anchuelo,63.0,7.7,3.86
+MZB,trafo,Anchuelo,64.0,8.7,4.36
+MZB,trafo,Anchuelo,65.0,9.7,4.86
+MZB,trafo,Anchuelo,66.0,10.7,5.36
+MZB,trafo,Anchuelo,67.0,11.7,5.86
+MZB,trafo,Anchuelo,68.0,12.7,6.36
+MZB,trafo,Anchuelo,69.0,13.7,6.86
+MZB,trafo,Anchuelo,70.0,14.7,7.36
+MZB,trafo,Anchuelo,71.0,15.7,7.86
+MZB,trafo,Anchuelo,72.0,16.7,8.36
+MZB,trafo,Anchuelo,73.0,17.7,8.86
+MZB,trafo,Anchuelo,74.0,18.7,9.36
+MZB,trafo,Anchuelo,75.0,19.7,9.86
+MZB,trafo,Anchuelo,76.0,20.7,10.36
+MZB,trafo,Anchuelo,77.0,21.7,10.86
+MZB,trafo,Anchuelo,78.0,22.7,11.36
+MZB,trafo,Anchuelo,79.0,23.7,11.86
+MZB,trafo,Anchuelo,80.0,24.7,12.36
+MZB,trafo,Anchuelo,81.0,25.7,12.86
+MZB,trafo,Anchuelo,82.0,26.7,13.36
+MZB,trafo,Anchuelo,83.0,27.7,13.86
+MZB,trafo,Anchuelo,84.0,28.7,14.36
 MZB,trafo,Anchuelo,85.0,29.7,19.87
 MZB,trafo,Anchuelo,86.0,30.7,32.74
 MZB,trafo,Brihuega,57.8,0.0,0.0
-MZB,trafo,Brihuega,58.0,0.2,0.01
-MZB,trafo,Brihuega,59.0,1.2,0.08
-MZB,trafo,Brihuega,60.0,2.2,0.16
-MZB,trafo,Brihuega,61.0,3.2,0.24
-MZB,trafo,Brihuega,62.0,4.2,0.34
-MZB,trafo,Brihuega,63.0,5.2,0.44
-MZB,trafo,Brihuega,64.0,6.2,0.56
-MZB,trafo,Brihuega,65.0,7.2,0.67
-MZB,trafo,Brihuega,66.0,8.2,0.79
-MZB,trafo,Brihuega,67.0,9.2,0.94
-MZB,trafo,Brihuega,68.0,10.2,1.09
-MZB,trafo,Brihuega,69.0,11.2,1.24
-MZB,trafo,Brihuega,70.0,12.2,1.4
-MZB,trafo,Brihuega,71.0,13.2,1.63
-MZB,trafo,Brihuega,72.0,14.2,1.87
-MZB,trafo,Brihuega,73.0,15.2,2.12
-MZB,trafo,Brihuega,74.0,16.2,2.37
-MZB,trafo,Brihuega,75.0,17.2,2.62
-MZB,trafo,Brihuega,76.0,18.2,2.89
-MZB,trafo,Brihuega,77.0,19.2,3.16
-MZB,trafo,Brihuega,78.0,20.2,3.44
-MZB,trafo,Brihuega,79.0,21.2,3.72
-MZB,trafo,Brihuega,80.0,22.2,4.08
-MZB,trafo,Brihuega,81.0,23.2,4.5
-MZB,trafo,Brihuega,82.0,24.2,5.21
-MZB,trafo,Brihuega,83.0,25.2,11.29
+MZB,trafo,Brihuega,58.0,0.2,0.12
+MZB,trafo,Brihuega,59.0,1.2,0.62
+MZB,trafo,Brihuega,60.0,2.2,1.12
+MZB,trafo,Brihuega,61.0,3.2,1.62
+MZB,trafo,Brihuega,62.0,4.2,2.12
+MZB,trafo,Brihuega,63.0,5.2,2.62
+MZB,trafo,Brihuega,64.0,6.2,3.12
+MZB,trafo,Brihuega,65.0,7.2,3.62
+MZB,trafo,Brihuega,66.0,8.2,4.12
+MZB,trafo,Brihuega,67.0,9.2,4.62
+MZB,trafo,Brihuega,68.0,10.2,5.12
+MZB,trafo,Brihuega,69.0,11.2,5.62
+MZB,trafo,Brihuega,70.0,12.2,6.12
+MZB,trafo,Brihuega,71.0,13.2,6.62
+MZB,trafo,Brihuega,72.0,14.2,7.12
+MZB,trafo,Brihuega,73.0,15.2,7.62
+MZB,trafo,Brihuega,74.0,16.2,8.12
+MZB,trafo,Brihuega,75.0,17.2,8.62
+MZB,trafo,Brihuega,76.0,18.2,9.12
+MZB,trafo,Brihuega,77.0,19.2,9.62
+MZB,trafo,Brihuega,78.0,20.2,10.12
+MZB,trafo,Brihuega,79.0,21.2,10.62
+MZB,trafo,Brihuega,80.0,22.2,11.12
+MZB,trafo,Brihuega,81.0,23.2,11.62
+MZB,trafo,Brihuega,82.0,24.2,12.12
+MZB,trafo,Brihuega,83.0,25.2,12.62
 MZB,trafo,Brihuega,84.0,26.2,23.86
 MZB,trafo,Brihuega,85.0,27.2,36.68
 MZB,trafo,Medinaceli,51.5,0.0,0.0
-MZB,trafo,Medinaceli,52.0,0.5,0.01
-MZB,trafo,Medinaceli,53.0,1.5,0.03
-MZB,trafo,Medinaceli,54.0,2.5,0.05
-MZB,trafo,Medinaceli,55.0,3.5,0.08
-MZB,trafo,Medinaceli,56.0,4.5,0.12
-MZB,trafo,Medinaceli,57.0,5.5,0.15
-MZB,trafo,Medinaceli,58.0,6.5,0.19
-MZB,trafo,Medinaceli,59.0,7.5,0.27
-MZB,trafo,Medinaceli,60.0,8.5,0.36
-MZB,trafo,Medinaceli,61.0,9.5,0.46
-MZB,trafo,Medinaceli,62.0,10.5,0.58
-MZB,trafo,Medinaceli,63.0,11.5,0.69
-MZB,trafo,Medinaceli,64.0,12.5,0.81
-MZB,trafo,Medinaceli,65.0,13.5,0.93
-MZB,trafo,Medinaceli,66.0,14.5,1.06
-MZB,trafo,Medinaceli,67.0,15.5,1.19
-MZB,trafo,Medinaceli,68.0,16.5,1.33
-MZB,trafo,Medinaceli,69.0,17.5,1.46
-MZB,trafo,Medinaceli,70.0,18.5,1.59
-MZB,trafo,Medinaceli,71.0,19.5,1.73
-MZB,trafo,Medinaceli,72.0,20.5,1.88
-MZB,trafo,Medinaceli,73.0,21.5,2.03
-MZB,trafo,Medinaceli,74.0,22.5,2.2
-MZB,trafo,Medinaceli,75.0,23.5,2.4
-MZB,trafo,Medinaceli,76.0,24.5,2.6
-MZB,trafo,Medinaceli,77.0,25.5,2.8
-MZB,trafo,Medinaceli,78.0,26.5,3.0
-MZB,trafo,Medinaceli,79.0,27.5,3.2
-MZB,trafo,Medinaceli,80.0,28.5,3.49
-MZB,trafo,Medinaceli,81.0,29.5,5.3
-MZB,trafo,Medinaceli,82.0,30.5,8.19
-MZB,trafo,Medinaceli,83.0,31.5,13.9
+MZB,trafo,Medinaceli,52.0,0.5,0.27
+MZB,trafo,Medinaceli,53.0,1.5,0.77
+MZB,trafo,Medinaceli,54.0,2.5,1.27
+MZB,trafo,Medinaceli,55.0,3.5,1.77
+MZB,trafo,Medinaceli,56.0,4.5,2.27
+MZB,trafo,Medinaceli,57.0,5.5,2.77
+MZB,trafo,Medinaceli,58.0,6.5,3.27
+MZB,trafo,Medinaceli,59.0,7.5,3.77
+MZB,trafo,Medinaceli,60.0,8.5,4.27
+MZB,trafo,Medinaceli,61.0,9.5,4.77
+MZB,trafo,Medinaceli,62.0,10.5,5.27
+MZB,trafo,Medinaceli,63.0,11.5,5.77
+MZB,trafo,Medinaceli,64.0,12.5,6.27
+MZB,trafo,Medinaceli,65.0,13.5,6.77
+MZB,trafo,Medinaceli,66.0,14.5,7.27
+MZB,trafo,Medinaceli,67.0,15.5,7.77
+MZB,trafo,Medinaceli,68.0,16.5,8.27
+MZB,trafo,Medinaceli,69.0,17.5,8.77
+MZB,trafo,Medinaceli,70.0,18.5,9.27
+MZB,trafo,Medinaceli,71.0,19.5,9.77
+MZB,trafo,Medinaceli,72.0,20.5,10.27
+MZB,trafo,Medinaceli,73.0,21.5,10.77
+MZB,trafo,Medinaceli,74.0,22.5,11.27
+MZB,trafo,Medinaceli,75.0,23.5,11.77
+MZB,trafo,Medinaceli,76.0,24.5,12.27
+MZB,trafo,Medinaceli,77.0,25.5,12.77
+MZB,trafo,Medinaceli,78.0,26.5,13.27
+MZB,trafo,Medinaceli,79.0,27.5,13.77
+MZB,trafo,Medinaceli,80.0,28.5,14.27
+MZB,trafo,Medinaceli,81.0,29.5,14.77
+MZB,trafo,Medinaceli,82.0,30.5,15.27
+MZB,trafo,Medinaceli,83.0,31.5,15.77
 MZB,trafo,Medinaceli,84.0,32.5,26.84
 MZB,trafo,Medinaceli,85.0,33.5,40.36
 MZB,trafo,Terrer,50.4,0.0,0.0
-MZB,trafo,Terrer,51.0,0.6,0.01
-MZB,trafo,Terrer,52.0,1.6,0.03
-MZB,trafo,Terrer,53.0,2.6,0.04
-MZB,trafo,Terrer,54.0,3.6,0.09
-MZB,trafo,Terrer,55.0,4.6,0.16
-MZB,trafo,Terrer,56.0,5.6,0.27
-MZB,trafo,Terrer,57.0,6.6,0.42
-MZB,trafo,Terrer,58.0,7.6,0.57
-MZB,trafo,Terrer,59.0,8.6,0.72
-MZB,trafo,Terrer,60.0,9.6,0.87
-MZB,trafo,Terrer,61.0,10.6,1.03
-MZB,trafo,Terrer,62.0,11.6,1.2
-MZB,trafo,Terrer,63.0,12.6,1.37
-MZB,trafo,Terrer,64.0,13.6,1.55
-MZB,trafo,Terrer,65.0,14.6,1.74
-MZB,trafo,Terrer,66.0,15.6,1.92
-MZB,trafo,Terrer,67.0,16.6,2.1
-MZB,trafo,Terrer,68.0,17.6,2.29
-MZB,trafo,Terrer,69.0,18.6,2.47
-MZB,trafo,Terrer,70.0,19.6,2.65
-MZB,trafo,Terrer,71.0,20.6,2.84
-MZB,trafo,Terrer,72.0,21.6,3.02
-MZB,trafo,Terrer,73.0,22.6,3.2
-MZB,trafo,Terrer,74.0,23.6,3.39
-MZB,trafo,Terrer,75.0,24.6,3.57
-MZB,trafo,Terrer,76.0,25.6,3.76
-MZB,trafo,Terrer,77.0,26.6,3.96
-MZB,trafo,Terrer,78.0,27.6,4.16
-MZB,trafo,Terrer,79.0,28.6,4.36
-MZB,trafo,Terrer,80.0,29.6,4.96
-MZB,trafo,Terrer,81.0,30.6,6.45
-MZB,trafo,Terrer,82.0,31.6,8.85
-MZB,trafo,Terrer,83.0,32.6,12.1
+MZB,trafo,Terrer,51.0,0.6,0.3
+MZB,trafo,Terrer,52.0,1.6,0.8
+MZB,trafo,Terrer,53.0,2.6,1.3
+MZB,trafo,Terrer,54.0,3.6,1.8
+MZB,trafo,Terrer,55.0,4.6,2.3
+MZB,trafo,Terrer,56.0,5.6,2.8
+MZB,trafo,Terrer,57.0,6.6,3.3
+MZB,trafo,Terrer,58.0,7.6,3.8
+MZB,trafo,Terrer,59.0,8.6,4.3
+MZB,trafo,Terrer,60.0,9.6,4.8
+MZB,trafo,Terrer,61.0,10.6,5.3
+MZB,trafo,Terrer,62.0,11.6,5.8
+MZB,trafo,Terrer,63.0,12.6,6.3
+MZB,trafo,Terrer,64.0,13.6,6.8
+MZB,trafo,Terrer,65.0,14.6,7.3
+MZB,trafo,Terrer,66.0,15.6,7.8
+MZB,trafo,Terrer,67.0,16.6,8.3
+MZB,trafo,Terrer,68.0,17.6,8.8
+MZB,trafo,Terrer,69.0,18.6,9.3
+MZB,trafo,Terrer,70.0,19.6,9.8
+MZB,trafo,Terrer,71.0,20.6,10.3
+MZB,trafo,Terrer,72.0,21.6,10.8
+MZB,trafo,Terrer,73.0,22.6,11.3
+MZB,trafo,Terrer,74.0,23.6,11.8
+MZB,trafo,Terrer,75.0,24.6,12.3
+MZB,trafo,Terrer,76.0,25.6,12.8
+MZB,trafo,Terrer,77.0,26.6,13.3
+MZB,trafo,Terrer,78.0,27.6,13.8
+MZB,trafo,Terrer,79.0,28.6,14.3
+MZB,trafo,Terrer,80.0,29.6,14.8
+MZB,trafo,Terrer,81.0,30.6,15.3
+MZB,trafo,Terrer,82.0,31.6,15.8
+MZB,trafo,Terrer,83.0,32.6,16.3
 MZB,trafo,Terrer,84.0,33.6,20.05
 MZB,trafo,Terrer,85.0,34.6,34.37
 MZB,trafo,Rueda de Jalón,57.2,0.0,0.0
-MZB,trafo,Rueda de Jalón,58.0,0.8,0.01
-MZB,trafo,Rueda de Jalón,59.0,1.8,0.06
-MZB,trafo,Rueda de Jalón,60.0,2.8,0.11
-MZB,trafo,Rueda de Jalón,61.0,3.8,0.16
-MZB,trafo,Rueda de Jalón,62.0,4.8,0.21
-MZB,trafo,Rueda de Jalón,63.0,5.8,0.26
-MZB,trafo,Rueda de Jalón,64.0,6.8,0.31
-MZB,trafo,Rueda de Jalón,65.0,7.8,0.36
-MZB,trafo,Rueda de Jalón,66.0,8.8,0.42
-MZB,trafo,Rueda de Jalón,67.0,9.8,0.48
-MZB,trafo,Rueda de Jalón,68.0,10.8,0.55
-MZB,trafo,Rueda de Jalón,69.0,11.8,0.62
-MZB,trafo,Rueda de Jalón,70.0,12.8,0.68
-MZB,trafo,Rueda de Jalón,71.0,13.8,0.75
-MZB,trafo,Rueda de Jalón,72.0,14.8,0.82
-MZB,trafo,Rueda de Jalón,73.0,15.8,0.88
-MZB,trafo,Rueda de Jalón,74.0,16.8,0.95
-MZB,trafo,Rueda de Jalón,75.0,17.8,1.02
-MZB,trafo,Rueda de Jalón,76.0,18.8,1.13
-MZB,trafo,Rueda de Jalón,77.0,19.8,1.24
-MZB,trafo,Rueda de Jalón,78.0,20.8,1.36
-MZB,trafo,Rueda de Jalón,79.0,21.8,1.5
-MZB,trafo,Rueda de Jalón,80.0,22.8,1.65
-MZB,trafo,Rueda de Jalón,81.0,23.8,1.82
-MZB,trafo,Rueda de Jalón,82.0,24.8,2.09
-MZB,trafo,Rueda de Jalón,83.0,25.8,2.43
-MZB,trafo,Rueda de Jalón,84.0,26.8,4.04
-MZB,trafo,Rueda de Jalón,85.0,27.8,7.74
+MZB,trafo,Rueda de Jalón,58.0,0.8,0.41
+MZB,trafo,Rueda de Jalón,59.0,1.8,0.91
+MZB,trafo,Rueda de Jalón,60.0,2.8,1.41
+MZB,trafo,Rueda de Jalón,61.0,3.8,1.91
+MZB,trafo,Rueda de Jalón,62.0,4.8,2.41
+MZB,trafo,Rueda de Jalón,63.0,5.8,2.91
+MZB,trafo,Rueda de Jalón,64.0,6.8,3.41
+MZB,trafo,Rueda de Jalón,65.0,7.8,3.91
+MZB,trafo,Rueda de Jalón,66.0,8.8,4.41
+MZB,trafo,Rueda de Jalón,67.0,9.8,4.91
+MZB,trafo,Rueda de Jalón,68.0,10.8,5.41
+MZB,trafo,Rueda de Jalón,69.0,11.8,5.91
+MZB,trafo,Rueda de Jalón,70.0,12.8,6.41
+MZB,trafo,Rueda de Jalón,71.0,13.8,6.91
+MZB,trafo,Rueda de Jalón,72.0,14.8,7.41
+MZB,trafo,Rueda de Jalón,73.0,15.8,7.91
+MZB,trafo,Rueda de Jalón,74.0,16.8,8.41
+MZB,trafo,Rueda de Jalón,75.0,17.8,8.91
+MZB,trafo,Rueda de Jalón,76.0,18.8,9.41
+MZB,trafo,Rueda de Jalón,77.0,19.8,9.91
+MZB,trafo,Rueda de Jalón,78.0,20.8,10.41
+MZB,trafo,Rueda de Jalón,79.0,21.8,10.91
+MZB,trafo,Rueda de Jalón,80.0,22.8,11.41
+MZB,trafo,Rueda de Jalón,81.0,23.8,11.91
+MZB,trafo,Rueda de Jalón,82.0,24.8,12.41
+MZB,trafo,Rueda de Jalón,83.0,25.8,12.91
+MZB,trafo,Rueda de Jalón,84.0,26.8,13.41
+MZB,trafo,Rueda de Jalón,85.0,27.8,13.91
 MZB,trafo,Rueda de Jalón,86.0,28.8,21.08
 MZB,trafo,Feria de Muestras,62.2,0.0,0.0
-MZB,trafo,Feria de Muestras,63.0,0.8,0.04
-MZB,trafo,Feria de Muestras,64.0,1.8,0.09
-MZB,trafo,Feria de Muestras,65.0,2.8,0.14
-MZB,trafo,Feria de Muestras,66.0,3.8,0.19
-MZB,trafo,Feria de Muestras,67.0,4.8,0.24
-MZB,trafo,Feria de Muestras,68.0,5.8,0.29
-MZB,trafo,Feria de Muestras,69.0,6.8,0.34
-MZB,trafo,Feria de Muestras,70.0,7.8,0.39
-MZB,trafo,Feria de Muestras,71.0,8.8,0.44
-MZB,trafo,Feria de Muestras,72.0,9.8,0.49
-MZB,trafo,Feria de Muestras,73.0,10.8,0.55
-MZB,trafo,Feria de Muestras,74.0,11.8,0.63
-MZB,trafo,Feria de Muestras,75.0,12.8,0.73
-MZB,trafo,Feria de Muestras,76.0,13.8,0.83
-MZB,trafo,Feria de Muestras,77.0,14.8,0.95
-MZB,trafo,Feria de Muestras,78.0,15.8,1.07
-MZB,trafo,Feria de Muestras,79.0,16.8,1.21
-MZB,trafo,Feria de Muestras,80.0,17.8,1.36
-MZB,trafo,Feria de Muestras,81.0,18.8,1.51
-MZB,trafo,Feria de Muestras,82.0,19.8,1.69
-MZB,trafo,Feria de Muestras,83.0,20.8,1.9
-MZB,trafo,Feria de Muestras,84.0,21.8,2.25
-MZB,trafo,Feria de Muestras,85.0,22.8,2.6
-MZB,trafo,Feria de Muestras,86.0,23.8,4.67
-MZB,trafo,Feria de Muestras,87.0,24.8,8.4
+MZB,trafo,Feria de Muestras,63.0,0.8,0.41
+MZB,trafo,Feria de Muestras,64.0,1.8,0.91
+MZB,trafo,Feria de Muestras,65.0,2.8,1.41
+MZB,trafo,Feria de Muestras,66.0,3.8,1.91
+MZB,trafo,Feria de Muestras,67.0,4.8,2.41
+MZB,trafo,Feria de Muestras,68.0,5.8,2.91
+MZB,trafo,Feria de Muestras,69.0,6.8,3.41
+MZB,trafo,Feria de Muestras,70.0,7.8,3.91
+MZB,trafo,Feria de Muestras,71.0,8.8,4.41
+MZB,trafo,Feria de Muestras,72.0,9.8,4.91
+MZB,trafo,Feria de Muestras,73.0,10.8,5.41
+MZB,trafo,Feria de Muestras,74.0,11.8,5.91
+MZB,trafo,Feria de Muestras,75.0,12.8,6.41
+MZB,trafo,Feria de Muestras,76.0,13.8,6.91
+MZB,trafo,Feria de Muestras,77.0,14.8,7.41
+MZB,trafo,Feria de Muestras,78.0,15.8,7.91
+MZB,trafo,Feria de Muestras,79.0,16.8,8.41
+MZB,trafo,Feria de Muestras,80.0,17.8,8.91
+MZB,trafo,Feria de Muestras,81.0,18.8,9.41
+MZB,trafo,Feria de Muestras,82.0,19.8,9.91
+MZB,trafo,Feria de Muestras,83.0,20.8,10.41
+MZB,trafo,Feria de Muestras,84.0,21.8,10.91
+MZB,trafo,Feria de Muestras,85.0,22.8,11.41
+MZB,trafo,Feria de Muestras,86.0,23.8,11.91
+MZB,trafo,Feria de Muestras,87.0,24.8,12.41
 MZB,trafo,Zaragoza,51.7,0.0,0.0
-MZB,trafo,Zaragoza,52.0,0.3,0.01
-MZB,trafo,Zaragoza,53.0,1.3,0.02
-MZB,trafo,Zaragoza,54.0,2.3,0.04
-MZB,trafo,Zaragoza,55.0,3.3,0.06
-MZB,trafo,Zaragoza,56.0,4.3,0.07
-MZB,trafo,Zaragoza,57.0,5.3,0.09
-MZB,trafo,Zaragoza,58.0,6.3,0.11
-MZB,trafo,Zaragoza,59.0,7.3,0.12
-MZB,trafo,Zaragoza,60.0,8.3,0.14
-MZB,trafo,Zaragoza,61.0,9.3,0.16
-MZB,trafo,Zaragoza,62.0,10.3,0.17
-MZB,trafo,Zaragoza,63.0,11.3,0.19
-MZB,trafo,Zaragoza,64.0,12.3,0.21
-MZB,trafo,Zaragoza,65.0,13.3,0.23
-MZB,trafo,Zaragoza,66.0,14.3,0.26
-MZB,trafo,Zaragoza,67.0,15.3,0.32
-MZB,trafo,Zaragoza,68.0,16.3,0.4
-MZB,trafo,Zaragoza,69.0,17.3,0.48
-MZB,trafo,Zaragoza,70.0,18.3,0.57
-MZB,trafo,Zaragoza,71.0,19.3,0.76
-MZB,trafo,Zaragoza,72.0,20.3,0.95
-MZB,trafo,Zaragoza,73.0,21.3,1.15
-MZB,trafo,Zaragoza,74.0,22.3,1.35
-MZB,trafo,Zaragoza,75.0,23.3,1.55
-MZB,trafo,Zaragoza,76.0,24.3,1.75
-MZB,trafo,Zaragoza,77.0,25.3,1.95
-MZB,trafo,Zaragoza,78.0,26.3,2.15
-MZB,trafo,Zaragoza,79.0,27.3,2.35
-MZB,trafo,Zaragoza,80.0,28.3,2.55
-MZB,trafo,Zaragoza,81.0,29.3,2.83
-MZB,trafo,Zaragoza,82.0,30.3,3.87
-MZB,trafo,Zaragoza,83.0,31.3,5.32
-MZB,trafo,Zaragoza,84.0,32.3,11.28
+MZB,trafo,Zaragoza,52.0,0.3,0.16
+MZB,trafo,Zaragoza,53.0,1.3,0.66
+MZB,trafo,Zaragoza,54.0,2.3,1.16
+MZB,trafo,Zaragoza,55.0,3.3,1.66
+MZB,trafo,Zaragoza,56.0,4.3,2.16
+MZB,trafo,Zaragoza,57.0,5.3,2.66
+MZB,trafo,Zaragoza,58.0,6.3,3.16
+MZB,trafo,Zaragoza,59.0,7.3,3.66
+MZB,trafo,Zaragoza,60.0,8.3,4.16
+MZB,trafo,Zaragoza,61.0,9.3,4.66
+MZB,trafo,Zaragoza,62.0,10.3,5.16
+MZB,trafo,Zaragoza,63.0,11.3,5.66
+MZB,trafo,Zaragoza,64.0,12.3,6.16
+MZB,trafo,Zaragoza,65.0,13.3,6.66
+MZB,trafo,Zaragoza,66.0,14.3,7.16
+MZB,trafo,Zaragoza,67.0,15.3,7.66
+MZB,trafo,Zaragoza,68.0,16.3,8.16
+MZB,trafo,Zaragoza,69.0,17.3,8.66
+MZB,trafo,Zaragoza,70.0,18.3,9.16
+MZB,trafo,Zaragoza,71.0,19.3,9.66
+MZB,trafo,Zaragoza,72.0,20.3,10.16
+MZB,trafo,Zaragoza,73.0,21.3,10.66
+MZB,trafo,Zaragoza,74.0,22.3,11.16
+MZB,trafo,Zaragoza,75.0,23.3,11.66
+MZB,trafo,Zaragoza,76.0,24.3,12.16
+MZB,trafo,Zaragoza,77.0,25.3,12.66
+MZB,trafo,Zaragoza,78.0,26.3,13.16
+MZB,trafo,Zaragoza,79.0,27.3,13.66
+MZB,trafo,Zaragoza,80.0,28.3,14.16
+MZB,trafo,Zaragoza,81.0,29.3,14.66
+MZB,trafo,Zaragoza,82.0,30.3,15.16
+MZB,trafo,Zaragoza,83.0,31.3,15.66
+MZB,trafo,Zaragoza,84.0,32.3,16.16
 MZB,trafo,Zaragoza,85.0,33.3,25.29
 MZB,trafo,Peñalba,62.4,0.0,0.0
-MZB,trafo,Peñalba,63.0,0.6,0.01
-MZB,trafo,Peñalba,64.0,1.6,0.05
-MZB,trafo,Peñalba,65.0,2.6,0.12
-MZB,trafo,Peñalba,66.0,3.6,0.2
-MZB,trafo,Peñalba,67.0,4.6,0.28
-MZB,trafo,Peñalba,68.0,5.6,0.37
-MZB,trafo,Peñalba,69.0,6.6,0.45
-MZB,trafo,Peñalba,70.0,7.6,0.59
-MZB,trafo,Peñalba,71.0,8.6,0.76
-MZB,trafo,Peñalba,72.0,9.6,0.93
-MZB,trafo,Peñalba,73.0,10.6,1.09
-MZB,trafo,Peñalba,74.0,11.6,1.61
-MZB,trafo,Peñalba,75.0,12.6,2.22
-MZB,trafo,Peñalba,76.0,13.6,2.87
-MZB,trafo,Peñalba,77.0,14.6,3.56
-MZB,trafo,Peñalba,78.0,15.6,4.25
-MZB,trafo,Peñalba,79.0,16.6,5.0
-MZB,trafo,Peñalba,80.0,17.6,5.79
-MZB,trafo,Peñalba,81.0,18.6,6.64
-MZB,trafo,Peñalba,82.0,19.6,9.67
+MZB,trafo,Peñalba,63.0,0.6,0.28
+MZB,trafo,Peñalba,64.0,1.6,0.78
+MZB,trafo,Peñalba,65.0,2.6,1.28
+MZB,trafo,Peñalba,66.0,3.6,1.78
+MZB,trafo,Peñalba,67.0,4.6,2.28
+MZB,trafo,Peñalba,68.0,5.6,2.78
+MZB,trafo,Peñalba,69.0,6.6,3.28
+MZB,trafo,Peñalba,70.0,7.6,3.78
+MZB,trafo,Peñalba,71.0,8.6,4.28
+MZB,trafo,Peñalba,72.0,9.6,4.78
+MZB,trafo,Peñalba,73.0,10.6,5.28
+MZB,trafo,Peñalba,74.0,11.6,5.78
+MZB,trafo,Peñalba,75.0,12.6,6.28
+MZB,trafo,Peñalba,76.0,13.6,6.78
+MZB,trafo,Peñalba,77.0,14.6,7.28
+MZB,trafo,Peñalba,78.0,15.6,7.78
+MZB,trafo,Peñalba,79.0,16.6,8.28
+MZB,trafo,Peñalba,80.0,17.6,8.78
+MZB,trafo,Peñalba,81.0,18.6,9.28
+MZB,trafo,Peñalba,82.0,19.6,9.78
 MZB,trafo,Peñalba,83.0,20.6,20.48
 MZB,trafo,Peñalba,84.0,21.6,34.47
 MZB,trafo,Lleida,54.9,0.0,0.0
-MZB,trafo,Lleida,55.0,0.1,0.0
-MZB,trafo,Lleida,56.0,1.1,0.02
-MZB,trafo,Lleida,57.0,2.1,0.03
-MZB,trafo,Lleida,58.0,3.1,0.05
-MZB,trafo,Lleida,59.0,4.1,0.07
-MZB,trafo,Lleida,60.0,5.1,0.08
-MZB,trafo,Lleida,61.0,6.1,0.1
-MZB,trafo,Lleida,62.0,7.1,0.12
-MZB,trafo,Lleida,63.0,8.1,0.16
-MZB,trafo,Lleida,64.0,9.1,0.23
-MZB,trafo,Lleida,65.0,10.1,0.29
-MZB,trafo,Lleida,66.0,11.1,0.36
-MZB,trafo,Lleida,67.0,12.1,0.43
-MZB,trafo,Lleida,68.0,13.1,0.55
-MZB,trafo,Lleida,69.0,14.1,0.67
-MZB,trafo,Lleida,70.0,15.1,0.78
-MZB,trafo,Lleida,71.0,16.1,0.9
-MZB,trafo,Lleida,72.0,17.1,1.02
-MZB,trafo,Lleida,73.0,18.1,1.34
-MZB,trafo,Lleida,74.0,19.1,1.65
-MZB,trafo,Lleida,75.0,20.1,2.1
-MZB,trafo,Lleida,76.0,21.1,2.68
-MZB,trafo,Lleida,77.0,22.1,3.28
-MZB,trafo,Lleida,78.0,23.1,3.89
-MZB,trafo,Lleida,79.0,24.1,4.52
-MZB,trafo,Lleida,80.0,25.1,5.15
-MZB,trafo,Lleida,81.0,26.1,5.79
-MZB,trafo,Lleida,82.0,27.1,6.42
-MZB,trafo,Lleida,83.0,28.1,9.88
+MZB,trafo,Lleida,55.0,0.1,0.04
+MZB,trafo,Lleida,56.0,1.1,0.54
+MZB,trafo,Lleida,57.0,2.1,1.04
+MZB,trafo,Lleida,58.0,3.1,1.54
+MZB,trafo,Lleida,59.0,4.1,2.04
+MZB,trafo,Lleida,60.0,5.1,2.54
+MZB,trafo,Lleida,61.0,6.1,3.04
+MZB,trafo,Lleida,62.0,7.1,3.54
+MZB,trafo,Lleida,63.0,8.1,4.04
+MZB,trafo,Lleida,64.0,9.1,4.54
+MZB,trafo,Lleida,65.0,10.1,5.04
+MZB,trafo,Lleida,66.0,11.1,5.54
+MZB,trafo,Lleida,67.0,12.1,6.04
+MZB,trafo,Lleida,68.0,13.1,6.54
+MZB,trafo,Lleida,69.0,14.1,7.04
+MZB,trafo,Lleida,70.0,15.1,7.54
+MZB,trafo,Lleida,71.0,16.1,8.04
+MZB,trafo,Lleida,72.0,17.1,8.54
+MZB,trafo,Lleida,73.0,18.1,9.04
+MZB,trafo,Lleida,74.0,19.1,9.54
+MZB,trafo,Lleida,75.0,20.1,10.04
+MZB,trafo,Lleida,76.0,21.1,10.54
+MZB,trafo,Lleida,77.0,22.1,11.04
+MZB,trafo,Lleida,78.0,23.1,11.54
+MZB,trafo,Lleida,79.0,24.1,12.04
+MZB,trafo,Lleida,80.0,25.1,12.54
+MZB,trafo,Lleida,81.0,26.1,13.04
+MZB,trafo,Lleida,82.0,27.1,13.54
+MZB,trafo,Lleida,83.0,28.1,14.04
 MZB,trafo,Lleida,84.0,29.1,23.0
 MZB,trafo,Lleida,85.0,30.1,36.54
 MZB,trafo,L'Espluga,49.7,0.0,0.0
-MZB,trafo,L'Espluga,50.0,0.3,0.0
-MZB,trafo,L'Espluga,51.0,1.3,0.02
-MZB,trafo,L'Espluga,52.0,2.3,0.04
-MZB,trafo,L'Espluga,53.0,3.3,0.07
-MZB,trafo,L'Espluga,54.0,4.3,0.14
-MZB,trafo,L'Espluga,55.0,5.3,0.23
-MZB,trafo,L'Espluga,56.0,6.3,0.31
-MZB,trafo,L'Espluga,57.0,7.3,0.39
-MZB,trafo,L'Espluga,58.0,8.3,0.5
-MZB,trafo,L'Espluga,59.0,9.3,0.62
-MZB,trafo,L'Espluga,60.0,10.3,0.74
-MZB,trafo,L'Espluga,61.0,11.3,0.85
-MZB,trafo,L'Espluga,62.0,12.3,0.97
-MZB,trafo,L'Espluga,63.0,13.3,1.09
-MZB,trafo,L'Espluga,64.0,14.3,1.2
-MZB,trafo,L'Espluga,65.0,15.3,1.32
-MZB,trafo,L'Espluga,66.0,16.3,1.46
-MZB,trafo,L'Espluga,67.0,17.3,1.61
-MZB,trafo,L'Espluga,68.0,18.3,1.76
-MZB,trafo,L'Espluga,69.0,19.3,1.91
-MZB,trafo,L'Espluga,70.0,20.3,2.06
-MZB,trafo,L'Espluga,71.0,21.3,2.21
-MZB,trafo,L'Espluga,72.0,22.3,2.36
-MZB,trafo,L'Espluga,73.0,23.3,2.51
-MZB,trafo,L'Espluga,74.0,24.3,2.66
-MZB,trafo,L'Espluga,75.0,25.3,2.81
-MZB,trafo,L'Espluga,76.0,26.3,2.96
-MZB,trafo,L'Espluga,77.0,27.3,3.11
-MZB,trafo,L'Espluga,78.0,28.3,3.27
-MZB,trafo,L'Espluga,79.0,29.3,4.32
-MZB,trafo,L'Espluga,80.0,30.3,5.39
-MZB,trafo,L'Espluga,81.0,31.3,6.46
-MZB,trafo,L'Espluga,82.0,32.3,7.52
-MZB,trafo,L'Espluga,83.0,33.3,15.14
+MZB,trafo,L'Espluga,50.0,0.3,0.14
+MZB,trafo,L'Espluga,51.0,1.3,0.64
+MZB,trafo,L'Espluga,52.0,2.3,1.14
+MZB,trafo,L'Espluga,53.0,3.3,1.64
+MZB,trafo,L'Espluga,54.0,4.3,2.14
+MZB,trafo,L'Espluga,55.0,5.3,2.64
+MZB,trafo,L'Espluga,56.0,6.3,3.14
+MZB,trafo,L'Espluga,57.0,7.3,3.64
+MZB,trafo,L'Espluga,58.0,8.3,4.14
+MZB,trafo,L'Espluga,59.0,9.3,4.64
+MZB,trafo,L'Espluga,60.0,10.3,5.14
+MZB,trafo,L'Espluga,61.0,11.3,5.64
+MZB,trafo,L'Espluga,62.0,12.3,6.14
+MZB,trafo,L'Espluga,63.0,13.3,6.64
+MZB,trafo,L'Espluga,64.0,14.3,7.14
+MZB,trafo,L'Espluga,65.0,15.3,7.64
+MZB,trafo,L'Espluga,66.0,16.3,8.14
+MZB,trafo,L'Espluga,67.0,17.3,8.64
+MZB,trafo,L'Espluga,68.0,18.3,9.14
+MZB,trafo,L'Espluga,69.0,19.3,9.64
+MZB,trafo,L'Espluga,70.0,20.3,10.14
+MZB,trafo,L'Espluga,71.0,21.3,10.64
+MZB,trafo,L'Espluga,72.0,22.3,11.14
+MZB,trafo,L'Espluga,73.0,23.3,11.64
+MZB,trafo,L'Espluga,74.0,24.3,12.14
+MZB,trafo,L'Espluga,75.0,25.3,12.64
+MZB,trafo,L'Espluga,76.0,26.3,13.14
+MZB,trafo,L'Espluga,77.0,27.3,13.64
+MZB,trafo,L'Espluga,78.0,28.3,14.14
+MZB,trafo,L'Espluga,79.0,29.3,14.64
+MZB,trafo,L'Espluga,80.0,30.3,15.14
+MZB,trafo,L'Espluga,81.0,31.3,15.64
+MZB,trafo,L'Espluga,82.0,32.3,16.14
+MZB,trafo,L'Espluga,83.0,33.3,16.64
 MZB,trafo,L'Espluga,84.0,34.3,28.78
 MZB,trafo,La Gornal,54.1,0.0,0.0
-MZB,trafo,La Gornal,55.0,0.9,0.02
-MZB,trafo,La Gornal,56.0,1.9,0.03
-MZB,trafo,La Gornal,57.0,2.9,0.05
-MZB,trafo,La Gornal,58.0,3.9,0.07
-MZB,trafo,La Gornal,59.0,4.9,0.08
-MZB,trafo,La Gornal,60.0,5.9,0.1
-MZB,trafo,La Gornal,61.0,6.9,0.12
-MZB,trafo,La Gornal,62.0,7.9,0.13
-MZB,trafo,La Gornal,63.0,8.9,0.15
-MZB,trafo,La Gornal,64.0,9.9,0.17
-MZB,trafo,La Gornal,65.0,10.9,0.18
-MZB,trafo,La Gornal,66.0,11.9,0.2
-MZB,trafo,La Gornal,67.0,12.9,0.29
-MZB,trafo,La Gornal,68.0,13.9,0.42
-MZB,trafo,La Gornal,69.0,14.9,0.59
-MZB,trafo,La Gornal,70.0,15.9,0.77
-MZB,trafo,La Gornal,71.0,16.9,0.95
-MZB,trafo,La Gornal,72.0,17.9,1.14
-MZB,trafo,La Gornal,73.0,18.9,1.37
-MZB,trafo,La Gornal,74.0,19.9,1.64
-MZB,trafo,La Gornal,75.0,20.9,1.92
-MZB,trafo,La Gornal,76.0,21.9,2.21
-MZB,trafo,La Gornal,77.0,22.9,2.58
-MZB,trafo,La Gornal,78.0,23.9,2.98
-MZB,trafo,La Gornal,79.0,24.9,3.38
-MZB,trafo,La Gornal,80.0,25.9,4.02
-MZB,trafo,La Gornal,81.0,26.9,4.8
-MZB,trafo,La Gornal,82.0,27.9,5.59
-MZB,trafo,La Gornal,83.0,28.9,7.68
+MZB,trafo,La Gornal,55.0,0.9,0.47
+MZB,trafo,La Gornal,56.0,1.9,0.97
+MZB,trafo,La Gornal,57.0,2.9,1.47
+MZB,trafo,La Gornal,58.0,3.9,1.97
+MZB,trafo,La Gornal,59.0,4.9,2.47
+MZB,trafo,La Gornal,60.0,5.9,2.97
+MZB,trafo,La Gornal,61.0,6.9,3.47
+MZB,trafo,La Gornal,62.0,7.9,3.97
+MZB,trafo,La Gornal,63.0,8.9,4.47
+MZB,trafo,La Gornal,64.0,9.9,4.97
+MZB,trafo,La Gornal,65.0,10.9,5.47
+MZB,trafo,La Gornal,66.0,11.9,5.97
+MZB,trafo,La Gornal,67.0,12.9,6.47
+MZB,trafo,La Gornal,68.0,13.9,6.97
+MZB,trafo,La Gornal,69.0,14.9,7.47
+MZB,trafo,La Gornal,70.0,15.9,7.97
+MZB,trafo,La Gornal,71.0,16.9,8.47
+MZB,trafo,La Gornal,72.0,17.9,8.97
+MZB,trafo,La Gornal,73.0,18.9,9.47
+MZB,trafo,La Gornal,74.0,19.9,9.97
+MZB,trafo,La Gornal,75.0,20.9,10.47
+MZB,trafo,La Gornal,76.0,21.9,10.97
+MZB,trafo,La Gornal,77.0,22.9,11.47
+MZB,trafo,La Gornal,78.0,23.9,11.97
+MZB,trafo,La Gornal,79.0,24.9,12.47
+MZB,trafo,La Gornal,80.0,25.9,12.97
+MZB,trafo,La Gornal,81.0,26.9,13.47
+MZB,trafo,La Gornal,82.0,27.9,13.97
+MZB,trafo,La Gornal,83.0,28.9,14.47
 MZB,trafo,La Gornal,84.0,29.9,19.98
 MZB,trafo,La Gornal,85.0,30.9,34.22
 MZB,trafo,Sant Boi,50.6,0.0,0.0
-MZB,trafo,Sant Boi,51.0,0.4,0.01
-MZB,trafo,Sant Boi,52.0,1.4,0.02
-MZB,trafo,Sant Boi,53.0,2.4,0.04
-MZB,trafo,Sant Boi,54.0,3.4,0.06
-MZB,trafo,Sant Boi,55.0,4.4,0.07
-MZB,trafo,Sant Boi,56.0,5.4,0.09
-MZB,trafo,Sant Boi,57.0,6.4,0.11
-MZB,trafo,Sant Boi,58.0,7.4,0.12
-MZB,trafo,Sant Boi,59.0,8.4,0.14
-MZB,trafo,Sant Boi,60.0,9.4,0.17
-MZB,trafo,Sant Boi,61.0,10.4,0.21
-MZB,trafo,Sant Boi,62.0,11.4,0.26
-MZB,trafo,Sant Boi,63.0,12.4,0.31
-MZB,trafo,Sant Boi,64.0,13.4,0.36
-MZB,trafo,Sant Boi,65.0,14.4,0.41
-MZB,trafo,Sant Boi,66.0,15.4,0.46
-MZB,trafo,Sant Boi,67.0,16.4,0.51
-MZB,trafo,Sant Boi,68.0,17.4,0.59
-MZB,trafo,Sant Boi,69.0,18.4,0.68
-MZB,trafo,Sant Boi,70.0,19.4,0.78
-MZB,trafo,Sant Boi,71.0,20.4,0.89
-MZB,trafo,Sant Boi,72.0,21.4,1.13
-MZB,trafo,Sant Boi,73.0,22.4,1.43
-MZB,trafo,Sant Boi,74.0,23.4,1.73
-MZB,trafo,Sant Boi,75.0,24.4,2.03
-MZB,trafo,Sant Boi,76.0,25.4,2.33
-MZB,trafo,Sant Boi,77.0,26.4,2.63
-MZB,trafo,Sant Boi,78.0,27.4,2.93
-MZB,trafo,Sant Boi,79.0,28.4,3.23
-MZB,trafo,Sant Boi,80.0,29.4,3.53
-MZB,trafo,Sant Boi,81.0,30.4,3.85
-MZB,trafo,Sant Boi,82.0,31.4,4.17
-MZB,trafo,Sant Boi,83.0,32.4,5.0
-MZB,trafo,Sant Boi,84.0,33.4,7.3
-MZB,trafo,Sant Boi,85.0,34.4,14.06
+MZB,trafo,Sant Boi,51.0,0.4,0.21
+MZB,trafo,Sant Boi,52.0,1.4,0.71
+MZB,trafo,Sant Boi,53.0,2.4,1.21
+MZB,trafo,Sant Boi,54.0,3.4,1.71
+MZB,trafo,Sant Boi,55.0,4.4,2.21
+MZB,trafo,Sant Boi,56.0,5.4,2.71
+MZB,trafo,Sant Boi,57.0,6.4,3.21
+MZB,trafo,Sant Boi,58.0,7.4,3.71
+MZB,trafo,Sant Boi,59.0,8.4,4.21
+MZB,trafo,Sant Boi,60.0,9.4,4.71
+MZB,trafo,Sant Boi,61.0,10.4,5.21
+MZB,trafo,Sant Boi,62.0,11.4,5.71
+MZB,trafo,Sant Boi,63.0,12.4,6.21
+MZB,trafo,Sant Boi,64.0,13.4,6.71
+MZB,trafo,Sant Boi,65.0,14.4,7.21
+MZB,trafo,Sant Boi,66.0,15.4,7.71
+MZB,trafo,Sant Boi,67.0,16.4,8.21
+MZB,trafo,Sant Boi,68.0,17.4,8.71
+MZB,trafo,Sant Boi,69.0,18.4,9.21
+MZB,trafo,Sant Boi,70.0,19.4,9.71
+MZB,trafo,Sant Boi,71.0,20.4,10.21
+MZB,trafo,Sant Boi,72.0,21.4,10.71
+MZB,trafo,Sant Boi,73.0,22.4,11.21
+MZB,trafo,Sant Boi,74.0,23.4,11.71
+MZB,trafo,Sant Boi,75.0,24.4,12.21
+MZB,trafo,Sant Boi,76.0,25.4,12.71
+MZB,trafo,Sant Boi,77.0,26.4,13.21
+MZB,trafo,Sant Boi,78.0,27.4,13.71
+MZB,trafo,Sant Boi,79.0,28.4,14.21
+MZB,trafo,Sant Boi,80.0,29.4,14.71
+MZB,trafo,Sant Boi,81.0,30.4,15.21
+MZB,trafo,Sant Boi,82.0,31.4,15.71
+MZB,trafo,Sant Boi,83.0,32.4,16.21
+MZB,trafo,Sant Boi,84.0,33.4,16.71
+MZB,trafo,Sant Boi,85.0,34.4,17.21
 MZB,trafo,Sant Boi,86.0,35.4,28.77
 MZB,30,Villaverde Bajo,0.0,0.0,0.0
-MZB,30,Villaverde Bajo,1.0,1.0,0.02
-MZB,30,Villaverde Bajo,2.0,2.0,0.03
-MZB,30,Villaverde Bajo,3.0,3.0,0.05
-MZB,30,Villaverde Bajo,4.0,4.0,0.07
-MZB,30,Villaverde Bajo,5.0,5.0,0.08
-MZB,30,Villaverde Bajo,6.0,6.0,0.1
-MZB,30,Villaverde Bajo,7.0,7.0,0.12
-MZB,30,Villaverde Bajo,8.0,8.0,0.14
-MZB,30,Villaverde Bajo,9.0,9.0,0.18
-MZB,30,Villaverde Bajo,10.0,10.0,0.22
-MZB,30,Villaverde Bajo,11.0,11.0,0.27
-MZB,30,Villaverde Bajo,12.0,12.0,0.32
-MZB,30,Villaverde Bajo,13.0,13.0,0.37
-MZB,30,Villaverde Bajo,14.0,14.0,0.42
-MZB,30,Villaverde Bajo,15.0,15.0,0.49
-MZB,30,Villaverde Bajo,16.0,16.0,0.64
-MZB,30,Villaverde Bajo,17.0,17.0,0.79
-MZB,30,Villaverde Bajo,18.0,18.0,0.94
-MZB,30,Villaverde Bajo,19.0,19.0,1.11
-MZB,30,Villaverde Bajo,20.0,20.0,1.27
-MZB,30,Villaverde Bajo,21.0,21.0,1.44
-MZB,30,Villaverde Bajo,22.0,22.0,1.61
-MZB,30,Villaverde Bajo,23.0,23.0,2.17
-MZB,30,Villaverde Bajo,24.0,24.0,6.65
+MZB,30,Villaverde Bajo,1.0,1.0,0.5
+MZB,30,Villaverde Bajo,2.0,2.0,1.0
+MZB,30,Villaverde Bajo,3.0,3.0,1.5
+MZB,30,Villaverde Bajo,4.0,4.0,2.0
+MZB,30,Villaverde Bajo,5.0,5.0,2.5
+MZB,30,Villaverde Bajo,6.0,6.0,3.0
+MZB,30,Villaverde Bajo,7.0,7.0,3.5
+MZB,30,Villaverde Bajo,8.0,8.0,4.0
+MZB,30,Villaverde Bajo,9.0,9.0,4.5
+MZB,30,Villaverde Bajo,10.0,10.0,5.0
+MZB,30,Villaverde Bajo,11.0,11.0,5.5
+MZB,30,Villaverde Bajo,12.0,12.0,6.0
+MZB,30,Villaverde Bajo,13.0,13.0,6.5
+MZB,30,Villaverde Bajo,14.0,14.0,7.0
+MZB,30,Villaverde Bajo,15.0,15.0,7.5
+MZB,30,Villaverde Bajo,16.0,16.0,8.0
+MZB,30,Villaverde Bajo,17.0,17.0,8.5
+MZB,30,Villaverde Bajo,18.0,18.0,9.0
+MZB,30,Villaverde Bajo,19.0,19.0,9.5
+MZB,30,Villaverde Bajo,20.0,20.0,10.0
+MZB,30,Villaverde Bajo,21.0,21.0,10.5
+MZB,30,Villaverde Bajo,22.0,22.0,11.0
+MZB,30,Villaverde Bajo,23.0,23.0,11.5
+MZB,30,Villaverde Bajo,24.0,24.0,12.0
 MZB,30,Anchuelo,0.0,0.0,0.0
-MZB,30,Anchuelo,1.0,1.0,0.02
-MZB,30,Anchuelo,2.0,2.0,0.04
-MZB,30,Anchuelo,3.0,3.0,0.09
-MZB,30,Anchuelo,4.0,4.0,0.14
-MZB,30,Anchuelo,5.0,5.0,0.22
-MZB,30,Anchuelo,6.0,6.0,0.32
-MZB,30,Anchuelo,7.0,7.0,0.42
-MZB,30,Anchuelo,8.0,8.0,0.52
-MZB,30,Anchuelo,9.0,9.0,0.62
-MZB,30,Anchuelo,10.0,10.0,0.72
-MZB,30,Anchuelo,11.0,11.0,0.83
-MZB,30,Anchuelo,12.0,12.0,0.99
-MZB,30,Anchuelo,13.0,13.0,1.24
-MZB,30,Anchuelo,14.0,14.0,1.49
-MZB,30,Anchuelo,15.0,15.0,1.74
-MZB,30,Anchuelo,16.0,16.0,2.27
-MZB,30,Anchuelo,17.0,17.0,2.93
-MZB,30,Anchuelo,18.0,18.0,3.66
-MZB,30,Anchuelo,19.0,19.0,4.42
-MZB,30,Anchuelo,20.0,20.0,5.19
-MZB,30,Anchuelo,21.0,21.0,8.32
+MZB,30,Anchuelo,1.0,1.0,0.5
+MZB,30,Anchuelo,2.0,2.0,1.0
+MZB,30,Anchuelo,3.0,3.0,1.5
+MZB,30,Anchuelo,4.0,4.0,2.0
+MZB,30,Anchuelo,5.0,5.0,2.5
+MZB,30,Anchuelo,6.0,6.0,3.0
+MZB,30,Anchuelo,7.0,7.0,3.5
+MZB,30,Anchuelo,8.0,8.0,4.0
+MZB,30,Anchuelo,9.0,9.0,4.5
+MZB,30,Anchuelo,10.0,10.0,5.0
+MZB,30,Anchuelo,11.0,11.0,5.5
+MZB,30,Anchuelo,12.0,12.0,6.0
+MZB,30,Anchuelo,13.0,13.0,6.5
+MZB,30,Anchuelo,14.0,14.0,7.0
+MZB,30,Anchuelo,15.0,15.0,7.5
+MZB,30,Anchuelo,16.0,16.0,8.0
+MZB,30,Anchuelo,17.0,17.0,8.5
+MZB,30,Anchuelo,18.0,18.0,9.0
+MZB,30,Anchuelo,19.0,19.0,9.5
+MZB,30,Anchuelo,20.0,20.0,10.0
+MZB,30,Anchuelo,21.0,21.0,10.5
 MZB,30,Anchuelo,22.0,22.0,19.67
 MZB,30,Anchuelo,23.0,23.0,32.54
 MZB,30,Brihuega,0.0,0.0,0.0
-MZB,30,Brihuega,1.0,1.0,0.12
-MZB,30,Brihuega,2.0,2.0,0.23
-MZB,30,Brihuega,3.0,3.0,0.35
-MZB,30,Brihuega,4.0,4.0,0.5
-MZB,30,Brihuega,5.0,5.0,0.65
-MZB,30,Brihuega,6.0,6.0,0.8
-MZB,30,Brihuega,7.0,7.0,0.96
-MZB,30,Brihuega,8.0,8.0,1.19
-MZB,30,Brihuega,9.0,9.0,1.43
-MZB,30,Brihuega,10.0,10.0,1.68
-MZB,30,Brihuega,11.0,11.0,1.93
-MZB,30,Brihuega,12.0,12.0,2.18
-MZB,30,Brihuega,13.0,13.0,2.45
-MZB,30,Brihuega,14.0,14.0,2.72
-MZB,30,Brihuega,15.0,15.0,3.0
-MZB,30,Brihuega,16.0,16.0,3.28
-MZB,30,Brihuega,17.0,17.0,3.64
-MZB,30,Brihuega,18.0,18.0,4.16
-MZB,30,Brihuega,19.0,19.0,4.99
+MZB,30,Brihuega,1.0,1.0,0.5
+MZB,30,Brihuega,2.0,2.0,1.0
+MZB,30,Brihuega,3.0,3.0,1.5
+MZB,30,Brihuega,4.0,4.0,2.0
+MZB,30,Brihuega,5.0,5.0,2.5
+MZB,30,Brihuega,6.0,6.0,3.0
+MZB,30,Brihuega,7.0,7.0,3.5
+MZB,30,Brihuega,8.0,8.0,4.0
+MZB,30,Brihuega,9.0,9.0,4.5
+MZB,30,Brihuega,10.0,10.0,5.0
+MZB,30,Brihuega,11.0,11.0,5.5
+MZB,30,Brihuega,12.0,12.0,6.0
+MZB,30,Brihuega,13.0,13.0,6.5
+MZB,30,Brihuega,14.0,14.0,7.0
+MZB,30,Brihuega,15.0,15.0,7.5
+MZB,30,Brihuega,16.0,16.0,8.0
+MZB,30,Brihuega,17.0,17.0,8.5
+MZB,30,Brihuega,18.0,18.0,9.0
+MZB,30,Brihuega,19.0,19.0,9.5
 MZB,30,Brihuega,20.0,20.0,10.84
 MZB,30,Brihuega,21.0,21.0,23.41
 MZB,30,Brihuega,22.0,22.0,36.23
 MZB,30,Medinaceli,0.0,0.0,0.0
-MZB,30,Medinaceli,1.0,1.0,0.12
-MZB,30,Medinaceli,2.0,2.0,0.23
-MZB,30,Medinaceli,3.0,3.0,0.37
-MZB,30,Medinaceli,4.0,4.0,0.5
-MZB,30,Medinaceli,5.0,5.0,0.63
-MZB,30,Medinaceli,6.0,6.0,0.77
-MZB,30,Medinaceli,7.0,7.0,0.9
-MZB,30,Medinaceli,8.0,8.0,1.03
-MZB,30,Medinaceli,9.0,9.0,1.18
-MZB,30,Medinaceli,10.0,10.0,1.34
-MZB,30,Medinaceli,11.0,11.0,1.51
-MZB,30,Medinaceli,12.0,12.0,1.71
-MZB,30,Medinaceli,13.0,13.0,1.91
-MZB,30,Medinaceli,14.0,14.0,2.11
-MZB,30,Medinaceli,15.0,15.0,2.31
-MZB,30,Medinaceli,16.0,16.0,2.51
-MZB,30,Medinaceli,17.0,17.0,2.74
-MZB,30,Medinaceli,18.0,18.0,4.53
-MZB,30,Medinaceli,19.0,19.0,7.42
+MZB,30,Medinaceli,1.0,1.0,0.5
+MZB,30,Medinaceli,2.0,2.0,1.0
+MZB,30,Medinaceli,3.0,3.0,1.5
+MZB,30,Medinaceli,4.0,4.0,2.0
+MZB,30,Medinaceli,5.0,5.0,2.5
+MZB,30,Medinaceli,6.0,6.0,3.0
+MZB,30,Medinaceli,7.0,7.0,3.5
+MZB,30,Medinaceli,8.0,8.0,4.0
+MZB,30,Medinaceli,9.0,9.0,4.5
+MZB,30,Medinaceli,10.0,10.0,5.0
+MZB,30,Medinaceli,11.0,11.0,5.5
+MZB,30,Medinaceli,12.0,12.0,6.0
+MZB,30,Medinaceli,13.0,13.0,6.5
+MZB,30,Medinaceli,14.0,14.0,7.0
+MZB,30,Medinaceli,15.0,15.0,7.5
+MZB,30,Medinaceli,16.0,16.0,8.0
+MZB,30,Medinaceli,17.0,17.0,8.5
+MZB,30,Medinaceli,18.0,18.0,9.0
+MZB,30,Medinaceli,19.0,19.0,9.5
 MZB,30,Medinaceli,20.0,20.0,13.11
 MZB,30,Medinaceli,21.0,21.0,26.05
 MZB,30,Medinaceli,22.0,22.0,39.57
 MZB,30,Terrer,0.0,0.0,0.0
-MZB,30,Terrer,1.0,1.0,0.18
-MZB,30,Terrer,2.0,2.0,0.37
-MZB,30,Terrer,3.0,3.0,0.55
-MZB,30,Terrer,4.0,4.0,0.73
-MZB,30,Terrer,5.0,5.0,0.92
-MZB,30,Terrer,6.0,6.0,1.1
-MZB,30,Terrer,7.0,7.0,1.28
-MZB,30,Terrer,8.0,8.0,1.47
-MZB,30,Terrer,9.0,9.0,1.65
-MZB,30,Terrer,10.0,10.0,1.83
-MZB,30,Terrer,11.0,11.0,2.02
-MZB,30,Terrer,12.0,12.0,2.2
-MZB,30,Terrer,13.0,13.0,2.39
-MZB,30,Terrer,14.0,14.0,2.59
-MZB,30,Terrer,15.0,15.0,2.79
-MZB,30,Terrer,16.0,16.0,2.99
-MZB,30,Terrer,17.0,17.0,3.59
-MZB,30,Terrer,18.0,18.0,5.08
-MZB,30,Terrer,19.0,19.0,7.37
+MZB,30,Terrer,1.0,1.0,0.5
+MZB,30,Terrer,2.0,2.0,1.0
+MZB,30,Terrer,3.0,3.0,1.5
+MZB,30,Terrer,4.0,4.0,2.0
+MZB,30,Terrer,5.0,5.0,2.5
+MZB,30,Terrer,6.0,6.0,3.0
+MZB,30,Terrer,7.0,7.0,3.5
+MZB,30,Terrer,8.0,8.0,4.0
+MZB,30,Terrer,9.0,9.0,4.5
+MZB,30,Terrer,10.0,10.0,5.0
+MZB,30,Terrer,11.0,11.0,5.5
+MZB,30,Terrer,12.0,12.0,6.0
+MZB,30,Terrer,13.0,13.0,6.5
+MZB,30,Terrer,14.0,14.0,7.0
+MZB,30,Terrer,15.0,15.0,7.5
+MZB,30,Terrer,16.0,16.0,8.0
+MZB,30,Terrer,17.0,17.0,8.5
+MZB,30,Terrer,18.0,18.0,9.0
+MZB,30,Terrer,19.0,19.0,9.5
 MZB,30,Terrer,20.0,20.0,10.61
 MZB,30,Terrer,21.0,21.0,18.5
 MZB,30,Terrer,22.0,22.0,32.82
 MZB,30,Rueda de Jalón,0.0,0.0,0.0
-MZB,30,Rueda de Jalón,1.0,1.0,0.05
-MZB,30,Rueda de Jalón,2.0,2.0,0.1
-MZB,30,Rueda de Jalón,3.0,3.0,0.15
-MZB,30,Rueda de Jalón,4.0,4.0,0.22
-MZB,30,Rueda de Jalón,5.0,5.0,0.29
-MZB,30,Rueda de Jalón,6.0,6.0,0.35
-MZB,30,Rueda de Jalón,7.0,7.0,0.42
-MZB,30,Rueda de Jalón,8.0,8.0,0.49
-MZB,30,Rueda de Jalón,9.0,9.0,0.55
-MZB,30,Rueda de Jalón,10.0,10.0,0.62
-MZB,30,Rueda de Jalón,11.0,11.0,0.69
-MZB,30,Rueda de Jalón,12.0,12.0,0.75
-MZB,30,Rueda de Jalón,13.0,13.0,0.86
-MZB,30,Rueda de Jalón,14.0,14.0,0.98
-MZB,30,Rueda de Jalón,15.0,15.0,1.1
-MZB,30,Rueda de Jalón,16.0,16.0,1.23
-MZB,30,Rueda de Jalón,17.0,17.0,1.38
-MZB,30,Rueda de Jalón,18.0,18.0,1.56
-MZB,30,Rueda de Jalón,19.0,19.0,1.83
-MZB,30,Rueda de Jalón,20.0,20.0,2.16
-MZB,30,Rueda de Jalón,21.0,21.0,3.78
-MZB,30,Rueda de Jalón,22.0,22.0,7.48
+MZB,30,Rueda de Jalón,1.0,1.0,0.5
+MZB,30,Rueda de Jalón,2.0,2.0,1.0
+MZB,30,Rueda de Jalón,3.0,3.0,1.5
+MZB,30,Rueda de Jalón,4.0,4.0,2.0
+MZB,30,Rueda de Jalón,5.0,5.0,2.5
+MZB,30,Rueda de Jalón,6.0,6.0,3.0
+MZB,30,Rueda de Jalón,7.0,7.0,3.5
+MZB,30,Rueda de Jalón,8.0,8.0,4.0
+MZB,30,Rueda de Jalón,9.0,9.0,4.5
+MZB,30,Rueda de Jalón,10.0,10.0,5.0
+MZB,30,Rueda de Jalón,11.0,11.0,5.5
+MZB,30,Rueda de Jalón,12.0,12.0,6.0
+MZB,30,Rueda de Jalón,13.0,13.0,6.5
+MZB,30,Rueda de Jalón,14.0,14.0,7.0
+MZB,30,Rueda de Jalón,15.0,15.0,7.5
+MZB,30,Rueda de Jalón,16.0,16.0,8.0
+MZB,30,Rueda de Jalón,17.0,17.0,8.5
+MZB,30,Rueda de Jalón,18.0,18.0,9.0
+MZB,30,Rueda de Jalón,19.0,19.0,9.5
+MZB,30,Rueda de Jalón,20.0,20.0,10.0
+MZB,30,Rueda de Jalón,21.0,21.0,10.5
+MZB,30,Rueda de Jalón,22.0,22.0,11.0
 MZB,30,Rueda de Jalón,23.0,23.0,20.82
 MZB,30,Feria de Muestras,0.0,0.0,0.0
-MZB,30,Feria de Muestras,1.0,1.0,0.05
-MZB,30,Feria de Muestras,2.0,2.0,0.1
-MZB,30,Feria de Muestras,3.0,3.0,0.15
-MZB,30,Feria de Muestras,4.0,4.0,0.2
-MZB,30,Feria de Muestras,5.0,5.0,0.25
-MZB,30,Feria de Muestras,6.0,6.0,0.3
-MZB,30,Feria de Muestras,7.0,7.0,0.35
-MZB,30,Feria de Muestras,8.0,8.0,0.42
-MZB,30,Feria de Muestras,9.0,9.0,0.49
-MZB,30,Feria de Muestras,10.0,10.0,0.55
-MZB,30,Feria de Muestras,11.0,11.0,0.62
-MZB,30,Feria de Muestras,12.0,12.0,0.69
-MZB,30,Feria de Muestras,13.0,13.0,0.79
-MZB,30,Feria de Muestras,14.0,14.0,0.91
-MZB,30,Feria de Muestras,15.0,15.0,1.03
-MZB,30,Feria de Muestras,16.0,16.0,1.17
-MZB,30,Feria de Muestras,17.0,17.0,1.32
-MZB,30,Feria de Muestras,18.0,18.0,1.47
-MZB,30,Feria de Muestras,19.0,19.0,1.65
-MZB,30,Feria de Muestras,20.0,20.0,1.9
-MZB,30,Feria de Muestras,21.0,21.0,2.25
-MZB,30,Feria de Muestras,22.0,22.0,2.6
-MZB,30,Feria de Muestras,23.0,23.0,4.64
-MZB,30,Feria de Muestras,24.0,24.0,8.36
+MZB,30,Feria de Muestras,1.0,1.0,0.5
+MZB,30,Feria de Muestras,2.0,2.0,1.0
+MZB,30,Feria de Muestras,3.0,3.0,1.5
+MZB,30,Feria de Muestras,4.0,4.0,2.0
+MZB,30,Feria de Muestras,5.0,5.0,2.5
+MZB,30,Feria de Muestras,6.0,6.0,3.0
+MZB,30,Feria de Muestras,7.0,7.0,3.5
+MZB,30,Feria de Muestras,8.0,8.0,4.0
+MZB,30,Feria de Muestras,9.0,9.0,4.5
+MZB,30,Feria de Muestras,10.0,10.0,5.0
+MZB,30,Feria de Muestras,11.0,11.0,5.5
+MZB,30,Feria de Muestras,12.0,12.0,6.0
+MZB,30,Feria de Muestras,13.0,13.0,6.5
+MZB,30,Feria de Muestras,14.0,14.0,7.0
+MZB,30,Feria de Muestras,15.0,15.0,7.5
+MZB,30,Feria de Muestras,16.0,16.0,8.0
+MZB,30,Feria de Muestras,17.0,17.0,8.5
+MZB,30,Feria de Muestras,18.0,18.0,9.0
+MZB,30,Feria de Muestras,19.0,19.0,9.5
+MZB,30,Feria de Muestras,20.0,20.0,10.0
+MZB,30,Feria de Muestras,21.0,21.0,10.5
+MZB,30,Feria de Muestras,22.0,22.0,11.0
+MZB,30,Feria de Muestras,23.0,23.0,11.5
+MZB,30,Feria de Muestras,24.0,24.0,12.0
 MZB,30,Zaragoza,0.0,0.0,0.0
-MZB,30,Zaragoza,1.0,1.0,0.03
-MZB,30,Zaragoza,2.0,2.0,0.07
-MZB,30,Zaragoza,3.0,3.0,0.12
-MZB,30,Zaragoza,4.0,4.0,0.18
-MZB,30,Zaragoza,5.0,5.0,0.26
-MZB,30,Zaragoza,6.0,6.0,0.34
-MZB,30,Zaragoza,7.0,7.0,0.42
-MZB,30,Zaragoza,8.0,8.0,0.58
-MZB,30,Zaragoza,9.0,9.0,0.77
-MZB,30,Zaragoza,10.0,10.0,0.97
-MZB,30,Zaragoza,11.0,11.0,1.17
-MZB,30,Zaragoza,12.0,12.0,1.37
-MZB,30,Zaragoza,13.0,13.0,1.57
-MZB,30,Zaragoza,14.0,14.0,1.77
-MZB,30,Zaragoza,15.0,15.0,1.97
-MZB,30,Zaragoza,16.0,16.0,2.17
-MZB,30,Zaragoza,17.0,17.0,2.37
-MZB,30,Zaragoza,18.0,18.0,2.7
-MZB,30,Zaragoza,19.0,19.0,3.58
-MZB,30,Zaragoza,20.0,20.0,5.03
+MZB,30,Zaragoza,1.0,1.0,0.5
+MZB,30,Zaragoza,2.0,2.0,1.0
+MZB,30,Zaragoza,3.0,3.0,1.5
+MZB,30,Zaragoza,4.0,4.0,2.0
+MZB,30,Zaragoza,5.0,5.0,2.5
+MZB,30,Zaragoza,6.0,6.0,3.0
+MZB,30,Zaragoza,7.0,7.0,3.5
+MZB,30,Zaragoza,8.0,8.0,4.0
+MZB,30,Zaragoza,9.0,9.0,4.5
+MZB,30,Zaragoza,10.0,10.0,5.0
+MZB,30,Zaragoza,11.0,11.0,5.5
+MZB,30,Zaragoza,12.0,12.0,6.0
+MZB,30,Zaragoza,13.0,13.0,6.5
+MZB,30,Zaragoza,14.0,14.0,7.0
+MZB,30,Zaragoza,15.0,15.0,7.5
+MZB,30,Zaragoza,16.0,16.0,8.0
+MZB,30,Zaragoza,17.0,17.0,8.5
+MZB,30,Zaragoza,18.0,18.0,9.0
+MZB,30,Zaragoza,19.0,19.0,9.5
+MZB,30,Zaragoza,20.0,20.0,10.0
 MZB,30,Zaragoza,21.0,21.0,10.61
 MZB,30,Zaragoza,22.0,22.0,24.61
 MZB,30,Peñalba,0.0,0.0,0.0
-MZB,30,Peñalba,1.0,1.0,0.04
-MZB,30,Peñalba,2.0,2.0,0.11
-MZB,30,Peñalba,3.0,3.0,0.19
-MZB,30,Peñalba,4.0,4.0,0.27
-MZB,30,Peñalba,5.0,5.0,0.36
-MZB,30,Peñalba,6.0,6.0,0.44
-MZB,30,Peñalba,7.0,7.0,0.58
-MZB,30,Peñalba,8.0,8.0,0.75
-MZB,30,Peñalba,9.0,9.0,0.92
-MZB,30,Peñalba,10.0,10.0,1.08
-MZB,30,Peñalba,11.0,11.0,1.59
-MZB,30,Peñalba,12.0,12.0,2.21
-MZB,30,Peñalba,13.0,13.0,2.86
-MZB,30,Peñalba,14.0,14.0,3.54
-MZB,30,Peñalba,15.0,15.0,4.24
-MZB,30,Peñalba,16.0,16.0,4.98
-MZB,30,Peñalba,17.0,17.0,5.78
-MZB,30,Peñalba,18.0,18.0,6.63
+MZB,30,Peñalba,1.0,1.0,0.5
+MZB,30,Peñalba,2.0,2.0,1.0
+MZB,30,Peñalba,3.0,3.0,1.5
+MZB,30,Peñalba,4.0,4.0,2.0
+MZB,30,Peñalba,5.0,5.0,2.5
+MZB,30,Peñalba,6.0,6.0,3.0
+MZB,30,Peñalba,7.0,7.0,3.5
+MZB,30,Peñalba,8.0,8.0,4.0
+MZB,30,Peñalba,9.0,9.0,4.5
+MZB,30,Peñalba,10.0,10.0,5.0
+MZB,30,Peñalba,11.0,11.0,5.5
+MZB,30,Peñalba,12.0,12.0,6.0
+MZB,30,Peñalba,13.0,13.0,6.5
+MZB,30,Peñalba,14.0,14.0,7.0
+MZB,30,Peñalba,15.0,15.0,7.5
+MZB,30,Peñalba,16.0,16.0,8.0
+MZB,30,Peñalba,17.0,17.0,8.5
+MZB,30,Peñalba,18.0,18.0,9.0
 MZB,30,Peñalba,19.0,19.0,9.66
 MZB,30,Peñalba,20.0,20.0,20.46
 MZB,30,Peñalba,21.0,21.0,34.45
 MZB,30,Lleida,0.0,0.0,0.0
-MZB,30,Lleida,1.0,1.0,0.06
-MZB,30,Lleida,2.0,2.0,0.13
-MZB,30,Lleida,3.0,3.0,0.19
-MZB,30,Lleida,4.0,4.0,0.27
-MZB,30,Lleida,5.0,5.0,0.38
-MZB,30,Lleida,6.0,6.0,0.5
-MZB,30,Lleida,7.0,7.0,0.62
-MZB,30,Lleida,8.0,8.0,0.73
-MZB,30,Lleida,9.0,9.0,0.88
-MZB,30,Lleida,10.0,10.0,1.19
-MZB,30,Lleida,11.0,11.0,1.51
-MZB,30,Lleida,12.0,12.0,1.82
-MZB,30,Lleida,13.0,13.0,2.37
-MZB,30,Lleida,14.0,14.0,2.97
-MZB,30,Lleida,15.0,15.0,3.58
-MZB,30,Lleida,16.0,16.0,4.21
-MZB,30,Lleida,17.0,17.0,4.84
-MZB,30,Lleida,18.0,18.0,5.48
-MZB,30,Lleida,19.0,19.0,6.11
-MZB,30,Lleida,20.0,20.0,9.34
+MZB,30,Lleida,1.0,1.0,0.5
+MZB,30,Lleida,2.0,2.0,1.0
+MZB,30,Lleida,3.0,3.0,1.5
+MZB,30,Lleida,4.0,4.0,2.0
+MZB,30,Lleida,5.0,5.0,2.5
+MZB,30,Lleida,6.0,6.0,3.0
+MZB,30,Lleida,7.0,7.0,3.5
+MZB,30,Lleida,8.0,8.0,4.0
+MZB,30,Lleida,9.0,9.0,4.5
+MZB,30,Lleida,10.0,10.0,5.0
+MZB,30,Lleida,11.0,11.0,5.5
+MZB,30,Lleida,12.0,12.0,6.0
+MZB,30,Lleida,13.0,13.0,6.5
+MZB,30,Lleida,14.0,14.0,7.0
+MZB,30,Lleida,15.0,15.0,7.5
+MZB,30,Lleida,16.0,16.0,8.0
+MZB,30,Lleida,17.0,17.0,8.5
+MZB,30,Lleida,18.0,18.0,9.0
+MZB,30,Lleida,19.0,19.0,9.5
+MZB,30,Lleida,20.0,20.0,10.0
 MZB,30,Lleida,21.0,21.0,22.46
 MZB,30,Lleida,22.0,22.0,35.91
 MZB,30,L'Espluga,0.0,0.0,0.0
-MZB,30,L'Espluga,1.0,1.0,0.12
-MZB,30,L'Espluga,2.0,2.0,0.23
-MZB,30,L'Espluga,3.0,3.0,0.38
-MZB,30,L'Espluga,4.0,4.0,0.53
-MZB,30,L'Espluga,5.0,5.0,0.68
-MZB,30,L'Espluga,6.0,6.0,0.83
-MZB,30,L'Espluga,7.0,7.0,0.98
-MZB,30,L'Espluga,8.0,8.0,1.13
-MZB,30,L'Espluga,9.0,9.0,1.28
-MZB,30,L'Espluga,10.0,10.0,1.43
-MZB,30,L'Espluga,11.0,11.0,1.58
-MZB,30,L'Espluga,12.0,12.0,1.73
-MZB,30,L'Espluga,13.0,13.0,1.88
-MZB,30,L'Espluga,14.0,14.0,2.03
-MZB,30,L'Espluga,15.0,15.0,2.18
-MZB,30,L'Espluga,16.0,16.0,2.96
-MZB,30,L'Espluga,17.0,17.0,4.03
-MZB,30,L'Espluga,18.0,18.0,5.1
-MZB,30,L'Espluga,19.0,19.0,6.16
+MZB,30,L'Espluga,1.0,1.0,0.5
+MZB,30,L'Espluga,2.0,2.0,1.0
+MZB,30,L'Espluga,3.0,3.0,1.5
+MZB,30,L'Espluga,4.0,4.0,2.0
+MZB,30,L'Espluga,5.0,5.0,2.5
+MZB,30,L'Espluga,6.0,6.0,3.0
+MZB,30,L'Espluga,7.0,7.0,3.5
+MZB,30,L'Espluga,8.0,8.0,4.0
+MZB,30,L'Espluga,9.0,9.0,4.5
+MZB,30,L'Espluga,10.0,10.0,5.0
+MZB,30,L'Espluga,11.0,11.0,5.5
+MZB,30,L'Espluga,12.0,12.0,6.0
+MZB,30,L'Espluga,13.0,13.0,6.5
+MZB,30,L'Espluga,14.0,14.0,7.0
+MZB,30,L'Espluga,15.0,15.0,7.5
+MZB,30,L'Espluga,16.0,16.0,8.0
+MZB,30,L'Espluga,17.0,17.0,8.5
+MZB,30,L'Espluga,18.0,18.0,9.0
+MZB,30,L'Espluga,19.0,19.0,9.5
 MZB,30,L'Espluga,20.0,20.0,13.07
 MZB,30,L'Espluga,21.0,21.0,26.72
 MZB,30,La Gornal,0.0,0.0,0.0
-MZB,30,La Gornal,1.0,1.0,0.03
-MZB,30,La Gornal,2.0,2.0,0.07
-MZB,30,La Gornal,3.0,3.0,0.11
-MZB,30,La Gornal,4.0,4.0,0.19
-MZB,30,La Gornal,5.0,5.0,0.3
-MZB,30,La Gornal,6.0,6.0,0.46
-MZB,30,La Gornal,7.0,7.0,0.65
-MZB,30,La Gornal,8.0,8.0,0.83
-MZB,30,La Gornal,9.0,9.0,1.02
-MZB,30,La Gornal,10.0,10.0,1.25
-MZB,30,La Gornal,11.0,11.0,1.52
-MZB,30,La Gornal,12.0,12.0,1.8
-MZB,30,La Gornal,13.0,13.0,2.08
-MZB,30,La Gornal,14.0,14.0,2.42
-MZB,30,La Gornal,15.0,15.0,2.82
-MZB,30,La Gornal,16.0,16.0,3.22
-MZB,30,La Gornal,17.0,17.0,3.81
-MZB,30,La Gornal,18.0,18.0,4.59
-MZB,30,La Gornal,19.0,19.0,5.38
-MZB,30,La Gornal,20.0,20.0,7.13
+MZB,30,La Gornal,1.0,1.0,0.5
+MZB,30,La Gornal,2.0,2.0,1.0
+MZB,30,La Gornal,3.0,3.0,1.5
+MZB,30,La Gornal,4.0,4.0,2.0
+MZB,30,La Gornal,5.0,5.0,2.5
+MZB,30,La Gornal,6.0,6.0,3.0
+MZB,30,La Gornal,7.0,7.0,3.5
+MZB,30,La Gornal,8.0,8.0,4.0
+MZB,30,La Gornal,9.0,9.0,4.5
+MZB,30,La Gornal,10.0,10.0,5.0
+MZB,30,La Gornal,11.0,11.0,5.5
+MZB,30,La Gornal,12.0,12.0,6.0
+MZB,30,La Gornal,13.0,13.0,6.5
+MZB,30,La Gornal,14.0,14.0,7.0
+MZB,30,La Gornal,15.0,15.0,7.5
+MZB,30,La Gornal,16.0,16.0,8.0
+MZB,30,La Gornal,17.0,17.0,8.5
+MZB,30,La Gornal,18.0,18.0,9.0
+MZB,30,La Gornal,19.0,19.0,9.5
+MZB,30,La Gornal,20.0,20.0,10.0
 MZB,30,La Gornal,21.0,21.0,19.43
 MZB,30,La Gornal,22.0,22.0,33.67
 MZB,30,Sant Boi,0.0,0.0,0.0
-MZB,30,Sant Boi,1.0,1.0,0.05
-MZB,30,Sant Boi,2.0,2.0,0.1
-MZB,30,Sant Boi,3.0,3.0,0.15
-MZB,30,Sant Boi,4.0,4.0,0.2
-MZB,30,Sant Boi,5.0,5.0,0.28
-MZB,30,Sant Boi,6.0,6.0,0.37
-MZB,30,Sant Boi,7.0,7.0,0.47
-MZB,30,Sant Boi,8.0,8.0,0.57
-MZB,30,Sant Boi,9.0,9.0,0.81
-MZB,30,Sant Boi,10.0,10.0,1.11
-MZB,30,Sant Boi,11.0,11.0,1.41
-MZB,30,Sant Boi,12.0,12.0,1.71
-MZB,30,Sant Boi,13.0,13.0,2.01
-MZB,30,Sant Boi,14.0,14.0,2.31
-MZB,30,Sant Boi,15.0,15.0,2.61
-MZB,30,Sant Boi,16.0,16.0,2.91
-MZB,30,Sant Boi,17.0,17.0,3.22
-MZB,30,Sant Boi,18.0,18.0,3.53
-MZB,30,Sant Boi,19.0,19.0,3.85
-MZB,30,Sant Boi,20.0,20.0,4.69
-MZB,30,Sant Boi,21.0,21.0,6.93
+MZB,30,Sant Boi,1.0,1.0,0.5
+MZB,30,Sant Boi,2.0,2.0,1.0
+MZB,30,Sant Boi,3.0,3.0,1.5
+MZB,30,Sant Boi,4.0,4.0,2.0
+MZB,30,Sant Boi,5.0,5.0,2.5
+MZB,30,Sant Boi,6.0,6.0,3.0
+MZB,30,Sant Boi,7.0,7.0,3.5
+MZB,30,Sant Boi,8.0,8.0,4.0
+MZB,30,Sant Boi,9.0,9.0,4.5
+MZB,30,Sant Boi,10.0,10.0,5.0
+MZB,30,Sant Boi,11.0,11.0,5.5
+MZB,30,Sant Boi,12.0,12.0,6.0
+MZB,30,Sant Boi,13.0,13.0,6.5
+MZB,30,Sant Boi,14.0,14.0,7.0
+MZB,30,Sant Boi,15.0,15.0,7.5
+MZB,30,Sant Boi,16.0,16.0,8.0
+MZB,30,Sant Boi,17.0,17.0,8.5
+MZB,30,Sant Boi,18.0,18.0,9.0
+MZB,30,Sant Boi,19.0,19.0,9.5
+MZB,30,Sant Boi,20.0,20.0,10.0
+MZB,30,Sant Boi,21.0,21.0,10.5
 MZB,30,Sant Boi,22.0,22.0,13.49
 MZB,30,Sant Boi,23.0,23.0,28.2
 MZB,60,Villaverde Bajo,21.8,0.0,0.0
-MZB,60,Villaverde Bajo,22.0,0.2,0.0
-MZB,60,Villaverde Bajo,23.0,1.2,0.02
-MZB,60,Villaverde Bajo,24.0,2.2,0.04
-MZB,60,Villaverde Bajo,25.0,3.2,0.05
-MZB,60,Villaverde Bajo,26.0,4.2,0.07
-MZB,60,Villaverde Bajo,27.0,5.2,0.09
-MZB,60,Villaverde Bajo,28.0,6.2,0.1
-MZB,60,Villaverde Bajo,29.0,7.2,0.12
-MZB,60,Villaverde Bajo,30.0,8.2,0.14
-MZB,60,Villaverde Bajo,31.0,9.2,0.15
-MZB,60,Villaverde Bajo,32.0,10.2,0.17
-MZB,60,Villaverde Bajo,33.0,11.2,0.19
-MZB,60,Villaverde Bajo,34.0,12.2,0.2
-MZB,60,Villaverde Bajo,35.0,13.2,0.23
-MZB,60,Villaverde Bajo,36.0,14.2,0.26
-MZB,60,Villaverde Bajo,37.0,15.2,0.3
-MZB,60,Villaverde Bajo,38.0,16.2,0.33
-MZB,60,Villaverde Bajo,39.0,17.2,0.36
-MZB,60,Villaverde Bajo,40.0,18.2,0.4
-MZB,60,Villaverde Bajo,41.0,19.2,0.44
-MZB,60,Villaverde Bajo,42.0,20.2,0.58
-MZB,60,Villaverde Bajo,43.0,21.2,0.73
-MZB,60,Villaverde Bajo,44.0,22.2,0.88
-MZB,60,Villaverde Bajo,45.0,23.2,1.03
-MZB,60,Villaverde Bajo,46.0,24.2,1.19
-MZB,60,Villaverde Bajo,47.0,25.2,1.36
-MZB,60,Villaverde Bajo,48.0,26.2,1.53
-MZB,60,Villaverde Bajo,49.0,27.2,1.69
-MZB,60,Villaverde Bajo,50.0,28.2,2.17
-MZB,60,Villaverde Bajo,51.0,29.2,6.77
+MZB,60,Villaverde Bajo,22.0,0.2,0.1
+MZB,60,Villaverde Bajo,23.0,1.2,0.6
+MZB,60,Villaverde Bajo,24.0,2.2,1.1
+MZB,60,Villaverde Bajo,25.0,3.2,1.6
+MZB,60,Villaverde Bajo,26.0,4.2,2.1
+MZB,60,Villaverde Bajo,27.0,5.2,2.6
+MZB,60,Villaverde Bajo,28.0,6.2,3.1
+MZB,60,Villaverde Bajo,29.0,7.2,3.6
+MZB,60,Villaverde Bajo,30.0,8.2,4.1
+MZB,60,Villaverde Bajo,31.0,9.2,4.6
+MZB,60,Villaverde Bajo,32.0,10.2,5.1
+MZB,60,Villaverde Bajo,33.0,11.2,5.6
+MZB,60,Villaverde Bajo,34.0,12.2,6.1
+MZB,60,Villaverde Bajo,35.0,13.2,6.6
+MZB,60,Villaverde Bajo,36.0,14.2,7.1
+MZB,60,Villaverde Bajo,37.0,15.2,7.6
+MZB,60,Villaverde Bajo,38.0,16.2,8.1
+MZB,60,Villaverde Bajo,39.0,17.2,8.6
+MZB,60,Villaverde Bajo,40.0,18.2,9.1
+MZB,60,Villaverde Bajo,41.0,19.2,9.6
+MZB,60,Villaverde Bajo,42.0,20.2,10.1
+MZB,60,Villaverde Bajo,43.0,21.2,10.6
+MZB,60,Villaverde Bajo,44.0,22.2,11.1
+MZB,60,Villaverde Bajo,45.0,23.2,11.6
+MZB,60,Villaverde Bajo,46.0,24.2,12.1
+MZB,60,Villaverde Bajo,47.0,25.2,12.6
+MZB,60,Villaverde Bajo,48.0,26.2,13.1
+MZB,60,Villaverde Bajo,49.0,27.2,13.6
+MZB,60,Villaverde Bajo,50.0,28.2,14.1
+MZB,60,Villaverde Bajo,51.0,29.2,14.6
 MZB,60,Anchuelo,19.3,0.0,0.0
-MZB,60,Anchuelo,20.0,0.7,0.01
-MZB,60,Anchuelo,21.0,1.7,0.03
-MZB,60,Anchuelo,22.0,2.7,0.05
-MZB,60,Anchuelo,23.0,3.7,0.06
-MZB,60,Anchuelo,24.0,4.7,0.08
-MZB,60,Anchuelo,25.0,5.7,0.1
-MZB,60,Anchuelo,26.0,6.7,0.11
-MZB,60,Anchuelo,27.0,7.7,0.13
-MZB,60,Anchuelo,28.0,8.7,0.15
-MZB,60,Anchuelo,29.0,9.7,0.16
-MZB,60,Anchuelo,30.0,10.7,0.18
-MZB,60,Anchuelo,31.0,11.7,0.22
-MZB,60,Anchuelo,32.0,12.7,0.29
-MZB,60,Anchuelo,33.0,13.7,0.39
-MZB,60,Anchuelo,34.0,14.7,0.49
-MZB,60,Anchuelo,35.0,15.7,0.59
-MZB,60,Anchuelo,36.0,16.7,0.69
-MZB,60,Anchuelo,37.0,17.7,0.79
-MZB,60,Anchuelo,38.0,18.7,0.9
-MZB,60,Anchuelo,39.0,19.7,1.05
-MZB,60,Anchuelo,40.0,20.7,1.3
-MZB,60,Anchuelo,41.0,21.7,1.55
-MZB,60,Anchuelo,42.0,22.7,1.8
-MZB,60,Anchuelo,43.0,23.7,2.4
-MZB,60,Anchuelo,44.0,24.7,3.06
-MZB,60,Anchuelo,45.0,25.7,3.79
-MZB,60,Anchuelo,46.0,26.7,4.55
-MZB,60,Anchuelo,47.0,27.7,5.32
-MZB,60,Anchuelo,48.0,28.7,8.45
+MZB,60,Anchuelo,20.0,0.7,0.36
+MZB,60,Anchuelo,21.0,1.7,0.86
+MZB,60,Anchuelo,22.0,2.7,1.36
+MZB,60,Anchuelo,23.0,3.7,1.86
+MZB,60,Anchuelo,24.0,4.7,2.36
+MZB,60,Anchuelo,25.0,5.7,2.86
+MZB,60,Anchuelo,26.0,6.7,3.36
+MZB,60,Anchuelo,27.0,7.7,3.86
+MZB,60,Anchuelo,28.0,8.7,4.36
+MZB,60,Anchuelo,29.0,9.7,4.86
+MZB,60,Anchuelo,30.0,10.7,5.36
+MZB,60,Anchuelo,31.0,11.7,5.86
+MZB,60,Anchuelo,32.0,12.7,6.36
+MZB,60,Anchuelo,33.0,13.7,6.86
+MZB,60,Anchuelo,34.0,14.7,7.36
+MZB,60,Anchuelo,35.0,15.7,7.86
+MZB,60,Anchuelo,36.0,16.7,8.36
+MZB,60,Anchuelo,37.0,17.7,8.86
+MZB,60,Anchuelo,38.0,18.7,9.36
+MZB,60,Anchuelo,39.0,19.7,9.86
+MZB,60,Anchuelo,40.0,20.7,10.36
+MZB,60,Anchuelo,41.0,21.7,10.86
+MZB,60,Anchuelo,42.0,22.7,11.36
+MZB,60,Anchuelo,43.0,23.7,11.86
+MZB,60,Anchuelo,44.0,24.7,12.36
+MZB,60,Anchuelo,45.0,25.7,12.86
+MZB,60,Anchuelo,46.0,26.7,13.36
+MZB,60,Anchuelo,47.0,27.7,13.86
+MZB,60,Anchuelo,48.0,28.7,14.36
 MZB,60,Anchuelo,49.0,29.7,19.87
 MZB,60,Anchuelo,50.0,30.7,32.74
 MZB,60,Brihuega,21.8,0.0,0.0
-MZB,60,Brihuega,22.0,0.2,0.01
-MZB,60,Brihuega,23.0,1.2,0.08
-MZB,60,Brihuega,24.0,2.2,0.16
-MZB,60,Brihuega,25.0,3.2,0.24
-MZB,60,Brihuega,26.0,4.2,0.34
-MZB,60,Brihuega,27.0,5.2,0.44
-MZB,60,Brihuega,28.0,6.2,0.56
-MZB,60,Brihuega,29.0,7.2,0.67
-MZB,60,Brihuega,30.0,8.2,0.79
-MZB,60,Brihuega,31.0,9.2,0.94
-MZB,60,Brihuega,32.0,10.2,1.09
-MZB,60,Brihuega,33.0,11.2,1.24
-MZB,60,Brihuega,34.0,12.2,1.4
-MZB,60,Brihuega,35.0,13.2,1.63
-MZB,60,Brihuega,36.0,14.2,1.87
-MZB,60,Brihuega,37.0,15.2,2.12
-MZB,60,Brihuega,38.0,16.2,2.37
-MZB,60,Brihuega,39.0,17.2,2.62
-MZB,60,Brihuega,40.0,18.2,2.89
-MZB,60,Brihuega,41.0,19.2,3.16
-MZB,60,Brihuega,42.0,20.2,3.44
-MZB,60,Brihuega,43.0,21.2,3.72
-MZB,60,Brihuega,44.0,22.2,4.08
-MZB,60,Brihuega,45.0,23.2,4.5
-MZB,60,Brihuega,46.0,24.2,5.21
-MZB,60,Brihuega,47.0,25.2,11.29
+MZB,60,Brihuega,22.0,0.2,0.12
+MZB,60,Brihuega,23.0,1.2,0.62
+MZB,60,Brihuega,24.0,2.2,1.12
+MZB,60,Brihuega,25.0,3.2,1.62
+MZB,60,Brihuega,26.0,4.2,2.12
+MZB,60,Brihuega,27.0,5.2,2.62
+MZB,60,Brihuega,28.0,6.2,3.12
+MZB,60,Brihuega,29.0,7.2,3.62
+MZB,60,Brihuega,30.0,8.2,4.12
+MZB,60,Brihuega,31.0,9.2,4.62
+MZB,60,Brihuega,32.0,10.2,5.12
+MZB,60,Brihuega,33.0,11.2,5.62
+MZB,60,Brihuega,34.0,12.2,6.12
+MZB,60,Brihuega,35.0,13.2,6.62
+MZB,60,Brihuega,36.0,14.2,7.12
+MZB,60,Brihuega,37.0,15.2,7.62
+MZB,60,Brihuega,38.0,16.2,8.12
+MZB,60,Brihuega,39.0,17.2,8.62
+MZB,60,Brihuega,40.0,18.2,9.12
+MZB,60,Brihuega,41.0,19.2,9.62
+MZB,60,Brihuega,42.0,20.2,10.12
+MZB,60,Brihuega,43.0,21.2,10.62
+MZB,60,Brihuega,44.0,22.2,11.12
+MZB,60,Brihuega,45.0,23.2,11.62
+MZB,60,Brihuega,46.0,24.2,12.12
+MZB,60,Brihuega,47.0,25.2,12.62
 MZB,60,Brihuega,48.0,26.2,23.86
 MZB,60,Brihuega,49.0,27.2,36.68
 MZB,60,Medinaceli,15.5,0.0,0.0
-MZB,60,Medinaceli,16.0,0.5,0.01
-MZB,60,Medinaceli,17.0,1.5,0.03
-MZB,60,Medinaceli,18.0,2.5,0.05
-MZB,60,Medinaceli,19.0,3.5,0.08
-MZB,60,Medinaceli,20.0,4.5,0.12
-MZB,60,Medinaceli,21.0,5.5,0.15
-MZB,60,Medinaceli,22.0,6.5,0.19
-MZB,60,Medinaceli,23.0,7.5,0.27
-MZB,60,Medinaceli,24.0,8.5,0.36
-MZB,60,Medinaceli,25.0,9.5,0.46
-MZB,60,Medinaceli,26.0,10.5,0.58
-MZB,60,Medinaceli,27.0,11.5,0.69
-MZB,60,Medinaceli,28.0,12.5,0.81
-MZB,60,Medinaceli,29.0,13.5,0.93
-MZB,60,Medinaceli,30.0,14.5,1.06
-MZB,60,Medinaceli,31.0,15.5,1.19
-MZB,60,Medinaceli,32.0,16.5,1.33
-MZB,60,Medinaceli,33.0,17.5,1.46
-MZB,60,Medinaceli,34.0,18.5,1.59
-MZB,60,Medinaceli,35.0,19.5,1.73
-MZB,60,Medinaceli,36.0,20.5,1.88
-MZB,60,Medinaceli,37.0,21.5,2.03
-MZB,60,Medinaceli,38.0,22.5,2.2
-MZB,60,Medinaceli,39.0,23.5,2.4
-MZB,60,Medinaceli,40.0,24.5,2.6
-MZB,60,Medinaceli,41.0,25.5,2.8
-MZB,60,Medinaceli,42.0,26.5,3.0
-MZB,60,Medinaceli,43.0,27.5,3.2
-MZB,60,Medinaceli,44.0,28.5,3.49
-MZB,60,Medinaceli,45.0,29.5,5.3
-MZB,60,Medinaceli,46.0,30.5,8.19
-MZB,60,Medinaceli,47.0,31.5,13.9
+MZB,60,Medinaceli,16.0,0.5,0.27
+MZB,60,Medinaceli,17.0,1.5,0.77
+MZB,60,Medinaceli,18.0,2.5,1.27
+MZB,60,Medinaceli,19.0,3.5,1.77
+MZB,60,Medinaceli,20.0,4.5,2.27
+MZB,60,Medinaceli,21.0,5.5,2.77
+MZB,60,Medinaceli,22.0,6.5,3.27
+MZB,60,Medinaceli,23.0,7.5,3.77
+MZB,60,Medinaceli,24.0,8.5,4.27
+MZB,60,Medinaceli,25.0,9.5,4.77
+MZB,60,Medinaceli,26.0,10.5,5.27
+MZB,60,Medinaceli,27.0,11.5,5.77
+MZB,60,Medinaceli,28.0,12.5,6.27
+MZB,60,Medinaceli,29.0,13.5,6.77
+MZB,60,Medinaceli,30.0,14.5,7.27
+MZB,60,Medinaceli,31.0,15.5,7.77
+MZB,60,Medinaceli,32.0,16.5,8.27
+MZB,60,Medinaceli,33.0,17.5,8.77
+MZB,60,Medinaceli,34.0,18.5,9.27
+MZB,60,Medinaceli,35.0,19.5,9.77
+MZB,60,Medinaceli,36.0,20.5,10.27
+MZB,60,Medinaceli,37.0,21.5,10.77
+MZB,60,Medinaceli,38.0,22.5,11.27
+MZB,60,Medinaceli,39.0,23.5,11.77
+MZB,60,Medinaceli,40.0,24.5,12.27
+MZB,60,Medinaceli,41.0,25.5,12.77
+MZB,60,Medinaceli,42.0,26.5,13.27
+MZB,60,Medinaceli,43.0,27.5,13.77
+MZB,60,Medinaceli,44.0,28.5,14.27
+MZB,60,Medinaceli,45.0,29.5,14.77
+MZB,60,Medinaceli,46.0,30.5,15.27
+MZB,60,Medinaceli,47.0,31.5,15.77
 MZB,60,Medinaceli,48.0,32.5,26.84
 MZB,60,Medinaceli,49.0,33.5,40.36
 MZB,60,Terrer,14.4,0.0,0.0
-MZB,60,Terrer,15.0,0.6,0.01
-MZB,60,Terrer,16.0,1.6,0.03
-MZB,60,Terrer,17.0,2.6,0.04
-MZB,60,Terrer,18.0,3.6,0.09
-MZB,60,Terrer,19.0,4.6,0.16
-MZB,60,Terrer,20.0,5.6,0.27
-MZB,60,Terrer,21.0,6.6,0.42
-MZB,60,Terrer,22.0,7.6,0.57
-MZB,60,Terrer,23.0,8.6,0.72
-MZB,60,Terrer,24.0,9.6,0.87
-MZB,60,Terrer,25.0,10.6,1.03
-MZB,60,Terrer,26.0,11.6,1.2
-MZB,60,Terrer,27.0,12.6,1.37
-MZB,60,Terrer,28.0,13.6,1.55
-MZB,60,Terrer,29.0,14.6,1.74
-MZB,60,Terrer,30.0,15.6,1.92
-MZB,60,Terrer,31.0,16.6,2.1
-MZB,60,Terrer,32.0,17.6,2.29
-MZB,60,Terrer,33.0,18.6,2.47
-MZB,60,Terrer,34.0,19.6,2.65
-MZB,60,Terrer,35.0,20.6,2.84
-MZB,60,Terrer,36.0,21.6,3.02
-MZB,60,Terrer,37.0,22.6,3.2
-MZB,60,Terrer,38.0,23.6,3.39
-MZB,60,Terrer,39.0,24.6,3.57
-MZB,60,Terrer,40.0,25.6,3.76
-MZB,60,Terrer,41.0,26.6,3.96
-MZB,60,Terrer,42.0,27.6,4.16
-MZB,60,Terrer,43.0,28.6,4.36
-MZB,60,Terrer,44.0,29.6,4.96
-MZB,60,Terrer,45.0,30.6,6.45
-MZB,60,Terrer,46.0,31.6,8.85
-MZB,60,Terrer,47.0,32.6,12.1
+MZB,60,Terrer,15.0,0.6,0.3
+MZB,60,Terrer,16.0,1.6,0.8
+MZB,60,Terrer,17.0,2.6,1.3
+MZB,60,Terrer,18.0,3.6,1.8
+MZB,60,Terrer,19.0,4.6,2.3
+MZB,60,Terrer,20.0,5.6,2.8
+MZB,60,Terrer,21.0,6.6,3.3
+MZB,60,Terrer,22.0,7.6,3.8
+MZB,60,Terrer,23.0,8.6,4.3
+MZB,60,Terrer,24.0,9.6,4.8
+MZB,60,Terrer,25.0,10.6,5.3
+MZB,60,Terrer,26.0,11.6,5.8
+MZB,60,Terrer,27.0,12.6,6.3
+MZB,60,Terrer,28.0,13.6,6.8
+MZB,60,Terrer,29.0,14.6,7.3
+MZB,60,Terrer,30.0,15.6,7.8
+MZB,60,Terrer,31.0,16.6,8.3
+MZB,60,Terrer,32.0,17.6,8.8
+MZB,60,Terrer,33.0,18.6,9.3
+MZB,60,Terrer,34.0,19.6,9.8
+MZB,60,Terrer,35.0,20.6,10.3
+MZB,60,Terrer,36.0,21.6,10.8
+MZB,60,Terrer,37.0,22.6,11.3
+MZB,60,Terrer,38.0,23.6,11.8
+MZB,60,Terrer,39.0,24.6,12.3
+MZB,60,Terrer,40.0,25.6,12.8
+MZB,60,Terrer,41.0,26.6,13.3
+MZB,60,Terrer,42.0,27.6,13.8
+MZB,60,Terrer,43.0,28.6,14.3
+MZB,60,Terrer,44.0,29.6,14.8
+MZB,60,Terrer,45.0,30.6,15.3
+MZB,60,Terrer,46.0,31.6,15.8
+MZB,60,Terrer,47.0,32.6,16.3
 MZB,60,Terrer,48.0,33.6,20.05
 MZB,60,Terrer,49.0,34.6,34.37
 MZB,60,Rueda de Jalón,21.2,0.0,0.0
-MZB,60,Rueda de Jalón,22.0,0.8,0.01
-MZB,60,Rueda de Jalón,23.0,1.8,0.06
-MZB,60,Rueda de Jalón,24.0,2.8,0.11
-MZB,60,Rueda de Jalón,25.0,3.8,0.16
-MZB,60,Rueda de Jalón,26.0,4.8,0.21
-MZB,60,Rueda de Jalón,27.0,5.8,0.26
-MZB,60,Rueda de Jalón,28.0,6.8,0.31
-MZB,60,Rueda de Jalón,29.0,7.8,0.36
-MZB,60,Rueda de Jalón,30.0,8.8,0.42
-MZB,60,Rueda de Jalón,31.0,9.8,0.48
-MZB,60,Rueda de Jalón,32.0,10.8,0.55
-MZB,60,Rueda de Jalón,33.0,11.8,0.62
-MZB,60,Rueda de Jalón,34.0,12.8,0.68
-MZB,60,Rueda de Jalón,35.0,13.8,0.75
-MZB,60,Rueda de Jalón,36.0,14.8,0.82
-MZB,60,Rueda de Jalón,37.0,15.8,0.88
-MZB,60,Rueda de Jalón,38.0,16.8,0.95
-MZB,60,Rueda de Jalón,39.0,17.8,1.02
-MZB,60,Rueda de Jalón,40.0,18.8,1.13
-MZB,60,Rueda de Jalón,41.0,19.8,1.24
-MZB,60,Rueda de Jalón,42.0,20.8,1.36
-MZB,60,Rueda de Jalón,43.0,21.8,1.5
-MZB,60,Rueda de Jalón,44.0,22.8,1.65
-MZB,60,Rueda de Jalón,45.0,23.8,1.82
-MZB,60,Rueda de Jalón,46.0,24.8,2.09
-MZB,60,Rueda de Jalón,47.0,25.8,2.43
-MZB,60,Rueda de Jalón,48.0,26.8,4.04
-MZB,60,Rueda de Jalón,49.0,27.8,7.74
+MZB,60,Rueda de Jalón,22.0,0.8,0.41
+MZB,60,Rueda de Jalón,23.0,1.8,0.91
+MZB,60,Rueda de Jalón,24.0,2.8,1.41
+MZB,60,Rueda de Jalón,25.0,3.8,1.91
+MZB,60,Rueda de Jalón,26.0,4.8,2.41
+MZB,60,Rueda de Jalón,27.0,5.8,2.91
+MZB,60,Rueda de Jalón,28.0,6.8,3.41
+MZB,60,Rueda de Jalón,29.0,7.8,3.91
+MZB,60,Rueda de Jalón,30.0,8.8,4.41
+MZB,60,Rueda de Jalón,31.0,9.8,4.91
+MZB,60,Rueda de Jalón,32.0,10.8,5.41
+MZB,60,Rueda de Jalón,33.0,11.8,5.91
+MZB,60,Rueda de Jalón,34.0,12.8,6.41
+MZB,60,Rueda de Jalón,35.0,13.8,6.91
+MZB,60,Rueda de Jalón,36.0,14.8,7.41
+MZB,60,Rueda de Jalón,37.0,15.8,7.91
+MZB,60,Rueda de Jalón,38.0,16.8,8.41
+MZB,60,Rueda de Jalón,39.0,17.8,8.91
+MZB,60,Rueda de Jalón,40.0,18.8,9.41
+MZB,60,Rueda de Jalón,41.0,19.8,9.91
+MZB,60,Rueda de Jalón,42.0,20.8,10.41
+MZB,60,Rueda de Jalón,43.0,21.8,10.91
+MZB,60,Rueda de Jalón,44.0,22.8,11.41
+MZB,60,Rueda de Jalón,45.0,23.8,11.91
+MZB,60,Rueda de Jalón,46.0,24.8,12.41
+MZB,60,Rueda de Jalón,47.0,25.8,12.91
+MZB,60,Rueda de Jalón,48.0,26.8,13.41
+MZB,60,Rueda de Jalón,49.0,27.8,13.91
 MZB,60,Rueda de Jalón,50.0,28.8,21.08
 MZB,60,Feria de Muestras,26.2,0.0,0.0
-MZB,60,Feria de Muestras,27.0,0.8,0.04
-MZB,60,Feria de Muestras,28.0,1.8,0.09
-MZB,60,Feria de Muestras,29.0,2.8,0.14
-MZB,60,Feria de Muestras,30.0,3.8,0.19
-MZB,60,Feria de Muestras,31.0,4.8,0.24
-MZB,60,Feria de Muestras,32.0,5.8,0.29
-MZB,60,Feria de Muestras,33.0,6.8,0.34
-MZB,60,Feria de Muestras,34.0,7.8,0.39
-MZB,60,Feria de Muestras,35.0,8.8,0.44
-MZB,60,Feria de Muestras,36.0,9.8,0.49
-MZB,60,Feria de Muestras,37.0,10.8,0.55
-MZB,60,Feria de Muestras,38.0,11.8,0.63
-MZB,60,Feria de Muestras,39.0,12.8,0.73
-MZB,60,Feria de Muestras,40.0,13.8,0.83
-MZB,60,Feria de Muestras,41.0,14.8,0.95
-MZB,60,Feria de Muestras,42.0,15.8,1.07
-MZB,60,Feria de Muestras,43.0,16.8,1.21
-MZB,60,Feria de Muestras,44.0,17.8,1.36
-MZB,60,Feria de Muestras,45.0,18.8,1.51
-MZB,60,Feria de Muestras,46.0,19.8,1.69
-MZB,60,Feria de Muestras,47.0,20.8,1.9
-MZB,60,Feria de Muestras,48.0,21.8,2.25
-MZB,60,Feria de Muestras,49.0,22.8,2.6
-MZB,60,Feria de Muestras,50.0,23.8,4.67
-MZB,60,Feria de Muestras,51.0,24.8,8.4
+MZB,60,Feria de Muestras,27.0,0.8,0.41
+MZB,60,Feria de Muestras,28.0,1.8,0.91
+MZB,60,Feria de Muestras,29.0,2.8,1.41
+MZB,60,Feria de Muestras,30.0,3.8,1.91
+MZB,60,Feria de Muestras,31.0,4.8,2.41
+MZB,60,Feria de Muestras,32.0,5.8,2.91
+MZB,60,Feria de Muestras,33.0,6.8,3.41
+MZB,60,Feria de Muestras,34.0,7.8,3.91
+MZB,60,Feria de Muestras,35.0,8.8,4.41
+MZB,60,Feria de Muestras,36.0,9.8,4.91
+MZB,60,Feria de Muestras,37.0,10.8,5.41
+MZB,60,Feria de Muestras,38.0,11.8,5.91
+MZB,60,Feria de Muestras,39.0,12.8,6.41
+MZB,60,Feria de Muestras,40.0,13.8,6.91
+MZB,60,Feria de Muestras,41.0,14.8,7.41
+MZB,60,Feria de Muestras,42.0,15.8,7.91
+MZB,60,Feria de Muestras,43.0,16.8,8.41
+MZB,60,Feria de Muestras,44.0,17.8,8.91
+MZB,60,Feria de Muestras,45.0,18.8,9.41
+MZB,60,Feria de Muestras,46.0,19.8,9.91
+MZB,60,Feria de Muestras,47.0,20.8,10.41
+MZB,60,Feria de Muestras,48.0,21.8,10.91
+MZB,60,Feria de Muestras,49.0,22.8,11.41
+MZB,60,Feria de Muestras,50.0,23.8,11.91
+MZB,60,Feria de Muestras,51.0,24.8,12.41
 MZB,60,Zaragoza,15.7,0.0,0.0
-MZB,60,Zaragoza,16.0,0.3,0.01
-MZB,60,Zaragoza,17.0,1.3,0.02
-MZB,60,Zaragoza,18.0,2.3,0.04
-MZB,60,Zaragoza,19.0,3.3,0.06
-MZB,60,Zaragoza,20.0,4.3,0.07
-MZB,60,Zaragoza,21.0,5.3,0.09
-MZB,60,Zaragoza,22.0,6.3,0.11
-MZB,60,Zaragoza,23.0,7.3,0.12
-MZB,60,Zaragoza,24.0,8.3,0.14
-MZB,60,Zaragoza,25.0,9.3,0.16
-MZB,60,Zaragoza,26.0,10.3,0.17
-MZB,60,Zaragoza,27.0,11.3,0.19
-MZB,60,Zaragoza,28.0,12.3,0.21
-MZB,60,Zaragoza,29.0,13.3,0.23
-MZB,60,Zaragoza,30.0,14.3,0.26
-MZB,60,Zaragoza,31.0,15.3,0.32
-MZB,60,Zaragoza,32.0,16.3,0.4
-MZB,60,Zaragoza,33.0,17.3,0.48
-MZB,60,Zaragoza,34.0,18.3,0.57
-MZB,60,Zaragoza,35.0,19.3,0.76
-MZB,60,Zaragoza,36.0,20.3,0.95
-MZB,60,Zaragoza,37.0,21.3,1.15
-MZB,60,Zaragoza,38.0,22.3,1.35
-MZB,60,Zaragoza,39.0,23.3,1.55
-MZB,60,Zaragoza,40.0,24.3,1.75
-MZB,60,Zaragoza,41.0,25.3,1.95
-MZB,60,Zaragoza,42.0,26.3,2.15
-MZB,60,Zaragoza,43.0,27.3,2.35
-MZB,60,Zaragoza,44.0,28.3,2.55
-MZB,60,Zaragoza,45.0,29.3,2.83
-MZB,60,Zaragoza,46.0,30.3,3.87
-MZB,60,Zaragoza,47.0,31.3,5.32
-MZB,60,Zaragoza,48.0,32.3,11.28
+MZB,60,Zaragoza,16.0,0.3,0.16
+MZB,60,Zaragoza,17.0,1.3,0.66
+MZB,60,Zaragoza,18.0,2.3,1.16
+MZB,60,Zaragoza,19.0,3.3,1.66
+MZB,60,Zaragoza,20.0,4.3,2.16
+MZB,60,Zaragoza,21.0,5.3,2.66
+MZB,60,Zaragoza,22.0,6.3,3.16
+MZB,60,Zaragoza,23.0,7.3,3.66
+MZB,60,Zaragoza,24.0,8.3,4.16
+MZB,60,Zaragoza,25.0,9.3,4.66
+MZB,60,Zaragoza,26.0,10.3,5.16
+MZB,60,Zaragoza,27.0,11.3,5.66
+MZB,60,Zaragoza,28.0,12.3,6.16
+MZB,60,Zaragoza,29.0,13.3,6.66
+MZB,60,Zaragoza,30.0,14.3,7.16
+MZB,60,Zaragoza,31.0,15.3,7.66
+MZB,60,Zaragoza,32.0,16.3,8.16
+MZB,60,Zaragoza,33.0,17.3,8.66
+MZB,60,Zaragoza,34.0,18.3,9.16
+MZB,60,Zaragoza,35.0,19.3,9.66
+MZB,60,Zaragoza,36.0,20.3,10.16
+MZB,60,Zaragoza,37.0,21.3,10.66
+MZB,60,Zaragoza,38.0,22.3,11.16
+MZB,60,Zaragoza,39.0,23.3,11.66
+MZB,60,Zaragoza,40.0,24.3,12.16
+MZB,60,Zaragoza,41.0,25.3,12.66
+MZB,60,Zaragoza,42.0,26.3,13.16
+MZB,60,Zaragoza,43.0,27.3,13.66
+MZB,60,Zaragoza,44.0,28.3,14.16
+MZB,60,Zaragoza,45.0,29.3,14.66
+MZB,60,Zaragoza,46.0,30.3,15.16
+MZB,60,Zaragoza,47.0,31.3,15.66
+MZB,60,Zaragoza,48.0,32.3,16.16
 MZB,60,Zaragoza,49.0,33.3,25.29
 MZB,60,Peñalba,26.4,0.0,0.0
-MZB,60,Peñalba,27.0,0.6,0.01
-MZB,60,Peñalba,28.0,1.6,0.05
-MZB,60,Peñalba,29.0,2.6,0.12
-MZB,60,Peñalba,30.0,3.6,0.2
-MZB,60,Peñalba,31.0,4.6,0.28
-MZB,60,Peñalba,32.0,5.6,0.37
-MZB,60,Peñalba,33.0,6.6,0.45
-MZB,60,Peñalba,34.0,7.6,0.59
-MZB,60,Peñalba,35.0,8.6,0.76
-MZB,60,Peñalba,36.0,9.6,0.93
-MZB,60,Peñalba,37.0,10.6,1.09
-MZB,60,Peñalba,38.0,11.6,1.61
-MZB,60,Peñalba,39.0,12.6,2.22
-MZB,60,Peñalba,40.0,13.6,2.87
-MZB,60,Peñalba,41.0,14.6,3.56
-MZB,60,Peñalba,42.0,15.6,4.25
-MZB,60,Peñalba,43.0,16.6,5.0
-MZB,60,Peñalba,44.0,17.6,5.79
-MZB,60,Peñalba,45.0,18.6,6.64
-MZB,60,Peñalba,46.0,19.6,9.67
+MZB,60,Peñalba,27.0,0.6,0.28
+MZB,60,Peñalba,28.0,1.6,0.78
+MZB,60,Peñalba,29.0,2.6,1.28
+MZB,60,Peñalba,30.0,3.6,1.78
+MZB,60,Peñalba,31.0,4.6,2.28
+MZB,60,Peñalba,32.0,5.6,2.78
+MZB,60,Peñalba,33.0,6.6,3.28
+MZB,60,Peñalba,34.0,7.6,3.78
+MZB,60,Peñalba,35.0,8.6,4.28
+MZB,60,Peñalba,36.0,9.6,4.78
+MZB,60,Peñalba,37.0,10.6,5.28
+MZB,60,Peñalba,38.0,11.6,5.78
+MZB,60,Peñalba,39.0,12.6,6.28
+MZB,60,Peñalba,40.0,13.6,6.78
+MZB,60,Peñalba,41.0,14.6,7.28
+MZB,60,Peñalba,42.0,15.6,7.78
+MZB,60,Peñalba,43.0,16.6,8.28
+MZB,60,Peñalba,44.0,17.6,8.78
+MZB,60,Peñalba,45.0,18.6,9.28
+MZB,60,Peñalba,46.0,19.6,9.78
 MZB,60,Peñalba,47.0,20.6,20.48
 MZB,60,Peñalba,48.0,21.6,34.47
 MZB,60,Lleida,18.9,0.0,0.0
-MZB,60,Lleida,19.0,0.1,0.0
-MZB,60,Lleida,20.0,1.1,0.02
-MZB,60,Lleida,21.0,2.1,0.03
-MZB,60,Lleida,22.0,3.1,0.05
-MZB,60,Lleida,23.0,4.1,0.07
-MZB,60,Lleida,24.0,5.1,0.08
-MZB,60,Lleida,25.0,6.1,0.1
-MZB,60,Lleida,26.0,7.1,0.12
-MZB,60,Lleida,27.0,8.1,0.16
-MZB,60,Lleida,28.0,9.1,0.23
-MZB,60,Lleida,29.0,10.1,0.29
-MZB,60,Lleida,30.0,11.1,0.36
-MZB,60,Lleida,31.0,12.1,0.43
-MZB,60,Lleida,32.0,13.1,0.55
-MZB,60,Lleida,33.0,14.1,0.67
-MZB,60,Lleida,34.0,15.1,0.78
-MZB,60,Lleida,35.0,16.1,0.9
-MZB,60,Lleida,36.0,17.1,1.02
-MZB,60,Lleida,37.0,18.1,1.34
-MZB,60,Lleida,38.0,19.1,1.65
-MZB,60,Lleida,39.0,20.1,2.1
-MZB,60,Lleida,40.0,21.1,2.68
-MZB,60,Lleida,41.0,22.1,3.28
-MZB,60,Lleida,42.0,23.1,3.89
-MZB,60,Lleida,43.0,24.1,4.52
-MZB,60,Lleida,44.0,25.1,5.15
-MZB,60,Lleida,45.0,26.1,5.79
-MZB,60,Lleida,46.0,27.1,6.42
-MZB,60,Lleida,47.0,28.1,9.88
+MZB,60,Lleida,19.0,0.1,0.04
+MZB,60,Lleida,20.0,1.1,0.54
+MZB,60,Lleida,21.0,2.1,1.04
+MZB,60,Lleida,22.0,3.1,1.54
+MZB,60,Lleida,23.0,4.1,2.04
+MZB,60,Lleida,24.0,5.1,2.54
+MZB,60,Lleida,25.0,6.1,3.04
+MZB,60,Lleida,26.0,7.1,3.54
+MZB,60,Lleida,27.0,8.1,4.04
+MZB,60,Lleida,28.0,9.1,4.54
+MZB,60,Lleida,29.0,10.1,5.04
+MZB,60,Lleida,30.0,11.1,5.54
+MZB,60,Lleida,31.0,12.1,6.04
+MZB,60,Lleida,32.0,13.1,6.54
+MZB,60,Lleida,33.0,14.1,7.04
+MZB,60,Lleida,34.0,15.1,7.54
+MZB,60,Lleida,35.0,16.1,8.04
+MZB,60,Lleida,36.0,17.1,8.54
+MZB,60,Lleida,37.0,18.1,9.04
+MZB,60,Lleida,38.0,19.1,9.54
+MZB,60,Lleida,39.0,20.1,10.04
+MZB,60,Lleida,40.0,21.1,10.54
+MZB,60,Lleida,41.0,22.1,11.04
+MZB,60,Lleida,42.0,23.1,11.54
+MZB,60,Lleida,43.0,24.1,12.04
+MZB,60,Lleida,44.0,25.1,12.54
+MZB,60,Lleida,45.0,26.1,13.04
+MZB,60,Lleida,46.0,27.1,13.54
+MZB,60,Lleida,47.0,28.1,14.04
 MZB,60,Lleida,48.0,29.1,23.0
 MZB,60,Lleida,49.0,30.1,36.54
 MZB,60,L'Espluga,13.7,0.0,0.0
-MZB,60,L'Espluga,14.0,0.3,0.0
-MZB,60,L'Espluga,15.0,1.3,0.02
-MZB,60,L'Espluga,16.0,2.3,0.04
-MZB,60,L'Espluga,17.0,3.3,0.07
-MZB,60,L'Espluga,18.0,4.3,0.14
-MZB,60,L'Espluga,19.0,5.3,0.23
-MZB,60,L'Espluga,20.0,6.3,0.31
-MZB,60,L'Espluga,21.0,7.3,0.39
-MZB,60,L'Espluga,22.0,8.3,0.5
-MZB,60,L'Espluga,23.0,9.3,0.62
-MZB,60,L'Espluga,24.0,10.3,0.74
-MZB,60,L'Espluga,25.0,11.3,0.85
-MZB,60,L'Espluga,26.0,12.3,0.97
-MZB,60,L'Espluga,27.0,13.3,1.09
-MZB,60,L'Espluga,28.0,14.3,1.2
-MZB,60,L'Espluga,29.0,15.3,1.32
-MZB,60,L'Espluga,30.0,16.3,1.46
-MZB,60,L'Espluga,31.0,17.3,1.61
-MZB,60,L'Espluga,32.0,18.3,1.76
-MZB,60,L'Espluga,33.0,19.3,1.91
-MZB,60,L'Espluga,34.0,20.3,2.06
-MZB,60,L'Espluga,35.0,21.3,2.21
-MZB,60,L'Espluga,36.0,22.3,2.36
-MZB,60,L'Espluga,37.0,23.3,2.51
-MZB,60,L'Espluga,38.0,24.3,2.66
-MZB,60,L'Espluga,39.0,25.3,2.81
-MZB,60,L'Espluga,40.0,26.3,2.96
-MZB,60,L'Espluga,41.0,27.3,3.11
-MZB,60,L'Espluga,42.0,28.3,3.27
-MZB,60,L'Espluga,43.0,29.3,4.32
-MZB,60,L'Espluga,44.0,30.3,5.39
-MZB,60,L'Espluga,45.0,31.3,6.46
-MZB,60,L'Espluga,46.0,32.3,7.52
-MZB,60,L'Espluga,47.0,33.3,15.14
+MZB,60,L'Espluga,14.0,0.3,0.14
+MZB,60,L'Espluga,15.0,1.3,0.64
+MZB,60,L'Espluga,16.0,2.3,1.14
+MZB,60,L'Espluga,17.0,3.3,1.64
+MZB,60,L'Espluga,18.0,4.3,2.14
+MZB,60,L'Espluga,19.0,5.3,2.64
+MZB,60,L'Espluga,20.0,6.3,3.14
+MZB,60,L'Espluga,21.0,7.3,3.64
+MZB,60,L'Espluga,22.0,8.3,4.14
+MZB,60,L'Espluga,23.0,9.3,4.64
+MZB,60,L'Espluga,24.0,10.3,5.14
+MZB,60,L'Espluga,25.0,11.3,5.64
+MZB,60,L'Espluga,26.0,12.3,6.14
+MZB,60,L'Espluga,27.0,13.3,6.64
+MZB,60,L'Espluga,28.0,14.3,7.14
+MZB,60,L'Espluga,29.0,15.3,7.64
+MZB,60,L'Espluga,30.0,16.3,8.14
+MZB,60,L'Espluga,31.0,17.3,8.64
+MZB,60,L'Espluga,32.0,18.3,9.14
+MZB,60,L'Espluga,33.0,19.3,9.64
+MZB,60,L'Espluga,34.0,20.3,10.14
+MZB,60,L'Espluga,35.0,21.3,10.64
+MZB,60,L'Espluga,36.0,22.3,11.14
+MZB,60,L'Espluga,37.0,23.3,11.64
+MZB,60,L'Espluga,38.0,24.3,12.14
+MZB,60,L'Espluga,39.0,25.3,12.64
+MZB,60,L'Espluga,40.0,26.3,13.14
+MZB,60,L'Espluga,41.0,27.3,13.64
+MZB,60,L'Espluga,42.0,28.3,14.14
+MZB,60,L'Espluga,43.0,29.3,14.64
+MZB,60,L'Espluga,44.0,30.3,15.14
+MZB,60,L'Espluga,45.0,31.3,15.64
+MZB,60,L'Espluga,46.0,32.3,16.14
+MZB,60,L'Espluga,47.0,33.3,16.64
 MZB,60,L'Espluga,48.0,34.3,28.78
 MZB,60,La Gornal,18.1,0.0,0.0
-MZB,60,La Gornal,19.0,0.9,0.02
-MZB,60,La Gornal,20.0,1.9,0.03
-MZB,60,La Gornal,21.0,2.9,0.05
-MZB,60,La Gornal,22.0,3.9,0.07
-MZB,60,La Gornal,23.0,4.9,0.08
-MZB,60,La Gornal,24.0,5.9,0.1
-MZB,60,La Gornal,25.0,6.9,0.12
-MZB,60,La Gornal,26.0,7.9,0.13
-MZB,60,La Gornal,27.0,8.9,0.15
-MZB,60,La Gornal,28.0,9.9,0.17
-MZB,60,La Gornal,29.0,10.9,0.18
-MZB,60,La Gornal,30.0,11.9,0.2
-MZB,60,La Gornal,31.0,12.9,0.29
-MZB,60,La Gornal,32.0,13.9,0.42
-MZB,60,La Gornal,33.0,14.9,0.59
-MZB,60,La Gornal,34.0,15.9,0.77
-MZB,60,La Gornal,35.0,16.9,0.95
-MZB,60,La Gornal,36.0,17.9,1.14
-MZB,60,La Gornal,37.0,18.9,1.37
-MZB,60,La Gornal,38.0,19.9,1.64
-MZB,60,La Gornal,39.0,20.9,1.92
-MZB,60,La Gornal,40.0,21.9,2.21
-MZB,60,La Gornal,41.0,22.9,2.58
-MZB,60,La Gornal,42.0,23.9,2.98
-MZB,60,La Gornal,43.0,24.9,3.38
-MZB,60,La Gornal,44.0,25.9,4.02
-MZB,60,La Gornal,45.0,26.9,4.8
-MZB,60,La Gornal,46.0,27.9,5.59
-MZB,60,La Gornal,47.0,28.9,7.68
+MZB,60,La Gornal,19.0,0.9,0.47
+MZB,60,La Gornal,20.0,1.9,0.97
+MZB,60,La Gornal,21.0,2.9,1.47
+MZB,60,La Gornal,22.0,3.9,1.97
+MZB,60,La Gornal,23.0,4.9,2.47
+MZB,60,La Gornal,24.0,5.9,2.97
+MZB,60,La Gornal,25.0,6.9,3.47
+MZB,60,La Gornal,26.0,7.9,3.97
+MZB,60,La Gornal,27.0,8.9,4.47
+MZB,60,La Gornal,28.0,9.9,4.97
+MZB,60,La Gornal,29.0,10.9,5.47
+MZB,60,La Gornal,30.0,11.9,5.97
+MZB,60,La Gornal,31.0,12.9,6.47
+MZB,60,La Gornal,32.0,13.9,6.97
+MZB,60,La Gornal,33.0,14.9,7.47
+MZB,60,La Gornal,34.0,15.9,7.97
+MZB,60,La Gornal,35.0,16.9,8.47
+MZB,60,La Gornal,36.0,17.9,8.97
+MZB,60,La Gornal,37.0,18.9,9.47
+MZB,60,La Gornal,38.0,19.9,9.97
+MZB,60,La Gornal,39.0,20.9,10.47
+MZB,60,La Gornal,40.0,21.9,10.97
+MZB,60,La Gornal,41.0,22.9,11.47
+MZB,60,La Gornal,42.0,23.9,11.97
+MZB,60,La Gornal,43.0,24.9,12.47
+MZB,60,La Gornal,44.0,25.9,12.97
+MZB,60,La Gornal,45.0,26.9,13.47
+MZB,60,La Gornal,46.0,27.9,13.97
+MZB,60,La Gornal,47.0,28.9,14.47
 MZB,60,La Gornal,48.0,29.9,19.98
 MZB,60,La Gornal,49.0,30.9,34.22
 MZB,60,Sant Boi,14.6,0.0,0.0
-MZB,60,Sant Boi,15.0,0.4,0.01
-MZB,60,Sant Boi,16.0,1.4,0.02
-MZB,60,Sant Boi,17.0,2.4,0.04
-MZB,60,Sant Boi,18.0,3.4,0.06
-MZB,60,Sant Boi,19.0,4.4,0.07
-MZB,60,Sant Boi,20.0,5.4,0.09
-MZB,60,Sant Boi,21.0,6.4,0.11
-MZB,60,Sant Boi,22.0,7.4,0.12
-MZB,60,Sant Boi,23.0,8.4,0.14
-MZB,60,Sant Boi,24.0,9.4,0.17
-MZB,60,Sant Boi,25.0,10.4,0.21
-MZB,60,Sant Boi,26.0,11.4,0.26
-MZB,60,Sant Boi,27.0,12.4,0.31
-MZB,60,Sant Boi,28.0,13.4,0.36
-MZB,60,Sant Boi,29.0,14.4,0.41
-MZB,60,Sant Boi,30.0,15.4,0.46
-MZB,60,Sant Boi,31.0,16.4,0.51
-MZB,60,Sant Boi,32.0,17.4,0.59
-MZB,60,Sant Boi,33.0,18.4,0.68
-MZB,60,Sant Boi,34.0,19.4,0.78
-MZB,60,Sant Boi,35.0,20.4,0.89
-MZB,60,Sant Boi,36.0,21.4,1.13
-MZB,60,Sant Boi,37.0,22.4,1.43
-MZB,60,Sant Boi,38.0,23.4,1.73
-MZB,60,Sant Boi,39.0,24.4,2.03
-MZB,60,Sant Boi,40.0,25.4,2.33
-MZB,60,Sant Boi,41.0,26.4,2.63
-MZB,60,Sant Boi,42.0,27.4,2.93
-MZB,60,Sant Boi,43.0,28.4,3.23
-MZB,60,Sant Boi,44.0,29.4,3.53
-MZB,60,Sant Boi,45.0,30.4,3.85
-MZB,60,Sant Boi,46.0,31.4,4.17
-MZB,60,Sant Boi,47.0,32.4,5.0
-MZB,60,Sant Boi,48.0,33.4,7.3
-MZB,60,Sant Boi,49.0,34.4,14.06
+MZB,60,Sant Boi,15.0,0.4,0.21
+MZB,60,Sant Boi,16.0,1.4,0.71
+MZB,60,Sant Boi,17.0,2.4,1.21
+MZB,60,Sant Boi,18.0,3.4,1.71
+MZB,60,Sant Boi,19.0,4.4,2.21
+MZB,60,Sant Boi,20.0,5.4,2.71
+MZB,60,Sant Boi,21.0,6.4,3.21
+MZB,60,Sant Boi,22.0,7.4,3.71
+MZB,60,Sant Boi,23.0,8.4,4.21
+MZB,60,Sant Boi,24.0,9.4,4.71
+MZB,60,Sant Boi,25.0,10.4,5.21
+MZB,60,Sant Boi,26.0,11.4,5.71
+MZB,60,Sant Boi,27.0,12.4,6.21
+MZB,60,Sant Boi,28.0,13.4,6.71
+MZB,60,Sant Boi,29.0,14.4,7.21
+MZB,60,Sant Boi,30.0,15.4,7.71
+MZB,60,Sant Boi,31.0,16.4,8.21
+MZB,60,Sant Boi,32.0,17.4,8.71
+MZB,60,Sant Boi,33.0,18.4,9.21
+MZB,60,Sant Boi,34.0,19.4,9.71
+MZB,60,Sant Boi,35.0,20.4,10.21
+MZB,60,Sant Boi,36.0,21.4,10.71
+MZB,60,Sant Boi,37.0,22.4,11.21
+MZB,60,Sant Boi,38.0,23.4,11.71
+MZB,60,Sant Boi,39.0,24.4,12.21
+MZB,60,Sant Boi,40.0,25.4,12.71
+MZB,60,Sant Boi,41.0,26.4,13.21
+MZB,60,Sant Boi,42.0,27.4,13.71
+MZB,60,Sant Boi,43.0,28.4,14.21
+MZB,60,Sant Boi,44.0,29.4,14.71
+MZB,60,Sant Boi,45.0,30.4,15.21
+MZB,60,Sant Boi,46.0,31.4,15.71
+MZB,60,Sant Boi,47.0,32.4,16.21
+MZB,60,Sant Boi,48.0,33.4,16.71
+MZB,60,Sant Boi,49.0,34.4,17.21
 MZB,60,Sant Boi,50.0,35.4,28.77
 MZB,120,Villaverde Bajo,75.8,0.0,0.0
-MZB,120,Villaverde Bajo,76.0,0.2,0.0
-MZB,120,Villaverde Bajo,77.0,1.2,0.02
-MZB,120,Villaverde Bajo,78.0,2.2,0.04
-MZB,120,Villaverde Bajo,79.0,3.2,0.05
-MZB,120,Villaverde Bajo,80.0,4.2,0.07
-MZB,120,Villaverde Bajo,81.0,5.2,0.09
-MZB,120,Villaverde Bajo,82.0,6.2,0.1
-MZB,120,Villaverde Bajo,83.0,7.2,0.12
-MZB,120,Villaverde Bajo,84.0,8.2,0.14
-MZB,120,Villaverde Bajo,85.0,9.2,0.15
-MZB,120,Villaverde Bajo,86.0,10.2,0.17
-MZB,120,Villaverde Bajo,87.0,11.2,0.19
-MZB,120,Villaverde Bajo,88.0,12.2,0.2
-MZB,120,Villaverde Bajo,89.0,13.2,0.23
-MZB,120,Villaverde Bajo,90.0,14.2,0.26
-MZB,120,Villaverde Bajo,91.0,15.2,0.3
-MZB,120,Villaverde Bajo,92.0,16.2,0.33
-MZB,120,Villaverde Bajo,93.0,17.2,0.36
-MZB,120,Villaverde Bajo,94.0,18.2,0.4
-MZB,120,Villaverde Bajo,95.0,19.2,0.44
-MZB,120,Villaverde Bajo,96.0,20.2,0.58
-MZB,120,Villaverde Bajo,97.0,21.2,0.73
-MZB,120,Villaverde Bajo,98.0,22.2,0.88
-MZB,120,Villaverde Bajo,99.0,23.2,1.03
-MZB,120,Villaverde Bajo,100.0,24.2,1.19
-MZB,120,Villaverde Bajo,101.0,25.2,1.36
-MZB,120,Villaverde Bajo,102.0,26.2,1.53
-MZB,120,Villaverde Bajo,103.0,27.2,1.69
-MZB,120,Villaverde Bajo,104.0,28.2,2.17
-MZB,120,Villaverde Bajo,105.0,29.2,6.77
+MZB,120,Villaverde Bajo,76.0,0.2,0.1
+MZB,120,Villaverde Bajo,77.0,1.2,0.6
+MZB,120,Villaverde Bajo,78.0,2.2,1.1
+MZB,120,Villaverde Bajo,79.0,3.2,1.6
+MZB,120,Villaverde Bajo,80.0,4.2,2.1
+MZB,120,Villaverde Bajo,81.0,5.2,2.6
+MZB,120,Villaverde Bajo,82.0,6.2,3.1
+MZB,120,Villaverde Bajo,83.0,7.2,3.6
+MZB,120,Villaverde Bajo,84.0,8.2,4.1
+MZB,120,Villaverde Bajo,85.0,9.2,4.6
+MZB,120,Villaverde Bajo,86.0,10.2,5.1
+MZB,120,Villaverde Bajo,87.0,11.2,5.6
+MZB,120,Villaverde Bajo,88.0,12.2,6.1
+MZB,120,Villaverde Bajo,89.0,13.2,6.6
+MZB,120,Villaverde Bajo,90.0,14.2,7.1
+MZB,120,Villaverde Bajo,91.0,15.2,7.6
+MZB,120,Villaverde Bajo,92.0,16.2,8.1
+MZB,120,Villaverde Bajo,93.0,17.2,8.6
+MZB,120,Villaverde Bajo,94.0,18.2,9.1
+MZB,120,Villaverde Bajo,95.0,19.2,9.6
+MZB,120,Villaverde Bajo,96.0,20.2,10.1
+MZB,120,Villaverde Bajo,97.0,21.2,10.6
+MZB,120,Villaverde Bajo,98.0,22.2,11.1
+MZB,120,Villaverde Bajo,99.0,23.2,11.6
+MZB,120,Villaverde Bajo,100.0,24.2,12.1
+MZB,120,Villaverde Bajo,101.0,25.2,12.6
+MZB,120,Villaverde Bajo,102.0,26.2,13.1
+MZB,120,Villaverde Bajo,103.0,27.2,13.6
+MZB,120,Villaverde Bajo,104.0,28.2,14.1
+MZB,120,Villaverde Bajo,105.0,29.2,14.6
 MZB,120,Anchuelo,73.3,0.0,0.0
-MZB,120,Anchuelo,74.0,0.7,0.01
-MZB,120,Anchuelo,75.0,1.7,0.03
-MZB,120,Anchuelo,76.0,2.7,0.05
-MZB,120,Anchuelo,77.0,3.7,0.06
-MZB,120,Anchuelo,78.0,4.7,0.08
-MZB,120,Anchuelo,79.0,5.7,0.1
-MZB,120,Anchuelo,80.0,6.7,0.11
-MZB,120,Anchuelo,81.0,7.7,0.13
-MZB,120,Anchuelo,82.0,8.7,0.15
-MZB,120,Anchuelo,83.0,9.7,0.16
-MZB,120,Anchuelo,84.0,10.7,0.18
-MZB,120,Anchuelo,85.0,11.7,0.22
-MZB,120,Anchuelo,86.0,12.7,0.29
-MZB,120,Anchuelo,87.0,13.7,0.39
-MZB,120,Anchuelo,88.0,14.7,0.49
-MZB,120,Anchuelo,89.0,15.7,0.59
-MZB,120,Anchuelo,90.0,16.7,0.69
-MZB,120,Anchuelo,91.0,17.7,0.79
-MZB,120,Anchuelo,92.0,18.7,0.9
-MZB,120,Anchuelo,93.0,19.7,1.05
-MZB,120,Anchuelo,94.0,20.7,1.3
-MZB,120,Anchuelo,95.0,21.7,1.55
-MZB,120,Anchuelo,96.0,22.7,1.8
-MZB,120,Anchuelo,97.0,23.7,2.4
-MZB,120,Anchuelo,98.0,24.7,3.06
-MZB,120,Anchuelo,99.0,25.7,3.79
-MZB,120,Anchuelo,100.0,26.7,4.55
-MZB,120,Anchuelo,101.0,27.7,5.32
-MZB,120,Anchuelo,102.0,28.7,8.45
+MZB,120,Anchuelo,74.0,0.7,0.36
+MZB,120,Anchuelo,75.0,1.7,0.86
+MZB,120,Anchuelo,76.0,2.7,1.36
+MZB,120,Anchuelo,77.0,3.7,1.86
+MZB,120,Anchuelo,78.0,4.7,2.36
+MZB,120,Anchuelo,79.0,5.7,2.86
+MZB,120,Anchuelo,80.0,6.7,3.36
+MZB,120,Anchuelo,81.0,7.7,3.86
+MZB,120,Anchuelo,82.0,8.7,4.36
+MZB,120,Anchuelo,83.0,9.7,4.86
+MZB,120,Anchuelo,84.0,10.7,5.36
+MZB,120,Anchuelo,85.0,11.7,5.86
+MZB,120,Anchuelo,86.0,12.7,6.36
+MZB,120,Anchuelo,87.0,13.7,6.86
+MZB,120,Anchuelo,88.0,14.7,7.36
+MZB,120,Anchuelo,89.0,15.7,7.86
+MZB,120,Anchuelo,90.0,16.7,8.36
+MZB,120,Anchuelo,91.0,17.7,8.86
+MZB,120,Anchuelo,92.0,18.7,9.36
+MZB,120,Anchuelo,93.0,19.7,9.86
+MZB,120,Anchuelo,94.0,20.7,10.36
+MZB,120,Anchuelo,95.0,21.7,10.86
+MZB,120,Anchuelo,96.0,22.7,11.36
+MZB,120,Anchuelo,97.0,23.7,11.86
+MZB,120,Anchuelo,98.0,24.7,12.36
+MZB,120,Anchuelo,99.0,25.7,12.86
+MZB,120,Anchuelo,100.0,26.7,13.36
+MZB,120,Anchuelo,101.0,27.7,13.86
+MZB,120,Anchuelo,102.0,28.7,14.36
 MZB,120,Anchuelo,103.0,29.7,19.87
 MZB,120,Anchuelo,104.0,30.7,32.74
 MZB,120,Brihuega,75.8,0.0,0.0
-MZB,120,Brihuega,76.0,0.2,0.01
-MZB,120,Brihuega,77.0,1.2,0.08
-MZB,120,Brihuega,78.0,2.2,0.16
-MZB,120,Brihuega,79.0,3.2,0.24
-MZB,120,Brihuega,80.0,4.2,0.34
-MZB,120,Brihuega,81.0,5.2,0.44
-MZB,120,Brihuega,82.0,6.2,0.56
-MZB,120,Brihuega,83.0,7.2,0.67
-MZB,120,Brihuega,84.0,8.2,0.79
-MZB,120,Brihuega,85.0,9.2,0.94
-MZB,120,Brihuega,86.0,10.2,1.09
-MZB,120,Brihuega,87.0,11.2,1.24
-MZB,120,Brihuega,88.0,12.2,1.4
-MZB,120,Brihuega,89.0,13.2,1.63
-MZB,120,Brihuega,90.0,14.2,1.87
-MZB,120,Brihuega,91.0,15.2,2.12
-MZB,120,Brihuega,92.0,16.2,2.37
-MZB,120,Brihuega,93.0,17.2,2.62
-MZB,120,Brihuega,94.0,18.2,2.89
-MZB,120,Brihuega,95.0,19.2,3.16
-MZB,120,Brihuega,96.0,20.2,3.44
-MZB,120,Brihuega,97.0,21.2,3.72
-MZB,120,Brihuega,98.0,22.2,4.08
-MZB,120,Brihuega,99.0,23.2,4.5
-MZB,120,Brihuega,100.0,24.2,5.21
-MZB,120,Brihuega,101.0,25.2,11.29
+MZB,120,Brihuega,76.0,0.2,0.12
+MZB,120,Brihuega,77.0,1.2,0.62
+MZB,120,Brihuega,78.0,2.2,1.12
+MZB,120,Brihuega,79.0,3.2,1.62
+MZB,120,Brihuega,80.0,4.2,2.12
+MZB,120,Brihuega,81.0,5.2,2.62
+MZB,120,Brihuega,82.0,6.2,3.12
+MZB,120,Brihuega,83.0,7.2,3.62
+MZB,120,Brihuega,84.0,8.2,4.12
+MZB,120,Brihuega,85.0,9.2,4.62
+MZB,120,Brihuega,86.0,10.2,5.12
+MZB,120,Brihuega,87.0,11.2,5.62
+MZB,120,Brihuega,88.0,12.2,6.12
+MZB,120,Brihuega,89.0,13.2,6.62
+MZB,120,Brihuega,90.0,14.2,7.12
+MZB,120,Brihuega,91.0,15.2,7.62
+MZB,120,Brihuega,92.0,16.2,8.12
+MZB,120,Brihuega,93.0,17.2,8.62
+MZB,120,Brihuega,94.0,18.2,9.12
+MZB,120,Brihuega,95.0,19.2,9.62
+MZB,120,Brihuega,96.0,20.2,10.12
+MZB,120,Brihuega,97.0,21.2,10.62
+MZB,120,Brihuega,98.0,22.2,11.12
+MZB,120,Brihuega,99.0,23.2,11.62
+MZB,120,Brihuega,100.0,24.2,12.12
+MZB,120,Brihuega,101.0,25.2,12.62
 MZB,120,Brihuega,102.0,26.2,23.86
 MZB,120,Brihuega,103.0,27.2,36.68
 MZB,120,Medinaceli,69.5,0.0,0.0
-MZB,120,Medinaceli,70.0,0.5,0.01
-MZB,120,Medinaceli,71.0,1.5,0.03
-MZB,120,Medinaceli,72.0,2.5,0.05
-MZB,120,Medinaceli,73.0,3.5,0.08
-MZB,120,Medinaceli,74.0,4.5,0.12
-MZB,120,Medinaceli,75.0,5.5,0.15
-MZB,120,Medinaceli,76.0,6.5,0.19
-MZB,120,Medinaceli,77.0,7.5,0.27
-MZB,120,Medinaceli,78.0,8.5,0.36
-MZB,120,Medinaceli,79.0,9.5,0.46
-MZB,120,Medinaceli,80.0,10.5,0.58
-MZB,120,Medinaceli,81.0,11.5,0.69
-MZB,120,Medinaceli,82.0,12.5,0.81
-MZB,120,Medinaceli,83.0,13.5,0.93
-MZB,120,Medinaceli,84.0,14.5,1.06
-MZB,120,Medinaceli,85.0,15.5,1.19
-MZB,120,Medinaceli,86.0,16.5,1.33
-MZB,120,Medinaceli,87.0,17.5,1.46
-MZB,120,Medinaceli,88.0,18.5,1.59
-MZB,120,Medinaceli,89.0,19.5,1.73
-MZB,120,Medinaceli,90.0,20.5,1.88
-MZB,120,Medinaceli,91.0,21.5,2.03
-MZB,120,Medinaceli,92.0,22.5,2.2
-MZB,120,Medinaceli,93.0,23.5,2.4
-MZB,120,Medinaceli,94.0,24.5,2.6
-MZB,120,Medinaceli,95.0,25.5,2.8
-MZB,120,Medinaceli,96.0,26.5,3.0
-MZB,120,Medinaceli,97.0,27.5,3.2
-MZB,120,Medinaceli,98.0,28.5,3.49
-MZB,120,Medinaceli,99.0,29.5,5.3
-MZB,120,Medinaceli,100.0,30.5,8.19
-MZB,120,Medinaceli,101.0,31.5,13.9
+MZB,120,Medinaceli,70.0,0.5,0.27
+MZB,120,Medinaceli,71.0,1.5,0.77
+MZB,120,Medinaceli,72.0,2.5,1.27
+MZB,120,Medinaceli,73.0,3.5,1.77
+MZB,120,Medinaceli,74.0,4.5,2.27
+MZB,120,Medinaceli,75.0,5.5,2.77
+MZB,120,Medinaceli,76.0,6.5,3.27
+MZB,120,Medinaceli,77.0,7.5,3.77
+MZB,120,Medinaceli,78.0,8.5,4.27
+MZB,120,Medinaceli,79.0,9.5,4.77
+MZB,120,Medinaceli,80.0,10.5,5.27
+MZB,120,Medinaceli,81.0,11.5,5.77
+MZB,120,Medinaceli,82.0,12.5,6.27
+MZB,120,Medinaceli,83.0,13.5,6.77
+MZB,120,Medinaceli,84.0,14.5,7.27
+MZB,120,Medinaceli,85.0,15.5,7.77
+MZB,120,Medinaceli,86.0,16.5,8.27
+MZB,120,Medinaceli,87.0,17.5,8.77
+MZB,120,Medinaceli,88.0,18.5,9.27
+MZB,120,Medinaceli,89.0,19.5,9.77
+MZB,120,Medinaceli,90.0,20.5,10.27
+MZB,120,Medinaceli,91.0,21.5,10.77
+MZB,120,Medinaceli,92.0,22.5,11.27
+MZB,120,Medinaceli,93.0,23.5,11.77
+MZB,120,Medinaceli,94.0,24.5,12.27
+MZB,120,Medinaceli,95.0,25.5,12.77
+MZB,120,Medinaceli,96.0,26.5,13.27
+MZB,120,Medinaceli,97.0,27.5,13.77
+MZB,120,Medinaceli,98.0,28.5,14.27
+MZB,120,Medinaceli,99.0,29.5,14.77
+MZB,120,Medinaceli,100.0,30.5,15.27
+MZB,120,Medinaceli,101.0,31.5,15.77
 MZB,120,Medinaceli,102.0,32.5,26.84
 MZB,120,Medinaceli,103.0,33.5,40.36
 MZB,120,Terrer,68.4,0.0,0.0
-MZB,120,Terrer,69.0,0.6,0.01
-MZB,120,Terrer,70.0,1.6,0.03
-MZB,120,Terrer,71.0,2.6,0.04
-MZB,120,Terrer,72.0,3.6,0.09
-MZB,120,Terrer,73.0,4.6,0.16
-MZB,120,Terrer,74.0,5.6,0.27
-MZB,120,Terrer,75.0,6.6,0.42
-MZB,120,Terrer,76.0,7.6,0.57
-MZB,120,Terrer,77.0,8.6,0.72
-MZB,120,Terrer,78.0,9.6,0.87
-MZB,120,Terrer,79.0,10.6,1.03
-MZB,120,Terrer,80.0,11.6,1.2
-MZB,120,Terrer,81.0,12.6,1.37
-MZB,120,Terrer,82.0,13.6,1.55
-MZB,120,Terrer,83.0,14.6,1.74
-MZB,120,Terrer,84.0,15.6,1.92
-MZB,120,Terrer,85.0,16.6,2.1
-MZB,120,Terrer,86.0,17.6,2.29
-MZB,120,Terrer,87.0,18.6,2.47
-MZB,120,Terrer,88.0,19.6,2.65
-MZB,120,Terrer,89.0,20.6,2.84
-MZB,120,Terrer,90.0,21.6,3.02
-MZB,120,Terrer,91.0,22.6,3.2
-MZB,120,Terrer,92.0,23.6,3.39
-MZB,120,Terrer,93.0,24.6,3.57
-MZB,120,Terrer,94.0,25.6,3.76
-MZB,120,Terrer,95.0,26.6,3.96
-MZB,120,Terrer,96.0,27.6,4.16
-MZB,120,Terrer,97.0,28.6,4.36
-MZB,120,Terrer,98.0,29.6,4.96
-MZB,120,Terrer,99.0,30.6,6.45
-MZB,120,Terrer,100.0,31.6,8.85
-MZB,120,Terrer,101.0,32.6,12.1
+MZB,120,Terrer,69.0,0.6,0.3
+MZB,120,Terrer,70.0,1.6,0.8
+MZB,120,Terrer,71.0,2.6,1.3
+MZB,120,Terrer,72.0,3.6,1.8
+MZB,120,Terrer,73.0,4.6,2.3
+MZB,120,Terrer,74.0,5.6,2.8
+MZB,120,Terrer,75.0,6.6,3.3
+MZB,120,Terrer,76.0,7.6,3.8
+MZB,120,Terrer,77.0,8.6,4.3
+MZB,120,Terrer,78.0,9.6,4.8
+MZB,120,Terrer,79.0,10.6,5.3
+MZB,120,Terrer,80.0,11.6,5.8
+MZB,120,Terrer,81.0,12.6,6.3
+MZB,120,Terrer,82.0,13.6,6.8
+MZB,120,Terrer,83.0,14.6,7.3
+MZB,120,Terrer,84.0,15.6,7.8
+MZB,120,Terrer,85.0,16.6,8.3
+MZB,120,Terrer,86.0,17.6,8.8
+MZB,120,Terrer,87.0,18.6,9.3
+MZB,120,Terrer,88.0,19.6,9.8
+MZB,120,Terrer,89.0,20.6,10.3
+MZB,120,Terrer,90.0,21.6,10.8
+MZB,120,Terrer,91.0,22.6,11.3
+MZB,120,Terrer,92.0,23.6,11.8
+MZB,120,Terrer,93.0,24.6,12.3
+MZB,120,Terrer,94.0,25.6,12.8
+MZB,120,Terrer,95.0,26.6,13.3
+MZB,120,Terrer,96.0,27.6,13.8
+MZB,120,Terrer,97.0,28.6,14.3
+MZB,120,Terrer,98.0,29.6,14.8
+MZB,120,Terrer,99.0,30.6,15.3
+MZB,120,Terrer,100.0,31.6,15.8
+MZB,120,Terrer,101.0,32.6,16.3
 MZB,120,Terrer,102.0,33.6,20.05
 MZB,120,Terrer,103.0,34.6,34.37
 MZB,120,Rueda de Jalón,75.2,0.0,0.0
-MZB,120,Rueda de Jalón,76.0,0.8,0.01
-MZB,120,Rueda de Jalón,77.0,1.8,0.06
-MZB,120,Rueda de Jalón,78.0,2.8,0.11
-MZB,120,Rueda de Jalón,79.0,3.8,0.16
-MZB,120,Rueda de Jalón,80.0,4.8,0.21
-MZB,120,Rueda de Jalón,81.0,5.8,0.26
-MZB,120,Rueda de Jalón,82.0,6.8,0.31
-MZB,120,Rueda de Jalón,83.0,7.8,0.36
-MZB,120,Rueda de Jalón,84.0,8.8,0.42
-MZB,120,Rueda de Jalón,85.0,9.8,0.48
-MZB,120,Rueda de Jalón,86.0,10.8,0.55
-MZB,120,Rueda de Jalón,87.0,11.8,0.62
-MZB,120,Rueda de Jalón,88.0,12.8,0.68
-MZB,120,Rueda de Jalón,89.0,13.8,0.75
-MZB,120,Rueda de Jalón,90.0,14.8,0.82
-MZB,120,Rueda de Jalón,91.0,15.8,0.88
-MZB,120,Rueda de Jalón,92.0,16.8,0.95
-MZB,120,Rueda de Jalón,93.0,17.8,1.02
-MZB,120,Rueda de Jalón,94.0,18.8,1.13
-MZB,120,Rueda de Jalón,95.0,19.8,1.24
-MZB,120,Rueda de Jalón,96.0,20.8,1.36
-MZB,120,Rueda de Jalón,97.0,21.8,1.5
-MZB,120,Rueda de Jalón,98.0,22.8,1.65
-MZB,120,Rueda de Jalón,99.0,23.8,1.82
-MZB,120,Rueda de Jalón,100.0,24.8,2.09
-MZB,120,Rueda de Jalón,101.0,25.8,2.43
-MZB,120,Rueda de Jalón,102.0,26.8,4.04
-MZB,120,Rueda de Jalón,103.0,27.8,7.74
+MZB,120,Rueda de Jalón,76.0,0.8,0.41
+MZB,120,Rueda de Jalón,77.0,1.8,0.91
+MZB,120,Rueda de Jalón,78.0,2.8,1.41
+MZB,120,Rueda de Jalón,79.0,3.8,1.91
+MZB,120,Rueda de Jalón,80.0,4.8,2.41
+MZB,120,Rueda de Jalón,81.0,5.8,2.91
+MZB,120,Rueda de Jalón,82.0,6.8,3.41
+MZB,120,Rueda de Jalón,83.0,7.8,3.91
+MZB,120,Rueda de Jalón,84.0,8.8,4.41
+MZB,120,Rueda de Jalón,85.0,9.8,4.91
+MZB,120,Rueda de Jalón,86.0,10.8,5.41
+MZB,120,Rueda de Jalón,87.0,11.8,5.91
+MZB,120,Rueda de Jalón,88.0,12.8,6.41
+MZB,120,Rueda de Jalón,89.0,13.8,6.91
+MZB,120,Rueda de Jalón,90.0,14.8,7.41
+MZB,120,Rueda de Jalón,91.0,15.8,7.91
+MZB,120,Rueda de Jalón,92.0,16.8,8.41
+MZB,120,Rueda de Jalón,93.0,17.8,8.91
+MZB,120,Rueda de Jalón,94.0,18.8,9.41
+MZB,120,Rueda de Jalón,95.0,19.8,9.91
+MZB,120,Rueda de Jalón,96.0,20.8,10.41
+MZB,120,Rueda de Jalón,97.0,21.8,10.91
+MZB,120,Rueda de Jalón,98.0,22.8,11.41
+MZB,120,Rueda de Jalón,99.0,23.8,11.91
+MZB,120,Rueda de Jalón,100.0,24.8,12.41
+MZB,120,Rueda de Jalón,101.0,25.8,12.91
+MZB,120,Rueda de Jalón,102.0,26.8,13.41
+MZB,120,Rueda de Jalón,103.0,27.8,13.91
 MZB,120,Rueda de Jalón,104.0,28.8,21.08
 MZB,120,Feria de Muestras,80.2,0.0,0.0
-MZB,120,Feria de Muestras,81.0,0.8,0.04
-MZB,120,Feria de Muestras,82.0,1.8,0.09
-MZB,120,Feria de Muestras,83.0,2.8,0.14
-MZB,120,Feria de Muestras,84.0,3.8,0.19
-MZB,120,Feria de Muestras,85.0,4.8,0.24
-MZB,120,Feria de Muestras,86.0,5.8,0.29
-MZB,120,Feria de Muestras,87.0,6.8,0.34
-MZB,120,Feria de Muestras,88.0,7.8,0.39
-MZB,120,Feria de Muestras,89.0,8.8,0.44
-MZB,120,Feria de Muestras,90.0,9.8,0.49
-MZB,120,Feria de Muestras,91.0,10.8,0.55
-MZB,120,Feria de Muestras,92.0,11.8,0.63
-MZB,120,Feria de Muestras,93.0,12.8,0.73
-MZB,120,Feria de Muestras,94.0,13.8,0.83
-MZB,120,Feria de Muestras,95.0,14.8,0.95
-MZB,120,Feria de Muestras,96.0,15.8,1.07
-MZB,120,Feria de Muestras,97.0,16.8,1.21
-MZB,120,Feria de Muestras,98.0,17.8,1.36
-MZB,120,Feria de Muestras,99.0,18.8,1.51
-MZB,120,Feria de Muestras,100.0,19.8,1.69
-MZB,120,Feria de Muestras,101.0,20.8,1.9
-MZB,120,Feria de Muestras,102.0,21.8,2.25
-MZB,120,Feria de Muestras,103.0,22.8,2.6
-MZB,120,Feria de Muestras,104.0,23.8,4.67
-MZB,120,Feria de Muestras,105.0,24.8,8.4
+MZB,120,Feria de Muestras,81.0,0.8,0.41
+MZB,120,Feria de Muestras,82.0,1.8,0.91
+MZB,120,Feria de Muestras,83.0,2.8,1.41
+MZB,120,Feria de Muestras,84.0,3.8,1.91
+MZB,120,Feria de Muestras,85.0,4.8,2.41
+MZB,120,Feria de Muestras,86.0,5.8,2.91
+MZB,120,Feria de Muestras,87.0,6.8,3.41
+MZB,120,Feria de Muestras,88.0,7.8,3.91
+MZB,120,Feria de Muestras,89.0,8.8,4.41
+MZB,120,Feria de Muestras,90.0,9.8,4.91
+MZB,120,Feria de Muestras,91.0,10.8,5.41
+MZB,120,Feria de Muestras,92.0,11.8,5.91
+MZB,120,Feria de Muestras,93.0,12.8,6.41
+MZB,120,Feria de Muestras,94.0,13.8,6.91
+MZB,120,Feria de Muestras,95.0,14.8,7.41
+MZB,120,Feria de Muestras,96.0,15.8,7.91
+MZB,120,Feria de Muestras,97.0,16.8,8.41
+MZB,120,Feria de Muestras,98.0,17.8,8.91
+MZB,120,Feria de Muestras,99.0,18.8,9.41
+MZB,120,Feria de Muestras,100.0,19.8,9.91
+MZB,120,Feria de Muestras,101.0,20.8,10.41
+MZB,120,Feria de Muestras,102.0,21.8,10.91
+MZB,120,Feria de Muestras,103.0,22.8,11.41
+MZB,120,Feria de Muestras,104.0,23.8,11.91
+MZB,120,Feria de Muestras,105.0,24.8,12.41
 MZB,120,Zaragoza,69.7,0.0,0.0
-MZB,120,Zaragoza,70.0,0.3,0.01
-MZB,120,Zaragoza,71.0,1.3,0.02
-MZB,120,Zaragoza,72.0,2.3,0.04
-MZB,120,Zaragoza,73.0,3.3,0.06
-MZB,120,Zaragoza,74.0,4.3,0.07
-MZB,120,Zaragoza,75.0,5.3,0.09
-MZB,120,Zaragoza,76.0,6.3,0.11
-MZB,120,Zaragoza,77.0,7.3,0.12
-MZB,120,Zaragoza,78.0,8.3,0.14
-MZB,120,Zaragoza,79.0,9.3,0.16
-MZB,120,Zaragoza,80.0,10.3,0.17
-MZB,120,Zaragoza,81.0,11.3,0.19
-MZB,120,Zaragoza,82.0,12.3,0.21
-MZB,120,Zaragoza,83.0,13.3,0.23
-MZB,120,Zaragoza,84.0,14.3,0.26
-MZB,120,Zaragoza,85.0,15.3,0.32
-MZB,120,Zaragoza,86.0,16.3,0.4
-MZB,120,Zaragoza,87.0,17.3,0.48
-MZB,120,Zaragoza,88.0,18.3,0.57
-MZB,120,Zaragoza,89.0,19.3,0.76
-MZB,120,Zaragoza,90.0,20.3,0.95
-MZB,120,Zaragoza,91.0,21.3,1.15
-MZB,120,Zaragoza,92.0,22.3,1.35
-MZB,120,Zaragoza,93.0,23.3,1.55
-MZB,120,Zaragoza,94.0,24.3,1.75
-MZB,120,Zaragoza,95.0,25.3,1.95
-MZB,120,Zaragoza,96.0,26.3,2.15
-MZB,120,Zaragoza,97.0,27.3,2.35
-MZB,120,Zaragoza,98.0,28.3,2.55
-MZB,120,Zaragoza,99.0,29.3,2.83
-MZB,120,Zaragoza,100.0,30.3,3.87
-MZB,120,Zaragoza,101.0,31.3,5.32
-MZB,120,Zaragoza,102.0,32.3,11.28
+MZB,120,Zaragoza,70.0,0.3,0.16
+MZB,120,Zaragoza,71.0,1.3,0.66
+MZB,120,Zaragoza,72.0,2.3,1.16
+MZB,120,Zaragoza,73.0,3.3,1.66
+MZB,120,Zaragoza,74.0,4.3,2.16
+MZB,120,Zaragoza,75.0,5.3,2.66
+MZB,120,Zaragoza,76.0,6.3,3.16
+MZB,120,Zaragoza,77.0,7.3,3.66
+MZB,120,Zaragoza,78.0,8.3,4.16
+MZB,120,Zaragoza,79.0,9.3,4.66
+MZB,120,Zaragoza,80.0,10.3,5.16
+MZB,120,Zaragoza,81.0,11.3,5.66
+MZB,120,Zaragoza,82.0,12.3,6.16
+MZB,120,Zaragoza,83.0,13.3,6.66
+MZB,120,Zaragoza,84.0,14.3,7.16
+MZB,120,Zaragoza,85.0,15.3,7.66
+MZB,120,Zaragoza,86.0,16.3,8.16
+MZB,120,Zaragoza,87.0,17.3,8.66
+MZB,120,Zaragoza,88.0,18.3,9.16
+MZB,120,Zaragoza,89.0,19.3,9.66
+MZB,120,Zaragoza,90.0,20.3,10.16
+MZB,120,Zaragoza,91.0,21.3,10.66
+MZB,120,Zaragoza,92.0,22.3,11.16
+MZB,120,Zaragoza,93.0,23.3,11.66
+MZB,120,Zaragoza,94.0,24.3,12.16
+MZB,120,Zaragoza,95.0,25.3,12.66
+MZB,120,Zaragoza,96.0,26.3,13.16
+MZB,120,Zaragoza,97.0,27.3,13.66
+MZB,120,Zaragoza,98.0,28.3,14.16
+MZB,120,Zaragoza,99.0,29.3,14.66
+MZB,120,Zaragoza,100.0,30.3,15.16
+MZB,120,Zaragoza,101.0,31.3,15.66
+MZB,120,Zaragoza,102.0,32.3,16.16
 MZB,120,Zaragoza,103.0,33.3,25.29
 MZB,120,Peñalba,80.4,0.0,0.0
-MZB,120,Peñalba,81.0,0.6,0.01
-MZB,120,Peñalba,82.0,1.6,0.05
-MZB,120,Peñalba,83.0,2.6,0.12
-MZB,120,Peñalba,84.0,3.6,0.2
-MZB,120,Peñalba,85.0,4.6,0.28
-MZB,120,Peñalba,86.0,5.6,0.37
-MZB,120,Peñalba,87.0,6.6,0.45
-MZB,120,Peñalba,88.0,7.6,0.59
-MZB,120,Peñalba,89.0,8.6,0.76
-MZB,120,Peñalba,90.0,9.6,0.93
-MZB,120,Peñalba,91.0,10.6,1.09
-MZB,120,Peñalba,92.0,11.6,1.61
-MZB,120,Peñalba,93.0,12.6,2.22
-MZB,120,Peñalba,94.0,13.6,2.87
-MZB,120,Peñalba,95.0,14.6,3.56
-MZB,120,Peñalba,96.0,15.6,4.25
-MZB,120,Peñalba,97.0,16.6,5.0
-MZB,120,Peñalba,98.0,17.6,5.79
-MZB,120,Peñalba,99.0,18.6,6.64
-MZB,120,Peñalba,100.0,19.6,9.67
+MZB,120,Peñalba,81.0,0.6,0.28
+MZB,120,Peñalba,82.0,1.6,0.78
+MZB,120,Peñalba,83.0,2.6,1.28
+MZB,120,Peñalba,84.0,3.6,1.78
+MZB,120,Peñalba,85.0,4.6,2.28
+MZB,120,Peñalba,86.0,5.6,2.78
+MZB,120,Peñalba,87.0,6.6,3.28
+MZB,120,Peñalba,88.0,7.6,3.78
+MZB,120,Peñalba,89.0,8.6,4.28
+MZB,120,Peñalba,90.0,9.6,4.78
+MZB,120,Peñalba,91.0,10.6,5.28
+MZB,120,Peñalba,92.0,11.6,5.78
+MZB,120,Peñalba,93.0,12.6,6.28
+MZB,120,Peñalba,94.0,13.6,6.78
+MZB,120,Peñalba,95.0,14.6,7.28
+MZB,120,Peñalba,96.0,15.6,7.78
+MZB,120,Peñalba,97.0,16.6,8.28
+MZB,120,Peñalba,98.0,17.6,8.78
+MZB,120,Peñalba,99.0,18.6,9.28
+MZB,120,Peñalba,100.0,19.6,9.78
 MZB,120,Peñalba,101.0,20.6,20.48
 MZB,120,Peñalba,102.0,21.6,34.47
 MZB,120,Lleida,72.9,0.0,0.0
-MZB,120,Lleida,73.0,0.1,0.0
-MZB,120,Lleida,74.0,1.1,0.02
-MZB,120,Lleida,75.0,2.1,0.03
-MZB,120,Lleida,76.0,3.1,0.05
-MZB,120,Lleida,77.0,4.1,0.07
-MZB,120,Lleida,78.0,5.1,0.08
-MZB,120,Lleida,79.0,6.1,0.1
-MZB,120,Lleida,80.0,7.1,0.12
-MZB,120,Lleida,81.0,8.1,0.16
-MZB,120,Lleida,82.0,9.1,0.23
-MZB,120,Lleida,83.0,10.1,0.29
-MZB,120,Lleida,84.0,11.1,0.36
-MZB,120,Lleida,85.0,12.1,0.43
-MZB,120,Lleida,86.0,13.1,0.55
-MZB,120,Lleida,87.0,14.1,0.67
-MZB,120,Lleida,88.0,15.1,0.78
-MZB,120,Lleida,89.0,16.1,0.9
-MZB,120,Lleida,90.0,17.1,1.02
-MZB,120,Lleida,91.0,18.1,1.34
-MZB,120,Lleida,92.0,19.1,1.65
-MZB,120,Lleida,93.0,20.1,2.1
-MZB,120,Lleida,94.0,21.1,2.68
-MZB,120,Lleida,95.0,22.1,3.28
-MZB,120,Lleida,96.0,23.1,3.89
-MZB,120,Lleida,97.0,24.1,4.52
-MZB,120,Lleida,98.0,25.1,5.15
-MZB,120,Lleida,99.0,26.1,5.79
-MZB,120,Lleida,100.0,27.1,6.42
-MZB,120,Lleida,101.0,28.1,9.88
+MZB,120,Lleida,73.0,0.1,0.04
+MZB,120,Lleida,74.0,1.1,0.54
+MZB,120,Lleida,75.0,2.1,1.04
+MZB,120,Lleida,76.0,3.1,1.54
+MZB,120,Lleida,77.0,4.1,2.04
+MZB,120,Lleida,78.0,5.1,2.54
+MZB,120,Lleida,79.0,6.1,3.04
+MZB,120,Lleida,80.0,7.1,3.54
+MZB,120,Lleida,81.0,8.1,4.04
+MZB,120,Lleida,82.0,9.1,4.54
+MZB,120,Lleida,83.0,10.1,5.04
+MZB,120,Lleida,84.0,11.1,5.54
+MZB,120,Lleida,85.0,12.1,6.04
+MZB,120,Lleida,86.0,13.1,6.54
+MZB,120,Lleida,87.0,14.1,7.04
+MZB,120,Lleida,88.0,15.1,7.54
+MZB,120,Lleida,89.0,16.1,8.04
+MZB,120,Lleida,90.0,17.1,8.54
+MZB,120,Lleida,91.0,18.1,9.04
+MZB,120,Lleida,92.0,19.1,9.54
+MZB,120,Lleida,93.0,20.1,10.04
+MZB,120,Lleida,94.0,21.1,10.54
+MZB,120,Lleida,95.0,22.1,11.04
+MZB,120,Lleida,96.0,23.1,11.54
+MZB,120,Lleida,97.0,24.1,12.04
+MZB,120,Lleida,98.0,25.1,12.54
+MZB,120,Lleida,99.0,26.1,13.04
+MZB,120,Lleida,100.0,27.1,13.54
+MZB,120,Lleida,101.0,28.1,14.04
 MZB,120,Lleida,102.0,29.1,23.0
 MZB,120,Lleida,103.0,30.1,36.54
 MZB,120,L'Espluga,67.7,0.0,0.0
-MZB,120,L'Espluga,68.0,0.3,0.0
-MZB,120,L'Espluga,69.0,1.3,0.02
-MZB,120,L'Espluga,70.0,2.3,0.04
-MZB,120,L'Espluga,71.0,3.3,0.07
-MZB,120,L'Espluga,72.0,4.3,0.14
-MZB,120,L'Espluga,73.0,5.3,0.23
-MZB,120,L'Espluga,74.0,6.3,0.31
-MZB,120,L'Espluga,75.0,7.3,0.39
-MZB,120,L'Espluga,76.0,8.3,0.5
-MZB,120,L'Espluga,77.0,9.3,0.62
-MZB,120,L'Espluga,78.0,10.3,0.74
-MZB,120,L'Espluga,79.0,11.3,0.85
-MZB,120,L'Espluga,80.0,12.3,0.97
-MZB,120,L'Espluga,81.0,13.3,1.09
-MZB,120,L'Espluga,82.0,14.3,1.2
-MZB,120,L'Espluga,83.0,15.3,1.32
-MZB,120,L'Espluga,84.0,16.3,1.46
-MZB,120,L'Espluga,85.0,17.3,1.61
-MZB,120,L'Espluga,86.0,18.3,1.76
-MZB,120,L'Espluga,87.0,19.3,1.91
-MZB,120,L'Espluga,88.0,20.3,2.06
-MZB,120,L'Espluga,89.0,21.3,2.21
-MZB,120,L'Espluga,90.0,22.3,2.36
-MZB,120,L'Espluga,91.0,23.3,2.51
-MZB,120,L'Espluga,92.0,24.3,2.66
-MZB,120,L'Espluga,93.0,25.3,2.81
-MZB,120,L'Espluga,94.0,26.3,2.96
-MZB,120,L'Espluga,95.0,27.3,3.11
-MZB,120,L'Espluga,96.0,28.3,3.27
-MZB,120,L'Espluga,97.0,29.3,4.32
-MZB,120,L'Espluga,98.0,30.3,5.39
-MZB,120,L'Espluga,99.0,31.3,6.46
-MZB,120,L'Espluga,100.0,32.3,7.52
-MZB,120,L'Espluga,101.0,33.3,15.14
+MZB,120,L'Espluga,68.0,0.3,0.14
+MZB,120,L'Espluga,69.0,1.3,0.64
+MZB,120,L'Espluga,70.0,2.3,1.14
+MZB,120,L'Espluga,71.0,3.3,1.64
+MZB,120,L'Espluga,72.0,4.3,2.14
+MZB,120,L'Espluga,73.0,5.3,2.64
+MZB,120,L'Espluga,74.0,6.3,3.14
+MZB,120,L'Espluga,75.0,7.3,3.64
+MZB,120,L'Espluga,76.0,8.3,4.14
+MZB,120,L'Espluga,77.0,9.3,4.64
+MZB,120,L'Espluga,78.0,10.3,5.14
+MZB,120,L'Espluga,79.0,11.3,5.64
+MZB,120,L'Espluga,80.0,12.3,6.14
+MZB,120,L'Espluga,81.0,13.3,6.64
+MZB,120,L'Espluga,82.0,14.3,7.14
+MZB,120,L'Espluga,83.0,15.3,7.64
+MZB,120,L'Espluga,84.0,16.3,8.14
+MZB,120,L'Espluga,85.0,17.3,8.64
+MZB,120,L'Espluga,86.0,18.3,9.14
+MZB,120,L'Espluga,87.0,19.3,9.64
+MZB,120,L'Espluga,88.0,20.3,10.14
+MZB,120,L'Espluga,89.0,21.3,10.64
+MZB,120,L'Espluga,90.0,22.3,11.14
+MZB,120,L'Espluga,91.0,23.3,11.64
+MZB,120,L'Espluga,92.0,24.3,12.14
+MZB,120,L'Espluga,93.0,25.3,12.64
+MZB,120,L'Espluga,94.0,26.3,13.14
+MZB,120,L'Espluga,95.0,27.3,13.64
+MZB,120,L'Espluga,96.0,28.3,14.14
+MZB,120,L'Espluga,97.0,29.3,14.64
+MZB,120,L'Espluga,98.0,30.3,15.14
+MZB,120,L'Espluga,99.0,31.3,15.64
+MZB,120,L'Espluga,100.0,32.3,16.14
+MZB,120,L'Espluga,101.0,33.3,16.64
 MZB,120,L'Espluga,102.0,34.3,28.78
 MZB,120,La Gornal,72.1,0.0,0.0
-MZB,120,La Gornal,73.0,0.9,0.02
-MZB,120,La Gornal,74.0,1.9,0.03
-MZB,120,La Gornal,75.0,2.9,0.05
-MZB,120,La Gornal,76.0,3.9,0.07
-MZB,120,La Gornal,77.0,4.9,0.08
-MZB,120,La Gornal,78.0,5.9,0.1
-MZB,120,La Gornal,79.0,6.9,0.12
-MZB,120,La Gornal,80.0,7.9,0.13
-MZB,120,La Gornal,81.0,8.9,0.15
-MZB,120,La Gornal,82.0,9.9,0.17
-MZB,120,La Gornal,83.0,10.9,0.18
-MZB,120,La Gornal,84.0,11.9,0.2
-MZB,120,La Gornal,85.0,12.9,0.29
-MZB,120,La Gornal,86.0,13.9,0.42
-MZB,120,La Gornal,87.0,14.9,0.59
-MZB,120,La Gornal,88.0,15.9,0.77
-MZB,120,La Gornal,89.0,16.9,0.95
-MZB,120,La Gornal,90.0,17.9,1.14
-MZB,120,La Gornal,91.0,18.9,1.37
-MZB,120,La Gornal,92.0,19.9,1.64
-MZB,120,La Gornal,93.0,20.9,1.92
-MZB,120,La Gornal,94.0,21.9,2.21
-MZB,120,La Gornal,95.0,22.9,2.58
-MZB,120,La Gornal,96.0,23.9,2.98
-MZB,120,La Gornal,97.0,24.9,3.38
-MZB,120,La Gornal,98.0,25.9,4.02
-MZB,120,La Gornal,99.0,26.9,4.8
-MZB,120,La Gornal,100.0,27.9,5.59
-MZB,120,La Gornal,101.0,28.9,7.68
+MZB,120,La Gornal,73.0,0.9,0.47
+MZB,120,La Gornal,74.0,1.9,0.97
+MZB,120,La Gornal,75.0,2.9,1.47
+MZB,120,La Gornal,76.0,3.9,1.97
+MZB,120,La Gornal,77.0,4.9,2.47
+MZB,120,La Gornal,78.0,5.9,2.97
+MZB,120,La Gornal,79.0,6.9,3.47
+MZB,120,La Gornal,80.0,7.9,3.97
+MZB,120,La Gornal,81.0,8.9,4.47
+MZB,120,La Gornal,82.0,9.9,4.97
+MZB,120,La Gornal,83.0,10.9,5.47
+MZB,120,La Gornal,84.0,11.9,5.97
+MZB,120,La Gornal,85.0,12.9,6.47
+MZB,120,La Gornal,86.0,13.9,6.97
+MZB,120,La Gornal,87.0,14.9,7.47
+MZB,120,La Gornal,88.0,15.9,7.97
+MZB,120,La Gornal,89.0,16.9,8.47
+MZB,120,La Gornal,90.0,17.9,8.97
+MZB,120,La Gornal,91.0,18.9,9.47
+MZB,120,La Gornal,92.0,19.9,9.97
+MZB,120,La Gornal,93.0,20.9,10.47
+MZB,120,La Gornal,94.0,21.9,10.97
+MZB,120,La Gornal,95.0,22.9,11.47
+MZB,120,La Gornal,96.0,23.9,11.97
+MZB,120,La Gornal,97.0,24.9,12.47
+MZB,120,La Gornal,98.0,25.9,12.97
+MZB,120,La Gornal,99.0,26.9,13.47
+MZB,120,La Gornal,100.0,27.9,13.97
+MZB,120,La Gornal,101.0,28.9,14.47
 MZB,120,La Gornal,102.0,29.9,19.98
 MZB,120,La Gornal,103.0,30.9,34.22
 MZB,120,Sant Boi,68.6,0.0,0.0
-MZB,120,Sant Boi,69.0,0.4,0.01
-MZB,120,Sant Boi,70.0,1.4,0.02
-MZB,120,Sant Boi,71.0,2.4,0.04
-MZB,120,Sant Boi,72.0,3.4,0.06
-MZB,120,Sant Boi,73.0,4.4,0.07
-MZB,120,Sant Boi,74.0,5.4,0.09
-MZB,120,Sant Boi,75.0,6.4,0.11
-MZB,120,Sant Boi,76.0,7.4,0.12
-MZB,120,Sant Boi,77.0,8.4,0.14
-MZB,120,Sant Boi,78.0,9.4,0.17
-MZB,120,Sant Boi,79.0,10.4,0.21
-MZB,120,Sant Boi,80.0,11.4,0.26
-MZB,120,Sant Boi,81.0,12.4,0.31
-MZB,120,Sant Boi,82.0,13.4,0.36
-MZB,120,Sant Boi,83.0,14.4,0.41
-MZB,120,Sant Boi,84.0,15.4,0.46
-MZB,120,Sant Boi,85.0,16.4,0.51
-MZB,120,Sant Boi,86.0,17.4,0.59
-MZB,120,Sant Boi,87.0,18.4,0.68
-MZB,120,Sant Boi,88.0,19.4,0.78
-MZB,120,Sant Boi,89.0,20.4,0.89
-MZB,120,Sant Boi,90.0,21.4,1.13
-MZB,120,Sant Boi,91.0,22.4,1.43
-MZB,120,Sant Boi,92.0,23.4,1.73
-MZB,120,Sant Boi,93.0,24.4,2.03
-MZB,120,Sant Boi,94.0,25.4,2.33
-MZB,120,Sant Boi,95.0,26.4,2.63
-MZB,120,Sant Boi,96.0,27.4,2.93
-MZB,120,Sant Boi,97.0,28.4,3.23
-MZB,120,Sant Boi,98.0,29.4,3.53
-MZB,120,Sant Boi,99.0,30.4,3.85
-MZB,120,Sant Boi,100.0,31.4,4.17
-MZB,120,Sant Boi,101.0,32.4,5.0
-MZB,120,Sant Boi,102.0,33.4,7.3
-MZB,120,Sant Boi,103.0,34.4,14.06
+MZB,120,Sant Boi,69.0,0.4,0.21
+MZB,120,Sant Boi,70.0,1.4,0.71
+MZB,120,Sant Boi,71.0,2.4,1.21
+MZB,120,Sant Boi,72.0,3.4,1.71
+MZB,120,Sant Boi,73.0,4.4,2.21
+MZB,120,Sant Boi,74.0,5.4,2.71
+MZB,120,Sant Boi,75.0,6.4,3.21
+MZB,120,Sant Boi,76.0,7.4,3.71
+MZB,120,Sant Boi,77.0,8.4,4.21
+MZB,120,Sant Boi,78.0,9.4,4.71
+MZB,120,Sant Boi,79.0,10.4,5.21
+MZB,120,Sant Boi,80.0,11.4,5.71
+MZB,120,Sant Boi,81.0,12.4,6.21
+MZB,120,Sant Boi,82.0,13.4,6.71
+MZB,120,Sant Boi,83.0,14.4,7.21
+MZB,120,Sant Boi,84.0,15.4,7.71
+MZB,120,Sant Boi,85.0,16.4,8.21
+MZB,120,Sant Boi,86.0,17.4,8.71
+MZB,120,Sant Boi,87.0,18.4,9.21
+MZB,120,Sant Boi,88.0,19.4,9.71
+MZB,120,Sant Boi,89.0,20.4,10.21
+MZB,120,Sant Boi,90.0,21.4,10.71
+MZB,120,Sant Boi,91.0,22.4,11.21
+MZB,120,Sant Boi,92.0,23.4,11.71
+MZB,120,Sant Boi,93.0,24.4,12.21
+MZB,120,Sant Boi,94.0,25.4,12.71
+MZB,120,Sant Boi,95.0,26.4,13.21
+MZB,120,Sant Boi,96.0,27.4,13.71
+MZB,120,Sant Boi,97.0,28.4,14.21
+MZB,120,Sant Boi,98.0,29.4,14.71
+MZB,120,Sant Boi,99.0,30.4,15.21
+MZB,120,Sant Boi,100.0,31.4,15.71
+MZB,120,Sant Boi,101.0,32.4,16.21
+MZB,120,Sant Boi,102.0,33.4,16.71
+MZB,120,Sant Boi,103.0,34.4,17.21
 MZB,120,Sant Boi,104.0,35.4,28.77
 MS,REE,El Hornillo,0.0,0.0,0.0
-MS,REE,El Hornillo,1.0,1.0,0.03
-MS,REE,El Hornillo,2.0,2.0,0.07
-MS,REE,El Hornillo,3.0,3.0,0.1
-MS,REE,El Hornillo,4.0,4.0,0.13
-MS,REE,El Hornillo,5.0,5.0,0.18
-MS,REE,El Hornillo,6.0,6.0,0.23
-MS,REE,El Hornillo,7.0,7.0,0.28
-MS,REE,El Hornillo,8.0,8.0,0.33
-MS,REE,El Hornillo,9.0,9.0,0.38
-MS,REE,El Hornillo,10.0,10.0,0.43
-MS,REE,El Hornillo,11.0,11.0,0.48
-MS,REE,El Hornillo,12.0,12.0,0.53
-MS,REE,El Hornillo,13.0,13.0,0.58
-MS,REE,El Hornillo,14.0,14.0,0.63
-MS,REE,El Hornillo,15.0,15.0,0.68
-MS,REE,El Hornillo,16.0,16.0,0.73
-MS,REE,El Hornillo,17.0,17.0,0.78
-MS,REE,El Hornillo,18.0,18.0,0.97
-MS,REE,El Hornillo,19.0,19.0,1.17
-MS,REE,El Hornillo,20.0,20.0,1.37
-MS,REE,El Hornillo,21.0,21.0,1.59
-MS,REE,El Hornillo,22.0,22.0,1.87
-MS,REE,El Hornillo,23.0,23.0,2.16
-MS,REE,El Hornillo,24.0,24.0,2.44
-MS,REE,El Hornillo,25.0,25.0,3.22
-MS,REE,El Hornillo,26.0,26.0,8.44
+MS,REE,El Hornillo,1.0,1.0,0.5
+MS,REE,El Hornillo,2.0,2.0,1.0
+MS,REE,El Hornillo,3.0,3.0,1.5
+MS,REE,El Hornillo,4.0,4.0,2.0
+MS,REE,El Hornillo,5.0,5.0,2.5
+MS,REE,El Hornillo,6.0,6.0,3.0
+MS,REE,El Hornillo,7.0,7.0,3.5
+MS,REE,El Hornillo,8.0,8.0,4.0
+MS,REE,El Hornillo,9.0,9.0,4.5
+MS,REE,El Hornillo,10.0,10.0,5.0
+MS,REE,El Hornillo,11.0,11.0,5.5
+MS,REE,El Hornillo,12.0,12.0,6.0
+MS,REE,El Hornillo,13.0,13.0,6.5
+MS,REE,El Hornillo,14.0,14.0,7.0
+MS,REE,El Hornillo,15.0,15.0,7.5
+MS,REE,El Hornillo,16.0,16.0,8.0
+MS,REE,El Hornillo,17.0,17.0,8.5
+MS,REE,El Hornillo,18.0,18.0,9.0
+MS,REE,El Hornillo,19.0,19.0,9.5
+MS,REE,El Hornillo,20.0,20.0,10.0
+MS,REE,El Hornillo,21.0,21.0,10.5
+MS,REE,El Hornillo,22.0,22.0,11.0
+MS,REE,El Hornillo,23.0,23.0,11.5
+MS,REE,El Hornillo,24.0,24.0,12.0
+MS,REE,El Hornillo,25.0,25.0,12.5
+MS,REE,El Hornillo,26.0,26.0,13.0
 MS,REE,El Hornillo,27.0,27.0,22.65
 MS,REE,Añover,25.0,0.0,0.0
 MS,REE,Añover,25.0,0.0,0.0
-MS,REE,Añover,26.0,1.0,0.03
-MS,REE,Añover,27.0,2.0,0.07
-MS,REE,Añover,28.0,3.0,0.12
-MS,REE,Añover,29.0,4.0,0.17
-MS,REE,Añover,30.0,5.0,0.27
-MS,REE,Añover,31.0,6.0,0.39
-MS,REE,Añover,32.0,7.0,0.52
-MS,REE,Añover,33.0,8.0,0.74
-MS,REE,Añover,34.0,9.0,1.01
-MS,REE,Añover,35.0,10.0,1.43
+MS,REE,Añover,26.0,1.0,0.5
+MS,REE,Añover,27.0,2.0,1.0
+MS,REE,Añover,28.0,3.0,1.5
+MS,REE,Añover,29.0,4.0,2.0
+MS,REE,Añover,30.0,5.0,2.5
+MS,REE,Añover,31.0,6.0,3.0
+MS,REE,Añover,32.0,7.0,3.5
+MS,REE,Añover,33.0,8.0,4.0
+MS,REE,Añover,34.0,9.0,4.5
+MS,REE,Añover,35.0,10.0,5.0
 MS,REE,Añover,36.0,11.0,5.71
 MS,REE,Mora,22.8,0.0,0.0
-MS,REE,Mora,23.0,0.2,0.0
-MS,REE,Mora,24.0,1.2,0.02
-MS,REE,Mora,25.0,2.2,0.04
-MS,REE,Mora,26.0,3.2,0.07
-MS,REE,Mora,27.0,4.2,0.13
-MS,REE,Mora,28.0,5.2,0.22
-MS,REE,Mora,29.0,6.2,0.32
-MS,REE,Mora,30.0,7.2,0.46
-MS,REE,Mora,31.0,8.2,0.62
-MS,REE,Mora,32.0,9.2,0.79
-MS,REE,Mora,33.0,10.2,0.97
-MS,REE,Mora,34.0,11.2,1.27
-MS,REE,Mora,35.0,12.2,1.67
-MS,REE,Mora,36.0,13.2,2.33
+MS,REE,Mora,23.0,0.2,0.1
+MS,REE,Mora,24.0,1.2,0.6
+MS,REE,Mora,25.0,2.2,1.1
+MS,REE,Mora,26.0,3.2,1.6
+MS,REE,Mora,27.0,4.2,2.1
+MS,REE,Mora,28.0,5.2,2.6
+MS,REE,Mora,29.0,6.2,3.1
+MS,REE,Mora,30.0,7.2,3.6
+MS,REE,Mora,31.0,8.2,4.1
+MS,REE,Mora,32.0,9.2,4.6
+MS,REE,Mora,33.0,10.2,5.1
+MS,REE,Mora,34.0,11.2,5.6
+MS,REE,Mora,35.0,12.2,6.1
+MS,REE,Mora,36.0,13.2,6.6
 MS,REE,Mora,37.0,14.2,7.55
 MS,REE,Mora,38.0,15.2,21.98
 MS,REE,El Emperador,22.6,0.0,0.0
-MS,REE,El Emperador,23.0,0.4,0.01
-MS,REE,El Emperador,24.0,1.4,0.05
-MS,REE,El Emperador,25.0,2.4,0.13
-MS,REE,El Emperador,26.0,3.4,0.27
-MS,REE,El Emperador,27.0,4.4,0.45
-MS,REE,El Emperador,28.0,5.4,0.65
-MS,REE,El Emperador,29.0,6.4,0.86
-MS,REE,El Emperador,30.0,7.4,1.08
-MS,REE,El Emperador,31.0,8.4,1.29
-MS,REE,El Emperador,32.0,9.4,1.51
-MS,REE,El Emperador,33.0,10.4,2.37
+MS,REE,El Emperador,23.0,0.4,0.19
+MS,REE,El Emperador,24.0,1.4,0.69
+MS,REE,El Emperador,25.0,2.4,1.19
+MS,REE,El Emperador,26.0,3.4,1.69
+MS,REE,El Emperador,27.0,4.4,2.19
+MS,REE,El Emperador,28.0,5.4,2.69
+MS,REE,El Emperador,29.0,6.4,3.19
+MS,REE,El Emperador,30.0,7.4,3.69
+MS,REE,El Emperador,31.0,8.4,4.19
+MS,REE,El Emperador,32.0,9.4,4.69
+MS,REE,El Emperador,33.0,10.4,5.19
 MS,REE,El Emperador,34.0,11.4,8.24
 MS,REE,Ciudad Real,18.2,0.0,0.0
-MS,REE,Ciudad Real,19.0,0.8,0.01
-MS,REE,Ciudad Real,20.0,1.8,0.03
-MS,REE,Ciudad Real,21.0,2.8,0.05
-MS,REE,Ciudad Real,22.0,3.8,0.06
-MS,REE,Ciudad Real,23.0,4.8,0.08
-MS,REE,Ciudad Real,24.0,5.8,0.1
-MS,REE,Ciudad Real,25.0,6.8,0.16
-MS,REE,Ciudad Real,26.0,7.8,0.26
-MS,REE,Ciudad Real,27.0,8.8,0.36
-MS,REE,Ciudad Real,28.0,9.8,0.47
-MS,REE,Ciudad Real,29.0,10.8,0.58
-MS,REE,Ciudad Real,30.0,11.8,0.71
-MS,REE,Ciudad Real,31.0,12.8,0.84
-MS,REE,Ciudad Real,32.0,13.8,1.03
-MS,REE,Ciudad Real,33.0,14.8,1.29
-MS,REE,Ciudad Real,34.0,15.8,1.64
-MS,REE,Ciudad Real,35.0,16.8,2.43
-MS,REE,Ciudad Real,36.0,17.8,3.86
+MS,REE,Ciudad Real,19.0,0.8,0.42
+MS,REE,Ciudad Real,20.0,1.8,0.92
+MS,REE,Ciudad Real,21.0,2.8,1.42
+MS,REE,Ciudad Real,22.0,3.8,1.92
+MS,REE,Ciudad Real,23.0,4.8,2.42
+MS,REE,Ciudad Real,24.0,5.8,2.92
+MS,REE,Ciudad Real,25.0,6.8,3.42
+MS,REE,Ciudad Real,26.0,7.8,3.92
+MS,REE,Ciudad Real,27.0,8.8,4.42
+MS,REE,Ciudad Real,28.0,9.8,4.92
+MS,REE,Ciudad Real,29.0,10.8,5.42
+MS,REE,Ciudad Real,30.0,11.8,5.92
+MS,REE,Ciudad Real,31.0,12.8,6.42
+MS,REE,Ciudad Real,32.0,13.8,6.92
+MS,REE,Ciudad Real,33.0,14.8,7.42
+MS,REE,Ciudad Real,34.0,15.8,7.92
+MS,REE,Ciudad Real,35.0,16.8,8.42
+MS,REE,Ciudad Real,36.0,17.8,8.92
 MS,REE,Ciudad Real,37.0,18.8,15.98
 MS,REE,La Nava,14.3,0.0,0.0
-MS,REE,La Nava,15.0,0.7,0.01
-MS,REE,La Nava,16.0,1.7,0.03
-MS,REE,La Nava,17.0,2.7,0.05
-MS,REE,La Nava,18.0,3.7,0.06
-MS,REE,La Nava,19.0,4.7,0.08
-MS,REE,La Nava,20.0,5.7,0.1
-MS,REE,La Nava,21.0,6.7,0.11
-MS,REE,La Nava,22.0,7.7,0.13
-MS,REE,La Nava,23.0,8.7,0.15
-MS,REE,La Nava,24.0,9.7,0.16
-MS,REE,La Nava,25.0,10.7,0.18
-MS,REE,La Nava,26.0,11.7,0.23
-MS,REE,La Nava,27.0,12.7,0.28
-MS,REE,La Nava,28.0,13.7,0.42
-MS,REE,La Nava,29.0,14.7,0.66
-MS,REE,La Nava,30.0,15.7,0.89
-MS,REE,La Nava,31.0,16.7,1.14
-MS,REE,La Nava,32.0,17.7,1.46
-MS,REE,La Nava,33.0,18.7,1.83
-MS,REE,La Nava,34.0,19.7,2.26
-MS,REE,La Nava,35.0,20.7,2.84
-MS,REE,La Nava,36.0,21.7,3.72
+MS,REE,La Nava,15.0,0.7,0.36
+MS,REE,La Nava,16.0,1.7,0.86
+MS,REE,La Nava,17.0,2.7,1.36
+MS,REE,La Nava,18.0,3.7,1.86
+MS,REE,La Nava,19.0,4.7,2.36
+MS,REE,La Nava,20.0,5.7,2.86
+MS,REE,La Nava,21.0,6.7,3.36
+MS,REE,La Nava,22.0,7.7,3.86
+MS,REE,La Nava,23.0,8.7,4.36
+MS,REE,La Nava,24.0,9.7,4.86
+MS,REE,La Nava,25.0,10.7,5.36
+MS,REE,La Nava,26.0,11.7,5.86
+MS,REE,La Nava,27.0,12.7,6.36
+MS,REE,La Nava,28.0,13.7,6.86
+MS,REE,La Nava,29.0,14.7,7.36
+MS,REE,La Nava,30.0,15.7,7.86
+MS,REE,La Nava,31.0,16.7,8.36
+MS,REE,La Nava,32.0,17.7,8.86
+MS,REE,La Nava,33.0,18.7,9.36
+MS,REE,La Nava,34.0,19.7,9.86
+MS,REE,La Nava,35.0,20.7,10.36
+MS,REE,La Nava,36.0,21.7,10.86
 MS,REE,La Nava,37.0,22.7,16.75
 MS,REE,Venta La Inés,28.1,0.0,0.0
-MS,REE,Venta La Inés,29.0,0.9,0.02
-MS,REE,Venta La Inés,30.0,1.9,0.05
-MS,REE,Venta La Inés,31.0,2.9,0.1
-MS,REE,Venta La Inés,32.0,3.9,0.15
-MS,REE,Venta La Inés,33.0,4.9,0.2
-MS,REE,Venta La Inés,34.0,5.9,0.29
-MS,REE,Venta La Inés,35.0,6.9,0.5
-MS,REE,Venta La Inés,36.0,7.9,0.76
-MS,REE,Venta La Inés,37.0,8.9,1.02
-MS,REE,Venta La Inés,38.0,9.9,1.29
-MS,REE,Venta La Inés,39.0,10.9,1.57
-MS,REE,Venta La Inés,40.0,11.9,1.86
-MS,REE,Venta La Inés,41.0,12.9,2.23
-MS,REE,Venta La Inés,42.0,13.9,2.79
-MS,REE,Venta La Inés,43.0,14.9,3.93
+MS,REE,Venta La Inés,29.0,0.9,0.46
+MS,REE,Venta La Inés,30.0,1.9,0.96
+MS,REE,Venta La Inés,31.0,2.9,1.46
+MS,REE,Venta La Inés,32.0,3.9,1.96
+MS,REE,Venta La Inés,33.0,4.9,2.46
+MS,REE,Venta La Inés,34.0,5.9,2.96
+MS,REE,Venta La Inés,35.0,6.9,3.46
+MS,REE,Venta La Inés,36.0,7.9,3.96
+MS,REE,Venta La Inés,37.0,8.9,4.46
+MS,REE,Venta La Inés,38.0,9.9,4.96
+MS,REE,Venta La Inés,39.0,10.9,5.46
+MS,REE,Venta La Inés,40.0,11.9,5.96
+MS,REE,Venta La Inés,41.0,12.9,6.46
+MS,REE,Venta La Inés,42.0,13.9,6.96
+MS,REE,Venta La Inés,43.0,14.9,7.46
 MS,REE,Venta La Inés,44.0,15.9,14.58
 MS,REE,Arroyo Valle,12.5,0.0,0.0
-MS,REE,Arroyo Valle,13.0,0.5,0.01
-MS,REE,Arroyo Valle,14.0,1.5,0.04
-MS,REE,Arroyo Valle,15.0,2.5,0.07
-MS,REE,Arroyo Valle,16.0,3.5,0.12
-MS,REE,Arroyo Valle,17.0,4.5,0.2
-MS,REE,Arroyo Valle,18.0,5.5,0.29
-MS,REE,Arroyo Valle,19.0,6.5,0.38
-MS,REE,Arroyo Valle,20.0,7.5,0.54
-MS,REE,Arroyo Valle,21.0,8.5,0.7
-MS,REE,Arroyo Valle,22.0,9.5,0.88
-MS,REE,Arroyo Valle,23.0,10.5,1.08
-MS,REE,Arroyo Valle,24.0,11.5,1.3
-MS,REE,Arroyo Valle,25.0,12.5,1.52
-MS,REE,Arroyo Valle,26.0,13.5,1.73
-MS,REE,Arroyo Valle,27.0,14.5,1.95
-MS,REE,Arroyo Valle,28.0,15.5,2.17
-MS,REE,Arroyo Valle,29.0,16.5,2.43
-MS,REE,Arroyo Valle,30.0,17.5,3.29
-MS,REE,Arroyo Valle,31.0,18.5,4.47
+MS,REE,Arroyo Valle,13.0,0.5,0.26
+MS,REE,Arroyo Valle,14.0,1.5,0.76
+MS,REE,Arroyo Valle,15.0,2.5,1.26
+MS,REE,Arroyo Valle,16.0,3.5,1.76
+MS,REE,Arroyo Valle,17.0,4.5,2.26
+MS,REE,Arroyo Valle,18.0,5.5,2.76
+MS,REE,Arroyo Valle,19.0,6.5,3.26
+MS,REE,Arroyo Valle,20.0,7.5,3.76
+MS,REE,Arroyo Valle,21.0,8.5,4.26
+MS,REE,Arroyo Valle,22.0,9.5,4.76
+MS,REE,Arroyo Valle,23.0,10.5,5.26
+MS,REE,Arroyo Valle,24.0,11.5,5.76
+MS,REE,Arroyo Valle,25.0,12.5,6.26
+MS,REE,Arroyo Valle,26.0,13.5,6.76
+MS,REE,Arroyo Valle,27.0,14.5,7.26
+MS,REE,Arroyo Valle,28.0,15.5,7.76
+MS,REE,Arroyo Valle,29.0,16.5,8.26
+MS,REE,Arroyo Valle,30.0,17.5,8.76
+MS,REE,Arroyo Valle,31.0,18.5,9.26
 MS,REE,Arroyo Valle,32.0,19.5,17.98
 MS,REE,La Lancha,2.7,0.0,0.0
-MS,REE,La Lancha,3.0,0.3,0.01
-MS,REE,La Lancha,4.0,1.3,0.02
-MS,REE,La Lancha,5.0,2.3,0.04
-MS,REE,La Lancha,6.0,3.3,0.06
-MS,REE,La Lancha,7.0,4.3,0.1
-MS,REE,La Lancha,8.0,5.3,0.13
-MS,REE,La Lancha,9.0,6.3,0.16
-MS,REE,La Lancha,10.0,7.3,0.2
-MS,REE,La Lancha,11.0,8.3,0.24
-MS,REE,La Lancha,12.0,9.3,0.29
-MS,REE,La Lancha,13.0,10.3,0.34
-MS,REE,La Lancha,14.0,11.3,0.39
-MS,REE,La Lancha,15.0,12.3,0.44
-MS,REE,La Lancha,16.0,13.3,0.52
-MS,REE,La Lancha,17.0,14.3,0.63
-MS,REE,La Lancha,18.0,15.3,0.75
-MS,REE,La Lancha,19.0,16.3,0.87
-MS,REE,La Lancha,20.0,17.3,1.01
-MS,REE,La Lancha,21.0,18.3,1.14
-MS,REE,La Lancha,22.0,19.3,1.27
-MS,REE,La Lancha,23.0,20.3,1.41
-MS,REE,La Lancha,24.0,21.3,1.54
-MS,REE,La Lancha,25.0,22.3,1.67
-MS,REE,La Lancha,26.0,23.3,1.81
-MS,REE,La Lancha,27.0,24.3,1.95
-MS,REE,La Lancha,28.0,25.3,2.1
-MS,REE,La Lancha,29.0,26.3,2.25
-MS,REE,La Lancha,30.0,27.3,2.97
-MS,REE,La Lancha,31.0,28.3,3.76
+MS,REE,La Lancha,3.0,0.3,0.16
+MS,REE,La Lancha,4.0,1.3,0.66
+MS,REE,La Lancha,5.0,2.3,1.16
+MS,REE,La Lancha,6.0,3.3,1.66
+MS,REE,La Lancha,7.0,4.3,2.16
+MS,REE,La Lancha,8.0,5.3,2.66
+MS,REE,La Lancha,9.0,6.3,3.16
+MS,REE,La Lancha,10.0,7.3,3.66
+MS,REE,La Lancha,11.0,8.3,4.16
+MS,REE,La Lancha,12.0,9.3,4.66
+MS,REE,La Lancha,13.0,10.3,5.16
+MS,REE,La Lancha,14.0,11.3,5.66
+MS,REE,La Lancha,15.0,12.3,6.16
+MS,REE,La Lancha,16.0,13.3,6.66
+MS,REE,La Lancha,17.0,14.3,7.16
+MS,REE,La Lancha,18.0,15.3,7.66
+MS,REE,La Lancha,19.0,16.3,8.16
+MS,REE,La Lancha,20.0,17.3,8.66
+MS,REE,La Lancha,21.0,18.3,9.16
+MS,REE,La Lancha,22.0,19.3,9.66
+MS,REE,La Lancha,23.0,20.3,10.16
+MS,REE,La Lancha,24.0,21.3,10.66
+MS,REE,La Lancha,25.0,22.3,11.16
+MS,REE,La Lancha,26.0,23.3,11.66
+MS,REE,La Lancha,27.0,24.3,12.16
+MS,REE,La Lancha,28.0,25.3,12.66
+MS,REE,La Lancha,29.0,26.3,13.16
+MS,REE,La Lancha,30.0,27.3,13.66
+MS,REE,La Lancha,31.0,28.3,14.16
 MS,REE,La Lancha,32.0,29.3,15.17
 MS,REE,Posadas,33.0,0.0,0.0
 MS,REE,Posadas,33.0,0.0,0.0
-MS,REE,Posadas,34.0,1.0,0.08
-MS,REE,Posadas,35.0,2.0,0.21
-MS,REE,Posadas,36.0,3.0,0.36
-MS,REE,Posadas,37.0,4.0,0.53
-MS,REE,Posadas,38.0,5.0,0.88
+MS,REE,Posadas,34.0,1.0,0.5
+MS,REE,Posadas,35.0,2.0,1.0
+MS,REE,Posadas,36.0,3.0,1.5
+MS,REE,Posadas,37.0,4.0,2.0
+MS,REE,Posadas,38.0,5.0,2.5
 MS,REE,Posadas,39.0,6.0,6.63
 MS,REE,Lora del Río,27.8,0.0,0.0
-MS,REE,Lora del Río,28.0,0.2,0.01
-MS,REE,Lora del Río,29.0,1.2,0.05
-MS,REE,Lora del Río,30.0,2.2,0.15
-MS,REE,Lora del Río,31.0,3.2,0.31
-MS,REE,Lora del Río,32.0,4.2,0.49
-MS,REE,Lora del Río,33.0,5.2,0.69
-MS,REE,Lora del Río,34.0,6.2,1.65
+MS,REE,Lora del Río,28.0,0.2,0.09
+MS,REE,Lora del Río,29.0,1.2,0.59
+MS,REE,Lora del Río,30.0,2.2,1.09
+MS,REE,Lora del Río,31.0,3.2,1.59
+MS,REE,Lora del Río,32.0,4.2,2.09
+MS,REE,Lora del Río,33.0,5.2,2.59
+MS,REE,Lora del Río,34.0,6.2,3.09
 MS,REE,Rinconada,20.1,0.0,0.0
-MS,REE,Rinconada,21.0,0.9,0.01
-MS,REE,Rinconada,22.0,1.9,0.03
-MS,REE,Rinconada,23.0,2.9,0.05
-MS,REE,Rinconada,24.0,3.9,0.07
-MS,REE,Rinconada,25.0,4.9,0.1
-MS,REE,Rinconada,26.0,5.9,0.13
-MS,REE,Rinconada,27.0,6.9,0.17
-MS,REE,Rinconada,28.0,7.9,0.22
-MS,REE,Rinconada,29.0,8.9,0.28
-MS,REE,Rinconada,30.0,9.9,0.44
-MS,REE,Rinconada,31.0,10.9,0.67
-MS,REE,Rinconada,32.0,11.9,0.94
-MS,REE,Rinconada,33.0,12.9,1.62
-MS,REE,Rinconada,34.0,13.9,4.4
+MS,REE,Rinconada,21.0,0.9,0.45
+MS,REE,Rinconada,22.0,1.9,0.95
+MS,REE,Rinconada,23.0,2.9,1.45
+MS,REE,Rinconada,24.0,3.9,1.95
+MS,REE,Rinconada,25.0,4.9,2.45
+MS,REE,Rinconada,26.0,5.9,2.95
+MS,REE,Rinconada,27.0,6.9,3.45
+MS,REE,Rinconada,28.0,7.9,3.95
+MS,REE,Rinconada,29.0,8.9,4.45
+MS,REE,Rinconada,30.0,9.9,4.95
+MS,REE,Rinconada,31.0,10.9,5.45
+MS,REE,Rinconada,32.0,11.9,5.95
+MS,REE,Rinconada,33.0,12.9,6.45
+MS,REE,Rinconada,34.0,13.9,6.95
 MS,trafo,El Hornillo,4.0,0.0,0.0
-MS,trafo,El Hornillo,4.0,0.0,0.0
-MS,trafo,El Hornillo,5.0,1.0,0.02
-MS,trafo,El Hornillo,6.0,2.0,0.03
-MS,trafo,El Hornillo,7.0,3.0,0.05
-MS,trafo,El Hornillo,8.0,4.0,0.07
-MS,trafo,El Hornillo,9.0,5.0,0.08
-MS,trafo,El Hornillo,10.0,6.0,0.1
-MS,trafo,El Hornillo,11.0,7.0,0.12
-MS,trafo,El Hornillo,12.0,8.0,0.13
-MS,trafo,El Hornillo,13.0,9.0,0.15
-MS,trafo,El Hornillo,14.0,10.0,0.17
-MS,trafo,El Hornillo,15.0,11.0,0.18
-MS,trafo,El Hornillo,16.0,12.0,0.2
-MS,trafo,El Hornillo,17.0,13.0,0.22
-MS,trafo,El Hornillo,18.0,14.0,0.24
-MS,trafo,El Hornillo,19.0,15.0,0.27
-MS,trafo,El Hornillo,20.0,16.0,0.3
-MS,trafo,El Hornillo,21.0,17.0,0.34
-MS,trafo,El Hornillo,22.0,18.0,0.37
-MS,trafo,El Hornillo,23.0,19.0,0.41
-MS,trafo,El Hornillo,24.0,20.0,0.46
-MS,trafo,El Hornillo,25.0,21.0,0.51
-MS,trafo,El Hornillo,26.0,22.0,0.56
-MS,trafo,El Hornillo,27.0,23.0,0.61
-MS,trafo,El Hornillo,28.0,24.0,0.66
-MS,trafo,El Hornillo,29.0,25.0,0.71
-MS,trafo,El Hornillo,30.0,26.0,0.76
-MS,trafo,El Hornillo,31.0,27.0,0.81
-MS,trafo,El Hornillo,32.0,28.0,0.86
-MS,trafo,El Hornillo,33.0,29.0,0.91
-MS,trafo,El Hornillo,34.0,30.0,0.96
-MS,trafo,El Hornillo,35.0,31.0,1.01
-MS,trafo,El Hornillo,36.0,32.0,1.06
-MS,trafo,El Hornillo,37.0,33.0,1.17
-MS,trafo,El Hornillo,38.0,34.0,1.37
-MS,trafo,El Hornillo,39.0,35.0,1.59
-MS,trafo,El Hornillo,40.0,36.0,1.87
-MS,trafo,El Hornillo,41.0,37.0,2.16
-MS,trafo,El Hornillo,42.0,38.0,2.44
-MS,trafo,El Hornillo,43.0,39.0,3.22
-MS,trafo,El Hornillo,44.0,40.0,8.68
+MS,trafo,El Hornillo,4.0,0.0,0.01
+MS,trafo,El Hornillo,5.0,1.0,0.51
+MS,trafo,El Hornillo,6.0,2.0,1.01
+MS,trafo,El Hornillo,7.0,3.0,1.51
+MS,trafo,El Hornillo,8.0,4.0,2.01
+MS,trafo,El Hornillo,9.0,5.0,2.51
+MS,trafo,El Hornillo,10.0,6.0,3.01
+MS,trafo,El Hornillo,11.0,7.0,3.51
+MS,trafo,El Hornillo,12.0,8.0,4.01
+MS,trafo,El Hornillo,13.0,9.0,4.51
+MS,trafo,El Hornillo,14.0,10.0,5.01
+MS,trafo,El Hornillo,15.0,11.0,5.51
+MS,trafo,El Hornillo,16.0,12.0,6.01
+MS,trafo,El Hornillo,17.0,13.0,6.51
+MS,trafo,El Hornillo,18.0,14.0,7.01
+MS,trafo,El Hornillo,19.0,15.0,7.51
+MS,trafo,El Hornillo,20.0,16.0,8.01
+MS,trafo,El Hornillo,21.0,17.0,8.51
+MS,trafo,El Hornillo,22.0,18.0,9.01
+MS,trafo,El Hornillo,23.0,19.0,9.51
+MS,trafo,El Hornillo,24.0,20.0,10.01
+MS,trafo,El Hornillo,25.0,21.0,10.51
+MS,trafo,El Hornillo,26.0,22.0,11.01
+MS,trafo,El Hornillo,27.0,23.0,11.51
+MS,trafo,El Hornillo,28.0,24.0,12.01
+MS,trafo,El Hornillo,29.0,25.0,12.51
+MS,trafo,El Hornillo,30.0,26.0,13.01
+MS,trafo,El Hornillo,31.0,27.0,13.51
+MS,trafo,El Hornillo,32.0,28.0,14.01
+MS,trafo,El Hornillo,33.0,29.0,14.51
+MS,trafo,El Hornillo,34.0,30.0,15.01
+MS,trafo,El Hornillo,35.0,31.0,15.51
+MS,trafo,El Hornillo,36.0,32.0,16.01
+MS,trafo,El Hornillo,37.0,33.0,16.51
+MS,trafo,El Hornillo,38.0,34.0,17.01
+MS,trafo,El Hornillo,39.0,35.0,17.51
+MS,trafo,El Hornillo,40.0,36.0,18.01
+MS,trafo,El Hornillo,41.0,37.0,18.51
+MS,trafo,El Hornillo,42.0,38.0,19.01
+MS,trafo,El Hornillo,43.0,39.0,19.51
+MS,trafo,El Hornillo,44.0,40.0,20.01
 MS,trafo,El Hornillo,45.0,41.0,22.89
 MS,trafo,Añover,35.8,0.0,0.0
-MS,trafo,Añover,36.0,0.2,0.0
-MS,trafo,Añover,37.0,1.2,0.04
-MS,trafo,Añover,38.0,2.2,0.08
-MS,trafo,Añover,39.0,3.2,0.13
-MS,trafo,Añover,40.0,4.2,0.18
-MS,trafo,Añover,41.0,5.2,0.29
-MS,trafo,Añover,42.0,6.2,0.42
-MS,trafo,Añover,43.0,7.2,0.55
-MS,trafo,Añover,44.0,8.2,0.79
-MS,trafo,Añover,45.0,9.2,1.06
-MS,trafo,Añover,46.0,10.2,1.52
+MS,trafo,Añover,36.0,0.2,0.1
+MS,trafo,Añover,37.0,1.2,0.6
+MS,trafo,Añover,38.0,2.2,1.1
+MS,trafo,Añover,39.0,3.2,1.6
+MS,trafo,Añover,40.0,4.2,2.1
+MS,trafo,Añover,41.0,5.2,2.6
+MS,trafo,Añover,42.0,6.2,3.1
+MS,trafo,Añover,43.0,7.2,3.6
+MS,trafo,Añover,44.0,8.2,4.1
+MS,trafo,Añover,45.0,9.2,4.6
+MS,trafo,Añover,46.0,10.2,5.1
 MS,trafo,Añover,47.0,11.2,8.51
 MS,trafo,Mora,31.8,0.0,0.0
-MS,trafo,Mora,32.0,0.2,0.0
-MS,trafo,Mora,33.0,1.2,0.02
-MS,trafo,Mora,34.0,2.2,0.04
-MS,trafo,Mora,35.0,3.2,0.07
-MS,trafo,Mora,36.0,4.2,0.13
-MS,trafo,Mora,37.0,5.2,0.22
-MS,trafo,Mora,38.0,6.2,0.32
-MS,trafo,Mora,39.0,7.2,0.46
-MS,trafo,Mora,40.0,8.2,0.62
-MS,trafo,Mora,41.0,9.2,0.79
-MS,trafo,Mora,42.0,10.2,0.97
-MS,trafo,Mora,43.0,11.2,1.27
-MS,trafo,Mora,44.0,12.2,1.67
-MS,trafo,Mora,45.0,13.2,2.33
+MS,trafo,Mora,32.0,0.2,0.1
+MS,trafo,Mora,33.0,1.2,0.6
+MS,trafo,Mora,34.0,2.2,1.1
+MS,trafo,Mora,35.0,3.2,1.6
+MS,trafo,Mora,36.0,4.2,2.1
+MS,trafo,Mora,37.0,5.2,2.6
+MS,trafo,Mora,38.0,6.2,3.1
+MS,trafo,Mora,39.0,7.2,3.6
+MS,trafo,Mora,40.0,8.2,4.1
+MS,trafo,Mora,41.0,9.2,4.6
+MS,trafo,Mora,42.0,10.2,5.1
+MS,trafo,Mora,43.0,11.2,5.6
+MS,trafo,Mora,44.0,12.2,6.1
+MS,trafo,Mora,45.0,13.2,6.6
 MS,trafo,Mora,46.0,14.2,7.55
 MS,trafo,Mora,47.0,15.2,21.98
 MS,trafo,El Emperador,34.3,0.0,0.0
-MS,trafo,El Emperador,35.0,0.7,0.02
-MS,trafo,El Emperador,36.0,1.7,0.06
-MS,trafo,El Emperador,37.0,2.7,0.17
-MS,trafo,El Emperador,38.0,3.7,0.31
-MS,trafo,El Emperador,39.0,4.7,0.51
-MS,trafo,El Emperador,40.0,5.7,0.71
-MS,trafo,El Emperador,41.0,6.7,0.92
-MS,trafo,El Emperador,42.0,7.7,1.14
-MS,trafo,El Emperador,43.0,8.7,1.36
-MS,trafo,El Emperador,44.0,9.7,1.64
-MS,trafo,El Emperador,45.0,10.7,2.73
+MS,trafo,El Emperador,35.0,0.7,0.34
+MS,trafo,El Emperador,36.0,1.7,0.84
+MS,trafo,El Emperador,37.0,2.7,1.34
+MS,trafo,El Emperador,38.0,3.7,1.84
+MS,trafo,El Emperador,39.0,4.7,2.34
+MS,trafo,El Emperador,40.0,5.7,2.84
+MS,trafo,El Emperador,41.0,6.7,3.34
+MS,trafo,El Emperador,42.0,7.7,3.84
+MS,trafo,El Emperador,43.0,8.7,4.34
+MS,trafo,El Emperador,44.0,9.7,4.84
+MS,trafo,El Emperador,45.0,10.7,5.34
 MS,trafo,El Emperador,46.0,11.7,12.44
 MS,trafo,Ciudad Real,27.2,0.0,0.0
-MS,trafo,Ciudad Real,28.0,0.8,0.01
-MS,trafo,Ciudad Real,29.0,1.8,0.03
-MS,trafo,Ciudad Real,30.0,2.8,0.05
-MS,trafo,Ciudad Real,31.0,3.8,0.06
-MS,trafo,Ciudad Real,32.0,4.8,0.08
-MS,trafo,Ciudad Real,33.0,5.8,0.1
-MS,trafo,Ciudad Real,34.0,6.8,0.16
-MS,trafo,Ciudad Real,35.0,7.8,0.26
-MS,trafo,Ciudad Real,36.0,8.8,0.36
-MS,trafo,Ciudad Real,37.0,9.8,0.47
-MS,trafo,Ciudad Real,38.0,10.8,0.58
-MS,trafo,Ciudad Real,39.0,11.8,0.71
-MS,trafo,Ciudad Real,40.0,12.8,0.84
-MS,trafo,Ciudad Real,41.0,13.8,1.03
-MS,trafo,Ciudad Real,42.0,14.8,1.29
-MS,trafo,Ciudad Real,43.0,15.8,1.64
-MS,trafo,Ciudad Real,44.0,16.8,2.43
-MS,trafo,Ciudad Real,45.0,17.8,3.86
+MS,trafo,Ciudad Real,28.0,0.8,0.42
+MS,trafo,Ciudad Real,29.0,1.8,0.92
+MS,trafo,Ciudad Real,30.0,2.8,1.42
+MS,trafo,Ciudad Real,31.0,3.8,1.92
+MS,trafo,Ciudad Real,32.0,4.8,2.42
+MS,trafo,Ciudad Real,33.0,5.8,2.92
+MS,trafo,Ciudad Real,34.0,6.8,3.42
+MS,trafo,Ciudad Real,35.0,7.8,3.92
+MS,trafo,Ciudad Real,36.0,8.8,4.42
+MS,trafo,Ciudad Real,37.0,9.8,4.92
+MS,trafo,Ciudad Real,38.0,10.8,5.42
+MS,trafo,Ciudad Real,39.0,11.8,5.92
+MS,trafo,Ciudad Real,40.0,12.8,6.42
+MS,trafo,Ciudad Real,41.0,13.8,6.92
+MS,trafo,Ciudad Real,42.0,14.8,7.42
+MS,trafo,Ciudad Real,43.0,15.8,7.92
+MS,trafo,Ciudad Real,44.0,16.8,8.42
+MS,trafo,Ciudad Real,45.0,17.8,8.92
 MS,trafo,Ciudad Real,46.0,18.8,15.98
 MS,trafo,La Nava,23.3,0.0,0.0
-MS,trafo,La Nava,24.0,0.7,0.01
-MS,trafo,La Nava,25.0,1.7,0.03
-MS,trafo,La Nava,26.0,2.7,0.05
-MS,trafo,La Nava,27.0,3.7,0.06
-MS,trafo,La Nava,28.0,4.7,0.08
-MS,trafo,La Nava,29.0,5.7,0.1
-MS,trafo,La Nava,30.0,6.7,0.11
-MS,trafo,La Nava,31.0,7.7,0.13
-MS,trafo,La Nava,32.0,8.7,0.15
-MS,trafo,La Nava,33.0,9.7,0.16
-MS,trafo,La Nava,34.0,10.7,0.18
-MS,trafo,La Nava,35.0,11.7,0.23
-MS,trafo,La Nava,36.0,12.7,0.28
-MS,trafo,La Nava,37.0,13.7,0.42
-MS,trafo,La Nava,38.0,14.7,0.66
-MS,trafo,La Nava,39.0,15.7,0.89
-MS,trafo,La Nava,40.0,16.7,1.14
-MS,trafo,La Nava,41.0,17.7,1.46
-MS,trafo,La Nava,42.0,18.7,1.83
-MS,trafo,La Nava,43.0,19.7,2.26
-MS,trafo,La Nava,44.0,20.7,2.84
-MS,trafo,La Nava,45.0,21.7,3.72
+MS,trafo,La Nava,24.0,0.7,0.36
+MS,trafo,La Nava,25.0,1.7,0.86
+MS,trafo,La Nava,26.0,2.7,1.36
+MS,trafo,La Nava,27.0,3.7,1.86
+MS,trafo,La Nava,28.0,4.7,2.36
+MS,trafo,La Nava,29.0,5.7,2.86
+MS,trafo,La Nava,30.0,6.7,3.36
+MS,trafo,La Nava,31.0,7.7,3.86
+MS,trafo,La Nava,32.0,8.7,4.36
+MS,trafo,La Nava,33.0,9.7,4.86
+MS,trafo,La Nava,34.0,10.7,5.36
+MS,trafo,La Nava,35.0,11.7,5.86
+MS,trafo,La Nava,36.0,12.7,6.36
+MS,trafo,La Nava,37.0,13.7,6.86
+MS,trafo,La Nava,38.0,14.7,7.36
+MS,trafo,La Nava,39.0,15.7,7.86
+MS,trafo,La Nava,40.0,16.7,8.36
+MS,trafo,La Nava,41.0,17.7,8.86
+MS,trafo,La Nava,42.0,18.7,9.36
+MS,trafo,La Nava,43.0,19.7,9.86
+MS,trafo,La Nava,44.0,20.7,10.36
+MS,trafo,La Nava,45.0,21.7,10.86
 MS,trafo,La Nava,46.0,22.7,16.75
 MS,trafo,Venta La Inés,30.0,0.0,0.0
-MS,trafo,Venta La Inés,31.0,1.0,0.02
-MS,trafo,Venta La Inés,32.0,2.0,0.05
-MS,trafo,Venta La Inés,33.0,3.0,0.1
-MS,trafo,Venta La Inés,34.0,4.0,0.15
-MS,trafo,Venta La Inés,35.0,5.0,0.2
-MS,trafo,Venta La Inés,36.0,6.0,0.3
-MS,trafo,Venta La Inés,37.0,7.0,0.51
-MS,trafo,Venta La Inés,38.0,8.0,0.77
-MS,trafo,Venta La Inés,39.0,9.0,1.04
-MS,trafo,Venta La Inés,40.0,10.0,1.3
-MS,trafo,Venta La Inés,41.0,11.0,1.58
-MS,trafo,Venta La Inés,42.0,12.0,1.88
-MS,trafo,Venta La Inés,43.0,13.0,2.26
-MS,trafo,Venta La Inés,44.0,14.0,2.82
-MS,trafo,Venta La Inés,45.0,15.0,4.04
+MS,trafo,Venta La Inés,31.0,1.0,0.48
+MS,trafo,Venta La Inés,32.0,2.0,0.98
+MS,trafo,Venta La Inés,33.0,3.0,1.48
+MS,trafo,Venta La Inés,34.0,4.0,1.98
+MS,trafo,Venta La Inés,35.0,5.0,2.48
+MS,trafo,Venta La Inés,36.0,6.0,2.98
+MS,trafo,Venta La Inés,37.0,7.0,3.48
+MS,trafo,Venta La Inés,38.0,8.0,3.98
+MS,trafo,Venta La Inés,39.0,9.0,4.48
+MS,trafo,Venta La Inés,40.0,10.0,4.98
+MS,trafo,Venta La Inés,41.0,11.0,5.48
+MS,trafo,Venta La Inés,42.0,12.0,5.98
+MS,trafo,Venta La Inés,43.0,13.0,6.48
+MS,trafo,Venta La Inés,44.0,14.0,6.98
+MS,trafo,Venta La Inés,45.0,15.0,7.48
 MS,trafo,Venta La Inés,46.0,16.0,15.38
 MS,trafo,Arroyo Valle,26.9,0.0,0.0
-MS,trafo,Arroyo Valle,27.0,0.1,0.0
-MS,trafo,Arroyo Valle,28.0,1.1,0.02
-MS,trafo,Arroyo Valle,29.0,2.1,0.06
-MS,trafo,Arroyo Valle,30.0,3.1,0.1
-MS,trafo,Arroyo Valle,31.0,4.1,0.17
-MS,trafo,Arroyo Valle,32.0,5.1,0.25
-MS,trafo,Arroyo Valle,33.0,6.1,0.34
-MS,trafo,Arroyo Valle,34.0,7.1,0.47
-MS,trafo,Arroyo Valle,35.0,8.1,0.64
-MS,trafo,Arroyo Valle,36.0,9.1,0.8
-MS,trafo,Arroyo Valle,37.0,10.1,1.0
-MS,trafo,Arroyo Valle,38.0,11.1,1.21
-MS,trafo,Arroyo Valle,39.0,12.1,1.43
-MS,trafo,Arroyo Valle,40.0,13.1,1.65
-MS,trafo,Arroyo Valle,41.0,14.1,1.86
-MS,trafo,Arroyo Valle,42.0,15.1,2.08
-MS,trafo,Arroyo Valle,43.0,16.1,2.3
-MS,trafo,Arroyo Valle,44.0,17.1,2.95
-MS,trafo,Arroyo Valle,45.0,18.1,3.82
+MS,trafo,Arroyo Valle,27.0,0.1,0.06
+MS,trafo,Arroyo Valle,28.0,1.1,0.56
+MS,trafo,Arroyo Valle,29.0,2.1,1.06
+MS,trafo,Arroyo Valle,30.0,3.1,1.56
+MS,trafo,Arroyo Valle,31.0,4.1,2.06
+MS,trafo,Arroyo Valle,32.0,5.1,2.56
+MS,trafo,Arroyo Valle,33.0,6.1,3.06
+MS,trafo,Arroyo Valle,34.0,7.1,3.56
+MS,trafo,Arroyo Valle,35.0,8.1,4.06
+MS,trafo,Arroyo Valle,36.0,9.1,4.56
+MS,trafo,Arroyo Valle,37.0,10.1,5.06
+MS,trafo,Arroyo Valle,38.0,11.1,5.56
+MS,trafo,Arroyo Valle,39.0,12.1,6.06
+MS,trafo,Arroyo Valle,40.0,13.1,6.56
+MS,trafo,Arroyo Valle,41.0,14.1,7.06
+MS,trafo,Arroyo Valle,42.0,15.1,7.56
+MS,trafo,Arroyo Valle,43.0,16.1,8.06
+MS,trafo,Arroyo Valle,44.0,17.1,8.56
+MS,trafo,Arroyo Valle,45.0,18.1,9.06
 MS,trafo,Arroyo Valle,46.0,19.1,11.93
 MS,trafo,La Lancha,16.2,0.0,0.0
-MS,trafo,La Lancha,17.0,0.8,0.01
-MS,trafo,La Lancha,18.0,1.8,0.03
-MS,trafo,La Lancha,19.0,2.8,0.05
-MS,trafo,La Lancha,20.0,3.8,0.08
-MS,trafo,La Lancha,21.0,4.8,0.11
-MS,trafo,La Lancha,22.0,5.8,0.15
-MS,trafo,La Lancha,23.0,6.8,0.18
-MS,trafo,La Lancha,24.0,7.8,0.22
-MS,trafo,La Lancha,25.0,8.8,0.27
-MS,trafo,La Lancha,26.0,9.8,0.32
-MS,trafo,La Lancha,27.0,10.8,0.37
-MS,trafo,La Lancha,28.0,11.8,0.42
-MS,trafo,La Lancha,29.0,12.8,0.47
-MS,trafo,La Lancha,30.0,13.8,0.58
-MS,trafo,La Lancha,31.0,14.8,0.69
-MS,trafo,La Lancha,32.0,15.8,0.81
-MS,trafo,La Lancha,33.0,16.8,0.94
-MS,trafo,La Lancha,34.0,17.8,1.07
-MS,trafo,La Lancha,35.0,18.8,1.21
-MS,trafo,La Lancha,36.0,19.8,1.34
-MS,trafo,La Lancha,37.0,20.8,1.47
-MS,trafo,La Lancha,38.0,21.8,1.61
-MS,trafo,La Lancha,39.0,22.8,1.74
-MS,trafo,La Lancha,40.0,23.8,1.87
-MS,trafo,La Lancha,41.0,24.8,2.02
-MS,trafo,La Lancha,42.0,25.8,2.17
-MS,trafo,La Lancha,43.0,26.8,2.59
-MS,trafo,La Lancha,44.0,27.8,3.36
-MS,trafo,La Lancha,45.0,28.8,7.98
+MS,trafo,La Lancha,17.0,0.8,0.41
+MS,trafo,La Lancha,18.0,1.8,0.91
+MS,trafo,La Lancha,19.0,2.8,1.41
+MS,trafo,La Lancha,20.0,3.8,1.91
+MS,trafo,La Lancha,21.0,4.8,2.41
+MS,trafo,La Lancha,22.0,5.8,2.91
+MS,trafo,La Lancha,23.0,6.8,3.41
+MS,trafo,La Lancha,24.0,7.8,3.91
+MS,trafo,La Lancha,25.0,8.8,4.41
+MS,trafo,La Lancha,26.0,9.8,4.91
+MS,trafo,La Lancha,27.0,10.8,5.41
+MS,trafo,La Lancha,28.0,11.8,5.91
+MS,trafo,La Lancha,29.0,12.8,6.41
+MS,trafo,La Lancha,30.0,13.8,6.91
+MS,trafo,La Lancha,31.0,14.8,7.41
+MS,trafo,La Lancha,32.0,15.8,7.91
+MS,trafo,La Lancha,33.0,16.8,8.41
+MS,trafo,La Lancha,34.0,17.8,8.91
+MS,trafo,La Lancha,35.0,18.8,9.41
+MS,trafo,La Lancha,36.0,19.8,9.91
+MS,trafo,La Lancha,37.0,20.8,10.41
+MS,trafo,La Lancha,38.0,21.8,10.91
+MS,trafo,La Lancha,39.0,22.8,11.41
+MS,trafo,La Lancha,40.0,23.8,11.91
+MS,trafo,La Lancha,41.0,24.8,12.41
+MS,trafo,La Lancha,42.0,25.8,12.91
+MS,trafo,La Lancha,43.0,26.8,13.41
+MS,trafo,La Lancha,44.0,27.8,13.91
+MS,trafo,La Lancha,45.0,28.8,14.41
 MS,trafo,La Lancha,46.0,29.8,22.44
 MS,trafo,Posadas,42.0,0.0,0.0
 MS,trafo,Posadas,42.0,0.0,0.0
-MS,trafo,Posadas,43.0,1.0,0.08
-MS,trafo,Posadas,44.0,2.0,0.21
-MS,trafo,Posadas,45.0,3.0,0.36
-MS,trafo,Posadas,46.0,4.0,0.53
-MS,trafo,Posadas,47.0,5.0,0.88
+MS,trafo,Posadas,43.0,1.0,0.5
+MS,trafo,Posadas,44.0,2.0,1.0
+MS,trafo,Posadas,45.0,3.0,1.5
+MS,trafo,Posadas,46.0,4.0,2.0
+MS,trafo,Posadas,47.0,5.0,2.5
 MS,trafo,Posadas,48.0,6.0,6.63
 MS,trafo,Lora del Río,41.3,0.0,0.0
-MS,trafo,Lora del Río,42.0,0.7,0.03
-MS,trafo,Lora del Río,43.0,1.7,0.09
-MS,trafo,Lora del Río,44.0,2.7,0.21
-MS,trafo,Lora del Río,45.0,3.7,0.4
-MS,trafo,Lora del Río,46.0,4.7,0.59
-MS,trafo,Lora del Río,47.0,5.7,0.82
+MS,trafo,Lora del Río,42.0,0.7,0.34
+MS,trafo,Lora del Río,43.0,1.7,0.84
+MS,trafo,Lora del Río,44.0,2.7,1.34
+MS,trafo,Lora del Río,45.0,3.7,1.84
+MS,trafo,Lora del Río,46.0,4.7,2.34
+MS,trafo,Lora del Río,47.0,5.7,2.84
 MS,trafo,Lora del Río,48.0,6.7,6.97
 MS,trafo,Rinconada,33.6,0.0,0.0
-MS,trafo,Rinconada,34.0,0.4,0.01
-MS,trafo,Rinconada,35.0,1.4,0.02
-MS,trafo,Rinconada,36.0,2.4,0.04
-MS,trafo,Rinconada,37.0,3.4,0.06
-MS,trafo,Rinconada,38.0,4.4,0.08
-MS,trafo,Rinconada,39.0,5.4,0.12
-MS,trafo,Rinconada,40.0,6.4,0.15
-MS,trafo,Rinconada,41.0,7.4,0.2
-MS,trafo,Rinconada,42.0,8.4,0.25
-MS,trafo,Rinconada,43.0,9.4,0.35
-MS,trafo,Rinconada,44.0,10.4,0.54
-MS,trafo,Rinconada,45.0,11.4,0.8
-MS,trafo,Rinconada,46.0,12.4,1.09
-MS,trafo,Rinconada,47.0,13.4,2.34
+MS,trafo,Rinconada,34.0,0.4,0.2
+MS,trafo,Rinconada,35.0,1.4,0.7
+MS,trafo,Rinconada,36.0,2.4,1.2
+MS,trafo,Rinconada,37.0,3.4,1.7
+MS,trafo,Rinconada,38.0,4.4,2.2
+MS,trafo,Rinconada,39.0,5.4,2.7
+MS,trafo,Rinconada,40.0,6.4,3.2
+MS,trafo,Rinconada,41.0,7.4,3.7
+MS,trafo,Rinconada,42.0,8.4,4.2
+MS,trafo,Rinconada,43.0,9.4,4.7
+MS,trafo,Rinconada,44.0,10.4,5.2
+MS,trafo,Rinconada,45.0,11.4,5.7
+MS,trafo,Rinconada,46.0,12.4,6.2
+MS,trafo,Rinconada,47.0,13.4,6.7
 MS,30,El Hornillo,0.0,0.0,0.0
-MS,30,El Hornillo,1.0,1.0,0.05
-MS,30,El Hornillo,2.0,2.0,0.1
-MS,30,El Hornillo,3.0,3.0,0.15
-MS,30,El Hornillo,4.0,4.0,0.2
-MS,30,El Hornillo,5.0,5.0,0.25
-MS,30,El Hornillo,6.0,6.0,0.3
-MS,30,El Hornillo,7.0,7.0,0.35
-MS,30,El Hornillo,8.0,8.0,0.4
-MS,30,El Hornillo,9.0,9.0,0.45
-MS,30,El Hornillo,10.0,10.0,0.5
-MS,30,El Hornillo,11.0,11.0,0.55
-MS,30,El Hornillo,12.0,12.0,0.68
-MS,30,El Hornillo,13.0,13.0,0.87
-MS,30,El Hornillo,14.0,14.0,1.07
-MS,30,El Hornillo,15.0,15.0,1.27
-MS,30,El Hornillo,16.0,16.0,1.47
-MS,30,El Hornillo,17.0,17.0,1.73
-MS,30,El Hornillo,18.0,18.0,2.02
-MS,30,El Hornillo,19.0,19.0,2.3
-MS,30,El Hornillo,20.0,20.0,2.58
-MS,30,El Hornillo,21.0,21.0,4.81
+MS,30,El Hornillo,1.0,1.0,0.5
+MS,30,El Hornillo,2.0,2.0,1.0
+MS,30,El Hornillo,3.0,3.0,1.5
+MS,30,El Hornillo,4.0,4.0,2.0
+MS,30,El Hornillo,5.0,5.0,2.5
+MS,30,El Hornillo,6.0,6.0,3.0
+MS,30,El Hornillo,7.0,7.0,3.5
+MS,30,El Hornillo,8.0,8.0,4.0
+MS,30,El Hornillo,9.0,9.0,4.5
+MS,30,El Hornillo,10.0,10.0,5.0
+MS,30,El Hornillo,11.0,11.0,5.5
+MS,30,El Hornillo,12.0,12.0,6.0
+MS,30,El Hornillo,13.0,13.0,6.5
+MS,30,El Hornillo,14.0,14.0,7.0
+MS,30,El Hornillo,15.0,15.0,7.5
+MS,30,El Hornillo,16.0,16.0,8.0
+MS,30,El Hornillo,17.0,17.0,8.5
+MS,30,El Hornillo,18.0,18.0,9.0
+MS,30,El Hornillo,19.0,19.0,9.5
+MS,30,El Hornillo,20.0,20.0,10.0
+MS,30,El Hornillo,21.0,21.0,10.5
 MS,30,El Hornillo,22.0,22.0,15.08
 MS,30,Añover,13.3,0.0,0.0
-MS,30,Añover,14.0,0.7,0.02
-MS,30,Añover,15.0,1.7,0.06
-MS,30,Añover,16.0,2.7,0.11
-MS,30,Añover,17.0,3.7,0.16
-MS,30,Añover,18.0,4.7,0.23
-MS,30,Añover,19.0,5.7,0.35
-MS,30,Añover,20.0,6.7,0.48
-MS,30,Añover,21.0,7.7,0.66
-MS,30,Añover,22.0,8.7,0.93
-MS,30,Añover,23.0,9.7,1.29
-MS,30,Añover,24.0,10.7,2.53
+MS,30,Añover,14.0,0.7,0.35
+MS,30,Añover,15.0,1.7,0.85
+MS,30,Añover,16.0,2.7,1.35
+MS,30,Añover,17.0,3.7,1.85
+MS,30,Añover,18.0,4.7,2.35
+MS,30,Añover,19.0,5.7,2.85
+MS,30,Añover,20.0,6.7,3.35
+MS,30,Añover,21.0,7.7,3.85
+MS,30,Añover,22.0,8.7,4.35
+MS,30,Añover,23.0,9.7,4.85
+MS,30,Añover,24.0,10.7,5.35
 MS,30,Añover,25.0,11.7,15.77
 MS,30,Mora,9.3,0.0,0.0
-MS,30,Mora,10.0,0.7,0.01
-MS,30,Mora,11.0,1.7,0.03
-MS,30,Mora,12.0,2.7,0.06
-MS,30,Mora,13.0,3.7,0.1
-MS,30,Mora,14.0,4.7,0.17
-MS,30,Mora,15.0,5.7,0.27
-MS,30,Mora,16.0,6.7,0.38
-MS,30,Mora,17.0,7.7,0.54
-MS,30,Mora,18.0,8.7,0.71
-MS,30,Mora,19.0,9.7,0.87
-MS,30,Mora,20.0,10.7,1.08
-MS,30,Mora,21.0,11.7,1.47
-MS,30,Mora,22.0,12.7,1.88
-MS,30,Mora,23.0,13.7,3.25
+MS,30,Mora,10.0,0.7,0.35
+MS,30,Mora,11.0,1.7,0.85
+MS,30,Mora,12.0,2.7,1.35
+MS,30,Mora,13.0,3.7,1.85
+MS,30,Mora,14.0,4.7,2.35
+MS,30,Mora,15.0,5.7,2.85
+MS,30,Mora,16.0,6.7,3.35
+MS,30,Mora,17.0,7.7,3.85
+MS,30,Mora,18.0,8.7,4.35
+MS,30,Mora,19.0,9.7,4.85
+MS,30,Mora,20.0,10.7,5.35
+MS,30,Mora,21.0,11.7,5.85
+MS,30,Mora,22.0,12.7,6.35
+MS,30,Mora,23.0,13.7,6.85
 MS,30,Mora,24.0,14.7,14.76
 MS,30,El Emperador,11.8,0.0,0.0
-MS,30,El Emperador,12.0,0.2,0.01
-MS,30,El Emperador,13.0,1.2,0.04
-MS,30,El Emperador,14.0,2.2,0.11
-MS,30,El Emperador,15.0,3.2,0.24
-MS,30,El Emperador,16.0,4.2,0.41
-MS,30,El Emperador,17.0,5.2,0.61
-MS,30,El Emperador,18.0,6.2,0.82
-MS,30,El Emperador,19.0,7.2,1.03
-MS,30,El Emperador,20.0,8.2,1.25
-MS,30,El Emperador,21.0,9.2,1.47
-MS,30,El Emperador,22.0,10.2,2.16
-MS,30,El Emperador,23.0,11.2,5.43
+MS,30,El Emperador,12.0,0.2,0.09
+MS,30,El Emperador,13.0,1.2,0.59
+MS,30,El Emperador,14.0,2.2,1.09
+MS,30,El Emperador,15.0,3.2,1.59
+MS,30,El Emperador,16.0,4.2,2.09
+MS,30,El Emperador,17.0,5.2,2.59
+MS,30,El Emperador,18.0,6.2,3.09
+MS,30,El Emperador,19.0,7.2,3.59
+MS,30,El Emperador,20.0,8.2,4.09
+MS,30,El Emperador,21.0,9.2,4.59
+MS,30,El Emperador,22.0,10.2,5.09
+MS,30,El Emperador,23.0,11.2,5.59
 MS,30,El Emperador,24.0,12.2,19.6
 MS,30,Ciudad Real,4.7,0.0,0.0
-MS,30,Ciudad Real,5.0,0.3,0.01
-MS,30,Ciudad Real,6.0,1.3,0.02
-MS,30,Ciudad Real,7.0,2.3,0.04
-MS,30,Ciudad Real,8.0,3.3,0.06
-MS,30,Ciudad Real,9.0,4.3,0.07
-MS,30,Ciudad Real,10.0,5.3,0.09
-MS,30,Ciudad Real,11.0,6.3,0.11
-MS,30,Ciudad Real,12.0,7.3,0.21
-MS,30,Ciudad Real,13.0,8.3,0.31
-MS,30,Ciudad Real,14.0,9.3,0.41
-MS,30,Ciudad Real,15.0,10.3,0.52
-MS,30,Ciudad Real,16.0,11.3,0.64
-MS,30,Ciudad Real,17.0,12.3,0.78
-MS,30,Ciudad Real,18.0,13.3,0.93
-MS,30,Ciudad Real,19.0,14.3,1.15
-MS,30,Ciudad Real,20.0,15.3,1.47
-MS,30,Ciudad Real,21.0,16.3,1.91
-MS,30,Ciudad Real,22.0,17.3,3.1
-MS,30,Ciudad Real,23.0,18.3,8.92
+MS,30,Ciudad Real,5.0,0.3,0.17
+MS,30,Ciudad Real,6.0,1.3,0.67
+MS,30,Ciudad Real,7.0,2.3,1.17
+MS,30,Ciudad Real,8.0,3.3,1.67
+MS,30,Ciudad Real,9.0,4.3,2.17
+MS,30,Ciudad Real,10.0,5.3,2.67
+MS,30,Ciudad Real,11.0,6.3,3.17
+MS,30,Ciudad Real,12.0,7.3,3.67
+MS,30,Ciudad Real,13.0,8.3,4.17
+MS,30,Ciudad Real,14.0,9.3,4.67
+MS,30,Ciudad Real,15.0,10.3,5.17
+MS,30,Ciudad Real,16.0,11.3,5.67
+MS,30,Ciudad Real,17.0,12.3,6.17
+MS,30,Ciudad Real,18.0,13.3,6.67
+MS,30,Ciudad Real,19.0,14.3,7.17
+MS,30,Ciudad Real,20.0,15.3,7.67
+MS,30,Ciudad Real,21.0,16.3,8.17
+MS,30,Ciudad Real,22.0,17.3,8.67
+MS,30,Ciudad Real,23.0,18.3,9.17
 MS,30,Ciudad Real,24.0,19.3,23.22
 MS,30,La Nava,0.8,0.0,0.0
-MS,30,La Nava,1.0,0.2,0.0
-MS,30,La Nava,2.0,1.2,0.02
-MS,30,La Nava,3.0,2.2,0.04
-MS,30,La Nava,4.0,3.2,0.05
-MS,30,La Nava,5.0,4.2,0.07
-MS,30,La Nava,6.0,5.2,0.09
-MS,30,La Nava,7.0,6.2,0.1
-MS,30,La Nava,8.0,7.2,0.12
-MS,30,La Nava,9.0,8.2,0.14
-MS,30,La Nava,10.0,9.2,0.15
-MS,30,La Nava,11.0,10.2,0.17
-MS,30,La Nava,12.0,11.2,0.2
-MS,30,La Nava,13.0,12.2,0.25
-MS,30,La Nava,14.0,13.2,0.31
-MS,30,La Nava,15.0,14.2,0.54
-MS,30,La Nava,16.0,15.2,0.77
-MS,30,La Nava,17.0,16.2,1.01
-MS,30,La Nava,18.0,17.2,1.28
-MS,30,La Nava,19.0,18.2,1.65
-MS,30,La Nava,20.0,19.2,2.02
-MS,30,La Nava,21.0,20.2,2.55
-MS,30,La Nava,22.0,21.2,3.14
-MS,30,La Nava,23.0,22.2,9.42
+MS,30,La Nava,1.0,0.2,0.11
+MS,30,La Nava,2.0,1.2,0.61
+MS,30,La Nava,3.0,2.2,1.11
+MS,30,La Nava,4.0,3.2,1.61
+MS,30,La Nava,5.0,4.2,2.11
+MS,30,La Nava,6.0,5.2,2.61
+MS,30,La Nava,7.0,6.2,3.11
+MS,30,La Nava,8.0,7.2,3.61
+MS,30,La Nava,9.0,8.2,4.11
+MS,30,La Nava,10.0,9.2,4.61
+MS,30,La Nava,11.0,10.2,5.11
+MS,30,La Nava,12.0,11.2,5.61
+MS,30,La Nava,13.0,12.2,6.11
+MS,30,La Nava,14.0,13.2,6.61
+MS,30,La Nava,15.0,14.2,7.11
+MS,30,La Nava,16.0,15.2,7.61
+MS,30,La Nava,17.0,16.2,8.11
+MS,30,La Nava,18.0,17.2,8.61
+MS,30,La Nava,19.0,18.2,9.11
+MS,30,La Nava,20.0,19.2,9.61
+MS,30,La Nava,21.0,20.2,10.11
+MS,30,La Nava,22.0,21.2,10.61
+MS,30,La Nava,23.0,22.2,11.11
 MS,30,La Nava,24.0,23.2,24.24
 MS,30,Venta La Inés,7.5,0.0,0.0
-MS,30,Venta La Inés,8.0,0.5,0.01
-MS,30,Venta La Inés,9.0,1.5,0.03
-MS,30,Venta La Inés,10.0,2.5,0.07
-MS,30,Venta La Inés,11.0,3.5,0.12
-MS,30,Venta La Inés,12.0,4.5,0.17
-MS,30,Venta La Inés,13.0,5.5,0.22
-MS,30,Venta La Inés,14.0,6.5,0.41
-MS,30,Venta La Inés,15.0,7.5,0.64
-MS,30,Venta La Inés,16.0,8.5,0.9
-MS,30,Venta La Inés,17.0,9.5,1.17
-MS,30,Venta La Inés,18.0,10.5,1.44
-MS,30,Venta La Inés,19.0,11.5,1.73
-MS,30,Venta La Inés,20.0,12.5,2.04
-MS,30,Venta La Inés,21.0,13.5,2.52
-MS,30,Venta La Inés,22.0,14.5,3.14
+MS,30,Venta La Inés,8.0,0.5,0.23
+MS,30,Venta La Inés,9.0,1.5,0.73
+MS,30,Venta La Inés,10.0,2.5,1.23
+MS,30,Venta La Inés,11.0,3.5,1.73
+MS,30,Venta La Inés,12.0,4.5,2.23
+MS,30,Venta La Inés,13.0,5.5,2.73
+MS,30,Venta La Inés,14.0,6.5,3.23
+MS,30,Venta La Inés,15.0,7.5,3.73
+MS,30,Venta La Inés,16.0,8.5,4.23
+MS,30,Venta La Inés,17.0,9.5,4.73
+MS,30,Venta La Inés,18.0,10.5,5.23
+MS,30,Venta La Inés,19.0,11.5,5.73
+MS,30,Venta La Inés,20.0,12.5,6.23
+MS,30,Venta La Inés,21.0,13.5,6.73
+MS,30,Venta La Inés,22.0,14.5,7.23
 MS,30,Venta La Inés,23.0,15.5,8.39
 MS,30,Venta La Inés,24.0,16.5,22.53
 MS,30,Arroyo Valle,4.4,0.0,0.0
-MS,30,Arroyo Valle,5.0,0.6,0.01
-MS,30,Arroyo Valle,6.0,1.6,0.04
-MS,30,Arroyo Valle,7.0,2.6,0.07
-MS,30,Arroyo Valle,8.0,3.6,0.13
-MS,30,Arroyo Valle,9.0,4.6,0.21
-MS,30,Arroyo Valle,10.0,5.6,0.29
-MS,30,Arroyo Valle,11.0,6.6,0.4
-MS,30,Arroyo Valle,12.0,7.6,0.55
-MS,30,Arroyo Valle,13.0,8.6,0.72
-MS,30,Arroyo Valle,14.0,9.6,0.9
-MS,30,Arroyo Valle,15.0,10.6,1.11
-MS,30,Arroyo Valle,16.0,11.6,1.32
-MS,30,Arroyo Valle,17.0,12.6,1.54
-MS,30,Arroyo Valle,18.0,13.6,1.76
-MS,30,Arroyo Valle,19.0,14.6,1.97
-MS,30,Arroyo Valle,20.0,15.6,2.19
-MS,30,Arroyo Valle,21.0,16.6,2.52
-MS,30,Arroyo Valle,22.0,17.6,3.38
-MS,30,Arroyo Valle,23.0,18.6,5.01
+MS,30,Arroyo Valle,5.0,0.6,0.31
+MS,30,Arroyo Valle,6.0,1.6,0.81
+MS,30,Arroyo Valle,7.0,2.6,1.31
+MS,30,Arroyo Valle,8.0,3.6,1.81
+MS,30,Arroyo Valle,9.0,4.6,2.31
+MS,30,Arroyo Valle,10.0,5.6,2.81
+MS,30,Arroyo Valle,11.0,6.6,3.31
+MS,30,Arroyo Valle,12.0,7.6,3.81
+MS,30,Arroyo Valle,13.0,8.6,4.31
+MS,30,Arroyo Valle,14.0,9.6,4.81
+MS,30,Arroyo Valle,15.0,10.6,5.31
+MS,30,Arroyo Valle,16.0,11.6,5.81
+MS,30,Arroyo Valle,17.0,12.6,6.31
+MS,30,Arroyo Valle,18.0,13.6,6.81
+MS,30,Arroyo Valle,19.0,14.6,7.31
+MS,30,Arroyo Valle,20.0,15.6,7.81
+MS,30,Arroyo Valle,21.0,16.6,8.31
+MS,30,Arroyo Valle,22.0,17.6,8.81
+MS,30,Arroyo Valle,23.0,18.6,9.31
 MS,30,Arroyo Valle,24.0,19.6,19.49
 MS,30,La Lancha,0.0,0.0,0.0
-MS,30,La Lancha,1.0,1.0,0.03
-MS,30,La Lancha,2.0,2.0,0.08
-MS,30,La Lancha,3.0,3.0,0.13
-MS,30,La Lancha,4.0,4.0,0.18
-MS,30,La Lancha,5.0,5.0,0.23
-MS,30,La Lancha,6.0,6.0,0.3
-MS,30,La Lancha,7.0,7.0,0.42
-MS,30,La Lancha,8.0,8.0,0.53
-MS,30,La Lancha,9.0,9.0,0.65
-MS,30,La Lancha,10.0,10.0,0.77
-MS,30,La Lancha,11.0,11.0,0.91
-MS,30,La Lancha,12.0,12.0,1.04
-MS,30,La Lancha,13.0,13.0,1.17
-MS,30,La Lancha,14.0,14.0,1.31
-MS,30,La Lancha,15.0,15.0,1.44
-MS,30,La Lancha,16.0,16.0,1.57
-MS,30,La Lancha,17.0,17.0,1.71
-MS,30,La Lancha,18.0,18.0,1.85
-MS,30,La Lancha,19.0,19.0,2.0
-MS,30,La Lancha,20.0,20.0,2.21
-MS,30,La Lancha,21.0,21.0,2.97
-MS,30,La Lancha,22.0,22.0,3.76
+MS,30,La Lancha,1.0,1.0,0.5
+MS,30,La Lancha,2.0,2.0,1.0
+MS,30,La Lancha,3.0,3.0,1.5
+MS,30,La Lancha,4.0,4.0,2.0
+MS,30,La Lancha,5.0,5.0,2.5
+MS,30,La Lancha,6.0,6.0,3.0
+MS,30,La Lancha,7.0,7.0,3.5
+MS,30,La Lancha,8.0,8.0,4.0
+MS,30,La Lancha,9.0,9.0,4.5
+MS,30,La Lancha,10.0,10.0,5.0
+MS,30,La Lancha,11.0,11.0,5.5
+MS,30,La Lancha,12.0,12.0,6.0
+MS,30,La Lancha,13.0,13.0,6.5
+MS,30,La Lancha,14.0,14.0,7.0
+MS,30,La Lancha,15.0,15.0,7.5
+MS,30,La Lancha,16.0,16.0,8.0
+MS,30,La Lancha,17.0,17.0,8.5
+MS,30,La Lancha,18.0,18.0,9.0
+MS,30,La Lancha,19.0,19.0,9.5
+MS,30,La Lancha,20.0,20.0,10.0
+MS,30,La Lancha,21.0,21.0,10.5
+MS,30,La Lancha,22.0,22.0,11.0
 MS,30,La Lancha,23.0,23.0,14.84
 MS,30,Posadas,19.5,0.0,0.0
-MS,30,Posadas,20.0,0.5,0.01
-MS,30,Posadas,21.0,1.5,0.15
-MS,30,Posadas,22.0,2.5,0.28
-MS,30,Posadas,23.0,3.5,0.44
-MS,30,Posadas,24.0,4.5,0.65
-MS,30,Posadas,25.0,5.5,1.47
+MS,30,Posadas,20.0,0.5,0.25
+MS,30,Posadas,21.0,1.5,0.75
+MS,30,Posadas,22.0,2.5,1.25
+MS,30,Posadas,23.0,3.5,1.75
+MS,30,Posadas,24.0,4.5,2.25
+MS,30,Posadas,25.0,5.5,2.75
 MS,30,Lora del Río,18.8,0.0,0.0
-MS,30,Lora del Río,19.0,0.2,0.01
-MS,30,Lora del Río,20.0,1.2,0.05
-MS,30,Lora del Río,21.0,2.2,0.15
-MS,30,Lora del Río,22.0,3.2,0.31
-MS,30,Lora del Río,23.0,4.2,0.49
-MS,30,Lora del Río,24.0,5.2,0.69
-MS,30,Lora del Río,25.0,6.2,1.65
+MS,30,Lora del Río,19.0,0.2,0.09
+MS,30,Lora del Río,20.0,1.2,0.59
+MS,30,Lora del Río,21.0,2.2,1.09
+MS,30,Lora del Río,22.0,3.2,1.59
+MS,30,Lora del Río,23.0,4.2,2.09
+MS,30,Lora del Río,24.0,5.2,2.59
+MS,30,Lora del Río,25.0,6.2,3.09
 MS,30,Rinconada,11.1,0.0,0.0
-MS,30,Rinconada,12.0,0.9,0.01
-MS,30,Rinconada,13.0,1.9,0.03
-MS,30,Rinconada,14.0,2.9,0.05
-MS,30,Rinconada,15.0,3.9,0.07
-MS,30,Rinconada,16.0,4.9,0.1
-MS,30,Rinconada,17.0,5.9,0.13
-MS,30,Rinconada,18.0,6.9,0.17
-MS,30,Rinconada,19.0,7.9,0.22
-MS,30,Rinconada,20.0,8.9,0.28
-MS,30,Rinconada,21.0,9.9,0.44
-MS,30,Rinconada,22.0,10.9,0.67
-MS,30,Rinconada,23.0,11.9,0.94
-MS,30,Rinconada,24.0,12.9,1.62
-MS,30,Rinconada,25.0,13.9,4.4
+MS,30,Rinconada,12.0,0.9,0.45
+MS,30,Rinconada,13.0,1.9,0.95
+MS,30,Rinconada,14.0,2.9,1.45
+MS,30,Rinconada,15.0,3.9,1.95
+MS,30,Rinconada,16.0,4.9,2.45
+MS,30,Rinconada,17.0,5.9,2.95
+MS,30,Rinconada,18.0,6.9,3.45
+MS,30,Rinconada,19.0,7.9,3.95
+MS,30,Rinconada,20.0,8.9,4.45
+MS,30,Rinconada,21.0,9.9,4.95
+MS,30,Rinconada,22.0,10.9,5.45
+MS,30,Rinconada,23.0,11.9,5.95
+MS,30,Rinconada,24.0,12.9,6.45
+MS,30,Rinconada,25.0,13.9,6.95
 MS,60,El Hornillo,8.5,0.0,0.0
-MS,60,El Hornillo,9.0,0.5,0.01
-MS,60,El Hornillo,10.0,1.5,0.03
-MS,60,El Hornillo,11.0,2.5,0.04
-MS,60,El Hornillo,12.0,3.5,0.06
-MS,60,El Hornillo,13.0,4.5,0.08
-MS,60,El Hornillo,14.0,5.5,0.09
-MS,60,El Hornillo,15.0,6.5,0.11
-MS,60,El Hornillo,16.0,7.5,0.13
-MS,60,El Hornillo,17.0,8.5,0.14
-MS,60,El Hornillo,18.0,9.5,0.16
-MS,60,El Hornillo,19.0,10.5,0.18
-MS,60,El Hornillo,20.0,11.5,0.19
-MS,60,El Hornillo,21.0,12.5,0.21
-MS,60,El Hornillo,22.0,13.5,0.23
-MS,60,El Hornillo,23.0,14.5,0.25
-MS,60,El Hornillo,24.0,15.5,0.29
-MS,60,El Hornillo,25.0,16.5,0.32
-MS,60,El Hornillo,26.0,17.5,0.35
-MS,60,El Hornillo,27.0,18.5,0.39
-MS,60,El Hornillo,28.0,19.5,0.44
-MS,60,El Hornillo,29.0,20.5,0.49
-MS,60,El Hornillo,30.0,21.5,0.54
-MS,60,El Hornillo,31.0,22.5,0.59
-MS,60,El Hornillo,32.0,23.5,0.64
-MS,60,El Hornillo,33.0,24.5,0.69
-MS,60,El Hornillo,34.0,25.5,0.74
-MS,60,El Hornillo,35.0,26.5,0.79
-MS,60,El Hornillo,36.0,27.5,0.84
-MS,60,El Hornillo,37.0,28.5,0.89
-MS,60,El Hornillo,38.0,29.5,0.94
-MS,60,El Hornillo,39.0,30.5,0.99
-MS,60,El Hornillo,40.0,31.5,1.04
-MS,60,El Hornillo,41.0,32.5,1.1
-MS,60,El Hornillo,42.0,33.5,1.27
-MS,60,El Hornillo,43.0,34.5,1.47
-MS,60,El Hornillo,44.0,35.5,1.73
-MS,60,El Hornillo,45.0,36.5,2.02
-MS,60,El Hornillo,46.0,37.5,2.3
-MS,60,El Hornillo,47.0,38.5,2.58
-MS,60,El Hornillo,48.0,39.5,4.88
-MS,60,El Hornillo,49.0,40.5,15.54
+MS,60,El Hornillo,9.0,0.5,0.26
+MS,60,El Hornillo,10.0,1.5,0.76
+MS,60,El Hornillo,11.0,2.5,1.26
+MS,60,El Hornillo,12.0,3.5,1.76
+MS,60,El Hornillo,13.0,4.5,2.26
+MS,60,El Hornillo,14.0,5.5,2.76
+MS,60,El Hornillo,15.0,6.5,3.26
+MS,60,El Hornillo,16.0,7.5,3.76
+MS,60,El Hornillo,17.0,8.5,4.26
+MS,60,El Hornillo,18.0,9.5,4.76
+MS,60,El Hornillo,19.0,10.5,5.26
+MS,60,El Hornillo,20.0,11.5,5.76
+MS,60,El Hornillo,21.0,12.5,6.26
+MS,60,El Hornillo,22.0,13.5,6.76
+MS,60,El Hornillo,23.0,14.5,7.26
+MS,60,El Hornillo,24.0,15.5,7.76
+MS,60,El Hornillo,25.0,16.5,8.26
+MS,60,El Hornillo,26.0,17.5,8.76
+MS,60,El Hornillo,27.0,18.5,9.26
+MS,60,El Hornillo,28.0,19.5,9.76
+MS,60,El Hornillo,29.0,20.5,10.26
+MS,60,El Hornillo,30.0,21.5,10.76
+MS,60,El Hornillo,31.0,22.5,11.26
+MS,60,El Hornillo,32.0,23.5,11.76
+MS,60,El Hornillo,33.0,24.5,12.26
+MS,60,El Hornillo,34.0,25.5,12.76
+MS,60,El Hornillo,35.0,26.5,13.26
+MS,60,El Hornillo,36.0,27.5,13.76
+MS,60,El Hornillo,37.0,28.5,14.26
+MS,60,El Hornillo,38.0,29.5,14.76
+MS,60,El Hornillo,39.0,30.5,15.26
+MS,60,El Hornillo,40.0,31.5,15.76
+MS,60,El Hornillo,41.0,32.5,16.26
+MS,60,El Hornillo,42.0,33.5,16.76
+MS,60,El Hornillo,43.0,34.5,17.26
+MS,60,El Hornillo,44.0,35.5,17.76
+MS,60,El Hornillo,45.0,36.5,18.26
+MS,60,El Hornillo,46.0,37.5,18.76
+MS,60,El Hornillo,47.0,38.5,19.26
+MS,60,El Hornillo,48.0,39.5,19.76
+MS,60,El Hornillo,49.0,40.5,20.26
 MS,60,Añover,40.3,0.0,0.0
-MS,60,Añover,41.0,0.7,0.02
-MS,60,Añover,42.0,1.7,0.06
-MS,60,Añover,43.0,2.7,0.11
-MS,60,Añover,44.0,3.7,0.16
-MS,60,Añover,45.0,4.7,0.23
-MS,60,Añover,46.0,5.7,0.35
-MS,60,Añover,47.0,6.7,0.48
-MS,60,Añover,48.0,7.7,0.66
-MS,60,Añover,49.0,8.7,0.93
-MS,60,Añover,50.0,9.7,1.29
-MS,60,Añover,51.0,10.7,2.53
+MS,60,Añover,41.0,0.7,0.35
+MS,60,Añover,42.0,1.7,0.85
+MS,60,Añover,43.0,2.7,1.35
+MS,60,Añover,44.0,3.7,1.85
+MS,60,Añover,45.0,4.7,2.35
+MS,60,Añover,46.0,5.7,2.85
+MS,60,Añover,47.0,6.7,3.35
+MS,60,Añover,48.0,7.7,3.85
+MS,60,Añover,49.0,8.7,4.35
+MS,60,Añover,50.0,9.7,4.85
+MS,60,Añover,51.0,10.7,5.35
 MS,60,Añover,52.0,11.7,15.77
 MS,60,Mora,36.3,0.0,0.0
-MS,60,Mora,37.0,0.7,0.01
-MS,60,Mora,38.0,1.7,0.03
-MS,60,Mora,39.0,2.7,0.06
-MS,60,Mora,40.0,3.7,0.1
-MS,60,Mora,41.0,4.7,0.17
-MS,60,Mora,42.0,5.7,0.27
-MS,60,Mora,43.0,6.7,0.38
-MS,60,Mora,44.0,7.7,0.54
-MS,60,Mora,45.0,8.7,0.71
-MS,60,Mora,46.0,9.7,0.87
-MS,60,Mora,47.0,10.7,1.08
-MS,60,Mora,48.0,11.7,1.47
-MS,60,Mora,49.0,12.7,1.88
-MS,60,Mora,50.0,13.7,3.25
+MS,60,Mora,37.0,0.7,0.35
+MS,60,Mora,38.0,1.7,0.85
+MS,60,Mora,39.0,2.7,1.35
+MS,60,Mora,40.0,3.7,1.85
+MS,60,Mora,41.0,4.7,2.35
+MS,60,Mora,42.0,5.7,2.85
+MS,60,Mora,43.0,6.7,3.35
+MS,60,Mora,44.0,7.7,3.85
+MS,60,Mora,45.0,8.7,4.35
+MS,60,Mora,46.0,9.7,4.85
+MS,60,Mora,47.0,10.7,5.35
+MS,60,Mora,48.0,11.7,5.85
+MS,60,Mora,49.0,12.7,6.35
+MS,60,Mora,50.0,13.7,6.85
 MS,60,Mora,51.0,14.7,14.76
 MS,60,El Emperador,38.8,0.0,0.0
-MS,60,El Emperador,39.0,0.2,0.01
-MS,60,El Emperador,40.0,1.2,0.04
-MS,60,El Emperador,41.0,2.2,0.11
-MS,60,El Emperador,42.0,3.2,0.24
-MS,60,El Emperador,43.0,4.2,0.41
-MS,60,El Emperador,44.0,5.2,0.61
-MS,60,El Emperador,45.0,6.2,0.82
-MS,60,El Emperador,46.0,7.2,1.03
-MS,60,El Emperador,47.0,8.2,1.25
-MS,60,El Emperador,48.0,9.2,1.47
-MS,60,El Emperador,49.0,10.2,2.16
-MS,60,El Emperador,50.0,11.2,5.43
+MS,60,El Emperador,39.0,0.2,0.09
+MS,60,El Emperador,40.0,1.2,0.59
+MS,60,El Emperador,41.0,2.2,1.09
+MS,60,El Emperador,42.0,3.2,1.59
+MS,60,El Emperador,43.0,4.2,2.09
+MS,60,El Emperador,44.0,5.2,2.59
+MS,60,El Emperador,45.0,6.2,3.09
+MS,60,El Emperador,46.0,7.2,3.59
+MS,60,El Emperador,47.0,8.2,4.09
+MS,60,El Emperador,48.0,9.2,4.59
+MS,60,El Emperador,49.0,10.2,5.09
+MS,60,El Emperador,50.0,11.2,5.59
 MS,60,El Emperador,51.0,12.2,19.6
 MS,60,Ciudad Real,31.7,0.0,0.0
-MS,60,Ciudad Real,32.0,0.3,0.01
-MS,60,Ciudad Real,33.0,1.3,0.02
-MS,60,Ciudad Real,34.0,2.3,0.04
-MS,60,Ciudad Real,35.0,3.3,0.06
-MS,60,Ciudad Real,36.0,4.3,0.07
-MS,60,Ciudad Real,37.0,5.3,0.09
-MS,60,Ciudad Real,38.0,6.3,0.11
-MS,60,Ciudad Real,39.0,7.3,0.21
-MS,60,Ciudad Real,40.0,8.3,0.31
-MS,60,Ciudad Real,41.0,9.3,0.41
-MS,60,Ciudad Real,42.0,10.3,0.52
-MS,60,Ciudad Real,43.0,11.3,0.64
-MS,60,Ciudad Real,44.0,12.3,0.78
-MS,60,Ciudad Real,45.0,13.3,0.93
-MS,60,Ciudad Real,46.0,14.3,1.15
-MS,60,Ciudad Real,47.0,15.3,1.47
-MS,60,Ciudad Real,48.0,16.3,1.91
-MS,60,Ciudad Real,49.0,17.3,3.1
-MS,60,Ciudad Real,50.0,18.3,8.92
+MS,60,Ciudad Real,32.0,0.3,0.17
+MS,60,Ciudad Real,33.0,1.3,0.67
+MS,60,Ciudad Real,34.0,2.3,1.17
+MS,60,Ciudad Real,35.0,3.3,1.67
+MS,60,Ciudad Real,36.0,4.3,2.17
+MS,60,Ciudad Real,37.0,5.3,2.67
+MS,60,Ciudad Real,38.0,6.3,3.17
+MS,60,Ciudad Real,39.0,7.3,3.67
+MS,60,Ciudad Real,40.0,8.3,4.17
+MS,60,Ciudad Real,41.0,9.3,4.67
+MS,60,Ciudad Real,42.0,10.3,5.17
+MS,60,Ciudad Real,43.0,11.3,5.67
+MS,60,Ciudad Real,44.0,12.3,6.17
+MS,60,Ciudad Real,45.0,13.3,6.67
+MS,60,Ciudad Real,46.0,14.3,7.17
+MS,60,Ciudad Real,47.0,15.3,7.67
+MS,60,Ciudad Real,48.0,16.3,8.17
+MS,60,Ciudad Real,49.0,17.3,8.67
+MS,60,Ciudad Real,50.0,18.3,9.17
 MS,60,Ciudad Real,51.0,19.3,23.22
 MS,60,La Nava,27.8,0.0,0.0
-MS,60,La Nava,28.0,0.2,0.0
-MS,60,La Nava,29.0,1.2,0.02
-MS,60,La Nava,30.0,2.2,0.04
-MS,60,La Nava,31.0,3.2,0.05
-MS,60,La Nava,32.0,4.2,0.07
-MS,60,La Nava,33.0,5.2,0.09
-MS,60,La Nava,34.0,6.2,0.1
-MS,60,La Nava,35.0,7.2,0.12
-MS,60,La Nava,36.0,8.2,0.14
-MS,60,La Nava,37.0,9.2,0.15
-MS,60,La Nava,38.0,10.2,0.17
-MS,60,La Nava,39.0,11.2,0.2
-MS,60,La Nava,40.0,12.2,0.25
-MS,60,La Nava,41.0,13.2,0.31
-MS,60,La Nava,42.0,14.2,0.54
-MS,60,La Nava,43.0,15.2,0.77
-MS,60,La Nava,44.0,16.2,1.01
-MS,60,La Nava,45.0,17.2,1.28
-MS,60,La Nava,46.0,18.2,1.65
-MS,60,La Nava,47.0,19.2,2.02
-MS,60,La Nava,48.0,20.2,2.55
-MS,60,La Nava,49.0,21.2,3.14
-MS,60,La Nava,50.0,22.2,9.42
+MS,60,La Nava,28.0,0.2,0.11
+MS,60,La Nava,29.0,1.2,0.61
+MS,60,La Nava,30.0,2.2,1.11
+MS,60,La Nava,31.0,3.2,1.61
+MS,60,La Nava,32.0,4.2,2.11
+MS,60,La Nava,33.0,5.2,2.61
+MS,60,La Nava,34.0,6.2,3.11
+MS,60,La Nava,35.0,7.2,3.61
+MS,60,La Nava,36.0,8.2,4.11
+MS,60,La Nava,37.0,9.2,4.61
+MS,60,La Nava,38.0,10.2,5.11
+MS,60,La Nava,39.0,11.2,5.61
+MS,60,La Nava,40.0,12.2,6.11
+MS,60,La Nava,41.0,13.2,6.61
+MS,60,La Nava,42.0,14.2,7.11
+MS,60,La Nava,43.0,15.2,7.61
+MS,60,La Nava,44.0,16.2,8.11
+MS,60,La Nava,45.0,17.2,8.61
+MS,60,La Nava,46.0,18.2,9.11
+MS,60,La Nava,47.0,19.2,9.61
+MS,60,La Nava,48.0,20.2,10.11
+MS,60,La Nava,49.0,21.2,10.61
+MS,60,La Nava,50.0,22.2,11.11
 MS,60,La Nava,51.0,23.2,24.24
 MS,60,Venta La Inés,34.5,0.0,0.0
-MS,60,Venta La Inés,35.0,0.5,0.01
-MS,60,Venta La Inés,36.0,1.5,0.03
-MS,60,Venta La Inés,37.0,2.5,0.07
-MS,60,Venta La Inés,38.0,3.5,0.12
-MS,60,Venta La Inés,39.0,4.5,0.17
-MS,60,Venta La Inés,40.0,5.5,0.22
-MS,60,Venta La Inés,41.0,6.5,0.41
-MS,60,Venta La Inés,42.0,7.5,0.64
-MS,60,Venta La Inés,43.0,8.5,0.9
-MS,60,Venta La Inés,44.0,9.5,1.17
-MS,60,Venta La Inés,45.0,10.5,1.44
-MS,60,Venta La Inés,46.0,11.5,1.73
-MS,60,Venta La Inés,47.0,12.5,2.04
-MS,60,Venta La Inés,48.0,13.5,2.52
-MS,60,Venta La Inés,49.0,14.5,3.14
+MS,60,Venta La Inés,35.0,0.5,0.23
+MS,60,Venta La Inés,36.0,1.5,0.73
+MS,60,Venta La Inés,37.0,2.5,1.23
+MS,60,Venta La Inés,38.0,3.5,1.73
+MS,60,Venta La Inés,39.0,4.5,2.23
+MS,60,Venta La Inés,40.0,5.5,2.73
+MS,60,Venta La Inés,41.0,6.5,3.23
+MS,60,Venta La Inés,42.0,7.5,3.73
+MS,60,Venta La Inés,43.0,8.5,4.23
+MS,60,Venta La Inés,44.0,9.5,4.73
+MS,60,Venta La Inés,45.0,10.5,5.23
+MS,60,Venta La Inés,46.0,11.5,5.73
+MS,60,Venta La Inés,47.0,12.5,6.23
+MS,60,Venta La Inés,48.0,13.5,6.73
+MS,60,Venta La Inés,49.0,14.5,7.23
 MS,60,Venta La Inés,50.0,15.5,8.39
 MS,60,Venta La Inés,51.0,16.5,22.53
 MS,60,Arroyo Valle,31.4,0.0,0.0
-MS,60,Arroyo Valle,32.0,0.6,0.01
-MS,60,Arroyo Valle,33.0,1.6,0.04
-MS,60,Arroyo Valle,34.0,2.6,0.07
-MS,60,Arroyo Valle,35.0,3.6,0.13
-MS,60,Arroyo Valle,36.0,4.6,0.21
-MS,60,Arroyo Valle,37.0,5.6,0.29
-MS,60,Arroyo Valle,38.0,6.6,0.4
-MS,60,Arroyo Valle,39.0,7.6,0.55
-MS,60,Arroyo Valle,40.0,8.6,0.72
-MS,60,Arroyo Valle,41.0,9.6,0.9
-MS,60,Arroyo Valle,42.0,10.6,1.11
-MS,60,Arroyo Valle,43.0,11.6,1.32
-MS,60,Arroyo Valle,44.0,12.6,1.54
-MS,60,Arroyo Valle,45.0,13.6,1.76
-MS,60,Arroyo Valle,46.0,14.6,1.97
-MS,60,Arroyo Valle,47.0,15.6,2.19
-MS,60,Arroyo Valle,48.0,16.6,2.52
-MS,60,Arroyo Valle,49.0,17.6,3.38
-MS,60,Arroyo Valle,50.0,18.6,5.01
+MS,60,Arroyo Valle,32.0,0.6,0.31
+MS,60,Arroyo Valle,33.0,1.6,0.81
+MS,60,Arroyo Valle,34.0,2.6,1.31
+MS,60,Arroyo Valle,35.0,3.6,1.81
+MS,60,Arroyo Valle,36.0,4.6,2.31
+MS,60,Arroyo Valle,37.0,5.6,2.81
+MS,60,Arroyo Valle,38.0,6.6,3.31
+MS,60,Arroyo Valle,39.0,7.6,3.81
+MS,60,Arroyo Valle,40.0,8.6,4.31
+MS,60,Arroyo Valle,41.0,9.6,4.81
+MS,60,Arroyo Valle,42.0,10.6,5.31
+MS,60,Arroyo Valle,43.0,11.6,5.81
+MS,60,Arroyo Valle,44.0,12.6,6.31
+MS,60,Arroyo Valle,45.0,13.6,6.81
+MS,60,Arroyo Valle,46.0,14.6,7.31
+MS,60,Arroyo Valle,47.0,15.6,7.81
+MS,60,Arroyo Valle,48.0,16.6,8.31
+MS,60,Arroyo Valle,49.0,17.6,8.81
+MS,60,Arroyo Valle,50.0,18.6,9.31
 MS,60,Arroyo Valle,51.0,19.6,19.49
 MS,60,La Lancha,20.7,0.0,0.0
-MS,60,La Lancha,21.0,0.3,0.01
-MS,60,La Lancha,22.0,1.3,0.02
-MS,60,La Lancha,23.0,2.3,0.04
-MS,60,La Lancha,24.0,3.3,0.06
-MS,60,La Lancha,25.0,4.3,0.1
-MS,60,La Lancha,26.0,5.3,0.13
-MS,60,La Lancha,27.0,6.3,0.16
-MS,60,La Lancha,28.0,7.3,0.2
-MS,60,La Lancha,29.0,8.3,0.24
-MS,60,La Lancha,30.0,9.3,0.29
-MS,60,La Lancha,31.0,10.3,0.34
-MS,60,La Lancha,32.0,11.3,0.39
-MS,60,La Lancha,33.0,12.3,0.44
-MS,60,La Lancha,34.0,13.3,0.52
-MS,60,La Lancha,35.0,14.3,0.63
-MS,60,La Lancha,36.0,15.3,0.75
-MS,60,La Lancha,37.0,16.3,0.87
-MS,60,La Lancha,38.0,17.3,1.01
-MS,60,La Lancha,39.0,18.3,1.14
-MS,60,La Lancha,40.0,19.3,1.27
-MS,60,La Lancha,41.0,20.3,1.41
-MS,60,La Lancha,42.0,21.3,1.54
-MS,60,La Lancha,43.0,22.3,1.67
-MS,60,La Lancha,44.0,23.3,1.81
-MS,60,La Lancha,45.0,24.3,1.95
-MS,60,La Lancha,46.0,25.3,2.1
-MS,60,La Lancha,47.0,26.3,2.25
-MS,60,La Lancha,48.0,27.3,2.97
-MS,60,La Lancha,49.0,28.3,3.76
+MS,60,La Lancha,21.0,0.3,0.16
+MS,60,La Lancha,22.0,1.3,0.66
+MS,60,La Lancha,23.0,2.3,1.16
+MS,60,La Lancha,24.0,3.3,1.66
+MS,60,La Lancha,25.0,4.3,2.16
+MS,60,La Lancha,26.0,5.3,2.66
+MS,60,La Lancha,27.0,6.3,3.16
+MS,60,La Lancha,28.0,7.3,3.66
+MS,60,La Lancha,29.0,8.3,4.16
+MS,60,La Lancha,30.0,9.3,4.66
+MS,60,La Lancha,31.0,10.3,5.16
+MS,60,La Lancha,32.0,11.3,5.66
+MS,60,La Lancha,33.0,12.3,6.16
+MS,60,La Lancha,34.0,13.3,6.66
+MS,60,La Lancha,35.0,14.3,7.16
+MS,60,La Lancha,36.0,15.3,7.66
+MS,60,La Lancha,37.0,16.3,8.16
+MS,60,La Lancha,38.0,17.3,8.66
+MS,60,La Lancha,39.0,18.3,9.16
+MS,60,La Lancha,40.0,19.3,9.66
+MS,60,La Lancha,41.0,20.3,10.16
+MS,60,La Lancha,42.0,21.3,10.66
+MS,60,La Lancha,43.0,22.3,11.16
+MS,60,La Lancha,44.0,23.3,11.66
+MS,60,La Lancha,45.0,24.3,12.16
+MS,60,La Lancha,46.0,25.3,12.66
+MS,60,La Lancha,47.0,26.3,13.16
+MS,60,La Lancha,48.0,27.3,13.66
+MS,60,La Lancha,49.0,28.3,14.16
 MS,60,La Lancha,50.0,29.3,15.17
 MS,60,Posadas,46.5,0.0,0.0
-MS,60,Posadas,47.0,0.5,0.01
-MS,60,Posadas,48.0,1.5,0.15
-MS,60,Posadas,49.0,2.5,0.28
-MS,60,Posadas,50.0,3.5,0.44
-MS,60,Posadas,51.0,4.5,0.65
-MS,60,Posadas,52.0,5.5,1.47
+MS,60,Posadas,47.0,0.5,0.25
+MS,60,Posadas,48.0,1.5,0.75
+MS,60,Posadas,49.0,2.5,1.25
+MS,60,Posadas,50.0,3.5,1.75
+MS,60,Posadas,51.0,4.5,2.25
+MS,60,Posadas,52.0,5.5,2.75
 MS,60,Lora del Río,45.8,0.0,0.0
-MS,60,Lora del Río,46.0,0.2,0.01
-MS,60,Lora del Río,47.0,1.2,0.05
-MS,60,Lora del Río,48.0,2.2,0.15
-MS,60,Lora del Río,49.0,3.2,0.31
-MS,60,Lora del Río,50.0,4.2,0.49
-MS,60,Lora del Río,51.0,5.2,0.69
-MS,60,Lora del Río,52.0,6.2,1.65
+MS,60,Lora del Río,46.0,0.2,0.09
+MS,60,Lora del Río,47.0,1.2,0.59
+MS,60,Lora del Río,48.0,2.2,1.09
+MS,60,Lora del Río,49.0,3.2,1.59
+MS,60,Lora del Río,50.0,4.2,2.09
+MS,60,Lora del Río,51.0,5.2,2.59
+MS,60,Lora del Río,52.0,6.2,3.09
 MS,60,Rinconada,38.1,0.0,0.0
-MS,60,Rinconada,39.0,0.9,0.01
-MS,60,Rinconada,40.0,1.9,0.03
-MS,60,Rinconada,41.0,2.9,0.05
-MS,60,Rinconada,42.0,3.9,0.07
-MS,60,Rinconada,43.0,4.9,0.1
-MS,60,Rinconada,44.0,5.9,0.13
-MS,60,Rinconada,45.0,6.9,0.17
-MS,60,Rinconada,46.0,7.9,0.22
-MS,60,Rinconada,47.0,8.9,0.28
-MS,60,Rinconada,48.0,9.9,0.44
-MS,60,Rinconada,49.0,10.9,0.67
-MS,60,Rinconada,50.0,11.9,0.94
-MS,60,Rinconada,51.0,12.9,1.62
-MS,60,Rinconada,52.0,13.9,4.4
+MS,60,Rinconada,39.0,0.9,0.45
+MS,60,Rinconada,40.0,1.9,0.95
+MS,60,Rinconada,41.0,2.9,1.45
+MS,60,Rinconada,42.0,3.9,1.95
+MS,60,Rinconada,43.0,4.9,2.45
+MS,60,Rinconada,44.0,5.9,2.95
+MS,60,Rinconada,45.0,6.9,3.45
+MS,60,Rinconada,46.0,7.9,3.95
+MS,60,Rinconada,47.0,8.9,4.45
+MS,60,Rinconada,48.0,9.9,4.95
+MS,60,Rinconada,49.0,10.9,5.45
+MS,60,Rinconada,50.0,11.9,5.95
+MS,60,Rinconada,51.0,12.9,6.45
+MS,60,Rinconada,52.0,13.9,6.95
 MS,120,El Hornillo,62.5,0.0,0.0
-MS,120,El Hornillo,63.0,0.5,0.01
-MS,120,El Hornillo,64.0,1.5,0.03
-MS,120,El Hornillo,65.0,2.5,0.04
-MS,120,El Hornillo,66.0,3.5,0.06
-MS,120,El Hornillo,67.0,4.5,0.08
-MS,120,El Hornillo,68.0,5.5,0.09
-MS,120,El Hornillo,69.0,6.5,0.11
-MS,120,El Hornillo,70.0,7.5,0.13
-MS,120,El Hornillo,71.0,8.5,0.14
-MS,120,El Hornillo,72.0,9.5,0.16
-MS,120,El Hornillo,73.0,10.5,0.18
-MS,120,El Hornillo,74.0,11.5,0.19
-MS,120,El Hornillo,75.0,12.5,0.21
-MS,120,El Hornillo,76.0,13.5,0.23
-MS,120,El Hornillo,77.0,14.5,0.25
-MS,120,El Hornillo,78.0,15.5,0.29
-MS,120,El Hornillo,79.0,16.5,0.32
-MS,120,El Hornillo,80.0,17.5,0.35
-MS,120,El Hornillo,81.0,18.5,0.39
-MS,120,El Hornillo,82.0,19.5,0.44
-MS,120,El Hornillo,83.0,20.5,0.49
-MS,120,El Hornillo,84.0,21.5,0.54
-MS,120,El Hornillo,85.0,22.5,0.59
-MS,120,El Hornillo,86.0,23.5,0.64
-MS,120,El Hornillo,87.0,24.5,0.69
-MS,120,El Hornillo,88.0,25.5,0.74
-MS,120,El Hornillo,89.0,26.5,0.79
-MS,120,El Hornillo,90.0,27.5,0.84
-MS,120,El Hornillo,91.0,28.5,0.89
-MS,120,El Hornillo,92.0,29.5,0.94
-MS,120,El Hornillo,93.0,30.5,0.99
-MS,120,El Hornillo,94.0,31.5,1.04
-MS,120,El Hornillo,95.0,32.5,1.1
-MS,120,El Hornillo,96.0,33.5,1.27
-MS,120,El Hornillo,97.0,34.5,1.47
-MS,120,El Hornillo,98.0,35.5,1.73
-MS,120,El Hornillo,99.0,36.5,2.02
-MS,120,El Hornillo,100.0,37.5,2.3
-MS,120,El Hornillo,101.0,38.5,2.58
-MS,120,El Hornillo,102.0,39.5,4.88
-MS,120,El Hornillo,103.0,40.5,15.54
+MS,120,El Hornillo,63.0,0.5,0.26
+MS,120,El Hornillo,64.0,1.5,0.76
+MS,120,El Hornillo,65.0,2.5,1.26
+MS,120,El Hornillo,66.0,3.5,1.76
+MS,120,El Hornillo,67.0,4.5,2.26
+MS,120,El Hornillo,68.0,5.5,2.76
+MS,120,El Hornillo,69.0,6.5,3.26
+MS,120,El Hornillo,70.0,7.5,3.76
+MS,120,El Hornillo,71.0,8.5,4.26
+MS,120,El Hornillo,72.0,9.5,4.76
+MS,120,El Hornillo,73.0,10.5,5.26
+MS,120,El Hornillo,74.0,11.5,5.76
+MS,120,El Hornillo,75.0,12.5,6.26
+MS,120,El Hornillo,76.0,13.5,6.76
+MS,120,El Hornillo,77.0,14.5,7.26
+MS,120,El Hornillo,78.0,15.5,7.76
+MS,120,El Hornillo,79.0,16.5,8.26
+MS,120,El Hornillo,80.0,17.5,8.76
+MS,120,El Hornillo,81.0,18.5,9.26
+MS,120,El Hornillo,82.0,19.5,9.76
+MS,120,El Hornillo,83.0,20.5,10.26
+MS,120,El Hornillo,84.0,21.5,10.76
+MS,120,El Hornillo,85.0,22.5,11.26
+MS,120,El Hornillo,86.0,23.5,11.76
+MS,120,El Hornillo,87.0,24.5,12.26
+MS,120,El Hornillo,88.0,25.5,12.76
+MS,120,El Hornillo,89.0,26.5,13.26
+MS,120,El Hornillo,90.0,27.5,13.76
+MS,120,El Hornillo,91.0,28.5,14.26
+MS,120,El Hornillo,92.0,29.5,14.76
+MS,120,El Hornillo,93.0,30.5,15.26
+MS,120,El Hornillo,94.0,31.5,15.76
+MS,120,El Hornillo,95.0,32.5,16.26
+MS,120,El Hornillo,96.0,33.5,16.76
+MS,120,El Hornillo,97.0,34.5,17.26
+MS,120,El Hornillo,98.0,35.5,17.76
+MS,120,El Hornillo,99.0,36.5,18.26
+MS,120,El Hornillo,100.0,37.5,18.76
+MS,120,El Hornillo,101.0,38.5,19.26
+MS,120,El Hornillo,102.0,39.5,19.76
+MS,120,El Hornillo,103.0,40.5,20.26
 MS,120,Añover,94.3,0.0,0.0
-MS,120,Añover,95.0,0.7,0.02
-MS,120,Añover,96.0,1.7,0.06
-MS,120,Añover,97.0,2.7,0.11
-MS,120,Añover,98.0,3.7,0.16
-MS,120,Añover,99.0,4.7,0.23
-MS,120,Añover,100.0,5.7,0.35
-MS,120,Añover,101.0,6.7,0.48
-MS,120,Añover,102.0,7.7,0.66
-MS,120,Añover,103.0,8.7,0.93
-MS,120,Añover,104.0,9.7,1.29
-MS,120,Añover,105.0,10.7,2.53
+MS,120,Añover,95.0,0.7,0.35
+MS,120,Añover,96.0,1.7,0.85
+MS,120,Añover,97.0,2.7,1.35
+MS,120,Añover,98.0,3.7,1.85
+MS,120,Añover,99.0,4.7,2.35
+MS,120,Añover,100.0,5.7,2.85
+MS,120,Añover,101.0,6.7,3.35
+MS,120,Añover,102.0,7.7,3.85
+MS,120,Añover,103.0,8.7,4.35
+MS,120,Añover,104.0,9.7,4.85
+MS,120,Añover,105.0,10.7,5.35
 MS,120,Añover,106.0,11.7,15.77
 MS,120,Mora,90.3,0.0,0.0
-MS,120,Mora,91.0,0.7,0.01
-MS,120,Mora,92.0,1.7,0.03
-MS,120,Mora,93.0,2.7,0.06
-MS,120,Mora,94.0,3.7,0.1
-MS,120,Mora,95.0,4.7,0.17
-MS,120,Mora,96.0,5.7,0.27
-MS,120,Mora,97.0,6.7,0.38
-MS,120,Mora,98.0,7.7,0.54
-MS,120,Mora,99.0,8.7,0.71
-MS,120,Mora,100.0,9.7,0.87
-MS,120,Mora,101.0,10.7,1.08
-MS,120,Mora,102.0,11.7,1.47
-MS,120,Mora,103.0,12.7,1.88
-MS,120,Mora,104.0,13.7,3.25
+MS,120,Mora,91.0,0.7,0.35
+MS,120,Mora,92.0,1.7,0.85
+MS,120,Mora,93.0,2.7,1.35
+MS,120,Mora,94.0,3.7,1.85
+MS,120,Mora,95.0,4.7,2.35
+MS,120,Mora,96.0,5.7,2.85
+MS,120,Mora,97.0,6.7,3.35
+MS,120,Mora,98.0,7.7,3.85
+MS,120,Mora,99.0,8.7,4.35
+MS,120,Mora,100.0,9.7,4.85
+MS,120,Mora,101.0,10.7,5.35
+MS,120,Mora,102.0,11.7,5.85
+MS,120,Mora,103.0,12.7,6.35
+MS,120,Mora,104.0,13.7,6.85
 MS,120,Mora,105.0,14.7,14.76
 MS,120,El Emperador,92.8,0.0,0.0
-MS,120,El Emperador,93.0,0.2,0.01
-MS,120,El Emperador,94.0,1.2,0.04
-MS,120,El Emperador,95.0,2.2,0.11
-MS,120,El Emperador,96.0,3.2,0.24
-MS,120,El Emperador,97.0,4.2,0.41
-MS,120,El Emperador,98.0,5.2,0.61
-MS,120,El Emperador,99.0,6.2,0.82
-MS,120,El Emperador,100.0,7.2,1.03
-MS,120,El Emperador,101.0,8.2,1.25
-MS,120,El Emperador,102.0,9.2,1.47
-MS,120,El Emperador,103.0,10.2,2.16
-MS,120,El Emperador,104.0,11.2,5.43
+MS,120,El Emperador,93.0,0.2,0.09
+MS,120,El Emperador,94.0,1.2,0.59
+MS,120,El Emperador,95.0,2.2,1.09
+MS,120,El Emperador,96.0,3.2,1.59
+MS,120,El Emperador,97.0,4.2,2.09
+MS,120,El Emperador,98.0,5.2,2.59
+MS,120,El Emperador,99.0,6.2,3.09
+MS,120,El Emperador,100.0,7.2,3.59
+MS,120,El Emperador,101.0,8.2,4.09
+MS,120,El Emperador,102.0,9.2,4.59
+MS,120,El Emperador,103.0,10.2,5.09
+MS,120,El Emperador,104.0,11.2,5.59
 MS,120,El Emperador,105.0,12.2,19.6
 MS,120,Ciudad Real,85.7,0.0,0.0
-MS,120,Ciudad Real,86.0,0.3,0.01
-MS,120,Ciudad Real,87.0,1.3,0.02
-MS,120,Ciudad Real,88.0,2.3,0.04
-MS,120,Ciudad Real,89.0,3.3,0.06
-MS,120,Ciudad Real,90.0,4.3,0.07
-MS,120,Ciudad Real,91.0,5.3,0.09
-MS,120,Ciudad Real,92.0,6.3,0.11
-MS,120,Ciudad Real,93.0,7.3,0.21
-MS,120,Ciudad Real,94.0,8.3,0.31
-MS,120,Ciudad Real,95.0,9.3,0.41
-MS,120,Ciudad Real,96.0,10.3,0.52
-MS,120,Ciudad Real,97.0,11.3,0.64
-MS,120,Ciudad Real,98.0,12.3,0.78
-MS,120,Ciudad Real,99.0,13.3,0.93
-MS,120,Ciudad Real,100.0,14.3,1.15
-MS,120,Ciudad Real,101.0,15.3,1.47
-MS,120,Ciudad Real,102.0,16.3,1.91
-MS,120,Ciudad Real,103.0,17.3,3.1
-MS,120,Ciudad Real,104.0,18.3,8.92
+MS,120,Ciudad Real,86.0,0.3,0.17
+MS,120,Ciudad Real,87.0,1.3,0.67
+MS,120,Ciudad Real,88.0,2.3,1.17
+MS,120,Ciudad Real,89.0,3.3,1.67
+MS,120,Ciudad Real,90.0,4.3,2.17
+MS,120,Ciudad Real,91.0,5.3,2.67
+MS,120,Ciudad Real,92.0,6.3,3.17
+MS,120,Ciudad Real,93.0,7.3,3.67
+MS,120,Ciudad Real,94.0,8.3,4.17
+MS,120,Ciudad Real,95.0,9.3,4.67
+MS,120,Ciudad Real,96.0,10.3,5.17
+MS,120,Ciudad Real,97.0,11.3,5.67
+MS,120,Ciudad Real,98.0,12.3,6.17
+MS,120,Ciudad Real,99.0,13.3,6.67
+MS,120,Ciudad Real,100.0,14.3,7.17
+MS,120,Ciudad Real,101.0,15.3,7.67
+MS,120,Ciudad Real,102.0,16.3,8.17
+MS,120,Ciudad Real,103.0,17.3,8.67
+MS,120,Ciudad Real,104.0,18.3,9.17
 MS,120,Ciudad Real,105.0,19.3,23.22
 MS,120,La Nava,81.8,0.0,0.0
-MS,120,La Nava,82.0,0.2,0.0
-MS,120,La Nava,83.0,1.2,0.02
-MS,120,La Nava,84.0,2.2,0.04
-MS,120,La Nava,85.0,3.2,0.05
-MS,120,La Nava,86.0,4.2,0.07
-MS,120,La Nava,87.0,5.2,0.09
-MS,120,La Nava,88.0,6.2,0.1
-MS,120,La Nava,89.0,7.2,0.12
-MS,120,La Nava,90.0,8.2,0.14
-MS,120,La Nava,91.0,9.2,0.15
-MS,120,La Nava,92.0,10.2,0.17
-MS,120,La Nava,93.0,11.2,0.2
-MS,120,La Nava,94.0,12.2,0.25
-MS,120,La Nava,95.0,13.2,0.31
-MS,120,La Nava,96.0,14.2,0.54
-MS,120,La Nava,97.0,15.2,0.77
-MS,120,La Nava,98.0,16.2,1.01
-MS,120,La Nava,99.0,17.2,1.28
-MS,120,La Nava,100.0,18.2,1.65
-MS,120,La Nava,101.0,19.2,2.02
-MS,120,La Nava,102.0,20.2,2.55
-MS,120,La Nava,103.0,21.2,3.14
-MS,120,La Nava,104.0,22.2,9.42
+MS,120,La Nava,82.0,0.2,0.11
+MS,120,La Nava,83.0,1.2,0.61
+MS,120,La Nava,84.0,2.2,1.11
+MS,120,La Nava,85.0,3.2,1.61
+MS,120,La Nava,86.0,4.2,2.11
+MS,120,La Nava,87.0,5.2,2.61
+MS,120,La Nava,88.0,6.2,3.11
+MS,120,La Nava,89.0,7.2,3.61
+MS,120,La Nava,90.0,8.2,4.11
+MS,120,La Nava,91.0,9.2,4.61
+MS,120,La Nava,92.0,10.2,5.11
+MS,120,La Nava,93.0,11.2,5.61
+MS,120,La Nava,94.0,12.2,6.11
+MS,120,La Nava,95.0,13.2,6.61
+MS,120,La Nava,96.0,14.2,7.11
+MS,120,La Nava,97.0,15.2,7.61
+MS,120,La Nava,98.0,16.2,8.11
+MS,120,La Nava,99.0,17.2,8.61
+MS,120,La Nava,100.0,18.2,9.11
+MS,120,La Nava,101.0,19.2,9.61
+MS,120,La Nava,102.0,20.2,10.11
+MS,120,La Nava,103.0,21.2,10.61
+MS,120,La Nava,104.0,22.2,11.11
 MS,120,La Nava,105.0,23.2,24.24
 MS,120,Venta La Inés,88.5,0.0,0.0
-MS,120,Venta La Inés,89.0,0.5,0.01
-MS,120,Venta La Inés,90.0,1.5,0.03
-MS,120,Venta La Inés,91.0,2.5,0.07
-MS,120,Venta La Inés,92.0,3.5,0.12
-MS,120,Venta La Inés,93.0,4.5,0.17
-MS,120,Venta La Inés,94.0,5.5,0.22
-MS,120,Venta La Inés,95.0,6.5,0.41
-MS,120,Venta La Inés,96.0,7.5,0.64
-MS,120,Venta La Inés,97.0,8.5,0.9
-MS,120,Venta La Inés,98.0,9.5,1.17
-MS,120,Venta La Inés,99.0,10.5,1.44
-MS,120,Venta La Inés,100.0,11.5,1.73
-MS,120,Venta La Inés,101.0,12.5,2.04
-MS,120,Venta La Inés,102.0,13.5,2.52
-MS,120,Venta La Inés,103.0,14.5,3.14
+MS,120,Venta La Inés,89.0,0.5,0.23
+MS,120,Venta La Inés,90.0,1.5,0.73
+MS,120,Venta La Inés,91.0,2.5,1.23
+MS,120,Venta La Inés,92.0,3.5,1.73
+MS,120,Venta La Inés,93.0,4.5,2.23
+MS,120,Venta La Inés,94.0,5.5,2.73
+MS,120,Venta La Inés,95.0,6.5,3.23
+MS,120,Venta La Inés,96.0,7.5,3.73
+MS,120,Venta La Inés,97.0,8.5,4.23
+MS,120,Venta La Inés,98.0,9.5,4.73
+MS,120,Venta La Inés,99.0,10.5,5.23
+MS,120,Venta La Inés,100.0,11.5,5.73
+MS,120,Venta La Inés,101.0,12.5,6.23
+MS,120,Venta La Inés,102.0,13.5,6.73
+MS,120,Venta La Inés,103.0,14.5,7.23
 MS,120,Venta La Inés,104.0,15.5,8.39
 MS,120,Venta La Inés,105.0,16.5,22.53
 MS,120,Arroyo Valle,85.4,0.0,0.0
-MS,120,Arroyo Valle,86.0,0.6,0.01
-MS,120,Arroyo Valle,87.0,1.6,0.04
-MS,120,Arroyo Valle,88.0,2.6,0.07
-MS,120,Arroyo Valle,89.0,3.6,0.13
-MS,120,Arroyo Valle,90.0,4.6,0.21
-MS,120,Arroyo Valle,91.0,5.6,0.29
-MS,120,Arroyo Valle,92.0,6.6,0.4
-MS,120,Arroyo Valle,93.0,7.6,0.55
-MS,120,Arroyo Valle,94.0,8.6,0.72
-MS,120,Arroyo Valle,95.0,9.6,0.9
-MS,120,Arroyo Valle,96.0,10.6,1.11
-MS,120,Arroyo Valle,97.0,11.6,1.32
-MS,120,Arroyo Valle,98.0,12.6,1.54
-MS,120,Arroyo Valle,99.0,13.6,1.76
-MS,120,Arroyo Valle,100.0,14.6,1.97
-MS,120,Arroyo Valle,101.0,15.6,2.19
-MS,120,Arroyo Valle,102.0,16.6,2.52
-MS,120,Arroyo Valle,103.0,17.6,3.38
-MS,120,Arroyo Valle,104.0,18.6,5.01
+MS,120,Arroyo Valle,86.0,0.6,0.31
+MS,120,Arroyo Valle,87.0,1.6,0.81
+MS,120,Arroyo Valle,88.0,2.6,1.31
+MS,120,Arroyo Valle,89.0,3.6,1.81
+MS,120,Arroyo Valle,90.0,4.6,2.31
+MS,120,Arroyo Valle,91.0,5.6,2.81
+MS,120,Arroyo Valle,92.0,6.6,3.31
+MS,120,Arroyo Valle,93.0,7.6,3.81
+MS,120,Arroyo Valle,94.0,8.6,4.31
+MS,120,Arroyo Valle,95.0,9.6,4.81
+MS,120,Arroyo Valle,96.0,10.6,5.31
+MS,120,Arroyo Valle,97.0,11.6,5.81
+MS,120,Arroyo Valle,98.0,12.6,6.31
+MS,120,Arroyo Valle,99.0,13.6,6.81
+MS,120,Arroyo Valle,100.0,14.6,7.31
+MS,120,Arroyo Valle,101.0,15.6,7.81
+MS,120,Arroyo Valle,102.0,16.6,8.31
+MS,120,Arroyo Valle,103.0,17.6,8.81
+MS,120,Arroyo Valle,104.0,18.6,9.31
 MS,120,Arroyo Valle,105.0,19.6,19.49
 MS,120,La Lancha,74.7,0.0,0.0
-MS,120,La Lancha,75.0,0.3,0.01
-MS,120,La Lancha,76.0,1.3,0.02
-MS,120,La Lancha,77.0,2.3,0.04
-MS,120,La Lancha,78.0,3.3,0.06
-MS,120,La Lancha,79.0,4.3,0.1
-MS,120,La Lancha,80.0,5.3,0.13
-MS,120,La Lancha,81.0,6.3,0.16
-MS,120,La Lancha,82.0,7.3,0.2
-MS,120,La Lancha,83.0,8.3,0.24
-MS,120,La Lancha,84.0,9.3,0.29
-MS,120,La Lancha,85.0,10.3,0.34
-MS,120,La Lancha,86.0,11.3,0.39
-MS,120,La Lancha,87.0,12.3,0.44
-MS,120,La Lancha,88.0,13.3,0.52
-MS,120,La Lancha,89.0,14.3,0.63
-MS,120,La Lancha,90.0,15.3,0.75
-MS,120,La Lancha,91.0,16.3,0.87
-MS,120,La Lancha,92.0,17.3,1.01
-MS,120,La Lancha,93.0,18.3,1.14
-MS,120,La Lancha,94.0,19.3,1.27
-MS,120,La Lancha,95.0,20.3,1.41
-MS,120,La Lancha,96.0,21.3,1.54
-MS,120,La Lancha,97.0,22.3,1.67
-MS,120,La Lancha,98.0,23.3,1.81
-MS,120,La Lancha,99.0,24.3,1.95
-MS,120,La Lancha,100.0,25.3,2.1
-MS,120,La Lancha,101.0,26.3,2.25
-MS,120,La Lancha,102.0,27.3,2.97
-MS,120,La Lancha,103.0,28.3,3.76
+MS,120,La Lancha,75.0,0.3,0.16
+MS,120,La Lancha,76.0,1.3,0.66
+MS,120,La Lancha,77.0,2.3,1.16
+MS,120,La Lancha,78.0,3.3,1.66
+MS,120,La Lancha,79.0,4.3,2.16
+MS,120,La Lancha,80.0,5.3,2.66
+MS,120,La Lancha,81.0,6.3,3.16
+MS,120,La Lancha,82.0,7.3,3.66
+MS,120,La Lancha,83.0,8.3,4.16
+MS,120,La Lancha,84.0,9.3,4.66
+MS,120,La Lancha,85.0,10.3,5.16
+MS,120,La Lancha,86.0,11.3,5.66
+MS,120,La Lancha,87.0,12.3,6.16
+MS,120,La Lancha,88.0,13.3,6.66
+MS,120,La Lancha,89.0,14.3,7.16
+MS,120,La Lancha,90.0,15.3,7.66
+MS,120,La Lancha,91.0,16.3,8.16
+MS,120,La Lancha,92.0,17.3,8.66
+MS,120,La Lancha,93.0,18.3,9.16
+MS,120,La Lancha,94.0,19.3,9.66
+MS,120,La Lancha,95.0,20.3,10.16
+MS,120,La Lancha,96.0,21.3,10.66
+MS,120,La Lancha,97.0,22.3,11.16
+MS,120,La Lancha,98.0,23.3,11.66
+MS,120,La Lancha,99.0,24.3,12.16
+MS,120,La Lancha,100.0,25.3,12.66
+MS,120,La Lancha,101.0,26.3,13.16
+MS,120,La Lancha,102.0,27.3,13.66
+MS,120,La Lancha,103.0,28.3,14.16
 MS,120,La Lancha,104.0,29.3,15.17
 MS,120,Posadas,100.5,0.0,0.0
-MS,120,Posadas,101.0,0.5,0.01
-MS,120,Posadas,102.0,1.5,0.15
-MS,120,Posadas,103.0,2.5,0.28
-MS,120,Posadas,104.0,3.5,0.44
-MS,120,Posadas,105.0,4.5,0.65
-MS,120,Posadas,106.0,5.5,1.47
+MS,120,Posadas,101.0,0.5,0.25
+MS,120,Posadas,102.0,1.5,0.75
+MS,120,Posadas,103.0,2.5,1.25
+MS,120,Posadas,104.0,3.5,1.75
+MS,120,Posadas,105.0,4.5,2.25
+MS,120,Posadas,106.0,5.5,2.75
 MS,120,Lora del Río,99.8,0.0,0.0
-MS,120,Lora del Río,100.0,0.2,0.01
-MS,120,Lora del Río,101.0,1.2,0.05
-MS,120,Lora del Río,102.0,2.2,0.15
-MS,120,Lora del Río,103.0,3.2,0.31
-MS,120,Lora del Río,104.0,4.2,0.49
-MS,120,Lora del Río,105.0,5.2,0.69
-MS,120,Lora del Río,106.0,6.2,1.65
+MS,120,Lora del Río,100.0,0.2,0.09
+MS,120,Lora del Río,101.0,1.2,0.59
+MS,120,Lora del Río,102.0,2.2,1.09
+MS,120,Lora del Río,103.0,3.2,1.59
+MS,120,Lora del Río,104.0,4.2,2.09
+MS,120,Lora del Río,105.0,5.2,2.59
+MS,120,Lora del Río,106.0,6.2,3.09
 MS,120,Rinconada,92.1,0.0,0.0
-MS,120,Rinconada,93.0,0.9,0.01
-MS,120,Rinconada,94.0,1.9,0.03
-MS,120,Rinconada,95.0,2.9,0.05
-MS,120,Rinconada,96.0,3.9,0.07
-MS,120,Rinconada,97.0,4.9,0.1
-MS,120,Rinconada,98.0,5.9,0.13
-MS,120,Rinconada,99.0,6.9,0.17
-MS,120,Rinconada,100.0,7.9,0.22
-MS,120,Rinconada,101.0,8.9,0.28
-MS,120,Rinconada,102.0,9.9,0.44
-MS,120,Rinconada,103.0,10.9,0.67
-MS,120,Rinconada,104.0,11.9,0.94
-MS,120,Rinconada,105.0,12.9,1.62
-MS,120,Rinconada,106.0,13.9,4.4
+MS,120,Rinconada,93.0,0.9,0.45
+MS,120,Rinconada,94.0,1.9,0.95
+MS,120,Rinconada,95.0,2.9,1.45
+MS,120,Rinconada,96.0,3.9,1.95
+MS,120,Rinconada,97.0,4.9,2.45
+MS,120,Rinconada,98.0,5.9,2.95
+MS,120,Rinconada,99.0,6.9,3.45
+MS,120,Rinconada,100.0,7.9,3.95
+MS,120,Rinconada,101.0,8.9,4.45
+MS,120,Rinconada,102.0,9.9,4.95
+MS,120,Rinconada,103.0,10.9,5.45
+MS,120,Rinconada,104.0,11.9,5.95
+MS,120,Rinconada,105.0,12.9,6.45
+MS,120,Rinconada,106.0,13.9,6.95

@@ -156,13 +156,39 @@ texto puede cambiar.
 | Vía "hoy" (permiso propio del CPD) | El CPD queda sujeto al decreto completo | Es igual que para cualquier CPD nuevo. No es una desventaja específica |
 | Vía "con reforma" (permiso compartido) | El decreto define su ámbito por la potencia de acceso del CPD | La reforma tiene que dejar claro que el CPD que comparte el permiso de Adif cumple el decreto con su propia potencia máxima |
 | Correlación horaria del 80 % | Es lo más difícil para un CPD que consume plano 24 h. La batería del modelo (12–15 min) no sirve para desplazar energía entre horas, y la FV propia solo cubre ≈5 % | El bloque flexible puede concentrar consumo en horas renovables, igual que cede potencia al tren. Así la misma flexibilidad sirve para dos cosas. Recortar consumo nunca penaliza, porque se mide lo consumido |
-| Adicionalidad y PPA | Para cubrir el 80 % hora a hora hace falta una cartera de PPA nuevos de eólica y solar bastante mayor que la potencia del CPD (del orden de 2–3 veces, estimación propia sin calcular) | Las líneas cruzan Aragón, Soria, Guadalajara y Castilla-La Mancha, con mucha renovable nueva cerca. En Madrid–Sevilla el sol del sur ayuda |
+| Adicionalidad y PPA | Para cubrir el 80 % hora a hora hace falta una cartera de PPA nuevos de eólica y solar varias veces mayor que la potencia del CPD (ver 7.1) | Las líneas cruzan Aragón, Soria, Guadalajara y Castilla-La Mancha, con mucha renovable nueva cerca. En Madrid–Sevilla el sol del sur ayuda |
 | PUE ≤ 1,15 | El modelo usaba 1,3 | Se cambia el valor central de `src/finance.py` a 1,15. Varias subestaciones están en la meseta alta (Medinaceli, Brihuega, Terrer), con clima frío que favorece el free cooling |
 | WUE ≤ 0,1 L/kWh | Obliga a refrigeración seca o en circuito cerrado | Encaja con la España interior seca. Cuidado: tensiona el PUE en los veranos de Zaragoza, Lleida y Córdoba |
 | Priorización (renovable nueva, agua y suelo eficientes, autonomía tecnológica) | — | **A favor:** se reutiliza un nudo y un suelo ya existentes, sin nuevas líneas ni subestaciones de transporte, y en infraestructura pública |
 | Soberanía digital | Neutro: depende del operador del CPD | Un CPD sobre infraestructura pública ferroviaria encaja con el discurso de soberanía y de la gigafactoría de IA |
 | CNMC: pide reconocer almacenamiento, gestión de demanda, reducciones temporales y servicios de balance | Aún no está en el texto | **Es el argumento central del paper:** nuestro CPD es justo ese tipo de demanda flexible. Conviene proponer que el texto final lo premie |
 | Caducidad de permisos no conectados | Liberará capacidad en nudos saturados (≈12 GW concedidos y ≈27 GW en cola para CPD) | **En contra:** puede reducir la escasez de acceso que da valor a la idea. El argumento de "no esperar 3 años" hay que matizarlo |
+
+### 7.1 Cuánta renovable hace falta para el 80 % horario
+
+`src/renovable_horaria.py` usa la forma horaria de la eólica y la FV peninsular de 2025 (REE, `data/ree_horario_2025.csv`)
+escalada a factores de capacidad **supuestos** de 0,26 (eólica) y 0,21 (FV), y busca la cartera de menor coste para un CPD
+plano de 1 MW (`results/renovable_horaria.csv`). El coste neto descuenta la venta del excedente a 30 €/MWh (**supuesto**).
+
+| Cumplir en el 95 % de las horas (recargo mínimo) | Eólica + FV por MW de CPD | Renovable / consumo | Recorte del CPD | Coste neto |
+|---|---|---|---|---|
+| CPD plano, sin nada más | 8,0 + 1,5 = 9,5 MW | 2,4 | 0 % | 64 €/MWh |
+| Con el bloque flexible (hasta 30 %) | 5,75 + 1,0 = 6,75 MW | 1,75 | 2,5 % | 54 €/MWh |
+| Con una batería de desplazamiento de 4 h | 2,75 + 3,0 = 5,75 MW | 1,34 | 0 % | 50 €/MWh |
+| Con las dos | 2,5 + 3,0 = 5,5 MW | 1,30 | 1,7 % | 49 €/MWh |
+
+Para no perder el permiso (como mucho el 20 % de horas sin cumplir) basta con 2,75 + 1,25 MW si el CPD es flexible
+(39 €/MWh, recortando el 8 % de su energía), frente a 4 + 1,5 MW sin flexibilidad (44 €/MWh).
+
+**Lectura:**
+- La correlación horaria obliga a sobredimensionar mucho la renovable: el problema son las noches sin viento.
+- **La flexibilidad del CPD vale ≈10 €/MWh** en el cumplimiento del decreto. En un CPD de 385 MW son del orden de
+  30 M€ al año, el doble del canon que cobraría Adif. Es la misma flexibilidad que cede potencia al tren, así que se
+  aprovecha dos veces.
+- La batería de desplazamiento (horas) es otra distinta de la de potencia del tren (minutos). Pueden ser el mismo equipo
+  si se dimensiona en energía para las horas.
+- **Es optimista:** el perfil agregado de toda la península es más suave que el de unas pocas plantas concretas. Con PPA
+  reales harán falta más MW. Tampoco se modela la limitación de horas de consumo de cuando la cuota renovable supere el 90 %.
 
 ## Fuentes
 

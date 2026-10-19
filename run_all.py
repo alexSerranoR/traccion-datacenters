@@ -25,6 +25,8 @@ for l in LINES:
     run("analysis.py", WORK / l, l, WORK / f"res_{l}.json")
 run("finance.py", WORK, RES)
 run("arquitectura.py", WORK, RES)
+REE = ROOT / "data" / "ree_horario_2025.csv"     # perfiles horarios de REE (versionados, ver data/README.md)
+if REE.exists(): run("renovable_horaria.py", REE, RES)
 run("export.py", WORK, RES)
 run("dashboard.py", RES)
 print(f"\nAbre {RES / 'dashboard.html'} con doble clic para ver los resultados.")
