@@ -6,7 +6,7 @@
 \usepackage{booktabs}
 \usepackage{textcomp}
 \usepackage{siunitx}
-\usepackage{url}
+\usepackage{xurl}
 \usepackage[hidelinks]{hyperref}
 \graphicspath{{figures/}}
 \sisetup{group-separator={,}}
@@ -30,7 +30,7 @@
 \affiliation[b]{organization={Affiliation to be completed at submission}, country={Spain}}
 
 \begin{abstract}
-Grid-connection capacity, not energy, has become the binding constraint for new data centres in Spain, while the traction substations of the high-speed railway network hold transmission-level access permits that they use, on average, at \msUsePct--\mzbUsePct\,\% of their rating. This paper quantifies how much data-centre load could share that capacity with absolute priority for the train, and shows how such an installation can be built and operated safely. A second-by-second traction simulation driven by the published timetables of the three operators is applied to the Madrid--Barcelona (\mzbSubs{} substations, \mzbAccess\,MW granted) and Madrid--Seville (\msSubs{} substations, \msAccess\,MW) lines, using the access capacity actually granted to each railway bay by the transmission system operator. Under current rules only the capacity that survives the loss of a neighbouring substation can be released: \mzbFirm\,MW and \msFirm\,MW. A shared access permit with train priority raises this to \mzbNoBat/\msNoBat\,MW without storage, \mzbFlex/\msFlex\,MW if 30\,\% of the load is curtailable, and \mzbBat/\msBat\,MW with power batteries of \mzbBatMWh/\msBatMWh\,MWh. The averaging window used to enforce the joint limit is the most influential parameter: moving from 1 to 15\,min triples the storage-free capacity on the busier line. We propose an implementation architecture (dedicated bay at the same node, redundant transformers, grid-forming storage, a two-block data centre and a fail-safe limiter), cost it at about 10\,\% of the data-centre investment, and derive physical, cyber and operational security requirements so that the railway acquires no new failure mode. The same flexibility that yields power to the train lowers the cost of hourly renewable matching by about \resFlexValue\,\texteuro/MWh.
+Grid-connection capacity, not energy, has become the binding constraint for new data centres in Spain, while the traction substations of the high-speed railway network hold transmission-level access permits that they use, on average, at \msUsePct--\mzbUsePct\,\% of their rating. This paper quantifies how much data-centre load could share that capacity with absolute priority for the train, and shows how such an installation can be built and operated safely. A second-by-second traction simulation driven by the published timetables of the three operators is applied to the Madrid--Barcelona (\mzbSubs{} substations, \mzbAccess\,MW granted) and Madrid--Seville (\msSubs{} substations, \msAccess\,MW) lines, using the access capacity actually granted to each railway bay. Under current rules only the capacity that survives the loss of a neighbouring substation can be released: \mzbFirm\,MW and \msFirm\,MW. A shared access permit with train priority raises this to \mzbNoBat/\msNoBat\,MW without storage, \mzbFlex/\msFlex\,MW if 30\,\% of the load is curtailable, and \mzbBat/\msBat\,MW with power batteries of \mzbBatMWh/\msBatMWh\,MWh. The averaging window used to enforce the joint limit is the most influential parameter: moving from 1 to 15\,min triples the storage-free capacity on the busier line. We propose an implementation architecture (dedicated bay, redundant transformers, grid-forming storage, two-block data centre, fail-safe limiter), cost it at about 10\,\% of the data-centre investment, and derive physical, cyber and operational security requirements so that the railway acquires no new failure mode. The same flexibility that yields power to the train lowers the cost of hourly renewable matching by about \resFlexValue\,\texteuro/MWh.
 \end{abstract}
 
 \begin{highlights}
@@ -38,7 +38,7 @@ Grid-connection capacity, not energy, has become the binding constraint for new 
 \item A shared access permit with train priority unlocks \mzbBat--\msBat\,MW per line with batteries.
 \item Enforcing the joint limit on 15-min instead of 1-min means triples storage-free capacity.
 \item A fail-safe, one-way architecture adds no new failure mode to railway operation.
-\item Data-centre flexibility cuts the cost of 80\,\% hourly renewable matching by \resFlexValue\,\texteuro/MWh.
+\item Flexibility cuts the cost of 80\,\% hourly renewable matching by \resFlexValue\,\texteuro/MWh.
 \end{highlights}
 
 \begin{keyword}

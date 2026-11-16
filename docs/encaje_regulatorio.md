@@ -126,6 +126,23 @@ Qué tendría que cambiar para la vía E:
 
 ## 7. Proyecto de RD de centros de datos (estado a 19/10/2026)
 
+> **Actualización a 16/11/2026.** El real decreto sigue sin aprobarse. El Consejo de Estado emitió dictamen favorable el
+> 6/11/2026 y el Gobierno prevé llevarlo al Consejo de Ministros del 17 o del 24 de noviembre. El texto enviado al Consejo
+> de Estado (no oficial; análisis de Ashurst de 3/11/2026) cambia respecto al de audiencia pública descrito más abajo:
+>
+> | Tema | Audiencia pública (agosto) | Texto revisado (noviembre) |
+> |---|---|---|
+> | Ámbito | ≥ 1 MW | **≥ 10 MW** |
+> | PUE transitorio | 1,15 | **1,25** (WUE sigue en 0,1 L/kWh) |
+> | Adicionalidad | plantas de ≤ 18 meses, PPA ≥ 10 años | **≤ 36 meses, PPA ≥ 6 años**; valen almacenamiento, repotenciación y FV sin PPA |
+> | Correlación horaria | 80 % cada hora | 80 % cada hora, y **la descarga de almacenamiento cuenta como renovable** |
+> | Flexibilidad | no se reconocía | **Régimen transitorio de 5 años para los centros adheridos al SRAP (sistema de reducción automática de potencia): 60 % en P1 hasta 2028; 70 % en P1 y 60 % en P2 desde 2029** |
+> | Recargos | tramos del 10/30/50 % | cinco tramos del 10 al 100 % sobre la media mensual; adicionalidad del 100 al 500 % |
+>
+> Lectura: el texto revisado premia justo la flexibilidad que el acceso compartido necesita, que es la tesis del trabajo.
+> El modelo mantiene PUE = 1,15 (dentro del rango de sensibilidad 1,10–1,30). El detalle y las fuentes están en
+> [`paper/research_update.md`](../paper/research_update.md). Lo que sigue describe el texto de audiencia pública.
+
 El RDL 7/2026 mandó aprobar un real decreto con requisitos para los centros de datos. El proyecto salió a
 audiencia pública por urgencia el 27/8/2026, la CNMC emitió su informe el 22/9/2026 (IPN/CNMC/038/26) y el
 Gobierno quiere aprobarlo entre finales de octubre y principios de noviembre. **Todavía no está en el BOE** y el
