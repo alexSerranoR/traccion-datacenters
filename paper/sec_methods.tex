@@ -1,0 +1,114 @@
+\section{System description and methodology}
+\label{sec:methods}
+
+\subsection{System under study}
+
+Spanish high-speed lines are electrified at 25\,kV, 50\,Hz. The Madrid--Zaragoza--Barcelona line (621\,km) uses the $2\times25$\,kV autotransformer system; the Madrid--C\'ordoba--Seville line (471\,km), opened in 1992, uses $1\times25$\,kV. Each traction substation takes two phases of the three-phase transmission grid through a dedicated bay in a TSO substation at 220 or 400\,kV and feeds two catenary sections separated by neutral zones. Typical ratings are two 60\,MVA transformers per substation on the first line and two 30\,MVA units on the second; the latter are being renewed. The infrastructure manager is, legally, an ordinary transmission-connected consumer that holds one access permit per bay \cite{convenio2021}.
+
+Table~\ref{tab:substations} lists the \mzbSubs{} substations of the Madrid--Barcelona line and the \msSubs{} of the Madrid--Seville line with the access capacity granted to each railway bay, taken from the list of occupied demand capacity per bay published by the TSO on 1 October 2026 \cite{ree2026posicion}. Granted capacity ranges from \mzbAccessMin{} to \mzbAccessMax\,MW on the first line (median \mzbAccessMed\,MW) and from \msAccessMin{} to \msAccessMax\,MW on the second. For six substations no bay could be identified in the TSO list (they are probably fed from the distribution grid) and a value of 35--40\,MW, close to the line median, is assumed. Substation chainages are not public and were estimated from geography with an uncertainty of about $\pm10$\,km.
+
+Two lines were chosen to span the range of traffic density. Madrid--Barcelona is the busiest corridor of the network, served by three operators. Madrid--Seville carries less end-to-end traffic but its first kilometres are shared with trains to Toledo, the Levante corridor and M\'alaga.
+
+\subsection{Overview of the model}
+
+The model is a chain of five steps, each a script in the repository: (i) timetable extraction, (ii) traction simulation, (iii) hosting-capacity analysis, (iv) architecture and contingency indicators and cost model, and (v) hourly renewable matching. All parameters that are not verified public data are flagged as assumptions (Table~\ref{tab:assumptions}).
+
+\subsection{Timetable}
+
+The simulated day is Wednesday 21 October 2026. Renfe services are read from the operator's open GTFS feed (downloaded on 12 October 2026). Every trip that uses any part of the line is kept, including trains that join or leave it at junctions. The other two operators are not in that feed: Iryo services follow their published weekday timetable of October 2026 (14 trains per direction Madrid--Barcelona; 7 and 6 Madrid--Seville; 4 per direction Madrid--M\'alaga), and Ouigo services follow the announced frequencies (6, 4 and 3 per direction, respectively) with departures spread evenly between 07:00 and 20:00, which is an assumption. The resulting day has \mzbTrains{} trains and \mzbTrainKm{} train-km on Madrid--Barcelona and \msTrains{} trains and \msTrainKm{} train-km on Madrid--Seville.
+
+\subsection{Traction simulation}
+
+Each train is simulated at 1\,s resolution between consecutive timetable stops. The speed profile consists of acceleration at maximum tractive effort, cruising at the speed $v_c$ that meets the scheduled run time reduced by a regularity margin of 8\,\%, and service braking at 0.5\,m/s$^2$. The power at the wheel is
+\begin{equation}
+P_w(t) = \left[\,\rho\, m\, a(t) + A + B\,v(t) + C\,v(t)^2 + m\,g\,s(x)\,\right] v(t),
+\label{eq:wheel}
+\end{equation}
+where $m$ is the laden mass, $\rho=1.06$ the rotating-mass factor, $a$ the acceleration, $A$, $B$, $C$ the Davis running-resistance coefficients \cite{rochard2000} and $s(x)$ the gradient at position $x$, obtained from an approximate elevation profile ($\pm50$\,m). $P_w$ is limited to the rated power of the train in traction and in electrical braking. The power at the pantograph is
+\begin{equation}
+P_p(t) =
+\begin{cases}
+P_w(t)/\eta_t + P_{aux}, & P_w(t) \ge 0,\\
+\eta_r\,P_w(t) + P_{aux}, & P_w(t) < 0,
+\end{cases}
+\label{eq:panto}
+\end{equation}
+with $\eta_t=0.85$, $\eta_r=0.80$ and auxiliary power $P_{aux}$ of 0.2--0.5\,MW depending on the train type. Five rolling-stock classes are parameterised from public data sheets (Table~\ref{tab:assumptions}).
+
+Each substation $k$ supplies the trains located between the midpoints to its neighbours, where the neutral sections are assumed to be:
+\begin{equation}
+P_k(t) = \sum_{i:\,x_i(t)\in Z_k} P_{p,i}(t).
+\label{eq:sub}
+\end{equation}
+Regenerated power is first used by other trains in the same section; the remainder flows back to the grid. Transmission losses in the catenary are not modelled. The load used in the analysis is $L_k(t)=\max(P_k(t),0)$, averaged over windows of 1\,s, 1\,min or 15\,min as needed.
+
+As a plausibility check, the simulated specific consumption is \mzbSpecific\,kWh per train-km on Madrid--Barcelona and \msSpecific\,kWh per train-km on Madrid--Seville, in the range reported for high-speed operation \cite{douglas2015}; the energy returned to the transmission grid is \mzbBackPct\,\% and \msBackPct\,\% of the energy drawn, which confirms that regeneration is a second-order effect at the grid connection.
+
+\subsection{Hosting capacity}
+
+Let $C_k$ be the access capacity of substation $k$ and $\sigma=0.9$ a safety factor. The data centre connects to the same transmission node through its own bay and transformers (Section~\ref{sec:arch}), so the only shared quantity is the joint power limit. The headroom available to the data centre is
+\begin{equation}
+H_k(t) = \sigma\,C_k - L_k(t).
+\label{eq:headroom}
+\end{equation}
+If a neighbouring substation is out of service, substation $k$ is assumed to take half of the load of its most loaded neighbour:
+\begin{equation}
+L^{N-1}_k(t) = L_k(t) + \tfrac{1}{2}\max\left(L_{k-1}(t),\,L_{k+1}(t)\right).
+\label{eq:n1}
+\end{equation}
+Five options are evaluated, all with 1-min averages:
+\begin{align}
+D^{firm}_k &= \max\left(0,\ \sigma C_k - \max_t L^{N-1}_k(t)\right), \label{eq:firm}\\
+D^{firm+flex}_k &= \min\left(D^{firm}_k/(1-\phi),\ \sigma C_k\right), \label{eq:firmflex}\\
+D^{shared}_k &= \min_t H_k(t), \label{eq:shared}\\
+D^{flex}_k &= \min\left(D^{shared}_k/(1-\phi),\ \sigma C_k\right), \label{eq:flex}
+\end{align}
+where $\phi=0.3$ is the share of the data-centre load that can be curtailed on request (training and batch workloads). $D^{firm}$ is the capacity that the railway never uses, even under N-1; it is the only quantity compatible with current rules, through a voluntary reduction of the railway permit (Section~\ref{sec:regulation}). The other options require the joint limit to be shared in real time.
+
+The fifth option adds a battery that supplies the data centre whenever $H_k(t)<D$. For a constant load $D$, the required battery power and energy are
+\begin{align}
+P^{b}_k(D) &= \max_t\left(D - H_k(t)\right)^+, \label{eq:pb}\\
+E^{b}_k(D) &= \max_t\left[\max_{\tau\le t} S(\tau) - S(t)\right],\qquad S(t)=\sum_{u\le t}\left(H_k(u)-D\right)\Delta t, \label{eq:eb}
+\end{align}
+that is, the largest cumulative deficit of the day treated as cyclic, which follows from the Lindley recursion of a single-server queue \cite{lindley1952}. Round-trip losses are neglected. To limit degradation the energy is constrained to $E^b_k \ge P^b_k/2$ (a maximum rate of 2C). The size $D^{bat}_k$ is increased in steps of 1\,MW while the marginal battery cost remains below $v=1$\,\MEUR{} per additional MW of data-centre capacity, with battery costs of 0.20\,\MEUR/MW plus 0.25\,\MEUR/MWh, of the order of published projections \cite{schmidt2019}.
+
+Access capacity is varied in five scenarios: the capacity granted today (base case), the rating of the traction transformers (about 100\,MW with $2\times60$\,MVA and 55\,MW with $2\times30$\,MVA), and uniform values of 30, 60 and 120\,MW. Traffic growth and consumption uncertainty are represented by scaling the load by 1.5.
+
+\subsection{Architecture and contingency indicators}
+
+For the battery option the model computes, per substation: the equivalent full cycles per day; the capacity that the same battery sustains under Eq.~\eqref{eq:n1}, hence the curtailment required when a neighbour trips; the storage-free capacity of Eq.~\eqref{eq:shared} for averaging windows of 1\,s, 1\,min and 15\,min; the largest 1\,s and 10\,s changes of the traction load; and an upper bound of the voltage unbalance factor at the transmission node, $\mathrm{VUF}\approx \hat{L}_k/S_{sc}$, with the 1\,s peak $\hat{L}_k$ and an assumed short-circuit power $S_{sc}$ of 12\,GVA at 400\,kV and 5\,GVA at 220\,kV (half of these values for a weak node).
+
+\subsection{Cost model}
+
+Sites below 10\,MW are discarded. Electrical capital cost comprises the dedicated high-voltage bay (3\,\MEUR{} per site), two transformers each rated for the full load (0.04\,\MEUR/MVA), the battery, and medium-voltage generating sets with $N{+}1$ redundancy for the firm block only (0.5\,\MEUR/MW). The data centre itself is costed at 9\,\MEUR{} per MW of IT load with a power usage effectiveness (PUE) of 1.15. The infrastructure manager is assumed to receive an access-sharing fee of 40\,\texteuro/kW per year (range 20--80), discounted at 7\,\% over 20 years. All unit costs are order-of-magnitude assumptions and are listed, with ranges, in the repository.
+
+\subsection{Hourly renewable matching}
+
+The draft decree requires that, in every hour, at least 80\,\% of consumption be matched by new renewable generation \cite{prd2026}. For a data centre of 1\,MW we search the wind and solar portfolio of least cost such that the share of hours failing the 80\,\% test does not exceed 5\,\% (lowest surcharge tier) or 20\,\% (permit-loss threshold). Hourly shapes are those of peninsular wind and solar generation in 2025 \cite{ree2025horario}, scaled to capacity factors of 0.26 and 0.21. Four cases are compared: a flat load; a load that may reduce up to 30\,\% in deficit hours; a 4\,h shifting battery; and both. Surplus is valued at 30\,\texteuro/MWh.
+
+\begin{table}[t]
+\caption{Main parameters and assumptions. A: assumption; P: public data.}
+\label{tab:assumptions}
+\centering\footnotesize
+\begin{tabular}{p{0.34\linewidth}p{0.36\linewidth}p{0.2\linewidth}}
+\toprule
+Parameter & Value & Status\\
+\midrule
+Simulated day & Wednesday 21 October 2026 & P (timetables)\\
+Ouigo departure times & evenly spread 07:00--20:00 & A\\
+Rolling stock (mass / power) & AVE 425\,t / 8.8\,MW; Iryo 500\,t / 9.8\,MW; Ouigo 430\,t / 9.3\,MW; Alvia 320\,t / 4.8\,MW; Avant 290\,t / 4.4\,MW & P (data sheets), laden mass A\\
+Efficiencies $\eta_t$ / $\eta_r$ & 0.85 / 0.80 & A\\
+Regularity margin & 8\,\% & A\\
+Elevation profile & approximate, $\pm50$\,m & A\\
+Substation chainage & estimated, $\pm10$\,km & A\\
+Granted access $C_k$ & TSO list of 1 Oct 2026; 35--40\,MW where unknown (6 substations) & P / A\\
+Safety factor $\sigma$ & 0.9 & A\\
+N-1 load transfer & 50\,\% of the most loaded neighbour & A\\
+Curtailable share $\phi$ & 30\,\% & A\\
+Battery cost; C-rate & 0.20\,\MEUR/MW + 0.25\,\MEUR/MWh; $\le 2$C & A\\
+Marginal value $v$ & 1\,\MEUR{} per MW & A\\
+Short-circuit power & 12\,GVA (400\,kV), 5\,GVA (220\,kV) & A\\
+PUE & 1.15 & draft decree\\
+\bottomrule
+\end{tabular}
+\end{table}

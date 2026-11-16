@@ -1,0 +1,111 @@
+\section{Security, resilience and train priority}
+\label{sec:security}
+
+\subsection{Design principle: no new failure mode for the railway}
+
+The year 2026 has been the most difficult in the history of Spanish high-speed rail. On 18 January a derailment and subsequent collision at Adamuz, on the Madrid--Seville line, caused 46 deaths; preliminary findings point to a rail break at a weld and to deficiencies in inspection and alarm thresholds \cite{adamuz2026}. On 28 October, at Urda on the same line, a train ran into another that was stopped after a failure of the automatic signalling system had forced operation in a degraded manual mode; 69 people died, and the preliminary cause is a human error in traffic control during degraded operation \cite{urda2026}. The minister of transport and the president of the infrastructure manager left office in the following days, and a 50\,\% increase in railway investment over five years was announced \cite{infobae2026}. During the same year copper theft repeatedly disrupted high-speed traffic \cite{cable2026}, and in September an intrusion into the corporate systems of the infrastructure manager and the incumbent operator exfiltrated a large volume of customer data \cite{cyber2026}.
+
+None of these events originated in the traction power supply. They are nonetheless the context in which any third-party use of railway electrical infrastructure will be judged, and they suggest three lessons that we adopt as requirements:
+\begin{itemize}
+\item[R1] \emph{Independence.} The data centre must not be able to cause, by failure, error or attack, any degradation of the railway supply. Whatever happens on the data-centre side, the railway must be exactly where it would be without it.
+\item[R2] \emph{Fail-safe degraded modes.} The Urda sequence, in which the loss of an automatic system was followed by an unsafe manual fallback, is the pattern to exclude. On loss of measurement, communication or control, the data centre must reduce to a safe level automatically; no manual action may raise its limit.
+\item[R3] \emph{No added burden.} The railway organisation, whose resources are being directed to safety and maintenance, must not acquire new operational tasks.
+\end{itemize}
+The following subsections show how the architecture of Section~\ref{sec:arch} meets them.
+
+\subsection{Electrical priority of the train}
+
+Requirement R1 is met electrically by construction: the two bays share the transmission busbar and nothing else. A fault in the data-centre installation is cleared by its own bay breaker, exactly as a fault in any other consumer connected to that substation; the railway bay, its protections and its transformers are untouched. The data centre cannot back-feed the catenary and does not use the traction transformers.
+
+Priority in the use of the joint limit is guaranteed by the limiter relay, designed according to four rules:
+\begin{enumerate}
+\item It is a protection device, independent of the energy management system and of the data-centre IT network, with its own measurement of the data-centre bay and a hard-wired trip circuit.
+\item Its setting is the joint limit agreed in the shared permit; it can only be changed by the TSO.
+\item It is fail-safe: loss of the railway-power measurement, of auxiliary supply or of internal health trips the flexible block and holds the data centre at the firm level $D^{firm}$ of Eq.~\eqref{eq:firm}, which is safe for any railway load including N-1.
+\item It is periodically tested by injection of recorded railway load profiles, and every operation is logged for the TSO and the regulator.
+\end{enumerate}
+With these rules the worst outcome of any malfunction is that the data centre loses load, never that the railway loses capacity. Requirement R3 follows: the railway does not operate, maintain or supervise anything new; the TSO already meters its bay.
+
+\subsection{Contingencies and ride-through}
+
+Table~\ref{tab:events} lists the events that affect the supply and the response of each party.
+
+\begin{table}[t]
+\caption{Supply events and response. Frequencies and durations are indicative.}
+\label{tab:events}
+\centering\footnotesize
+\begin{tabular}{p{0.2\linewidth}p{0.13\linewidth}p{0.25\linewidth}p{0.3\linewidth}}
+\toprule
+Event & Duration & Effect on the data centre & Response\\
+\midrule
+Voltage dip from a transmission fault & 80--150\,ms & None if it rides through & UPS and grid-forming battery; no disconnection from the grid\\
+Loss of a neighbouring traction substation & minutes to hours & Less headroom (Eq.~\ref{eq:n1}) & Battery, then curtailment of the flexible block\\
+Loss of one data-centre transformer or feeder & hours & None & Second transformer takes the load\\
+Loss of the transmission node & minutes to hours & Total loss of grid supply & Battery forms the 30\,kV island; generators start and supply the firm block\\
+System-wide blackout & hours & Total loss of grid supply; trains are also stopped & As above; no conflict with the railway\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\emph{Loss of a neighbouring substation.} This is the contingency that sizes the curtailable block. With the batteries of the base case, the data centres sustain \mzbNoneSust\,MW of their \mzbBat\,MW on Madrid--Barcelona and \msNoneSust\,MW of \msBat\,MW on Madrid--Seville, so \mzbNoneCut\,MW and \msNoneCut\,MW must be shed (Fig.~\ref{fig:n1}); the median per site is \mzbNoneCutMed\,\% and \msNoneCutMed\,\%, within the 30\,\% assumed for the flexible block in all but three substations, where the site should be smaller or the flexible share larger. The curtailment can be staged over the minutes that the railway needs to reconfigure the catenary feeding, while the battery covers the transition.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_n1}
+\caption{Data-centre power sustained and curtailed at each site when a neighbouring traction substation is out of service (battery option). The marker shows the firm block.}
+\label{fig:n1}
+\end{figure}
+
+\emph{Loss of grid supply.} The battery sized for train-priority shaving also bridges the start of the generators. At Anchuelo, \anBatMW\,MW / \anBatMWh\,MWh correspond to about \anBridgeMin\,min at rated power, against the tens of seconds that medium-voltage sets need to start and take load; reserving a minimum state of charge for this function is sufficient. In the blackout of 28 April 2025, caused by a combination of voltage and oscillation phenomena \cite{entsoe2026}, supply to the Iberian peninsula took many hours to restore and railway traffic stopped; in such an event there is no competition for capacity between the train and the data centre, and during restoration the limiter keeps the data centre at the firm level until the TSO releases the joint limit.
+
+\subsection{Systemic risk for the transmission system}
+
+Two dozen data centres along a line are a new type of risk for the TSO. In the Virginia event of 10 July 2024, about 1,500\,MW of data-centre load disconnected simultaneously because their protection and UPS logic reacted to a sequence of voltage dips \cite{nerc2025}; the sudden loss of load raised frequency and voltage. Loads of this kind sited on the same 400\,kV axis could behave in the same way, and the over-voltage sensitivity shown by the Iberian system in 2025 \cite{entsoe2026} makes the point more acute. The shared permit should therefore include grid-code obligations for the data centre, in line with the guidance being developed for large loads \cite{nerc2025}:
+\begin{enumerate}
+\item voltage ride-through: remain connected for dips within a defined envelope and count events on a rolling window instead of transferring to islanded supply after a fixed number of dips;
+\item ramp-limited reconnection after any transfer to on-site supply;
+\item ramp limits and filtering, by the battery, of workload-induced power oscillations \cite{li2024};
+\item no use of generating sets to cover train-priority curtailment;
+\item voltage support from the grid-forming battery \cite{lin2020}, which turns the site into an asset for the node.
+\end{enumerate}
+
+\subsection{Physical security}
+
+Traction substations and their TSO counterparts are, by nature, isolated sites along the line. Co-location changes their physical risk profile in both directions. It adds permanent staffing, perimeter surveillance and lighting to places that are otherwise unattended, which is a deterrent against the copper theft that has repeatedly disrupted traffic \cite{cable2026}. It also adds a high-value target and more people and vehicles near railway assets. The design rules are those of separation: independent fenced perimeters and accesses for the railway substation, the TSO substation and the data centre; no shared cable routes, trenches or auxiliary supplies with railway installations; no data-centre construction or access through the railway public domain; and vetted personnel under the access rules applicable to critical-infrastructure operators \cite{ley82011,cer2022}. Fuel storage for the generators and the battery containers are sited and protected against fire with clearances to both substations.
+
+\subsection{Cyber security}
+
+The cyber risk has two faces. The first is that the data centre becomes a path into railway or TSO operational technology (OT). The second is that an attacker manipulates the data centre to overload the node. Both are closed by the same architecture, organised in zones and conduits \cite{iec62443}:
+\begin{itemize}
+\item \emph{One-way measurement.} The only information that crosses from the railway/TSO side is the active power of the railway bay. It is taken from the TSO metering at the bay and delivered through a unidirectional gateway (data diode) or as a hard-wired analogue signal. There is no routable connection between the data-centre networks and the railway control systems, signalling or telecommunications, and no connection at all to railway traffic management.
+\item \emph{No command path.} The data centre receives no commands from the railway and sends none. Curtailment requests from the TSO use the channel already defined for flexible access permits.
+\item \emph{Protection outside the attack surface.} The limiter is a hard-wired protection relay with local settings; compromise of the energy management system or of the IT workload scheduler can cause the data centre to consume \emph{less}, or to be tripped by the limiter, but not to exceed the joint limit.
+\item \emph{Segmentation and standards.} The electrical OT of the data centre (substation automation under IEC~61850, battery and generator controls) is a separate zone from the IT infrastructure, with secured communications \cite{iec62351}, and both parties are subject to the obligations of essential entities \cite{nis2,ens2022}. On the railway side the applicable reference is CLC/TS~50701 \cite{ts50701}.
+\end{itemize}
+The September 2026 breach affected corporate IT and customer data, not operations \cite{cyber2026}; the literature has long warned that railway control systems \cite{lopez2015,kour2020} and power grids \cite{sun2018} are exposed when IT and OT are insufficiently separated. The proposal deliberately avoids creating any new IT/OT or OT/OT interface on the railway side.
+
+\subsection{Risk register}
+
+Table~\ref{tab:risk} summarises the threats considered, their potential impact on the railway and the mitigation. In every row the residual impact on the railway is nil or equal to the situation without a data centre, which is the design objective.
+
+\begin{table}[t]
+\caption{Risk register (design level).}
+\label{tab:risk}
+\centering\scriptsize
+\begin{tabular}{p{0.23\linewidth}p{0.2\linewidth}p{0.33\linewidth}p{0.14\linewidth}}
+\toprule
+Threat & Potential impact & Mitigation & Residual impact on railway\\
+\midrule
+Data-centre load exceeds the headroom (control failure) & Overload of the joint limit & Independent limiter relay; battery; staged curtailment & None\\
+Loss of railway-power measurement & Limit not enforced & Fail-safe: reduction to firm level & None\\
+Electrical fault in the data-centre installation & Disturbance at the node & Own bay breaker and protections; selectivity study & As any other consumer at the node\\
+Simultaneous trip of several data centres & Over-voltage, frequency rise & Ride-through and ramp obligations; grid-forming support & As for the system\\
+Workload-induced power oscillations & Flicker, oscillation excitation & Battery filtering; ramp limits & None\\
+Intrusion into data-centre IT or EMS & Malicious load changes & Hard-wired limiter; OT/IT segmentation & None\\
+Pivot from data centre to railway OT & Compromise of railway systems & One-way gateway; no routable link; no command path & None (no interface)\\
+Physical intrusion or theft & Damage to shared surroundings & Separate perimeters and routes; surveillance; vetted staff & Reduced (added presence)\\
+Fire in battery or fuel store & Damage to adjacent substations & Clearances; fire protection; siting & Low\\
+Traffic growth beyond forecast & Less headroom & Train has priority; periodic review of the limit; battery upgrade & None\\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,76 @@
+\section{Regulatory pathway, discussion and limitations}
+\label{sec:discussion}
+
+\subsection{What is possible today and what requires reform}
+\label{sec:regulation}
+
+Under the Spanish Electricity Act \cite{ley242013} and the access regulations \cite{rd11832020,cnmc2024circular}, an access permit belongs to one holder for its own consumption. The infrastructure manager cannot transfer or sublet capacity to another consumer, nor resell energy behind its meter; direct lines and closed distribution networks do not fit the case. Table~\ref{tab:reg} classifies the possible arrangements.
+
+\begin{table}[t]
+\caption{Regulatory routes for a data centre at a traction-substation node.}
+\label{tab:reg}
+\centering\footnotesize
+\begin{tabular}{p{0.05\linewidth}p{0.42\linewidth}p{0.14\linewidth}p{0.27\linewidth}}
+\toprule
+ & Arrangement & Possible today & Capacity in the model\\
+\midrule
+A & Data centre behind the railway meter & No & --\\
+B & Own permit and bay, flexible access (Type~3) & Yes & Node margin only\\
+C & As B, plus voluntary reduction of the railway permit & Yes, with allocation risk & Firm: \mzbFirm{} / \msFirm\,MW\\
+D & Data centre sharing the railway bay & No (dedicated bay required until 2029) & --\\
+E & Shared access permit with priority & Requires reform & Up to \mzbBat{} / \msBat\,MW\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Route C is available now: the flexible access permits in force since September 2026 allow a consumer above 1\,MW to connect at transmission level accepting curtailment ordered by the TSO, with a dedicated bay \cite{cnmc2026flex}, and the 2026 decree-law opened a window to reduce granted capacity without forfeiting guarantees \cite{rdl72026}. Its weakness is that the capacity released by the railway returns to the node and is allocated by the general priority order or by tender; it cannot be directed to the co-located consumer. It also unlocks only the firm margin.
+
+Route E is the proposal of this paper. It requires four changes: (i) a \emph{shared demand access permit} for several holders at the same node, with a joint limit and an agreed priority order, analogous to the hybridisation of generation facilities under one permit; (ii) acceptance that the curtailment signal of a flexible permit may be the load of the priority holder and not only an instruction from the system operator; (iii) allocation of capacity reduced by one consumer to a co-located consumer without tender, provided the node is not worse off; and (iv) explicit recognition that offering access headroom and land to non-railway users is compatible with the functions of the infrastructure manager, in line with the earlier recommendation of the competition authority on substations and renewable generation \cite{cnmc2023adif}. The definition of the joint limit should specify the averaging window, which Section~\ref{sec:results} shows to be decisive.
+
+\subsection{Interaction with the data-centre decree}
+
+The decree mandated by the 2026 decree-law had not been approved when this paper was completed (16 November 2026). The draft submitted to public hearing in August 2026 \cite{prd2026} applied to data centres of 1\,MW or more and required a PUE of 1.15, 80\,\% of consumption from new renewable plants and 80\,\% hourly matching. The revised draft sent to the Council of State, which issued a favourable opinion on 6 November \cite{mundiario2026}, raises the threshold to 10\,MW, relaxes the transitional PUE to 1.25, admits storage in the hourly matching and, most relevant here, introduces a transitional regime with lower matching targets for data centres that join the automatic power-reduction scheme of the system operator \cite{ashurst2026}. The regulator had asked for flexibility to be recognised \cite{cnmc2026ipn}. If confirmed, the decree will reward exactly the capability that the shared permit requires, and the result of Section~\ref{sec:results} quantifies it: flexibility reduces the renewable portfolio needed for compliance by about 30\,\%. The decree also affects the premise of scarcity: permits that are not built will lapse, which may free capacity at saturated nodes. The value of the proposal then rests less on avoiding a queue and more on reusing existing nodes, bays and land without new transmission assets.
+
+\subsection{Why the two lines differ}
+
+The busy line has little firm margin because its permits were sized to its peaks; its value lies in sharing in real time with storage. The quiet line has substantial firm margin today, because permits of similar size serve half the traffic; there the proposal could start under current rules. In both cases the capacity with batteries is of the order of 400\,MW per line, comparable to a large hyperscale campus but distributed over a dozen sites of 25--50\,MW, which suits the regional distribution of computing capacity and limits the systemic exposure of any single node.
+
+\subsection{Limitations}
+
+The results are preliminary in several respects, all stated as assumptions in Table~\ref{tab:assumptions}.
+
+\emph{Load curves.} Substation loads are simulated, not measured. The real load curves of the infrastructure manager, at 1\,s resolution, are needed to validate peaks and ramps. The simulation uses approximate gradients, generic rolling-stock parameters, neutral sections at midpoints and no catenary losses; one day of one season was simulated.
+
+\emph{Substation data.} Chainages are estimated ($\pm10$\,km), which shifts load between neighbours; six substations have no identified transmission bay and an assumed access; one granted value (12\,MW at Rueda de Jal\'on) is anomalously low. The fact that simulated peaks exceed 90\,\% of the granted access in \allTight{} substations must be reconciled with real data.
+
+\emph{Contingencies.} The N-1 rule (half of the most loaded neighbour) is a simplification; the real redistribution depends on the feeding scheme and on the time needed to reconfigure the catenary, which also determines how fast the data centre must shed load.
+
+\emph{Limit enforcement.} The resolution at which a joint limit would be monitored is a regulatory choice not yet made; the results span 1\,s to 15\,min.
+
+\emph{Grid data.} Short-circuit powers are assumed; node margins for access beyond the current permits were not analysed.
+
+\emph{Economics.} Unit costs and the sharing fee are order-of-magnitude assumptions; the renewable-matching analysis uses aggregate national profiles and is optimistic.
+
+\emph{Timetable.} The model uses the October 2026 timetable. After the accident of 28 October services between Madrid and Andalusia were suspended and operating rules are under review; lower speeds or frequencies would reduce the traction load and increase headroom, so the Madrid--Seville results are conservative in that respect.
+
+\emph{Security.} Section~\ref{sec:security} is a design-level analysis; a formal hazard analysis under railway safety standards and a site-specific security plan are required before implementation.
+
+\subsection{Future work}
+
+The immediate next step is validation with measured load curves and the real electrical data of each node, followed by site-level studies of individual substations (protection selectivity, power quality, short-circuit contribution). On the modelling side: a stochastic treatment of delays and traffic growth; co-optimisation of the battery for train-priority shaving, renewable matching and ancillary services; coordinated shifting of workloads between the sites of a line; and extension to the remaining high-speed lines. On the regulatory side: a legal design of the shared permit and of its metering and settlement.
+
+\section{Conclusions}
+\label{sec:conclusions}
+
+High-speed traction substations in Spain hold transmission-level access that they use at \msUsePct--\mzbUsePct\,\% on average but fill for a few minutes at a time. With the access capacity actually granted to each railway bay and a timetable-driven simulation of two lines, this paper has shown that:
+
+\begin{enumerate}
+\item Under current rules, the capacity that the railway could release without losing N-1 firmness is small on the busy line (\mzbFirm\,MW on Madrid--Barcelona) and significant on the quiet one (\msFirm\,MW on Madrid--Seville).
+\item A shared access permit with absolute train priority would allow \mzbFlex\,MW and \msFlex\,MW of data centres with a 30\,\% curtailable share, and \mzbBat\,MW and \msBat\,MW with power batteries of \mzbBatMWh\,MWh and \msBatMWh\,MWh, without any new transmission asset.
+\item The averaging window of the joint limit is the most influential design parameter: 15-min instead of 1-min enforcement more than triples the storage-free capacity on the busy line.
+\item The installation can be built with standard equipment: a dedicated bay at the same node, redundant transformers, a grid-forming battery limited to 2C, a two-block data centre and an independent fail-safe limiter. Its electrical cost is about 10\,\% of the data-centre investment.
+\item The architecture gives the railway no new failure mode: the two installations share only a power limit, the only signal is a one-way measurement, every degraded mode reduces the data centre and never the train, and the railway acquires no operational duty. After the events of 2026 this is the condition for the proposal to be acceptable.
+\item The flexibility needed to yield power to the train also lowers the cost of hourly renewable matching by about \resFlexValue\,\texteuro/MWh, and the latest draft of the Spanish data-centre decree moves towards rewarding it.
+\end{enumerate}
+
+The capacity is blocked by the design of access rules, not by the physics of the grid. Validating the simulated loads with measured data and testing the limiter at one pilot site are the two steps that would turn this estimate into an engineering project.

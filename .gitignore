@@ -22,3 +22,14 @@ video/build.html
 video/still_*.png
 # Web publicada (se genera en el despliegue, ver vercel.json)
 public/
+# Paper: build products (run paper/figures.py and latexmk; the PDF is not versioned)
+paper/figures/
+paper/*.pdf
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.spl

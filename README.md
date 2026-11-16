@@ -85,6 +85,7 @@ Solo se publican esos ficheros, y la web pide a los buscadores que no la indexen
 
 | Documento | Qué contiene |
 |---|---|
+| [`paper/`](paper/) | El artículo (LaTeX, en inglés): `main.tex` y secciones, `refs.bib`, `figures.py` (genera todas las figuras desde `results/`), `check_numbers.py` (enlaza cada cifra del texto con `results/`), `research_update.md` (novedades de octubre y noviembre de 2026) y `NOTES.md` (decisiones y cómo compilar) |
 | [`docs/arquitectura_y_caidas.md`](docs/arquitectura_y_caidas.md) | Cómo se conecta el CPD (posición, transformadores, 30 kV, batería, solar, grupos, control) y qué pasa en cada tipo de caída, con tiempos y Tier III/IV |
 | [`docs/esquema_instalacion.html`](docs/esquema_instalacion.html) | El mismo diseño dibujado, interactivo, con los números de Anchuelo |
 | [`docs/encaje_regulatorio.md`](docs/encaje_regulatorio.md) | Qué permite hoy la normativa (acceso flexible Tipo 3, reducción voluntaria del permiso de Adif), qué reforma haría falta y cómo nos afecta el proyecto de RD de centros de datos (80 % renovable horario, PUE ≤ 1,15) |
