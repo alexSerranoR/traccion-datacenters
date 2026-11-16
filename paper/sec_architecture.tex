@@ -1,0 +1,104 @@
+\section{Implementation architecture and feasibility}
+\label{sec:arch}
+
+The results above are only useful if the installation can be built with standard equipment, under an arrangement in which the railway keeps full control of its own supply. This section specifies such an installation.
+
+\subsection{Connection scheme}
+
+Fig.~\ref{fig:sld} shows the proposed single-line diagram. Its defining choice is that the data centre does \emph{not} connect behind the railway meter or to the railway busbar. It has its own bay in the same TSO substation, its own step-down transformers and its own medium-voltage network. The only thing shared is the joint power limit at the node. Table~\ref{tab:design} summarises the design decisions.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_sld}
+\caption{Proposed single-line diagram. The railway bay and the data-centre bay are electrically independent; they share only the joint power limit, enforced by a limiter that reads the power of the railway bay and can trip data-centre feeders.}
+\label{fig:sld}
+\end{figure}
+
+\begin{table}[t]
+\caption{Design decisions of the proposed installation.}
+\label{tab:design}
+\centering\footnotesize
+\begin{tabular}{p{0.16\linewidth}p{0.26\linewidth}p{0.2\linewidth}p{0.28\linewidth}}
+\toprule
+Element & Choice & Rejected alternative & Reason\\
+\midrule
+Point of connection & Dedicated bay at the same transmission node & Tap on the railway busbar or line & Required today for flexible access; no common-mode failure with the railway supply\\
+Transformers & $2\times100\,\%$, 400(220)/30\,kV & One unit or $2\times50\,\%$ & N-1 and concurrent maintenance (Tier III)\\
+Distribution & 30\,kV ring & 20\,kV & Lower currents for tens of MW\\
+Storage & Medium-voltage, AC-coupled, grid-forming & Inside the UPS DC link & Serves train-priority shaving and bridges supply losses; can hold the 30\,kV island\\
+Photovoltaics & Optional, DC-coupled to the battery, no export & Plant with grid export & Adds energy, not capacity; no generation access permit needed\\
+Generating sets & Medium voltage, $N{+}1$, firm block only & Running them to cover train-priority curtailment & Emission-limited hours; would amount to unlicensed generation behind the limit\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+All components are catalogue equipment. Dedicated transmission bays and 400/30\,kV transformers of 50--100\,MVA are standard for wind and solar plants; medium-voltage grid-forming battery systems are an established technology \cite{lin2020}; and medium-voltage generating sets are the norm in large data centres.
+
+\subsection{Two-block data centre}
+
+The data centre is divided into two blocks.
+
+The \emph{firm block} (about 70\,\% of the load: inference, storage, colocation) is a conventional concurrently maintainable design with UPS and generating sets. Its certification is unaffected by the shared connection, because in the Tier classification the utility supply is regarded as an economic alternative and the on-site engine generators as the reliable source \cite{uptime2018}.
+
+The \emph{flexible block} (about 30\,\%: model training, batch and high-performance computing) has no generating sets. It reduces power by capping accelerators within seconds and by checkpointing and pausing jobs within minutes, as demonstrated on production clusters \cite{colangelo2025}. Not installing generators for this block saves \mzbGenSaved\,\MEUR{} and \msGenSaved\,\MEUR{} on the two lines, more than half of the cost of the battery.
+
+\subsection{Control hierarchy}
+
+Train priority is enforced by four layers that act on different time scales:
+\begin{enumerate}
+\item \emph{Milliseconds to one second: battery.} The grid-forming battery supplies the difference whenever the measured railway power plus the data-centre power approaches the limit. It is the only resource fast enough for load steps of \mzbRampS\,MW in one second, and it also filters the power oscillations of training workloads \cite{li2024}.
+\item \emph{One to ten seconds: power capping} of the accelerators in the flexible block.
+\item \emph{Minutes: workload management}, pausing or migrating flexible jobs, including to other sites along the line \cite{zheng2020}.
+\item \emph{Hard backstop: limiter relay.} An independent protection relay trips feeders of the flexible block, and ultimately of the whole data centre, if the joint power exceeds the limit for longer than a set time. This relay, not the energy management system, is the contractual guarantee of train priority (Section~\ref{sec:security}).
+\end{enumerate}
+The only input from the railway side is the active power of the railway bay, which the TSO already measures at the bay; no signal flows from the data centre to the railway.
+
+Fig.~\ref{fig:timeline} illustrates the sequence at Anchuelo when a neighbouring substation trips. The site hosts \anDC\,MW with a battery of \anBatMW\,MW / \anBatMWh\,MWh. With the neighbour out, the same battery sustains \anNone\,MW, so \anCut\,MW (\anCutPct\,\%) must be shed: the battery covers the step instantly, power capping follows within seconds and job pausing within minutes. The firm block (\anFirmBlock\,MW) is untouched.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.6\linewidth]{fig_timeline}
+\caption{Illustrative response at Anchuelo after the loss of a neighbouring traction substation. Power levels are model results; the timing of the capping and pausing steps is indicative.}
+\label{fig:timeline}
+\end{figure}
+
+\subsection{Power quality}
+
+The traction load is single-phase and the data centre is a balanced three-phase load, so the latter does not worsen the unbalance, but it is exposed to it. With the assumed short-circuit powers the upper bound of the voltage unbalance factor at the transmission node is \mzbVufMin--\mzbVufMax\,\% on Madrid--Barcelona and \msVufMin--\msVufMax\,\% on Madrid--Seville, and up to \msVufWeak\,\% in a weak 220\,kV node. Typical planning levels at high voltage are of the order of 1.4\,\% \cite{iec61000313}; the bound is conservative because the V-connection of the traction transformers and the phase rotation between consecutive substations reduce the net unbalance \cite{gazafrudi2015}. Active-front-end UPS rectifiers tolerate these levels, but a joint power-quality study with the real short-circuit power of each node, including harmonics and resonances, is required per site.
+
+\subsection{Cost}
+
+Table~\ref{tab:cost} gives the electrical investment for the battery option. The complete electrical installation costs \mzbCapexEl\,\MEUR{} on Madrid--Barcelona and \msCapexEl\,\MEUR{} on Madrid--Seville, about \mzbElPct\,\% and \msElPct\,\% of the investment in the data centres themselves. For the infrastructure manager, a fee of 40\,\texteuro/kW per year would yield \mzbFee\,\MEUR{} and \msFee\,\MEUR{} per year (\mzbFeeLow--\mzbFeeHigh{} and \msFeeLow--\msFeeHigh\,\MEUR{} over the assumed range), with a present value of \mzbFeeNPV\,\MEUR{} and \msFeeNPV\,\MEUR{}; under current rules the firm capacity alone would yield \mzbFeeFirm\,\MEUR{} and \msFeeFirm\,\MEUR{} per year. These revenues require no railway investment and no change in railway operation.
+
+\begin{table}[t]
+\caption{Electrical investment for the option with shared access and batteries (sites of 10\,MW or more).}
+\label{tab:cost}
+\centering\footnotesize
+\begin{tabular}{lrr}
+\toprule
+ & Madrid--Barcelona & Madrid--Seville\\
+\midrule
+Sites / data-centre power (MW) & \mzbFinSites{} / \mzbFinMW & \msFinSites{} / \msFinMW\\
+Dedicated bays and transformers (\MEUR) & \mzbCapexBay & \msCapexBay\\
+Batteries, 2C (\MEUR) & \mzbCapexBat & \msCapexBat\\
+Generating sets, firm block, $N{+}1$ (\MEUR) & \mzbCapexGen & \msCapexGen\\
+\textbf{Total electrical (\MEUR)} & \textbf{\mzbCapexEl} & \textbf{\msCapexEl}\\
+\midrule
+Saving: no generators for the flexible block (\MEUR) & \mzbGenSaved & \msGenSaved\\
+Optional photovoltaics, 0.25\,MWp per MW (\MEUR) & \mzbCapexPV & \msCapexPV\\
+For reference: data centres (\MEUR) & \mzbCapexDC & \msCapexDC\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Staged pilot}
+
+The concept can be validated at a single site before any regulatory change, in three stages.
+
+\emph{Stage 1: measurement (no construction).} One year of 1\,s power records of a railway bay, compared with the simulation, would settle the largest uncertainty of this study. Anchuelo is a suitable candidate: it is a 400\,kV node close to Madrid with \anAccess\,MW granted, a simulated mean of \anMean\,MW and a firm margin of \anFirm\,MW.
+
+\emph{Stage 2: firm and flexible connection under current rules.} A data centre of the order of 10\,MW with its own bay and a flexible access permit \cite{cnmc2026flex}, combined with a voluntary reduction of the railway permit to its verified need. The limiter, the battery and the control hierarchy are commissioned and tested against recorded and injected railway load profiles, including the loss of a neighbouring substation, without the railway depending on the outcome.
+
+\emph{Stage 3: shared permit.} Under a regulatory sandbox or once the shared permit exists, the site is extended to its full size (\anDC\,MW with \anBatMW\,MW / \anBatMWh\,MWh in the model).
+
+The critical path is administrative rather than technical: the access and connection permits, the environmental and municipal licences and the transmission bay typically take longer than the construction of the data centre. Land must lie outside the railway public domain and protection zones \cite{ley382015}, on railway-owned or private plots adjacent to the TSO substation.

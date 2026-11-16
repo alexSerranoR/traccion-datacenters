@@ -1,0 +1,75 @@
+\documentclass[preprint,review,12pt]{elsarticle}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{textcomp}
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\graphicspath{{figures/}}
+\sisetup{group-separator={,}}
+\input{numbers}
+\input{tables}
+\newcommand{\MEUR}{M\texteuro}
+
+\journal{Applied Energy}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Hosting flexible data centres on the grid-connection capacity of high-speed railway traction substations: hosting capacity, implementation architecture and security for two Spanish lines}
+
+% Author block intentionally left generic in the public repository; complete at submission (see NOTES.md).
+\author[a]{Author One\corref{cor}}
+\author[b]{Author Two}
+\cortext[cor]{Corresponding author.}
+\affiliation[a]{organization={Affiliation to be completed at submission}, country={Spain}}
+\affiliation[b]{organization={Affiliation to be completed at submission}, country={Spain}}
+
+\begin{abstract}
+Grid-connection capacity, not energy, has become the binding constraint for new data centres in Spain, while the traction substations of the high-speed railway network hold transmission-level access permits that they use, on average, at \msUsePct--\mzbUsePct\,\% of their rating. This paper quantifies how much data-centre load could share that capacity with absolute priority for the train, and shows how such an installation can be built and operated safely. A second-by-second traction simulation driven by the published timetables of the three operators is applied to the Madrid--Barcelona (\mzbSubs{} substations, \mzbAccess\,MW granted) and Madrid--Seville (\msSubs{} substations, \msAccess\,MW) lines, using the access capacity actually granted to each railway bay by the transmission system operator. Under current rules only the capacity that survives the loss of a neighbouring substation can be released: \mzbFirm\,MW and \msFirm\,MW. A shared access permit with train priority raises this to \mzbNoBat/\msNoBat\,MW without storage, \mzbFlex/\msFlex\,MW if 30\,\% of the load is curtailable, and \mzbBat/\msBat\,MW with power batteries of \mzbBatMWh/\msBatMWh\,MWh. The averaging window used to enforce the joint limit is the most influential parameter: moving from 1 to 15\,min triples the storage-free capacity on the busier line. We propose an implementation architecture (dedicated bay at the same node, redundant transformers, grid-forming storage, a two-block data centre and a fail-safe limiter), cost it at about 10\,\% of the data-centre investment, and derive physical, cyber and operational security requirements so that the railway acquires no new failure mode. The same flexibility that yields power to the train lowers the cost of hourly renewable matching by about \resFlexValue\,\texteuro/MWh.
+\end{abstract}
+
+\begin{highlights}
+\item High-speed traction substations use \msUsePct--\mzbUsePct\,\% of their granted grid access on average.
+\item A shared access permit with train priority unlocks \mzbBat--\msBat\,MW per line with batteries.
+\item Enforcing the joint limit on 15-min instead of 1-min means triples storage-free capacity.
+\item A fail-safe, one-way architecture adds no new failure mode to railway operation.
+\item Data-centre flexibility cuts the cost of 80\,\% hourly renewable matching by \resFlexValue\,\texteuro/MWh.
+\end{highlights}
+
+\begin{keyword}
+Data centre \sep Railway traction substation \sep Grid connection capacity \sep Demand flexibility \sep Battery energy storage \sep Critical infrastructure security
+\end{keyword}
+
+\end{frontmatter}
+
+\input{sec_intro}
+\input{sec_methods}
+\input{sec_results}
+\input{sec_architecture}
+\input{sec_security}
+\input{sec_discussion}
+
+\section*{CRediT authorship contribution statement}
+To be completed at submission following the CRediT taxonomy (conceptualisation, methodology, software, validation, writing, supervision).
+
+\section*{Declaration of competing interest}
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper. Any professional affiliation with railway or data-centre companies will be disclosed at submission.
+
+\section*{Data availability}
+The model, the input data that can be redistributed, the result tables and the scripts that generate every figure and every number quoted in this paper are available in the project repository (link to be provided at submission). The Renfe timetable feed is open data and must be downloaded separately as described in the repository.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the writing process}
+During the preparation of this work the authors used a large language model assistant to support code development, literature search and drafting of the manuscript. After using this tool, the authors reviewed and edited the content as needed and take full responsibility for the content of the published article.
+
+\section*{Funding}
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{refs}
+
+\end{document}

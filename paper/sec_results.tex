@@ -1,0 +1,96 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{Traction load}
+
+On the simulated day the Madrid--Barcelona line draws \mzbEnergy\,MWh from the transmission grid, with a mean of \mzbMeanMW\,MW and a 1-min peak of \mzbPeakMW\,MW for the whole line; Madrid--Seville draws \msEnergy\,MWh, with a mean of \msMeanMW\,MW and a peak of \msPeakMW\,MW (Fig.~\ref{fig:profile}a). Against the \mzbAccess\,MW and \msAccess\,MW of granted access, the mean utilisation is \mzbUsePct\,\% and \msUsePct\,\%. Both lines are electrically idle for about six hours every night (\mzbIdleMin{} and \msIdleMin{} minutes with less than 1\,MW), which coincides with the maintenance window.
+
+The picture at substation level is different (Fig.~\ref{fig:profile}b and Fig.~\ref{fig:substations}). The load is a sequence of pulses of a few minutes: at Anchuelo, the first 400\,kV substation east of Madrid, the mean is \anMean\,MW (\anUse\,\% of the \anAccess\,MW granted) but the 1-min peak reaches \anPeak\,MW. In \allTight{} of the 25 substations the simulated 1-min peak exceeds 90\,\% of the granted access, \mzbTight{} of them on Madrid--Barcelona. This indicates that the infrastructure manager has requested access close to its real peaks, or that the estimated chainages assign too much load to some substations; either way, the firm margin inside the current permits is small on the busier line. The traction load changes by up to \mzbRampS\,MW in one second (median of the per-substation maxima: \mzbRampSMed\,MW on Madrid--Barcelona and \msRampSMed\,MW on Madrid--Seville), which determines the speed required from any device that enforces the joint limit.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_profile}
+\caption{Simulated traction demand on 21 October 2026: (a) both lines; (b) one substation against its granted access capacity and the joint limit.}
+\label{fig:profile}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_substations}
+\caption{Granted access capacity, simulated 1-min peaks (normal operation and with a neighbouring substation out of service) and daily mean per substation.}
+\label{fig:substations}
+\end{figure}
+
+\subsection{Hosting capacity}
+
+Table~\ref{tab:substations} and Fig.~\ref{fig:capacity} give the capacity available to data centres for the five options.
+
+\emph{Under current rules} only the firm capacity can be released: \mzbFirm\,MW on Madrid--Barcelona, concentrated in four substations, and \msFirm\,MW on Madrid--Seville, where the lighter traffic leaves margin almost everywhere. If the data centre accepts curtailment of 30\,\% of its load under N-1, these values rise to \mzbFirmFlex\,MW and \msFirmFlex\,MW.
+
+\emph{With a shared access permit}, the data centre can use the headroom of normal operation and yield when a contingency occurs. Without storage the capacity is \mzbNoBat\,MW and \msNoBat\,MW; with a 30\,\% curtailable share, \mzbFlex\,MW and \msFlex\,MW. Curtailment is rare: the flexible share is called on for at most \mzbFlexCurt\,\% and \msFlexCurt\,\% of its energy in the worst substation of each line.
+
+\emph{With batteries}, the capacity reaches \mzbBat\,MW on Madrid--Barcelona (\mzbBatMW\,MW / \mzbBatMWh\,MWh of storage, \mzbBatCost\,\MEUR) and \msBat\,MW on Madrid--Seville (\msBatMW\,MW / \msBatMWh\,MWh, \msBatCost\,\MEUR). The two lines converge to about 75--80\,\% of the granted access, but by different routes: the busy line needs a battery almost as large as the data centre in power terms, because trains fill the permit for a few minutes many times a day, whereas the quiet line needs less than half.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.8\linewidth]{fig_capacity}
+\caption{Data-centre capacity that can share the granted access of the traction substations, by option. Plain bars: Madrid--Barcelona; hatched bars: Madrid--Seville.}
+\label{fig:capacity}
+\end{figure}
+
+\begin{table}[p]
+\caption{Substations, granted access and hosting capacity (base case: granted access, traffic $\times1.0$). Powers in MW; battery in MW/MWh. Mean and peaks are simulated 1-min traction loads.}
+\label{tab:substations}
+\centering\scriptsize
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Substation & kV & $C_k$ & Mean & Peak & Peak N-1 & Firm & Shared & Sh.+flex & Sh.+bat. & Battery\\
+\midrule
+\substationrows
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Storage is a power application}
+
+The battery that shaves the train peaks is very different from the energy-shifting batteries used with renewables. If it were sized with the minimum energy of Eq.~\eqref{eq:eb} (\mzbBatMinMWh\,MWh and \msBatMinMWh\,MWh), it would discharge fully in 15--20\,min and perform a median of \mzbCycMin{} and \msCycMin{} equivalent full cycles per day, which would exhaust a lithium iron phosphate system rated for several thousand cycles \cite{preger2020} in three to four years. With the 2C constraint the installed energy rises to \mzbBatMWh\,MWh and \msBatMWh\,MWh and the median cycling falls to \mzbCyc{} and \msCyc{} cycles per day (Fig.~\ref{fig:battery}), consistent with a service life of six to eight years; the cost model uses eight. Chemistries with higher cycle life, or a hybrid with supercapacitors or flywheels for the first seconds \cite{ratniyomchai2014}, are natural alternatives.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_battery}
+\caption{(a) Battery energy required as a function of the data-centre size at each substation (grey curves) and selected sizes. (b) Installed energy and median daily cycling with the minimum energy and with the 2C limit.}
+\label{fig:battery}
+\end{figure}
+
+\subsection{The averaging window of the joint limit}
+
+How the joint limit is measured matters more than any other parameter (Fig.~\ref{fig:window}). Without storage, the capacity on Madrid--Barcelona is \mzbGapS\,MW if the limit is enforced on 1\,s values, \mzbGapMin\,MW on 1-min means and \mzbGapQ\,MW on 15-min means; on Madrid--Seville, \msGapS, \msGapMin{} and \msGapQ\,MW. Contracted power is billed on quarter-hourly maxima, and the capacity methodology itself admits overloads of 15\,\% for up to 20\,min after a contingency \cite{cnmc2025capacidad}; equipment protection, in contrast, acts in seconds. A regulatory definition of the shared permit based on 15-min means, with a fast backstop limiter set at the thermal capability of the bay, would therefore deliver on the busy line more than three times the storage-free capacity of a 1-min rule.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.6\linewidth]{fig_window}
+\caption{Storage-free hosting capacity as a function of the averaging window used to enforce the joint limit.}
+\label{fig:window}
+\end{figure}
+
+\subsection{Sensitivity to access level and traffic growth}
+
+Fig.~\ref{fig:sensitivity} shows the firm, flexible and battery options for the five access scenarios and for a 50\,\% higher traction load. Three results stand out. First, with the access granted today the firm capacity on Madrid--Barcelona disappears if traffic grows by half (\mzbFirmGrowth\,MW; \msFirmGrowth\,MW remain on Madrid--Seville), whereas the battery option is robust (\mzbBatGrowth\,MW and \msBatGrowth\,MW): sharing with storage is the only option that survives traffic growth without new access. Second, if access were extended to the rating of the existing traction transformers (\mzbAccessTrafo\,MW and \msAccessTrafo\,MW in total), firm capacity would rise to \mzbFirmTrafo\,MW and \msFirmTrafo\,MW and the battery option to \mzbBatTrafo\,MW and \msBatTrafo\,MW; this expansion depends on the margin of each transmission node and is outside the scope of the shared permit. Third, the uniform 30\,MW scenario leaves nothing without storage on the busy line, which confirms that the granted values are close to the real need.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_sensitivity}
+\caption{Sensitivity of the hosting capacity to the access capacity per substation and to traffic growth (dashed: traction load $\times1.5$).}
+\label{fig:sensitivity}
+\end{figure}
+
+\subsection{Hourly renewable matching}
+
+A flat data-centre load needs \resFlatWind\,MW of new wind and \resFlatPV\,MW of new solar capacity per MW (\resFlatTot\,MW in total, \resFlatRatio{} times its consumption in energy) to meet the 80\,\% hourly test in 95\,\% of the hours (Fig.~\ref{fig:renewable}), at a net cost of \resFlatCost\,\texteuro/MWh. If the flexible block reduces consumption in deficit hours, \resFlexTot\,MW suffice and the net cost falls to \resFlexCost\,\texteuro/MWh, with \resFlexCurt\,\% of the energy curtailed. A 4\,h shifting battery brings the portfolio to \resStoTot\,MW (\resStoCost\,\texteuro/MWh), and both together to \resBothTot\,MW (\resBothCost\,\texteuro/MWh). The flexibility that the data centre needs anyway to yield power to the train is thus worth about \resFlexValue\,\texteuro/MWh in compliance cost, or some \resFlexValueMzb\,\MEUR{} per year for the \mzbFinGWh\,GWh consumed by the Madrid--Barcelona fleet. These figures are optimistic, because the aggregate peninsular profile is smoother than that of any real portfolio, but the ranking of the cases is robust and consistent with system-level studies of hourly matching \cite{xu2024,riepin2024}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.6\linewidth]{fig_renewable}
+\caption{New renewable capacity needed per MW of data centre to meet 80\,\% hourly matching in 95\,\% of the hours, and net cost per MWh consumed.}
+\label{fig:renewable}
+\end{figure}
